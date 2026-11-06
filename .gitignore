@@ -1,0 +1,16 @@
+# extracted official export (rebuilt from data/raw/entities-*.zip by src/build_spec_official.py)
+data/raw/bird_official/
+# generated databases and synthetic data
+*.duckdb
+*.duckdb.wal
+data/synthetic/
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# local Claude Code settings
+.claude/settings.local.json
+# OS
+.DS_Store
+Thumbs.db

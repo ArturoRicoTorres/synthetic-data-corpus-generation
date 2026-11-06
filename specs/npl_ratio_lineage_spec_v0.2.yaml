@@ -1,0 +1,1512 @@
+# Canonical lineage spec v0.2 - NPL ratio - built from the official BIRD export by src/build_spec_official.py
+spec_version: 0.2-draft
+status: DRAFT - open issues OI-07, OI-09 to OI-14 need sign-off before artifacts are rendered
+provenance:
+  primary_source:
+    type: official ECB BIRD metadata export
+    file: entities-06_11_2026_11_53_34.zip
+    sha256: 87a75e0600d33f01d3edcecb59fa7df4091e78b384daf4587e2e710fc1b54c3b
+    obtained_from: bird.ecb.europa.eu (downloaded by user)
+    frameworks:
+    - FRAMEWORK_ID: AE
+      VERSION_ID: '4.3'
+      VALID_FROM: '2026-03-01'
+    - FRAMEWORK_ID: ANCRDT
+      VERSION_ID: '1'
+      VALID_FROM: '2026-03-01'
+    - FRAMEWORK_ID: BIRD
+      VERSION_ID: '1'
+      VALID_FROM: '2026-03-01'
+    - FRAMEWORK_ID: FINREP
+      VERSION_ID: '4.3'
+      VALID_FROM: '2026-03-01'
+  supersedes: v0.1 (community repo regcommunity/FreeBIRD_EIL_67)
+  legend:
+    bird_official: read from the official export by src/build_spec_official.py
+    gap_fill: added by hand; not specified in the official export
+kri:
+  id: KRI_NPL_RATIO_LA
+  name: Non-performing loans and advances ratio (debt instruments at cost or amortised cost)
+  formula: F_18.00.a R0070 C0060 / F_18.00.a R0070 C0010
+  numerator:
+    bird_cube_id: F_18.00.a_R0070_C0060_OL
+    description: 'F_18.00.a - DEBT INSTRUMENTS AT COST OR AT AMORTISED COST: Loans and advances \ Gross carrying amount/Nominal
+      amount: Non-performing'
+    metric:
+    - GRSS_CRRYNG_AMNT
+    filters:
+    - variable: ACCNTNG_CLSSFCTN
+      member: ACCNTNG_CLSSFCTN_531
+      label: Accounting portfolios for financial assets measured at cost based methods, excluding cash and cash balances at
+        central banks and other demand deposits
+      leaf_members:
+      - member: ACCNTNG_CLSSFCTN_6
+        label: 'IFRS: Financial assets at amortised cost'
+      - member: ACCNTNG_CLSSFCTN_74
+        label: 'nGAAP: Other non-trading non-derivative financial assets. Other than LOCOM'
+      - member: ACCNTNG_CLSSFCTN_76
+        label: 'nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. LOCOM'
+      - member: ACCNTNG_CLSSFCTN_77
+        label: 'nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. Other than LOCOM'
+    - variable: PRFRMNG_STTS
+      member: CRDT_QLTY_1
+      label: Non-performing
+      leaf_members:
+      - member: CRDT_QLTY_12
+        label: Non-performing exposures. Defaulted
+      - member: CRDT_QLTY_13
+        label: Non-performing exposures. Impaired
+    - variable: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      member: TYP_INSTRMNT_1117
+      label: Loans and Advances
+    transformation_rule: TR_F_18.00.a_R0070_C0060_OL
+    routine_chain:
+    - R_F_18.00.a_ALL
+    - R_F_18.00.a_R0070
+    - R_F_18.00.a_C0060
+    source_cubes:
+    - INSTRMNT_RL_EIL
+    - INTRNL_GRP_RL_EIL
+    - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL
+    - SCRTY_EXCHNG_TRDBL_DRVTV_EIL
+    attribute_links:
+    - source: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL__GRSS_CRRYNG_AMNT
+      target: GRSS_CRRYNG_AMNT
+      routine: R_F_18.00.a_C0060
+    - source: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL__TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      target: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      routine: R_F_18.00.a_R0070
+    - source: SCRTY_EXCHNG_TRDBL_DRVTV_EIL__DBT_SCRTY_PRFRMNG_STTS_TYP
+      target: PRFRMNG_STTS
+      routine: R_F_18.00.a_C0060
+    - source: INSTRMNT_RL_EIL__TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      target: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      routine: R_F_18.00.a_R0070
+    - source: INTRNL_GRP_RL_EIL__FNRP_RPRTNG_SCHM
+      target: '*'
+      routine: R_F_18.00.a_ALL
+    - source: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL__ACCNTNG_CLSSFCTN
+      target: ACCNTNG_CLSSFCTN
+      routine: R_F_18.00.a_R0070
+    - source: INSTRMNT_RL_EIL__ACCNTNG_CLSSFCTN
+      target: ACCNTNG_CLSSFCTN
+      routine: R_F_18.00.a_R0070
+    - source: INSTRMNT_RL_EIL__GRSS_CRRYNG_AMNT
+      target: GRSS_CRRYNG_AMNT
+      routine: R_F_18.00.a_C0060
+    - source: INSTRMNT_RL_EIL__PRFRMNG_STTS
+      target: PRFRMNG_STTS
+      routine: R_F_18.00.a_C0060
+    provenance: bird_official
+  denominator:
+    bird_cube_id: F_18.00.a_R0070_C0010_OL
+    description: 'F_18.00.a - DEBT INSTRUMENTS AT COST OR AT AMORTISED COST: Loans and advances \ Gross carrying amount/Nominal
+      amount'
+    metric:
+    - GRSS_CRRYNG_AMNT
+    filters:
+    - variable: ACCNTNG_CLSSFCTN
+      member: ACCNTNG_CLSSFCTN_531
+      label: Accounting portfolios for financial assets measured at cost based methods, excluding cash and cash balances at
+        central banks and other demand deposits
+      leaf_members:
+      - member: ACCNTNG_CLSSFCTN_6
+        label: 'IFRS: Financial assets at amortised cost'
+      - member: ACCNTNG_CLSSFCTN_74
+        label: 'nGAAP: Other non-trading non-derivative financial assets. Other than LOCOM'
+      - member: ACCNTNG_CLSSFCTN_76
+        label: 'nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. LOCOM'
+      - member: ACCNTNG_CLSSFCTN_77
+        label: 'nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. Other than LOCOM'
+    - variable: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      member: TYP_INSTRMNT_1117
+      label: Loans and Advances
+    transformation_rule: TR_F_18.00.a_R0070_C0010_OL
+    routine_chain:
+    - R_F_18.00.a_ALL
+    - R_F_18.00.a_R0070
+    - R_F_18.00.a_C0010
+    source_cubes:
+    - INSTRMNT_RL_EIL
+    - INTRNL_GRP_RL_EIL
+    - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL
+    attribute_links:
+    - source: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL__GRSS_CRRYNG_AMNT
+      target: GRSS_CRRYNG_AMNT
+      routine: R_F_18.00.a_C0010
+    - source: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL__TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      target: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      routine: R_F_18.00.a_R0070
+    - source: INSTRMNT_RL_EIL__TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      target: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+      routine: R_F_18.00.a_R0070
+    - source: INTRNL_GRP_RL_EIL__FNRP_RPRTNG_SCHM
+      target: '*'
+      routine: R_F_18.00.a_ALL
+    - source: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL__ACCNTNG_CLSSFCTN
+      target: ACCNTNG_CLSSFCTN
+      routine: R_F_18.00.a_R0070
+    - source: INSTRMNT_RL_EIL__ACCNTNG_CLSSFCTN
+      target: ACCNTNG_CLSSFCTN
+      routine: R_F_18.00.a_R0070
+    - source: INSTRMNT_RL_EIL__GRSS_CRRYNG_AMNT
+      target: GRSS_CRRYNG_AMNT
+      routine: R_F_18.00.a_C0010
+    provenance: bird_official
+  lineage_gap_at_total_row:
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL__ENTTY_RL_TYP
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL__MN_DBTR_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL__MN_DPST_TKNG_CRPRTN_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL__MN_LSS_INDCTR
+  - PRTY_EIL__INSTTTNL_SCTR
+  - PRTY_EIL__MLTLTRL_DVLPMNT_BNK_INDCTR
+  - SCRTY_ENTTY_RL_ASSGNMNT_EIL__ENTTY_RL_TYP
+  - SCRTY_ENTTY_RL_ASSGNMNT_EIL__PRMRY_ISSR_INDCTR
+taxonomy_draft:
+  SOURCE_ACQUISITION: Selecting input data for the reporting date and entity.
+  MEASUREMENT: Deriving monetary amounts under the applicable accounting standard.
+  PRODUCT_SEGMENTATION: Assigning instruments to regulatory product categories.
+  DATA_INTEGRATION: Joining related entities into one position record.
+  COUNTERPARTY_ENRICHMENT: Attaching debtor attributes such as sector, size and role.
+  REGULATORY_SCOPE: Restricting to the perimeter a template cell requires.
+  CREDIT_QUALITY_CLASSIFICATION: Classifying exposures by performing, default or impairment status.
+  AGGREGATION: Summing positions into report cells.
+  KRI_CALCULATION: Combining report cells into the key risk indicator.
+  TECHNICAL: Steps with no business meaning (unions, casts, deduplication).
+attributes:
+- id: INSTRMNT_IL.INSTRMNT_TYP_PRDCT
+  table: INSTRMNT_IL
+  column: INSTRMNT_TYP_PRDCT
+  present_in_official_il: true
+  mandatory: true
+  business_name: Instrument type by product
+  business_definition: A discriminator to distinguish instruments by product. Examles are loans and advances, securities financing
+    transactions, financial guarantees and other commitments or over the counter derivatives.
+  domain: Type of instrument
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_IL.RPYMNT_RGHTS
+  table: INSTRMNT_IL
+  column: RPYMNT_RGHTS
+  present_in_official_il: true
+  mandatory: false
+  business_name: Repayment rights
+  business_definition: Classification of credit exposures according to the creditor's rights to claim the repayment of the
+    exposure. On demand or at short notice
+  domain: Repayment rights
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.INSTRMNT_RL_TYP
+  table: INSTRMNT_RL_IL
+  column: INSTRMNT_RL_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Instrument role type
+  business_definition: A discriminator to distinguish between different roles an instrument may act in. Examples are financial
+    asset instrument, financial liability instrument.
+  domain: Abstract instrument role type
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.ACCNTNG_CLSSFCTN
+  table: INSTRMNT_RL_IL
+  column: ACCNTNG_CLSSFCTN
+  present_in_official_il: true
+  mandatory: false
+  business_name: Accounting classification
+  business_definition: Accounting portfolio where the instrument is recorded in accordance with the accounting standard –
+    IFRS or national GAAP –under Regulation (EU) 2015/534 (ECB/2015/13) applied by the observed agent's legal entity.
+  domain: Accounting classification
+  legal_refs:
+  - REG_EU_534_2015
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.HLD_SL_INDCTR
+  table: INSTRMNT_RL_IL
+  column: HLD_SL_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Held for sale indicator
+  business_definition: A variable indicating the Non-current assets and instruments in disposal groups classified as held
+    for sale in accordance with IFRS5. Is not applicable under national GAAP based on BAD.
+  domain: Held for sale
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.SBJCT_IMPRMNT_INDCTR
+  table: INSTRMNT_RL_IL
+  column: SBJCT_IMPRMNT_INDCTR
+  present_in_official_il: true
+  mandatory: true
+  business_name: Subject to impairment indicator
+  business_definition: Subject to impairment indicator indicates whether the asset is subject to impairment or not.
+  domain: Subject to impairment indicator
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.IMPRMNT_STTS
+  table: INSTRMNT_RL_IL
+  column: IMPRMNT_STTS
+  present_in_official_il: true
+  mandatory: false
+  business_name: Impairment status
+  business_definition: Type of impairment recorded in accordance with the accounting standard – IFRS or national GAAP.
+  domain: Credit quality
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.PRFRMNG_STTS
+  table: INSTRMNT_RL_IL
+  column: PRFRMNG_STTS
+  present_in_official_il: true
+  mandatory: false
+  business_name: Performing status
+  business_definition: Performing status in accordance with Implementing Regulation (EU) No 680/2014.
+  domain: Credit quality
+  legal_refs:
+  - REG_EU_680_2014
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.CRRYNG_AMNT
+  table: INSTRMNT_RL_IL
+  column: CRRYNG_AMNT
+  present_in_official_il: true
+  mandatory: false
+  business_name: Carrying amount
+  business_definition: The carrying amount in accordance with Annex V to Implementing Regulation (EU) No 680/2014.
+  domain: Monetary
+  legal_refs:
+  - REG_EU_680_2014
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.ACCMLTD_IMPRMNT
+  table: INSTRMNT_RL_IL
+  column: ACCMLTD_IMPRMNT
+  present_in_official_il: true
+  mandatory: false
+  business_name: Accumulated impairment
+  business_definition: |-
+    The amount of loss allowances that are held against or are allocated to the instrument on the reporting reference date. This data attribute applies to instruments subject to impairment under the applied accounting standard. Under IFRS, the accumulated impairment relates to the following
+    amounts:
+    (i) loss allowance at an amount equal to 12-month expected
+    credit losses;
+    (ii) loss allowance at an amount equal to lifetime expected
+    credit losses.
+    Under GAAP, the accumulated impairment relates to the following
+    amounts:
+    (i) loss allowance at an amount equal to general allowances;
+    (ii) loss allowance at an amount equal to specific allowances.
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.FV
+  table: INSTRMNT_RL_IL
+  column: FV
+  present_in_official_il: true
+  mandatory: false
+  business_name: Fair value
+  business_definition: Fair value as defined in IFRS 13.9.
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.ACCMLTD_CHNGS_FV_CR
+  table: INSTRMNT_RL_IL
+  column: ACCMLTD_CHNGS_FV_CR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Accumulated changes in fair value due to credit risk
+  business_definition: Accumulated changes in fair value due to credit risk in accordance with Part 2.46 of Annex V to Implementing
+    Regulation (EU) No 680/2014.
+  domain: Monetary
+  legal_refs:
+  - REG_EU_680_2014
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.GNRL_ALLWNCS_CRDT_RSK
+  table: INSTRMNT_RL_IL
+  column: GNRL_ALLWNCS_CRDT_RSK
+  present_in_official_il: true
+  mandatory: false
+  business_name: General allowances for credit risk affecting carrying amount (nGAAP)
+  business_definition: General allowances for credit risk affecting carrying amount (nGAAP)
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_RL_IL.GNRL_ALLWNCS_BNK_RSK
+  table: INSTRMNT_RL_IL
+  column: GNRL_ALLWNCS_BNK_RSK
+  present_in_official_il: true
+  mandatory: false
+  business_name: General allowances for bank risk affecting carrying amount (nGAAP)
+  business_definition: General allowances for bank risk affecting carrying amount (nGAAP)
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_ENTTY_RL_ASSGNMNT_IL.ENTTY_RL_TYP
+  table: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  column: ENTTY_RL_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Entity role type
+  business_definition: A discriminator to distinguish between party roles, organisation roles, central bank and private sector
+    company roles and legal person roles.
+  domain: Entity role type
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_DBTR_INDCTR
+  table: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  column: MN_DBTR_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Main debtor indicator
+  business_definition: An indicator specifying if a debtor is the main debtor.
+  domain: Main debtor indicator
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_LSS_INDCTR
+  table: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  column: MN_LSS_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Main lessee indicator
+  business_definition: An indicator specifying if a debtor is the main debtor.
+  domain: Main lessee indicator
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_DPST_TKNG_CRPRTN_INDCTR
+  table: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  column: MN_DPST_TKNG_CRPRTN_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Main Deposit-taking corporation indicator
+  business_definition: An indicator specifying if a debtor is the main debtor.
+  domain: Main Deposit-taking corporation indicator
+  legal_refs: []
+  provenance: bird_official
+- id: INSTRMNT_ENTTY_RL_ASSGNMNT_IL.PRTY_ID
+  table: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  column: PRTY_ID
+  present_in_official_il: true
+  mandatory: true
+  business_name: Party identifier
+  business_definition: An identifier that uniquely identifies a party.
+  domain: String
+  legal_refs: []
+  provenance: bird_official
+- id: PRTY_IL.INSTTTNL_SCTR
+  table: PRTY_IL
+  column: INSTTTNL_SCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Institutional sector
+  business_definition: Institutional sectors in accordance with Regulation (EU) No 549/2013, Regulation (EU) No 575/2013 and
+    Regulation (EU) No 1075/2013 of the European Central Bank (ECB/2013/40)(1).
+  domain: Institutional sectors
+  legal_refs:
+  - CRR_REGULATION
+  - REG_EU_549_2013
+  - REG_EU_1075_2013
+  provenance: bird_official
+- id: PRTY_IL.MLTLTRL_DVLPMNT_BNK_INDCTR
+  table: PRTY_IL
+  column: MLTLTRL_DVLPMNT_BNK_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Multilateral development bank indicator
+  business_definition: Multilateral development bank indicator specifies if the International organisation is a multilateral
+    development bank or not.
+  domain: Multilateral development bank indicator
+  legal_refs: []
+  provenance: bird_official
+- id: INTRNL_GRP_RL_IL.FNRP_RPRTNG_SCHM
+  table: INTRNL_GRP_RL_IL
+  column: FNRP_RPRTNG_SCHM
+  present_in_official_il: true
+  mandatory: false
+  business_name: Finrep reporting scheme
+  business_definition: Finrep reporting scheme
+  domain: Finrep reporting scheme
+  legal_refs: []
+  provenance: bird_official
+- id: OTC_DRVTV_HDG_IL.ACCNTNG_HDG_INDCTR
+  table: OTC_DRVTV_HDG_IL
+  column: ACCNTNG_HDG_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Accounting hedge indicator
+  business_definition: An indicator specifying if the hedge is considered an accounting hedge or not.
+  domain: Accounting hedge indicator
+  legal_refs: []
+  provenance: bird_official
+- id: derived.GRSS_CRRYNG_AMNT
+  table: (EIL, derived)
+  column: GRSS_CRRYNG_AMNT
+  business_name: Gross carrying amount
+  business_definition: Gross carrying amount as defined in Annex V 5.2.
+  domain: Monetary
+  provenance: bird_official
+- id: derived.TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+  table: (EIL, derived)
+  column: TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+  business_name: Type of Financial Asset Instrument according to Annex V
+  business_definition: Type of Financial Asset Instrument according to Annex V
+  domain: Type of instrument
+  provenance: bird_official
+- id: derived.DBT_SCRTY_PRFRMNG_STTS_TYP
+  table: (EIL, derived)
+  column: DBT_SCRTY_PRFRMNG_STTS_TYP
+  business_name: Debt security by Performing status type
+  business_definition: Performing status in accordance with Implementing Regulation (EU) No 680/2014.
+  domain: Security or exchange tradable derivative type
+  provenance: bird_official
+joins:
+- relationship: ASS_INSTRMNT_ACTS_INSTRMNT_RL_S_85476_IL
+  parent: INSTRMNT_IL
+  child: INSTRMNT_RL_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INSTRMNT_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_FNNCL_LS_LSS_FNNCL_LS_LSS_ASSGNMNT_77220_IL
+  parent: INSTRMNT_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INSTRMNT_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_DPST_PRVDD_DPST_TKNG_CRPRTN_DPST_DPST_TKNG_CRPRTN_ASSGNMNT_77220_IL
+  parent: INSTRMNT_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INSTRMNT_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_OTHR_LN_DBTR_S_OTHR_LN_LN_DBTR_ASSGNMNT_77220_IL
+  parent: INSTRMNT_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INSTRMNT_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_LN_DBTR_OBLGD_PY_OTHR_LN_S_OTHR_LN_LN_DBTR_ASSGNMNT_25372_IL
+  parent: ENTTY_RL_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - ENTTY_RL_TYP
+  - PRTY_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_DPST_TKNG_CRPRTN_PRVDS_DPST_S_DPST_DPST_TKNG_CRPRTN_ASSGNMNT_25372_IL
+  parent: ENTTY_RL_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - ENTTY_RL_TYP
+  - PRTY_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_LSS_LSS_FNNCL_LS_S_FNNCL_LS_LSS_ASSGNMNT_25372_IL
+  parent: ENTTY_RL_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - ENTTY_RL_TYP
+  - PRTY_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_CRDTR_PRVDS_OTHR_LN_S_OTHR_LN_CRDTR_ASSGNMNT_25372_IL
+  parent: ENTTY_RL_IL
+  child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - ENTTY_RL_TYP
+  - PRTY_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: context-key join to INTRNL_GRP_RL_IL
+  parent: INTRNL_GRP_RL_IL
+  child: (all positions)
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - RPRTNG_AGNT_ID
+  provenance: gap_fill
+  open_issue: OI-13
+transformations:
+- id: T01
+  name: Load input layer for reporting date
+  layer: source
+  inputs:
+  - INSTRMNT_IL
+  - INSTRMNT_RL_IL
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  - PRTY_IL
+  - INTRNL_GRP_RL_IL
+  - OTC_DRVTV_HDG_IL
+  - SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  outputs:
+  - '*_IL snapshot'
+  logic:
+    type: select
+    filter: context key = (:dt_rfrnc, :rprtng_agnt_id, :accntng_cnsldtn_lvl, :accntng_stndrd)
+  business_group: SOURCE_ACQUISITION
+  provenance: gap_fill
+- id: T02
+  name: Carry status and classification attributes into the enriched layer
+  layer: enrichment
+  inputs:
+  - INSTRMNT_RL_IL.PRFRMNG_STTS
+  - INSTRMNT_RL_IL.ACCNTNG_CLSSFCTN
+  - PRTY_IL.INSTTTNL_SCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.ENTTY_RL_TYP
+  - INTRNL_GRP_RL_IL.FNRP_RPRTNG_SCHM
+  outputs:
+  - '*_EIL (same attributes)'
+  logic:
+    type: identity
+    routine: R_IDT_DER
+  business_group: TECHNICAL
+  provenance: bird_official
+- id: T03
+  name: Derive gross carrying amount (loans)
+  layer: enrichment
+  inputs:
+  - INSTRMNT_RL_IL.ACCMLTD_CHNGS_FV_CR
+  - INSTRMNT_RL_IL.ACCMLTD_IMPRMNT
+  - INSTRMNT_RL_IL.ACCNTNG_CLSSFCTN
+  - INSTRMNT_RL_IL.CRRYNG_AMNT
+  - INSTRMNT_RL_IL.FV
+  - INSTRMNT_RL_IL.GNRL_ALLWNCS_BNK_RSK
+  - INSTRMNT_RL_IL.GNRL_ALLWNCS_CRDT_RSK
+  - INSTRMNT_RL_IL.IMPRMNT_STTS
+  - INSTRMNT_RL_IL.PRFRMNG_STTS
+  - INSTRMNT_RL_IL.SBJCT_IMPRMNT_INDCTR
+  outputs:
+  - INSTRMNT_RL_EIL.GRSS_CRRYNG_AMNT
+  routine:
+  - R_DER_GRSS_CRRYNG_AMNT_3
+  logic:
+    type: case
+    in_scope_branches_for_R0070:
+    - when: ACCNTNG_CLSSFCTN in (6, 8)
+      then: CRRYNG_AMNT + ACCMLTD_IMPRMNT
+      requires: CRRYNG_AMNT and ACCMLTD_IMPRMNT not null
+    - when: ACCNTNG_CLSSFCTN in (76, 77, 44) and IMPRMNT_STTS = CRDT_QLTY_26
+      then: CRRYNG_AMNT + ACCMLTD_IMPRMNT
+    - when: ACCNTNG_CLSSFCTN in (9, 73, 74) and SBJCT_IMPRMNT_INDCTR = 1 and IMPRMNT_STTS = CRDT_QLTY_26
+      then: CRRYNG_AMNT + ACCMLTD_IMPRMNT
+    - when: ACCNTNG_CLSSFCTN in (76, 77, 44) and IMPRMNT_STTS in (CRDT_QLTY_211, CRDT_QLTY_212)
+      then: CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK
+    - when: ACCNTNG_CLSSFCTN in (9, 73, 74) and SBJCT_IMPRMNT_INDCTR = 1 and IMPRMNT_STTS in (CRDT_QLTY_211, CRDT_QLTY_212)
+      then: CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK
+    - else: no value (fair-value branches exist but are outside ACCNTNG_CLSSFCTN_531)
+    official_algorithm: |-
+      update cubes --(destination cubes: INSTRMNT_RL_EIL)
+      -- The derivation logic is defined in accordance with Annex V
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_2, ACCNTNG_CLSSFCTN_3)
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_41, ACCNTNG_CLSSFCTN_4, ACCNTNG_CLSSFCTN_7, ACCNTNG_CLSSFCTN_49)
+      and
+      PRFRMNG_STTS = CRDT_QLTY_11
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_9
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2
+      and
+      PRFRMNG_STTS = CRDT_QLTY_11
+      )
+      )
+      and
+      FV <> null
+      then
+      FV
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_41, ACCNTNG_CLSSFCTN_4, ACCNTNG_CLSSFCTN_7, ACCNTNG_CLSSFCTN_49)
+      and
+      PRFRMNG_STTS = CRDT_QLTY_1
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_9
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2
+      and
+      PRFRMNG_STTS = CRDT_QLTY_1
+      )
+      )
+      and
+      FV <> null
+      and
+      ACCMLTD_CHNGS_FV_CR < 0
+      then
+      FV - ACCMLTD_CHNGS_FV_CR
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_8, ACCNTNG_CLSSFCTN_6)
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_76, ACCNTNG_CLSSFCTN_77, ACCNTNG_CLSSFCTN_44)
+      and
+      IMPRMNT_STTS = CRDT_QLTY_26
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_9, ACCNTNG_CLSSFCTN_73, ACCNTNG_CLSSFCTN_74)
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_1
+      and
+      IMPRMNT_STTS = CRDT_QLTY_26
+      )
+      )
+      and
+      CRRYNG_AMNT <> null
+      and
+      ACCMLTD_IMPRMNT <> null
+      then
+      CRRYNG_AMNT + ACCMLTD_IMPRMNT
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_76, ACCNTNG_CLSSFCTN_77, ACCNTNG_CLSSFCTN_44)
+      and
+      IMPRMNT_STTS in (CRDT_QLTY_211, CRDT_QLTY_212)
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_9, ACCNTNG_CLSSFCTN_73, ACCNTNG_CLSSFCTN_74)
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_1
+      and
+      IMPRMNT_STTS in (CRDT_QLTY_211, CRDT_QLTY_212)
+      )
+      )
+      and
+      CRRYNG_AMNT <> null
+      and
+      (
+      GNRL_ALLWNCS_CRDT_RSK <> null
+      or
+      GNRL_ALLWNCS_BNK_RSK <> null
+      )
+      then
+      CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      (
+      ACCNTNG_CLSSFCTN_73
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2 -- Measured at cost
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN_44
+      and
+      IMPRMNT_STTS not in (CRDT_QLTY_26, CRDT_QLTY_211, CRDT_QLTY_212) -- Measured at cost
+      )
+      )
+      and
+      CRRYNG_AMNT <> null
+      then
+      CRRYNG_AMNT
+      );
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      FV = null
+      and
+      CRRYNG_AMNT = null
+      )
+      then
+      null;
+  business_group: MEASUREMENT
+  provenance: bird_official
+  open_issues:
+  - OI-11
+  - OI-12
+- id: T04
+  name: Classify instrument per Annex V (loans and advances)
+  layer: enrichment
+  inputs:
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.ENTTY_RL_TYP
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_DBTR_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_DPST_TKNG_CRPRTN_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_LSS_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.PRTY_ID
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_IL.RPRTNG_AGNT_ID
+  - INSTRMNT_IL.INSTRMNT_TYP_PRDCT
+  - INSTRMNT_IL.RPYMNT_RGHTS
+  - INSTRMNT_RL_IL.HLD_SL_INDCTR
+  - INSTRMNT_RL_IL.INSTRMNT_RL_TYP
+  - OTC_DRVTV_HDG_IL.ACCNTNG_HDG_INDCTR
+  - PRTY_IL.INSTTTNL_SCTR
+  outputs:
+  - INSTRMNT_RL_EIL.TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+  routine:
+  - R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+  logic:
+    type: case
+    loans_and_advances_branch:
+      product_and_role:
+      - products:
+        - TYP_INSTRMNT_1020
+        - TYP_INSTRMNT_1022
+        - TYP_INSTRMNT_1023
+        - TYP_INSTRMNT_120
+        - TYP_INSTRMNT_130
+        - TYP_INSTRMNT_140
+        - TYP_INSTRMNT_162
+        - TYP_INSTRMNT_163
+        - TYP_INSTRMNT_51
+        role: ENTTY_RL_TYP_28 (loan debtor)
+        main_flag: MN_DBTR_INDCTR_1
+      - products:
+        - TYP_INSTRMNT_80
+        role: ENTTY_RL_TYP_19 (lessee)
+        main_flag: MN_LSS_INDCTR_1
+      - products:
+        - TYP_INSTRMNT_511
+        - TYP_INSTRMNT_512
+        - TYP_INSTRMNT_522
+        - TYP_INSTRMNT_1202
+        role: ENTTY_RL_TYP_27 (deposit-taking corporation)
+        main_flag: MN_DPST_TKNG_CRPRTN_INDCTR_1
+      sector_condition: INSTTTNL_SCTR not in (S121, S122_A), or it is and RPYMNT_RGHTS = RPYMNT_RGHTS_2
+      result: TYP_INSTRMNT_1117 if nGAAP balance-sheet asset, or IFRS and not held for sale; TYP_INSTRMNT_1118 if IFRS and
+        held for sale
+    official_algorithm: "Update EIL Cube -- Destination cube: INSTRMNT_RL_EIL\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = \ncase\n\
+      when -- Start of the Loans and Advances section\n(\n(\nINSTRMNT_TYP_PRDCT in (TYP_INSTRMNT_1020, TYP_INSTRMNT_1022,\
+      \ TYP_INSTRMNT_1023, TYP_INSTRMNT_120, -- Source cube: INSTRMNT_IL; Members' name: Factoring, Other loans, Other trade\
+      \ receivables, Transit items\nTYP_INSTRMNT_130, TYP_INSTRMNT_140, -- Members' name: Suspence items, Advances that are\
+      \ not loans other than transit items and suspence items\nTYP_INSTRMNT_162, TYP_INSTRMNT_163, TYP_INSTRMNT_51) -- Members'\
+      \ name: Term repurchase agreement, Open repurchase agreement, Credit card debt\nand ENTTY_RL_TYP = ENTTY_RL_TYP_28 --\
+      \ Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Debtor\nand MN_DBTR_INDCTR = MN_DBTR_INDCTR_1 -- Source\
+      \ cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Main debtor Indicator\n)\nor\n(\nINSTRMNT_TYP_PRDCT = TYP_INSTRMNT_80\
+      \ -- Members' name: Finance leases\nand ENTTY_RL_TYP = ENTTY_RL_TYP_19  -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL;\
+      \ Members' name: Lesee\nand MN_LSS_INDCTR = MN_LSS_INDCTR_1 -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members'\
+      \ name: Main Lesee Indicator\n)\nor\n(\nINSTRMNT_TYP_PRDCT in (TYP_INSTRMNT_511, TYP_INSTRMNT_512, TYP_INSTRMNT_522,\
+      \ TYP_INSTRMNT_1202) -- Source cube: INSTRMNT_IL; Members' name: ranferable overnight deposits, Non-transferable overnight\
+      \ deposits, Deposits with agreed maturity - other than counterpart liability to non-derecognised loans, On demand deposit\
+      \ not used for minimum reserve\nand ENTTY_RL_TYP = ENTTY_RL_TYP_27 -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members'\
+      \ name: Deposit taking corporation\nand MN_DPST_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INCTR_1 -- Source cube:\
+      \ INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Main Deposit taking corporation Indicator\n)\n)\nand\n(INSTTTNL_SCTR\
+      \ not in (INSTTTNL_SCTR_S121, INSTTTNL_SCTR_S122_A) -- Source cube: PRTY_IL; Members' name: Central banks, Credit institution\n\
+      or\n(INSTTTNL_SCTR in (INSTTTNL_SCTR_S121, INSTTTNL_SCTR_S122_A) -- Source cube: PRTY_IL; Members' name: Central banks,\
+      \ Credit institution\nand RPYMNT_RGHTS = RPYMNT_RGHTS_2)) -- Source cube: INSTRMNT_IL; Other than on demand or short\
+      \ notice\n)\n)\n)\nthen\ncase\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_34 -- Source cube: INSTRMNT_RL_IL; Members'\
+      \ name: Balance sheet recognised financial asset instrument according to national general accepted accounting principles\
+      \ (nGAAP)\nor\n(\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube: INSTRMNT_RL_IL; Members' name: Balance\
+      \ sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR\
+      \ = HLD_SL_INDCTR_2 -- Source cube: INSTRMNT_RL_IL; Members' name: Not Held for sale\n)\nthen TYP_INSTRMNT_1117 -- Loans\
+      \ and Advances\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube: INSTRMNT_RL_IL; Members' name: Balance\
+      \ sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR\
+      \ = HLD_SL_INDCTR_1 -- Source cube: INSTRMNT_RL_IL; Members' name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current\
+      \ assets and disposal groups classified as held for sale\nend -- End of the Loans and Advances section\nwhen -- Start\
+      \ of the Cash balances at central banks section\n(\n(INSTRMNT_TYP_PRDCT in (TYP_INSTRMNT_511, TYP_INSTRMNT_512, TYP_INSTRMNT_522,\
+      \ TYP_INSTRMNT_1202) -- Source cube: INSTRMNT_IL; Members' name: ranferable overnight deposits, Non-transferable overnight\
+      \ deposits, Deposits with agreed maturity - other than counterpart liability to non-derecognised loans, On demand deposit\
+      \ not used for minimum reserve\nand RPYMNT_RGHTS = RPYMNT_RGHTS_1) -- Source cube: INSTRMNT_IL; On demand or short notice\n\
+      or TYP_INSTRMNT_1201 --Loan on demand used for minimum reserve\n)\nand ENTTY_RL_TYP = ENTTY_RL_TYP_27 -- Source cube:\
+      \ INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Deposit taking corporation\nand MN_DPST_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INCTR_1\
+      \ -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Main Deposit taking corporation Indicator\nand INSTTTNL_SCTR\
+      \ = INSTTTNL_SCTR_S121 -- Source cube: PRTY_IL; Members' name: Central banks\nthen\ncase\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_34\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to national\
+      \ general accepted accounting principles (nGAAP)\nor\n(\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube:\
+      \ INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International Financial\
+      \ Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_2 -- Source cube: INSTRMNT_RL_IL; Members' name: Not\
+      \ Held for sale\n)\nthen TYP_INSTRMNT_1112 -- Cash balances at central banks\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International\
+      \ Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1 -- Source cube: INSTRMNT_RL_IL; Members'\
+      \ name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets and disposal groups classified as held for sale\n\
+      end -- End of the Cash balances at central banks section\nwhen -- Start of the Other demand deposits section\nINSTRMNT_TYP_PRDCT\
+      \ in (TYP_INSTRMNT_511, TYP_INSTRMNT_512, TYP_INSTRMNT_522, TYP_INSTRMNT_1202) -- Source cube: INSTRMNT_IL; Members'\
+      \ name: Tranferable overnight deposits, Non-transferable overnight deposits, Deposits with agreed maturity - other than\
+      \ counterpart liability to non-derecognised loans, On demand deposit not used for minimum reserve\nand RPYMNT_RGHTS\
+      \ = RPYMNT_RGHTS_1 --Source cube: INSTRMNT_IL; On demand or short notice\nand ENTTY_RL_TYP = ENTTY_RL_TYP_27 -- Source\
+      \ cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Deposit taking corporation\nand MN_DPST_DPST_TKNG_CRPRTN_INDCTR\
+      \ = MN_DPST_TKNG_CRPRTN_INCTR_1 -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name: Main Deposit taking corporation\
+      \ Indicator\nand INSTTTNL_SCTR = INSTTTNL_SCTR_S122_A -- Source cube: PRTY_IL; Members' name: Credit institution\nthen\n\
+      case\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_34 -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet\
+      \ recognised financial asset instrument according to national general accepted accounting principles (nGAAP)\nor\n(\n\
+      INSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised\
+      \ financial asset instrument according to International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_2\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Not Held for sale\n)\nthen TYP_INSTRMNT_1113 -- Other demand deposits\n\
+      when\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised\
+      \ financial asset instrument according to International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets and disposal\
+      \ groups classified as held for sale\nend -- End of the Other demand deposits section\nwhen -- Start of the Equity instruments\
+      \ section\nINSTRMNT_TYP_PRDCT = TYP_INSTRMNT_2 -- Source cube: INSTRMNT_IL; Members' name: Equity instrument that is\
+      \ not a security\nthen\ncase\nwhen\n(\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_34 -- Source cube: INSTRMNT_RL_IL;\
+      \ Members' name: Balance sheet recognised financial asset instrument according to national general accepted accounting\
+      \ principles (nGAAP)\nand ENTTY_RL_TYP = ENTTY_RL_TYP_8 -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL; Members' name:\
+      \ Issuer\nand PRTY_ID <> RPRTNG_AGNT_ID -- Source cube: INSTRMNT_ENTTY_RL_ASSGNMNT_IL\n)\nor\n(\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International\
+      \ Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_2 -- Source cube: INSTRMNT_RL_IL; Members'\
+      \ name: Not Held for sale\n)\nthen TYP_INSTRMNT_1115 -- Equity instruments\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International\
+      \ Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1 -- Source cube: INSTRMNT_RL_IL; Members'\
+      \ name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets and disposal groups classified as held for sale\n\
+      end -- End of the Equity instruments section\nwhen  -- Start of the Derivatives not hedge section\nINSTRMNT_TYP_PRDCT\
+      \ in (TYP_INSTRMNT_10, TYP_INSTRMNT_380, TYP_INSTRMNT_5, -- Source cube: INSTRMNT_IL; Members' name: OTC Option other\
+      \ than OTC Credit spread option, Forward, Other OTC Derivative instrument\nTYP_INSTRMNT_6, TYP_INSTRMNT_7, TYP_INSTRMNT_8,\
+      \ TYP_INSTRMNT_9) -- Members' name: OTC Total return swap, OTC Credit default swap, Other OTC swap, OTC Credit spread\
+      \ option\nand ACCNTNG_HDG_INDCTR = ACCNTNG_HDG_INDCTR_2 -- Source cube: OTC_DRVTV_HDG_IL; Members' name: Not accounting\
+      \ hedge\nthen\ncase\nwhen\nINSTRMNT_RL_TYP in (ABSTRCT_INSTRMNT_RL_TYP_34, ABSTRCT_INSTRMNT_RL_TYP_102) -- Source cube:\
+      \ INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to national general accepted\
+      \ accounting principles (nGAAP), Non-balance sheet recognised financial asset instrument according to national general\
+      \ accepted accounting principles (nGAAP), \nor\n(\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube: INSTRMNT_RL_IL;\
+      \ Members' name: Balance sheet recognised financial asset instrument according to International Financial Reporting\
+      \ Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_2 -- Source cube: INSTRMNT_RL_IL; Members' name: Not Held for sale\n\
+      )\nthen TYP_INSTRMNT_1114 -- Derivatives not hedge\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35 -- Source cube:\
+      \ INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International Financial\
+      \ Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1 -- Source cube: INSTRMNT_RL_IL; Members' name: Held\
+      \ for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets and disposal groups classified as held for sale\nend -- End\
+      \ of the Derivatives not hedge section\nwhen  -- Start of the Derivatives hedge section\nINSTRMNT_TYP_PRDCT in (TYP_INSTRMNT_10,\
+      \ TYP_INSTRMNT_380, TYP_INSTRMNT_5, -- Source cube: INSTRMNT_IL; Members' name: OTC Option other than OTC Credit spread\
+      \ option, Forward, Other OTC Derivative instrument\nTYP_INSTRMNT_6, TYP_INSTRMNT_7, TYP_INSTRMNT_8, TYP_INSTRMNT_9)\
+      \ -- Members' name: OTC Total return swap, OTC Credit default swap, Other OTC swap, OTC Credit spread option\nand ACCNTNG_HDG_INDCTR\
+      \ = ACCNTNG_HDG_INDCTR_1 -- Source cube: OTC_DRVTV_HDG_IL; Members' name: Accounting hedge\nthen\ncase\nwhen\nINSTRMNT_RL_TYP\
+      \ = ABSTRCT_INSTRMNT_RL_TYP_34 -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset\
+      \ instrument according to national general accepted accounting principles (nGAAP)\nor\n(\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International\
+      \ Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_2 -- Source cube: INSTRMNT_RL_IL; Members'\
+      \ name: Not Held for sale\n)\nthen TYP_INSTRMNT_1119 -- Derivatives hedge\nwhen\nINSTRMNT_RL_TYP = ABSTRCT_INSTRMNT_RL_TYP_35\
+      \ -- Source cube: INSTRMNT_RL_IL; Members' name: Balance sheet recognised financial asset instrument according to International\
+      \ Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1 -- Source cube: INSTRMNT_RL_IL; Members'\
+      \ name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets and disposal groups classified as held for sale\n\
+      end -- End of the Derivatives hedge section\nelse null;"
+  business_group: PRODUCT_SEGMENTATION
+  provenance: bird_official
+  open_issues:
+  - OI-12
+- id: T05
+  name: 'Securities branch: non-negotiable debt securities as loans and advances'
+  layer: enrichment
+  inputs:
+  - SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  outputs:
+  - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL.GRSS_CRRYNG_AMNT
+  - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL.TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+  - SCRTY_EXCHNG_TRDBL_DRVTV_EIL.DBT_SCRTY_PRFRMNG_STTS_TYP
+  routine:
+  - R_DER_GRSS_CRRYNG_AMNT_1
+  - R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3
+  logic:
+    type: case
+    summary: debt securities (types 11, 13, 14, 5) with NGTBL_SCRTY_INDCTR = NGTBL_SCRTY_2 are classified TYP_INSTRMNT_1117;
+      gross carrying amount mirrors T03
+    official_algorithm_gca: |-
+      update cubes --(destination cubes: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL) The derivation logic is defined in accordance with Annex V
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_2, ACCNTNG_CLSSFCTN_3)
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_41, ACCNTNG_CLSSFCTN_4, ACCNTNG_CLSSFCTN_7, ACCNTNG_CLSSFCTN_49)
+      and
+      DBT_SCRTY_PRFRMNG_STTS_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_19
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_9
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2
+      and
+      DBT_SCRTY_PRFRMNG_STTS_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_19
+      )
+      )
+      and
+      FV <> null
+      then
+      FV
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_41, ACCNTNG_CLSSFCTN_4, ACCNTNG_CLSSFCTN_7, ACCNTNG_CLSSFCTN_49)
+      and
+      DBT_SCRTY_PRFRMNG_STTS_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_20
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_9
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2
+      and
+      DBT_SCRTY_PRFRMNG_STTS_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_20
+      )
+      )
+      and
+      FV <> null
+      and
+      ACCMLTD_CHNGS_FV_CR < 0
+      then
+      FV - ACCMLTD_CHNGS_FV_CR
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_8, ACCNTNG_CLSSFCTN_6)
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_76, ACCNTNG_CLSSFCTN_77, ACCNTNG_CLSSFCTN_44)
+      and
+      IMPRMNT_STTS = CRDT_QLTY_26
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_9, ACCNTNG_CLSSFCTN_73, ACCNTNG_CLSSFCTN_74)
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_1
+      and
+      IMPRMNT_STTS = CRDT_QLTY_26
+      )
+      )
+      and
+      CRRYNG_AMNT <> null
+      and
+      ACCMLTD_IMPRMNT <> null
+      then
+      CRRYNG_AMNT + ACCMLTD_IMPRMNT
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_76, ACCNTNG_CLSSFCTN_77, ACCNTNG_CLSSFCTN_44)
+      and
+      IMPRMNT_STTS in (CRDT_QLTY_211, CRDT_QLTY_212)
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_9, ACCNTNG_CLSSFCTN_73, ACCNTNG_CLSSFCTN_74)
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_1
+      and
+      IMPRMNT_STTS in (CRDT_QLTY_211, CRDT_QLTY_212)
+      )
+      )
+      and
+      CRRYNG_AMNT <> null
+      and
+      (
+      GNRL_ALLWNCS_CRDT_RSK <> null
+      or
+      GNRL_ALLWNCS_BNK_RSK <> null
+      )
+      then
+      CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK
+      )
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      (
+      ACCNTNG_CLSSFCTN_73
+      and
+      SBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2 -- Measured at cost
+      )
+      or
+      (
+      ACCNTNG_CLSSFCTN_44
+      and
+      IMPRMNT_STTS not in (CRDT_QLTY_26, CRDT_QLTY_211, CRDT_QLTY_212) -- Measured at cost
+      )
+      )
+      and
+      CRRYNG_AMNT <> null
+      then
+      CRRYNG_AMNT
+      );
+      or
+      (
+      set
+      GRSS_CRRYNG_AMNT =
+      case when
+      (
+      FV = null
+      and
+      CRRYNG_AMNT = null
+      )
+      then
+      null;
+    official_algorithm_type: "Update EIL Cube -- Destination cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL\n\
+      set\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = \ncase\nwhen -- Start of the Loans and Advances section \nSCRTY_EXCHNG_TRDBL_DRVTV_TYP\
+      \ in (SCRTY_EXCHNG_TRDBL_DRVTV_TYP_11, SCRTY_EXCHNG_TRDBL_DRVTV_TYP_14,  -- Source cube: SCRTY_EXCHNG_TRDBL_DRVTV_IL;\
+      \ Members' name: Debt security without underlying assets, Covered bond\nSCRTY_EXCHNG_TRDBL_DRVTV_TYP_13, SCRTY_EXCHNG_TRDBL_DRVTV_TYP_5)\
+      \ -- Members' name: Asset backed security, Fund securities\nand NGTBL_SCRTY_INDCTR = NGTBL_SCRTY_2 -- Source cube: SCRTY_EXCHNG_TRDBL_DRVTV_IL;\
+      \ Members' name: Non-negotiable security\nthen\ncase\nwhen\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_4\
+      \  -- Source cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance\
+      \ sheet recognised security position national general accepted accounting principles (nGAAP)\nor\n(\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP\
+      \ =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_3 -- Source cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL;\
+      \ Members' name: Long balance sheet recognised security position International Financial Reporting Standard (IFRS)\n\
+      and HLD_SL_INDCTR = HLD_SL_INDCTR_2 -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL; Members' name: Not Held for sale\n)\n\
+      then TYP_INSTRMNT_1117 -- Loans and Advances\nwhen\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_3\
+      \ -- Source cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance\
+      \ sheet recognised security position International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1\
+      \ -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL; Members' name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets\
+      \ and disposal groups classified as held for sale\nend -- End of the Loans and Advances section\nwhen -- Start of the\
+      \ Debt securities section\nSCRTY_EXCHNG_TRDBL_DRVTV_TYP in (SCRTY_EXCHNG_TRDBL_DRVTV_TYP_11, SCRTY_EXCHNG_TRDBL_DRVTV_TYP_14,\
+      \  -- Source cube: SCRTY_EXCHNG_TRDBL_DRVTV_IL; Members' name: Debt security without underlying assets, Covered bond\n\
+      SCRTY_EXCHNG_TRDBL_DRVTV_TYP_13, SCRTY_EXCHNG_TRDBL_DRVTV_TYP_5) -- Members' name: Asset backed security, Fund securities\n\
+      and NGTBL_SCRTY_INDCTR = NGTBL_SCRTY_1 -- Source cube: SCRTY_EXCHNG_TRDBL_DRVTV_IL; Members' name: Negotiable security\n\
+      then\ncase\nwhen\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_4  -- Source cube:\
+      \ LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance sheet recognised\
+      \ security position national general accepted accounting principles (nGAAP)\nor\n(\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP\
+      \ =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_3 -- Source cube:LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL;\
+      \ Members' name: Long balance sheet recognised security position International Financial Reporting Standard (IFRS)\n\
+      and HLD_SL_INDCTR = HLD_SL_INDCTR_2 -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL; Members' name: Not Held for sale\n)\n\
+      then TYP_INSTRMNT_1116 -- Debt securities\nwhen\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_3\
+      \ -- Source cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance\
+      \ sheet recognised security position International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1\
+      \ -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL; Members' name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets\
+      \ and disposal groups classified as held for sale\nend -- End of the Debt securities section\nwhen -- Start of the Equity\
+      \ instruments section\nSCRTY_EXCHNG_TRDBL_DRVTV_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_6  -- Source cube: SCRTY_EXCHNG_TRDBL_DRVTV_IL;\
+      \ Members' name: Equity security\nthen\ncase\nwhen\n(\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_4\
+      \  -- Source cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance\
+      \ sheet recognised security position national general accepted accounting principles (nGAAP)\nand\nand ENTTY_RL_TYP\
+      \ = ENTTY_RL_TYP_8 -- Source cube: SCRTY_ENTTY_RL_ASSGNMNT_IL; Members' name: Issuer\nand PRTY_ID <> RPRTNG_AGNT_ID\
+      \ -- Source cube: SCRTY_ENTTY_RL_ASSGNMNT_IL\n)\nor\n(\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_3\
+      \ -- Source cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance\
+      \ sheet recognised security position International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_2\
+      \ -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL; Members' name: Not Held for sale\n)\nthen TYP_INSTRMNT_1115 -- Equity\
+      \ instruments\nwhen\nLNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP =  LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_3 -- Source\
+      \ cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL; Members' name: Long balance sheet\
+      \ recognised security position International Financial Reporting Standard (IFRS)\nand HLD_SL_INDCTR = HLD_SL_INDCTR_1\
+      \ -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL; Members' name: Held for sale\nthen TYP_INSTRMNT_1118 -- Non-current assets\
+      \ and disposal groups classified as held for sale\nend -- End of the Equity instruments section\nelse null;"
+  business_group: PRODUCT_SEGMENTATION
+  provenance: bird_official
+- id: T06
+  name: Gate on FINREP reporting scheme
+  layer: reporting
+  inputs:
+  - INTRNL_GRP_RL_EIL.FNRP_RPRTNG_SCHM
+  outputs:
+  - F_18.00.a scope
+  logic:
+    type: filter
+    routine: R_F_18.00.a_ALL
+    official_algorithm: "Select *\nwhere\nFNRP_RPRTNG_SCHM in \n(\nFNRP_RPRTNG_SCHM_1, \nFNRP_RPRTNG_SCHM_2, \nFNRP_RPRTNG_SCHM_3\n\
+      );"
+    meaning: full, simplified or over-simplified FINREP reporters
+  business_group: REGULATORY_SCOPE
+  provenance: bird_official
+  open_issues:
+  - OI-13
+- id: T07
+  name: Resolve counterparty sector and debtor role per sector row
+  layer: reporting
+  inputs:
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.ENTTY_RL_TYP
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.MN_DBTR_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.MN_DPST_TKNG_CRPRTN_INDCTR
+  - INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.MN_LSS_INDCTR
+  - PRTY_EIL.INSTTTNL_SCTR
+  - PRTY_EIL.MLTLTRL_DVLPMNT_BNK_INDCTR
+  - SCRTY_ENTTY_RL_ASSGNMNT_EIL.ENTTY_RL_TYP
+  - SCRTY_ENTTY_RL_ASSGNMNT_EIL.PRMRY_ISSR_INDCTR
+  outputs:
+  - F_18.00.a_R0080_*
+  - F_18.00.a_R0090_*
+  - F_18.00.a_R0100_*
+  - F_18.00.a_R0110_*
+  - F_18.00.a_R0120_*
+  - F_18.00.a_R0150_*
+  logic:
+    type: filter_partition
+    common: TYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117 and ACCNTNG_CLSSFCTN in (6, 74, 76, 77)
+    debtor_role: (ENTTY_RL_TYP in (20, 28) and MN_DBTR_INDCTR_1) or (ENTTY_RL_TYP 27 and MN_DPST_TKNG_CRPRTN_INDCTR_1) or
+      (ENTTY_RL_TYP 19 and MN_LSS_INDCTR_1) or (ENTTY_RL_TYP 8 and PRMRY_ISSR_INDCTR_1)
+    rows:
+      R0080: Central banks
+      R0090: General governments
+      R0100: Credit institutions
+      R0110: Other financial corporations
+      R0120: Non-financial corporations
+      R0150: Households
+    official_algorithms:
+      R0080: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\n\
+        INSTTTNL_SCTR = INSTTTNL_SCTR_S121\nwhere\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117\nand ACCNTNG_CLSSFCTN\
+        \ in \n(\nACCNTNG_CLSSFCTN_6, \nACCNTNG_CLSSFCTN_74, \nACCNTNG_CLSSFCTN_76, \nACCNTNG_CLSSFCTN_77\n)\nand INSTTTNL_SCTR\
+        \ = INSTTTNL_SCTR_S121\nand (\n(ENTTY_RL_TYP in \n(\nENTTY_RL_TYP_20,\nENTTY_RL_TYP_28\n) -- Seller; Loan debtor [Cube:\
+        \ INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DBTR_INDCTR = MN_DBTR_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_27  --\
+        \ Deposit taking corporation [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INDCTR_1)\n\
+        or\n(ENTTY_RL_TYP = ENTTY_RL_TYP_19  -- Lessee [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_LSS_INDCTR = MN_LSS_INDCTR_1)\n\
+        or\n(ENTTY_RL_TYP = ENTTY_RL_TYP_8 -- Issuer [Cube: SCRTY_ENTTY_RL_ASSGNMNT_EIL]\nand PRMRY_ISSR_INDCTR = PRMRY_ISSR_INDCTR_1));"
+      R0090: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\n\
+        INSTTTNL_SCTR = INSTTTNL_SCTR_S13_IO\nwhere\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117\nand ACCNTNG_CLSSFCTN\
+        \ in \n(\nACCNTNG_CLSSFCTN_6, \nACCNTNG_CLSSFCTN_74, \nACCNTNG_CLSSFCTN_76, \nACCNTNG_CLSSFCTN_77\n)\nand  INSTTTNL_SCTR\
+        \ in \n(\nINSTTTNL_SCTR_S1311, \nINSTTTNL_SCTR_S1312, \nINSTTTNL_SCTR_S1313, \nINSTTTNL_SCTR_S1314, \nINSTTTNL_SCTR_IO\n\
+        )\nand (\n(ENTTY_RL_TYP in \n(\nENTTY_RL_TYP_20,\nENTTY_RL_TYP_28\n) -- Seller; Loan debtor [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\n\
+        and MN_DBTR_INDCTR = MN_DBTR_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_27  -- Deposit taking corporation [Cube:\
+        \ INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INDCTR_1)\nor\n(ENTTY_RL_TYP\
+        \ = ENTTY_RL_TYP_19  -- Lessee [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_LSS_INDCTR = MN_LSS_INDCTR_1)\nor\n\
+        (ENTTY_RL_TYP = ENTTY_RL_TYP_8  -- Issuer [Cube: SCRTY_ENTTY_RL_ASSGNMNT_EIL]\nand PRMRY_ISSR_INDCTR = PRMRY_ISSR_INDCTR_1));"
+      R0100: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\n\
+        INSTTTNL_SCTR = INSTTTNL_SCTR_S1_MDB\nwhere\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117\nand ACCNTNG_CLSSFCTN\
+        \ in \n(\nACCNTNG_CLSSFCTN_6, \nACCNTNG_CLSSFCTN_74, \nACCNTNG_CLSSFCTN_76, \nACCNTNG_CLSSFCTN_77\n)\nand (INSTTTNL_SCTR\
+        \ in \n(\nINSTTTNL_SCTR_S122_A_1, \nINSTTTNL_SCTR_S122_A_2\n)\nor MLTLTRL_DVLPMNT_BNK_INDCTR = MLTLTRL_DVLPMNT_BNK_INDCTR_1)\n\
+        and (\n(ENTTY_RL_TYP in \n(\nENTTY_RL_TYP_20,\nENTTY_RL_TYP_28\n) -- Seller; Loan debtor [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\n\
+        and MN_DBTR_INDCTR = MN_DBTR_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_27 -- Deposit taking corporation [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\n\
+        and MN_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_19 -- Lessee [Cube:\
+        \ INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_LSS_INDCTR = MN_LSS_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_8 -- Issuer\
+        \ [Cube: SCRTY_ENTTY_RL_ASSGNMNT_EIL]\nand PRMRY_ISSR_INDCTR = PRMRY_ISSR_INDCTR_1));"
+      R0110: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\n\
+        INSTTTNL_SCTR  = INSTTTNL_SCTR_S12_D\nwhere\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117\nand ACCNTNG_CLSSFCTN\
+        \ in \n(\nACCNTNG_CLSSFCTN_6, \nACCNTNG_CLSSFCTN_74, \nACCNTNG_CLSSFCTN_76, \nACCNTNG_CLSSFCTN_77\n)\nand  INSTTTNL_SCTR\
+        \ in \n(\nINSTTTNL_SCTR_S123, \nINSTTTNL_SCTR_S124, \nINSTTTNL_SCTR_S125_I, \nINSTTTNL_SCTR_S125_C, \nINSTTTNL_SCTR_S125_A,\
+        \ \nINSTTTNL_SCTR_S125_E, \nINSTTTNL_SCTR_S125_D, \nINSTTTNL_SCTR_S125_B, \nINSTTTNL_SCTR_S125_W, \nINSTTTNL_SCTR_S127,\
+        \ \nINSTTTNL_SCTR_S128, \nINSTTTNL_SCTR_S129,  \nINSTTTNL_SCTR_S122_B1, \nINSTTTNL_SCTR_S122_B2\n)\nand (\n(ENTTY_RL_TYP\
+        \ in \n(\nENTTY_RL_TYP_20,\nENTTY_RL_TYP_28\n) -- Seller; Loan debtor [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand\
+        \ MN_DBTR_INDCTR = MN_DBTR_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_27 -- Deposit taking corporation [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\n\
+        and MN_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_19 -- Lessee [Cube:\
+        \ INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_LSS_INDCTR = MN_LSS_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_8 -- Issuer\
+        \ [Cube: SCRTY_ENTTY_RL_ASSGNMNT_EIL]\nand PRMRY_ISSR_INDCTR = PRMRY_ISSR_INDCTR_1));"
+      R0120: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\n\
+        INSTTTNL_SCTR = INSTTTNL_SCTR_S11\nwhere\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117\nand ACCNTNG_CLSSFCTN\
+        \ in \n(\nACCNTNG_CLSSFCTN_6, \nACCNTNG_CLSSFCTN_74, \nACCNTNG_CLSSFCTN_76, \nACCNTNG_CLSSFCTN_77\n)\nand INSTTTNL_SCTR\
+        \ = INSTTTNL_SCTR_S11\nand (\n(ENTTY_RL_TYP in \n(\nENTTY_RL_TYP_20,\nENTTY_RL_TYP_28\n) -- Seller; Loan debtor [Cube:\
+        \ INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DBTR_INDCTR = MN_DBTR_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_27 --\
+        \ Deposit taking corporation [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DPST_TKNG_CRPRTN_INDCTR = MN_DPST_TKNG_CRPRTN_INDCTR_1)\n\
+        or\n(ENTTY_RL_TYP = ENTTY_RL_TYP_19 -- Lessee [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_LSS_INDCTR = MN_LSS_INDCTR_1)\n\
+        or\n(ENTTY_RL_TYP = ENTTY_RL_TYP_8 -- Issuer [Cube: SCRTY_ENTTY_RL_ASSGNMNT_EIL]\nand PRMRY_ISSR_INDCTR = PRMRY_ISSR_INDCTR_1));"
+      R0150: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\n\
+        INSTTTNL_SCTR = INSTTTNL_SCTR_S1_A\nwhere\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117\nand ACCNTNG_CLSSFCTN\
+        \ in \n(\nACCNTNG_CLSSFCTN_6, \nACCNTNG_CLSSFCTN_74, \nACCNTNG_CLSSFCTN_76, \nACCNTNG_CLSSFCTN_77\n)\nand INSTTTNL_SCTR\
+        \ in \n(\nINSTTTNL_SCTR_S14_A, \nINSTTTNL_SCTR_S14_B, \nINSTTTNL_SCTR_S15\n)\nand (\n(ENTTY_RL_TYP in \n(\nENTTY_RL_TYP_20,\n\
+        ENTTY_RL_TYP_28\n) -- Seller; Loan debtor [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DBTR_INDCTR = MN_DBTR_INDCTR_1)\n\
+        or\n(ENTTY_RL_TYP = ENTTY_RL_TYP_27 -- Deposit taking corporation [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\nand MN_DPST_TKNG_CRPRTN_INDCTR\
+        \ = MN_DPST_TKNG_CRPRTN_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_19 -- Lessee [Cube: INSTRMNT_ENTTY_RL_ASSGNMNT_EIL]\n\
+        and MN_LSS_INDCTR = MN_LSS_INDCTR_1)\nor\n(ENTTY_RL_TYP = ENTTY_RL_TYP_8 -- Issuer [Cube: SCRTY_ENTTY_RL_ASSGNMNT_EIL]\n\
+        and PRMRY_ISSR_INDCTR = PRMRY_ISSR_INDCTR_1));"
+  business_group: COUNTERPARTY_ENRICHMENT
+  provenance: bird_official
+  open_issues:
+  - OI-10
+  - OI-12
+- id: T08
+  name: Row 0070 as sum of sector rows
+  layer: reporting
+  inputs:
+  - F_18.00.a_R0080
+  - F_18.00.a_R0090
+  - F_18.00.a_R0100
+  - F_18.00.a_R0110
+  - F_18.00.a_R0120
+  - F_18.00.a_R0150
+  outputs:
+  - F_18.00.a_R0070
+  logic:
+    type: aggregate
+    official_algorithm: SUM(R0080, R0090, R0100, R0110, R0120, R0150)
+  business_group: AGGREGATION
+  provenance: bird_official
+  open_issues:
+  - OI-10
+- id: T09
+  name: 'Column 0010: gross carrying amount'
+  layer: reporting
+  inputs:
+  - GRSS_CRRYNG_AMNT
+  outputs:
+  - cell F_18.00.a R0070 C0010
+  logic:
+    type: aggregate
+    function: sum
+    filter: GRSS_CRRYNG_AMNT > 0
+    official_algorithm: |-
+      Update DataPointCube
+      set
+      GRSS_CRRYNG_AMNT = GRSS_CRRYNG_AMNT
+      where
+      GRSS_CRRYNG_AMNT > 0;
+  business_group: AGGREGATION
+  provenance: bird_official
+- id: T10
+  name: 'Column 0060: non-performing'
+  layer: reporting
+  inputs:
+  - INSTRMNT_RL_EIL.PRFRMNG_STTS
+  - SCRTY_EXCHNG_TRDBL_DRVTV_EIL.DBT_SCRTY_PRFRMNG_STTS_TYP
+  - GRSS_CRRYNG_AMNT
+  outputs:
+  - cell F_18.00.a R0070 C0060
+  logic:
+    type: aggregate
+    function: sum
+    filter: GRSS_CRRYNG_AMNT > 0 and (PRFRMNG_STTS = CRDT_QLTY_1 or DBT_SCRTY_PRFRMNG_STTS_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_20)
+    official_algorithm: |-
+      Update DataPointCube
+      set
+      GRSS_CRRYNG_AMNT = GRSS_CRRYNG_AMNT,
+      PRFRMNG_STTS = CRDT_QLTY_1
+      where
+      GRSS_CRRYNG_AMNT > 0
+      and
+      (PRFRMNG_STTS = CRDT_QLTY_1
+      or
+      DBT_SCRTY_PRFRMNG_STTS_TYP = SCRTY_EXCHNG_TRDBL_DRVTV_TYP_20);
+  business_group: CREDIT_QUALITY_CLASSIFICATION
+  provenance: bird_official
+- id: T11
+  name: Compute NPL ratio
+  layer: kri
+  inputs:
+  - cell F_18.00.a R0070 C0060
+  - cell F_18.00.a R0070 C0010
+  outputs:
+  - kri.NPL_RATIO
+  logic:
+    type: expression
+    expr: C0060 / NULLIF(C0010, 0)
+  business_group: KRI_CALCULATION
+  provenance: gap_fill
+  open_issues:
+  - OI-07
+algorithm_validation:
+  method: identifiers in algorithm code (comments removed) checked against variables, members, cubes and routines in the export
+  findings:
+    R_DER_GRSS_CRRYNG_AMNT_3:
+      unknown_identifiers: []
+      member_used_without_variable:
+      - ACCNTNG_CLSSFCTN_73
+      - ACCNTNG_CLSSFCTN_44
+    R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2:
+      unknown_identifiers:
+      - MN_DPST_DPST_TKNG_CRPRTN_INDCTR
+      - MN_DPST_TKNG_CRPRTN_INCTR_1
+      member_used_without_variable:
+      - TYP_INSTRMNT_1201
+    R_DER_GRSS_CRRYNG_AMNT_1:
+      unknown_identifiers: []
+      member_used_without_variable:
+      - ACCNTNG_CLSSFCTN_73
+      - ACCNTNG_CLSSFCTN_44
+diff_vs_v0.1:
+- item: framework_version
+  community_v0.1: FINREP 3.0
+  official: FINREP 4.3 (valid from 2026-03-01)
+- item: cell_filters
+  community_v0.1:
+  - ACCNTNG_CLSSFCTN
+  - DFLT_STTS
+  - HLD_SL_INDCTR
+  - IMPRMNT_STTS
+  - INSTTTNL_SCTR
+  - MLTLTRL_DVLPMNT_BNK_INDCTR
+  - MN_DBTR_INDCTR
+  - NGTBL_SCRTY_INDCTR
+  - PRFRMNG_STTS
+  - PRPS
+  - PRTY_RL_TYP
+  - RPYMNT_RGHTS
+  - SBJCT_IMPRMNT_INDCTR
+  - TYP_CLLTRL
+  - TYP_INSTRMNT
+  official:
+  - ACCNTNG_CLSSFCTN
+  - PRFRMNG_STTS
+  - TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+  removed_in_official:
+  - DFLT_STTS
+  - HLD_SL_INDCTR
+  - IMPRMNT_STTS
+  - INSTTTNL_SCTR
+  - MLTLTRL_DVLPMNT_BNK_INDCTR
+  - MN_DBTR_INDCTR
+  - NGTBL_SCRTY_INDCTR
+  - PRPS
+  - PRTY_RL_TYP
+  - RPYMNT_RGHTS
+  - SBJCT_IMPRMNT_INDCTR
+  - TYP_CLLTRL
+  - TYP_INSTRMNT
+  added_in_official:
+  - TYP_FNNCL_ASST_INSTRMNT_ANNX_V
+- item: instrument_type
+  community_v0.1: filter TYP_INSTRMNT under node TYP_INSTRMNT_251
+  official: derived TYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117 (T04, T05)
+  products_only_in_community:
+  - TYP_INSTRMNT_1003
+  - TYP_INSTRMNT_1201
+  - TYP_INSTRMNT_214
+  - TYP_INSTRMNT_30
+  products_only_in_official:
+  - TYP_INSTRMNT_162
+  - TYP_INSTRMNT_163
+- item: debtor_roles
+  community_v0.1:
+  - '18'
+  - '19'
+  - '28'
+  - '4'
+  - '8'
+  official:
+  - '20'
+  - '27'
+  - '28'
+  - '19'
+  - '8'
+  note: official pairs each role with its own 'main' indicator; community used MN_DBTR_INDCTR for all
+- item: gca_amortised_cost
+  community_v0.1: CRRYNG_AMNT - ACCMLTD_IMPRMNT
+  official: CRRYNG_AMNT + ACCMLTD_IMPRMNT
+- item: gca_general_allowances
+  community_v0.1: CRRYNG_AMNT - GNRL_ALLWNCS_* (77 only)
+  official: CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK (76, 77, 44 and 9/73/74 if subject to impairment)
+- item: gca_portfolio_74
+  community_v0.1: CRRYNG_AMNT + ACCMLTD_IMPRMNT unconditionally
+  official: only if SBJCT_IMPRMNT_INDCTR_1 and an impairment status applies
+- item: gca_inputs
+  community_v0.1: ACCMLTD_CHNGS_FV, INSTRMNT_RL_TYP guard
+  official: ACCMLTD_CHNGS_FV_CR, no INSTRMNT_RL_TYP guard
+- item: performing_status_level
+  community_v0.1: ambiguous (PRTY overrides INSTRMNT_RL in generated code)
+  official: INSTRMNT_RL.PRFRMNG_STTS (instrument level), plus DBT_SCRTY_PRFRMNG_STTS_TYP for securities
+- item: reporting_scheme_gate
+  community_v0.1: absent
+  official: FNRP_RPRTNG_SCHM in (1, 2, 3)
+- item: positive_amount_filter
+  community_v0.1: absent
+  official: GRSS_CRRYNG_AMNT > 0
+- item: non_negotiable_securities
+  community_v0.1: excluded from row 0070
+  official: included as loans and advances (T05)
+- item: sector_partition
+  community_v0.1: INSTTTNL_SCTR unrestricted at row 0070
+  official: row 0070 = sum of six sector rows; positions outside those sectors drop out
+- item: join_keys
+  community_v0.1: LDM foreign keys
+  official: identical keys in role-specific cube relationships (unchanged)
+- item: business_definitions
+  community_v0.1: empty
+  official: variable descriptions and legal references available (see attributes)
+open_issues:
+- id: OI-01
+  status: RESOLVED
+  resolution: Official uses CRRYNG_AMNT + ACCMLTD_IMPRMNT. The community derivation had the sign wrong.
+- id: OI-02
+  status: RESOLVED
+  resolution: Official branches use IMPRMNT_STTS; the community code's duplicate case and PRFRMNG_STTS match were errors.
+- id: OI-03
+  status: RESOLVED
+  resolution: Join keys confirmed by official cube relationships.
+- id: OI-04
+  status: RESOLVED
+  resolution: Official attribute lineage takes PRFRMNG_STTS from INSTRMNT_RL (instrument level).
+- id: OI-05
+  status: RESOLVED
+  resolution: No collateral filter in the official cells; collateral is not part of this lineage.
+- id: OI-06
+  status: RESOLVED
+  resolution: Official algorithms use member IDs directly (e.g. CRDT_QLTY_1), so no code mapping is needed.
+- id: OI-07
+  status: NARROWED
+  resolution: Official cell description confirms row 0070 sits under 'debt instruments at cost or at amortised cost'. Still
+    decide whether the KRI is this cell ratio or a wider headline ratio.
+- id: OI-08
+  status: RESOLVED
+  resolution: Official export has algorithm text for every routine and business definitions for variables.
+- id: OI-09
+  status: OPEN
+  severity: medium
+  issue: 'Official algorithms are pseudo-SQL, not executable, and contain defects (see algorithm_validation): identifiers
+    that exist nowhere in the export, and predicates that name a member without its variable. They must be normalised when
+    rendering SQL; record each fix.'
+- id: OI-10
+  status: OPEN
+  severity: medium
+  issue: Official attribute lineage for the R0070 cells omits the counterparty attributes that the sector rows use (8 source
+    attributes, see lineage_gap_at_total_row). Model R0070 as the sum of sector rows (T08) so lineage is complete.
+- id: OI-11
+  status: OPEN
+  severity: low
+  issue: GRSS_CRRYNG_AMNT gets no value for an amortised-cost loan whose ACCMLTD_IMPRMNT is null; the C0010/C0060 filter GRSS_CRRYNG_AMNT
+    > 0 then silently drops it. Decide whether null impairment is treated as zero in the synthetic data.
+- id: OI-12
+  status: OPEN
+  severity: low
+  issue: Official algorithms reference portfolios and products (e.g. ACCNTNG_CLSSFCTN_44, 8, 9, 73) outside the R0070 scope;
+    the spec keeps only in-scope branches as structured logic and the full text verbatim.
+- id: OI-13
+  status: OPEN
+  severity: medium
+  issue: FNRP_RPRTNG_SCHM sits on INTRNL_GRP_RL, which has no relationship to instruments. The gate is joined on the context
+    key; which GRP_RL_TYP row applies is not specified.
+- id: OI-14
+  status: OPEN
+  severity: low
+  issue: Legal references cite Implementing Regulation (EU) No 680/2014, which was replaced by Implementing Regulation (EU)
+    2021/451. Confirm citations before writing the Collibra and regulatory documents.

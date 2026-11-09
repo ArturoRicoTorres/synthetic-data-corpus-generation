@@ -1,6 +1,6 @@
 # Canonical lineage spec v0.2 - NPL ratio - built from the official BIRD export by src/build_spec_official.py
 spec_version: 0.2-draft
-status: DRAFT - open issues OI-07, OI-09 to OI-14 need sign-off before artifacts are rendered
+status: DRAFT - open issues OI-14 to OI-18 are undecided; decided issues are logged in decisions.md
 provenance:
   primary_source:
     type: official ECB BIRD metadata export
@@ -430,6 +430,194 @@ attributes:
   domain: Accounting hedge indicator
   legal_refs: []
   provenance: bird_official
+- id: SCRTY_EXCHNG_TRDBL_DRVTV_IL.SCRTY_EXCHNG_TRDBL_DRVTV_TYP
+  table: SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  column: SCRTY_EXCHNG_TRDBL_DRVTV_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Security and exchange tradable derivative type
+  business_definition: A discriminator to distinguish between securities and exchange tradable derivatives.
+  domain: Security or exchange tradable derivative type
+  legal_refs: []
+  provenance: bird_official
+- id: SCRTY_EXCHNG_TRDBL_DRVTV_IL.NGTBL_SCRTY_INDCTR
+  table: SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  column: NGTBL_SCRTY_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Negotiable security indicator
+  business_definition: An indicator specifying is a security is listed or not.
+  domain: Negotiable security
+  legal_refs: []
+  provenance: bird_official
+- id: SCRTY_EXCHNG_TRDBL_DRVTV_IL.DBT_SCRTY_PRFRMNG_STTS_TYP
+  table: SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  column: DBT_SCRTY_PRFRMNG_STTS_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Debt security by Performing status type
+  business_definition: Performing status in accordance with Implementing Regulation (EU) No 680/2014.
+  domain: Security or exchange tradable derivative type
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Long/Short balance sheet recognised security position type
+  business_definition: Long/Short balance sheet recognised security position type defines whether a long/short balance sheet
+    recognised security position is long or short.
+  domain: Long balance sheet recognised security position accounting standard type
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.ACCNTNG_CLSSFCTN
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: ACCNTNG_CLSSFCTN
+  present_in_official_il: true
+  mandatory: true
+  business_name: Accounting classification
+  business_definition: Accounting portfolio where the instrument is recorded in accordance with the accounting standard –
+    IFRS or national GAAP –under Regulation (EU) 2015/534 (ECB/2015/13) applied by the observed agent's legal entity.
+  domain: Accounting classification
+  legal_refs:
+  - REG_EU_534_2015
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.SBJCT_IMPRMNT_INDCTR
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: SBJCT_IMPRMNT_INDCTR
+  present_in_official_il: true
+  mandatory: true
+  business_name: Subject to impairment indicator
+  business_definition: Subject to impairment indicator indicates whether the asset is subject to impairment or not.
+  domain: Subject to impairment indicator
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.IMPRMNT_STTS
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: IMPRMNT_STTS
+  present_in_official_il: true
+  mandatory: false
+  business_name: Impairment status
+  business_definition: Type of impairment recorded in accordance with the accounting standard – IFRS or national GAAP.
+  domain: Credit quality
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.CRRYNG_AMNT
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: CRRYNG_AMNT
+  present_in_official_il: true
+  mandatory: false
+  business_name: Carrying amount
+  business_definition: The carrying amount in accordance with Annex V to Implementing Regulation (EU) No 680/2014.
+  domain: Monetary
+  legal_refs:
+  - REG_EU_680_2014
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.ACCMLTD_IMPRMNT
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: ACCMLTD_IMPRMNT
+  present_in_official_il: true
+  mandatory: false
+  business_name: Accumulated impairment
+  business_definition: |-
+    The amount of loss allowances that are held against or are allocated to the instrument on the reporting reference date. This data attribute applies to instruments subject to impairment under the applied accounting standard. Under IFRS, the accumulated impairment relates to the following
+    amounts:
+    (i) loss allowance at an amount equal to 12-month expected
+    credit losses;
+    (ii) loss allowance at an amount equal to lifetime expected
+    credit losses.
+    Under GAAP, the accumulated impairment relates to the following
+    amounts:
+    (i) loss allowance at an amount equal to general allowances;
+    (ii) loss allowance at an amount equal to specific allowances.
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.FV
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: FV
+  present_in_official_il: true
+  mandatory: false
+  business_name: Fair value
+  business_definition: Fair value as defined in IFRS 13.9.
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.ACCMLTD_CHNGS_FV_CR
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: ACCMLTD_CHNGS_FV_CR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Accumulated changes in fair value due to credit risk
+  business_definition: Accumulated changes in fair value due to credit risk in accordance with Part 2.46 of Annex V to Implementing
+    Regulation (EU) No 680/2014.
+  domain: Monetary
+  legal_refs:
+  - REG_EU_680_2014
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.GNRL_ALLWNCS_CRDT_RSK
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: GNRL_ALLWNCS_CRDT_RSK
+  present_in_official_il: true
+  mandatory: false
+  business_name: General allowances for credit risk affecting carrying amount (nGAAP)
+  business_definition: General allowances for credit risk affecting carrying amount (nGAAP)
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.GNRL_ALLWNCS_BNK_RSK
+  table: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  column: GNRL_ALLWNCS_BNK_RSK
+  present_in_official_il: true
+  mandatory: false
+  business_name: General allowances for bank risk affecting carrying amount (nGAAP)
+  business_definition: General allowances for bank risk affecting carrying amount (nGAAP)
+  domain: Monetary
+  legal_refs: []
+  provenance: bird_official
+- id: LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL.HLD_SL_INDCTR
+  table: LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+  column: HLD_SL_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Held for sale indicator
+  business_definition: A variable indicating the Non-current assets and instruments in disposal groups classified as held
+    for sale in accordance with IFRS5. Is not applicable under national GAAP based on BAD.
+  domain: Held for sale
+  legal_refs: []
+  provenance: bird_official
+- id: SCRTY_ENTTY_RL_ASSGNMNT_IL.ENTTY_RL_TYP
+  table: SCRTY_ENTTY_RL_ASSGNMNT_IL
+  column: ENTTY_RL_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Entity role type
+  business_definition: A discriminator to distinguish between party roles, organisation roles, central bank and private sector
+    company roles and legal person roles.
+  domain: Entity role type
+  legal_refs: []
+  provenance: bird_official
+- id: SCRTY_ENTTY_RL_ASSGNMNT_IL.PRMRY_ISSR_INDCTR
+  table: SCRTY_ENTTY_RL_ASSGNMNT_IL
+  column: PRMRY_ISSR_INDCTR
+  present_in_official_il: true
+  mandatory: false
+  business_name: Primary issuer indicator
+  business_definition: Primary issuer indicator
+  domain: Primary issuer indicator
+  legal_refs: []
+  provenance: bird_official
+- id: SCRTY_ENTTY_RL_ASSGNMNT_IL.PRTY_ID
+  table: SCRTY_ENTTY_RL_ASSGNMNT_IL
+  column: PRTY_ID
+  present_in_official_il: true
+  mandatory: true
+  business_name: Party identifier
+  business_definition: An identifier that uniquely identifies a party.
+  domain: String
+  legal_refs: []
+  provenance: bird_official
 - id: derived.GRSS_CRRYNG_AMNT
   table: (EIL, derived)
   column: GRSS_CRRYNG_AMNT
@@ -535,6 +723,122 @@ joins:
 - relationship: ASS_CRDTR_PRVDS_OTHR_LN_S_OTHR_LN_CRDTR_ASSGNMNT_25372_IL
   parent: ENTTY_RL_IL
   child: INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - ENTTY_RL_TYP
+  - PRTY_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_PRTY_ACTS_PRTY_RL_68323_IL
+  parent: PRTY_IL
+  child: ENTTY_RL_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - PRTY_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_OTC_DRVTV_INSTRMNT_OTC_DRVTV_HDG_60023_IL
+  parent: INSTRMNT_IL
+  child: OTC_DRVTV_HDG_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INSTRMNT_ID
+  - RPRTNG_AGNT_ID
+  provenance: bird_official
+- relationship: ASS_SCRTY_INVLVD_SCRTY_PSTN_30258_IL
+  parent: SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  child: SCRTY_PSTN_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - RPRTNG_AGNT_ID
+  - SCRTY_EXCHNG_TRDBL_DRVTV_ID
+  key_map:
+    SCRTY_EXCHNG_TRDBL_DRVTV_ID: SCRTY_ID
+  provenance: bird_official
+- relationship: ASS_SCRTY_PSTN_BLNC_SHT_NN_BLNC_SHT_RCGNSD_28454_IL
+  parent: SCRTY_PSTN_IL
+  child: BLNC_SHT_RCGNSD_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INVSTR_ENTTY_RL_TYP
+  - INVSTR_PRTY_ID
+  - RPRTNG_AGNT_ID
+  - SCRTY_ID
+  provenance: bird_official
+- relationship: ASS_BLNC_SHT_RCGNSD_SCRTY_PSTN_LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_34797_IL
+  parent: BLNC_SHT_RCGNSD_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+  child: LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INVSTR_ENTTY_RL_TYP
+  - INVSTR_PRTY_ID
+  - RPRTNG_AGNT_ID
+  - SCRTY_ID
+  - SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP
+  provenance: bird_official
+- relationship: ASS_LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_ASSGND_PRDNTL_PRTFL_S_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_26869_IL
+  parent: LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+  child: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INVSTR_ENTTY_RL_TYP
+  - INVSTR_PRTY_ID
+  - LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP
+  - RPRTNG_AGNT_ID
+  - SCRTY_ID
+  - SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP
+  provenance: bird_official
+- relationship: ASS_LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ASSGND_ACCNTNG_CLSSFCTN_S_LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_39975_IL
+  parent: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_IL
+  child: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - INVSTR_ENTTY_RL_TYP
+  - INVSTR_PRTY_ID
+  - LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP
+  - PRDNTL_PRTFL_TYP
+  - RPRTNG_AGNT_ID
+  - SCRTY_ID
+  - SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP
+  provenance: bird_official
+- relationship: ASS_SCRTY_EXCHNG_TRDBL_DRVTV_ISSD_ISSR_S_SCRTY_ISSR_ASSGNMNT_74658_IL
+  parent: SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  child: SCRTY_ENTTY_RL_ASSGNMNT_IL
+  cardinality: 1:N
+  keys:
+  - ACCNTNG_CNSLDTN_LVL
+  - ACCNTNG_STNDRD
+  - DT_RFRNC
+  - RPRTNG_AGNT_ID
+  - SCRTY_EXCHNG_TRDBL_DRVTV_ID
+  provenance: bird_official
+- relationship: ASS_ISSR_ISSS_SCRTY_EXCHNG_TRDBL_DRVTV_S_SCRTY_ISSR_ASSGNMNT_91707_IL
+  parent: ENTTY_RL_IL
+  child: SCRTY_ENTTY_RL_ASSGNMNT_IL
   cardinality: 1:N
   keys:
   - ACCNTNG_CNSLDTN_LVL
@@ -1473,35 +1777,41 @@ open_issues:
   status: RESOLVED
   resolution: Official algorithms use member IDs directly (e.g. CRDT_QLTY_1), so no code mapping is needed.
 - id: OI-07
-  status: NARROWED
+  status: DECIDED
+  decision: see decisions.md
   resolution: Official cell description confirms row 0070 sits under 'debt instruments at cost or at amortised cost'. Still
     decide whether the KRI is this cell ratio or a wider headline ratio.
 - id: OI-08
   status: RESOLVED
   resolution: Official export has algorithm text for every routine and business definitions for variables.
 - id: OI-09
-  status: OPEN
+  status: DECIDED
+  decision: see decisions.md
   severity: medium
   issue: 'Official algorithms are pseudo-SQL, not executable, and contain defects (see algorithm_validation): identifiers
     that exist nowhere in the export, and predicates that name a member without its variable. They must be normalised when
     rendering SQL; record each fix.'
 - id: OI-10
-  status: OPEN
+  status: DECIDED
+  decision: see decisions.md
   severity: medium
   issue: Official attribute lineage for the R0070 cells omits the counterparty attributes that the sector rows use (8 source
     attributes, see lineage_gap_at_total_row). Model R0070 as the sum of sector rows (T08) so lineage is complete.
 - id: OI-11
-  status: OPEN
+  status: DECIDED
+  decision: see decisions.md
   severity: low
   issue: GRSS_CRRYNG_AMNT gets no value for an amortised-cost loan whose ACCMLTD_IMPRMNT is null; the C0010/C0060 filter GRSS_CRRYNG_AMNT
     > 0 then silently drops it. Decide whether null impairment is treated as zero in the synthetic data.
 - id: OI-12
-  status: OPEN
+  status: DECIDED
+  decision: see decisions.md
   severity: low
   issue: Official algorithms reference portfolios and products (e.g. ACCNTNG_CLSSFCTN_44, 8, 9, 73) outside the R0070 scope;
     the spec keeps only in-scope branches as structured logic and the full text verbatim.
 - id: OI-13
-  status: OPEN
+  status: DECIDED
+  decision: see decisions.md
   severity: medium
   issue: FNRP_RPRTNG_SCHM sits on INTRNL_GRP_RL, which has no relationship to instruments. The gate is joined on the context
     key; which GRP_RL_TYP row applies is not specified.
@@ -1510,3 +1820,27 @@ open_issues:
   severity: low
   issue: Legal references cite Implementing Regulation (EU) No 680/2014, which was replaced by Implementing Regulation (EU)
     2021/451. Confirm citations before writing the Collibra and regulatory documents.
+- id: OI-15
+  status: OPEN
+  severity: medium
+  issue: INSTTTNL_SCTR_S126 (financial auxiliaries) sits under INSTTTNL_SCTR_S12_D in the member hierarchy but is missing
+    from the member list of official routine R_F_18.00.a_R0110. Read literally, loans to financial auxiliaries fall in no
+    sector row and drop out of R0070.
+- id: OI-16
+  status: OPEN
+  severity: medium
+  issue: R_F_18.00.a_R0100 selects MLTLTRL_DVLPMNT_BNK_INDCTR_1 regardless of sector, and R_F_18.00.a_R0090 selects general-government
+    sectors without excluding multilateral development banks. A development bank party with a general-government sector is
+    counted in both rows, so the R0070 sum counts it twice.
+- id: OI-17
+  status: OPEN
+  severity: medium
+  issue: Official algorithms compare against parent members while input data may hold their leaves (and vice versa). R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+    excludes INSTTTNL_SCTR_S122_A, but input may hold S122_A_1/S122_A_2; the sector rows list leaves only, so a party stored
+    as parent S14 or S122_A matches no row. The SQL compares members literally (OI-09).
+- id: OI-18
+  status: OPEN
+  severity: low
+  issue: The general-allowances branch of R_DER_GRSS_CRRYNG_AMNT_1/_3 fires when either GNRL_ALLWNCS_CRDT_RSK or GNRL_ALLWNCS_BNK_RSK
+    is not null, but CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK is null when one of them is null, so the position
+    drops out. The SQL keeps the literal arithmetic (OI-09).

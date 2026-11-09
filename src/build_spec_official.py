@@ -124,6 +124,13 @@ used_vars = {
     "PRTY_IL": ["INSTTTNL_SCTR", "MLTLTRL_DVLPMNT_BNK_INDCTR"],
     "INTRNL_GRP_RL_IL": ["FNRP_RPRTNG_SCHM"],
     "OTC_DRVTV_HDG_IL": ["ACCNTNG_HDG_INDCTR"],
+    # securities path (T05, T07, T10)
+    "SCRTY_EXCHNG_TRDBL_DRVTV_IL": ["SCRTY_EXCHNG_TRDBL_DRVTV_TYP", "NGTBL_SCRTY_INDCTR", "DBT_SCRTY_PRFRMNG_STTS_TYP"],
+    "LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL": [
+        "LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP", "ACCNTNG_CLSSFCTN", "SBJCT_IMPRMNT_INDCTR", "IMPRMNT_STTS",
+        "CRRYNG_AMNT", "ACCMLTD_IMPRMNT", "FV", "ACCMLTD_CHNGS_FV_CR", "GNRL_ALLWNCS_CRDT_RSK", "GNRL_ALLWNCS_BNK_RSK"],
+    "LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL": ["HLD_SL_INDCTR"],
+    "SCRTY_ENTTY_RL_ASSGNMNT_IL": ["ENTTY_RL_TYP", "PRMRY_ISSR_INDCTR", "PRTY_ID"],
 }
 attributes = []
 for t, vs in used_vars.items():
@@ -153,14 +160,30 @@ def rel_keys(p, f, contains):
     out = []
     for r in x.itertuples():
         k = csr[csr.CUBE_RELATIONSHIP_ID == r.CUBE_RELATIONSHIP_ID]
-        out.append({"relationship": r.CUBE_RELATIONSHIP_ID, "parent": p, "child": f,
-                    "cardinality": f"{r.PRIMARY_CUBE_CARDINALITY}:{r.FOREIGN_CUBE_CARDINALITY}",
-                    "keys": sorted(k.PRIMARY_CUBE_STRUCTURE_ITEM_CODE.tolist()), "provenance": "bird_official"})
+        j = {"relationship": r.CUBE_RELATIONSHIP_ID, "parent": p, "child": f,
+             "cardinality": f"{r.PRIMARY_CUBE_CARDINALITY}:{r.FOREIGN_CUBE_CARDINALITY}",
+             "keys": sorted(k.PRIMARY_CUBE_STRUCTURE_ITEM_CODE.tolist())}
+        renamed = {a: b for a, b in zip(k.PRIMARY_CUBE_STRUCTURE_ITEM_CODE, k.FOREIGN_CUBE_STRUCTURE_ITEM_CODE) if a != b}
+        if renamed:                                       # parent key -> child column, where the names differ
+            j["key_map"] = dict(sorted(renamed.items()))
+        j["provenance"] = "bird_official"
+        out.append(j)
     return out
 
 joins = (rel_keys("INSTRMNT_IL", "INSTRMNT_RL_IL", "")
          + rel_keys("INSTRMNT_IL", "INSTRMNT_ENTTY_RL_ASSGNMNT_IL", "OTHR_LN_DBTR|FNNCL_LS_LSS_|DPST_PRVDD")
-         + rel_keys("ENTTY_RL_IL", "INSTRMNT_ENTTY_RL_ASSGNMNT_IL", "OTHR_LN_S_OTHR_LN|LSS_LSS|DPST_TKNG_CRPRTN_PRVDS"))
+         + rel_keys("ENTTY_RL_IL", "INSTRMNT_ENTTY_RL_ASSGNMNT_IL", "OTHR_LN_S_OTHR_LN|LSS_LSS|DPST_TKNG_CRPRTN_PRVDS")
+         + rel_keys("PRTY_IL", "ENTTY_RL_IL", "ASS_PRTY_ACTS_PRTY_RL_")
+         + rel_keys("INSTRMNT_IL", "OTC_DRVTV_HDG_IL", "")
+         # securities path: security -> position chain -> accounting-classification assignment, and issuer role
+         + rel_keys("SCRTY_EXCHNG_TRDBL_DRVTV_IL", "SCRTY_PSTN_IL", "")
+         + rel_keys("SCRTY_PSTN_IL", "BLNC_SHT_RCGNSD_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL", "")
+         + rel_keys("BLNC_SHT_RCGNSD_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL", "LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL", "")
+         + rel_keys("LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL", "LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_IL", "")
+         + rel_keys("LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_IL",
+                    "LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL", "")
+         + rel_keys("SCRTY_EXCHNG_TRDBL_DRVTV_IL", "SCRTY_ENTTY_RL_ASSGNMNT_IL", "_ISSD_ISSR_")
+         + rel_keys("ENTTY_RL_IL", "SCRTY_ENTTY_RL_ASSGNMNT_IL", "ASS_ISSR_ISSS_"))
 joins.append({"relationship": "context-key join to INTRNL_GRP_RL_IL", "parent": "INTRNL_GRP_RL_IL",
               "child": "(all positions)", "keys": ["ACCNTNG_CNSLDTN_LVL", "ACCNTNG_STNDRD", "DT_RFRNC", "RPRTNG_AGNT_ID"],
               "provenance": "gap_fill", "open_issue": "OI-13"})
@@ -347,33 +370,51 @@ issues = [
     {"id": "OI-04", "status": "RESOLVED", "resolution": "Official attribute lineage takes PRFRMNG_STTS from INSTRMNT_RL (instrument level)."},
     {"id": "OI-05", "status": "RESOLVED", "resolution": "No collateral filter in the official cells; collateral is not part of this lineage."},
     {"id": "OI-06", "status": "RESOLVED", "resolution": "Official algorithms use member IDs directly (e.g. CRDT_QLTY_1), so no code mapping is needed."},
-    {"id": "OI-07", "status": "NARROWED", "resolution": "Official cell description confirms row 0070 sits under 'debt instruments at cost or at amortised cost'. Still decide whether the KRI is this cell ratio or a wider headline ratio."},
+    {"id": "OI-07", "status": "DECIDED", "decision": "see decisions.md",
+     "resolution": "Official cell description confirms row 0070 sits under 'debt instruments at cost or at amortised cost'. Still decide whether the KRI is this cell ratio or a wider headline ratio."},
     {"id": "OI-08", "status": "RESOLVED", "resolution": "Official export has algorithm text for every routine and business definitions for variables."},
-    {"id": "OI-09", "status": "OPEN", "severity": "medium",
+    {"id": "OI-09", "status": "DECIDED", "decision": "see decisions.md", "severity": "medium",
      "issue": "Official algorithms are pseudo-SQL, not executable, and contain defects (see algorithm_validation): identifiers that exist "
               "nowhere in the export, and predicates that name a member without its variable. They must be normalised when rendering SQL; record each fix."},
-    {"id": "OI-10", "status": "OPEN", "severity": "medium",
+    {"id": "OI-10", "status": "DECIDED", "decision": "see decisions.md", "severity": "medium",
      "issue": "Official attribute lineage for the R0070 cells omits the counterparty attributes that the sector rows "
               "use (" + str(len(missing_at_total)) + " source attributes, see lineage_gap_at_total_row). Model "
               "R0070 as the sum of sector rows (T08) so lineage is complete."},
-    {"id": "OI-11", "status": "OPEN", "severity": "low",
+    {"id": "OI-11", "status": "DECIDED", "decision": "see decisions.md", "severity": "low",
      "issue": "GRSS_CRRYNG_AMNT gets no value for an amortised-cost loan whose ACCMLTD_IMPRMNT is null; the "
               "C0010/C0060 filter GRSS_CRRYNG_AMNT > 0 then silently drops it. Decide whether null impairment is "
               "treated as zero in the synthetic data."},
-    {"id": "OI-12", "status": "OPEN", "severity": "low",
+    {"id": "OI-12", "status": "DECIDED", "decision": "see decisions.md", "severity": "low",
      "issue": "Official algorithms reference portfolios and products (e.g. ACCNTNG_CLSSFCTN_44, 8, 9, 73) outside "
               "the R0070 scope; the spec keeps only in-scope branches as structured logic and the full text verbatim."},
-    {"id": "OI-13", "status": "OPEN", "severity": "medium",
+    {"id": "OI-13", "status": "DECIDED", "decision": "see decisions.md", "severity": "medium",
      "issue": "FNRP_RPRTNG_SCHM sits on INTRNL_GRP_RL, which has no relationship to instruments. The gate is "
               "joined on the context key; which GRP_RL_TYP row applies is not specified."},
     {"id": "OI-14", "status": "OPEN", "severity": "low",
      "issue": "Legal references cite Implementing Regulation (EU) No 680/2014, which was replaced by Implementing "
               "Regulation (EU) 2021/451. Confirm citations before writing the Collibra and regulatory documents."},
+    {"id": "OI-15", "status": "OPEN", "severity": "medium",
+     "issue": "INSTTTNL_SCTR_S126 (financial auxiliaries) sits under INSTTTNL_SCTR_S12_D in the member hierarchy but is "
+              "missing from the member list of official routine R_F_18.00.a_R0110. Read literally, loans to financial "
+              "auxiliaries fall in no sector row and drop out of R0070."},
+    {"id": "OI-16", "status": "OPEN", "severity": "medium",
+     "issue": "R_F_18.00.a_R0100 selects MLTLTRL_DVLPMNT_BNK_INDCTR_1 regardless of sector, and R_F_18.00.a_R0090 "
+              "selects general-government sectors without excluding multilateral development banks. A development bank "
+              "party with a general-government sector is counted in both rows, so the R0070 sum counts it twice."},
+    {"id": "OI-17", "status": "OPEN", "severity": "medium",
+     "issue": "Official algorithms compare against parent members while input data may hold their leaves (and vice "
+              "versa). R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2 excludes INSTTTNL_SCTR_S122_A, but input may hold "
+              "S122_A_1/S122_A_2; the sector rows list leaves only, so a party stored as parent S14 or S122_A matches "
+              "no row. The SQL compares members literally (OI-09)."},
+    {"id": "OI-18", "status": "OPEN", "severity": "low",
+     "issue": "The general-allowances branch of R_DER_GRSS_CRRYNG_AMNT_1/_3 fires when either GNRL_ALLWNCS_CRDT_RSK or "
+              "GNRL_ALLWNCS_BNK_RSK is not null, but CRRYNG_AMNT + GNRL_ALLWNCS_CRDT_RSK + GNRL_ALLWNCS_BNK_RSK is null "
+              "when one of them is null, so the position drops out. The SQL keeps the literal arithmetic (OI-09)."},
 ]
 
 spec = {
     "spec_version": "0.2-draft",
-    "status": "DRAFT - open issues OI-07, OI-09 to OI-14 need sign-off before artifacts are rendered",
+    "status": "DRAFT - open issues OI-14 to OI-18 are undecided; decided issues are logged in decisions.md",
     "provenance": {
         "primary_source": {"type": "official ECB BIRD metadata export", "file": ZIP.name,
                            "sha256": zip_sha, "obtained_from": "bird.ecb.europa.eu (downloaded by user)",
@@ -410,7 +451,7 @@ def str_rep(d, s):
 D.add_representer(str, str_rep)
 D.add_representer(type(None), lambda d, _: d.represent_scalar("tag:yaml.org,2002:null", "null"))
 
-with open(OUT, "w", encoding="utf-8") as f:
+with open(OUT, "w", encoding="utf-8", newline="\n") as f:      # LF on every platform
     f.write("# Canonical lineage spec v0.2 - NPL ratio - built from the official BIRD export by src/build_spec_official.py\n")
     yaml.dump(spec, f, Dumper=D, sort_keys=False, allow_unicode=True, width=120)
 

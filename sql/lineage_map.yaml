@@ -1,0 +1,199 @@
+# Mapping from spec transformation nodes (specs/npl_ratio_lineage_spec_v0.2.yaml) to the reference SQL.
+# This file is part of the answer key: it is never shown to the classifier.
+#
+# Per node:
+#   file      SQL file under sql/reference/ that implements the node
+#   compare   column - spec inputs/outputs are columns, compared column by column
+#             table  - spec inputs/outputs are whole tables or wildcards, compared table by table
+#   inputs    spec input name -> SQL objects ("view_or_table.COLUMN" in column mode, "view_or_table" in table mode)
+#   outputs   spec output name -> SQL objects created by the file
+#   extras    SQL columns the file reads that the spec does not list for the node, with the reason
+#             ("table.*" allows every column of that table)
+# Columns listed under keys are join and context keys and are allowed in every node.
+
+keys: [DT_RFRNC, RPRTNG_AGNT_ID, ACCNTNG_CNSLDTN_LVL, ACCNTNG_STNDRD, INSTRMNT_ID, INSTRMNT_RL_TYP, PRTY_ID, GRP_ID,
+       SCRTY_ID, SCRTY_EXCHNG_TRDBL_DRVTV_ID, INVSTR_PRTY_ID, INVSTR_ENTTY_RL_TYP, SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,
+       LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP, PRDNTL_PRTFL_TYP]
+
+nodes:
+  T01:
+    file: 01_load_input_snapshot.sql
+    compare: table
+    inputs:
+      INSTRMNT_IL: [INSTRMNT_IL]
+      INSTRMNT_RL_IL: [INSTRMNT_RL_IL]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL: [INSTRMNT_ENTTY_RL_ASSGNMNT_IL]
+      PRTY_IL: [PRTY_IL]
+      INTRNL_GRP_RL_IL: [INTRNL_GRP_RL_IL]
+      OTC_DRVTV_HDG_IL: [OTC_DRVTV_HDG_IL]
+      SCRTY_EXCHNG_TRDBL_DRVTV_IL: [SCRTY_EXCHNG_TRDBL_DRVTV_IL]
+      LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL:
+        [LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL]
+    outputs:
+      '*_IL snapshot': [instrmnt_il_snp, instrmnt_rl_il_snp, instrmnt_entty_rl_assgnmnt_il_snp, prty_il_snp,
+                        intrnl_grp_rl_il_snp, otc_drvtv_hdg_il_snp, scrty_exchng_trdbl_drvtv_il_snp,
+                        scrty_entty_rl_assgnmnt_il_snp, lng_shrt_blnc_sht_rcgnsd_scrty_pstn_il_snp,
+                        lng_blnc_sht_rcgnsd_scrty_pstn_accntng_il_snp]
+    extras:
+      - {sql: LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL.*, reason: holds HLD_SL_INDCTR of security positions (correction wrong_cube); not in the spec's T01 input list}
+      - {sql: SCRTY_ENTTY_RL_ASSGNMNT_IL.*, reason: issuer role of securities used by the sector rows (spec T07 input); not in the spec's T01 input list}
+
+  T02:
+    file: 02_carry_enriched_attributes.sql
+    compare: column
+    inputs:
+      INSTRMNT_RL_IL.PRFRMNG_STTS: [instrmnt_rl_il_snp.PRFRMNG_STTS]
+      INSTRMNT_RL_IL.ACCNTNG_CLSSFCTN: [instrmnt_rl_il_snp.ACCNTNG_CLSSFCTN]
+      PRTY_IL.INSTTTNL_SCTR: [prty_il_snp.INSTTTNL_SCTR]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.ENTTY_RL_TYP: [instrmnt_entty_rl_assgnmnt_il_snp.ENTTY_RL_TYP]
+      INTRNL_GRP_RL_IL.FNRP_RPRTNG_SCHM: [intrnl_grp_rl_il_snp.FNRP_RPRTNG_SCHM]
+    outputs:
+      '*_EIL (same attributes)': [instrmnt_rl_eil, instrmnt_entty_rl_assgnmnt_eil, prty_eil, intrnl_grp_rl_eil,
+                                  scrty_entty_rl_assgnmnt_eil]
+    extras:
+      - {sql: instrmnt_entty_rl_assgnmnt_il_snp.MN_DBTR_INDCTR, reason: carried for the sector rows (spec T07 input)}
+      - {sql: instrmnt_entty_rl_assgnmnt_il_snp.MN_LSS_INDCTR, reason: carried for the sector rows (spec T07 input)}
+      - {sql: instrmnt_entty_rl_assgnmnt_il_snp.MN_DPST_TKNG_CRPRTN_INDCTR, reason: carried for the sector rows (spec T07 input)}
+      - {sql: prty_il_snp.MLTLTRL_DVLPMNT_BNK_INDCTR, reason: carried for the sector rows (spec T07 input)}
+      - {sql: intrnl_grp_rl_il_snp.GRP_RL_TYP, reason: carried for the reporting-scheme gate (decision OI-13)}
+      - {sql: scrty_entty_rl_assgnmnt_il_snp.ENTTY_RL_TYP, reason: carried for the sector rows (spec T07 input)}
+      - {sql: scrty_entty_rl_assgnmnt_il_snp.PRMRY_ISSR_INDCTR, reason: carried for the sector rows (spec T07 input)}
+
+  T03:
+    file: 03_gross_carrying_amount_instruments.sql
+    compare: column
+    inputs:
+      INSTRMNT_RL_IL.ACCMLTD_CHNGS_FV_CR: [instrmnt_rl_il_snp.ACCMLTD_CHNGS_FV_CR]
+      INSTRMNT_RL_IL.ACCMLTD_IMPRMNT: [instrmnt_rl_il_snp.ACCMLTD_IMPRMNT]
+      INSTRMNT_RL_IL.ACCNTNG_CLSSFCTN: [instrmnt_rl_il_snp.ACCNTNG_CLSSFCTN]
+      INSTRMNT_RL_IL.CRRYNG_AMNT: [instrmnt_rl_il_snp.CRRYNG_AMNT]
+      INSTRMNT_RL_IL.FV: [instrmnt_rl_il_snp.FV]
+      INSTRMNT_RL_IL.GNRL_ALLWNCS_BNK_RSK: [instrmnt_rl_il_snp.GNRL_ALLWNCS_BNK_RSK]
+      INSTRMNT_RL_IL.GNRL_ALLWNCS_CRDT_RSK: [instrmnt_rl_il_snp.GNRL_ALLWNCS_CRDT_RSK]
+      INSTRMNT_RL_IL.IMPRMNT_STTS: [instrmnt_rl_il_snp.IMPRMNT_STTS]
+      INSTRMNT_RL_IL.PRFRMNG_STTS: [instrmnt_rl_il_snp.PRFRMNG_STTS]
+      INSTRMNT_RL_IL.SBJCT_IMPRMNT_INDCTR: [instrmnt_rl_il_snp.SBJCT_IMPRMNT_INDCTR]
+    outputs:
+      INSTRMNT_RL_EIL.GRSS_CRRYNG_AMNT: [instrmnt_rl_eil_grss_crryng_amnt.GRSS_CRRYNG_AMNT]
+    extras: []
+
+  T04:
+    file: 04_annex_v_type_instruments.sql
+    compare: column
+    inputs:
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.ENTTY_RL_TYP: [instrmnt_entty_rl_assgnmnt_il_snp.ENTTY_RL_TYP]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_DBTR_INDCTR: [instrmnt_entty_rl_assgnmnt_il_snp.MN_DBTR_INDCTR]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_DPST_TKNG_CRPRTN_INDCTR: [instrmnt_entty_rl_assgnmnt_il_snp.MN_DPST_TKNG_CRPRTN_INDCTR]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.MN_LSS_INDCTR: [instrmnt_entty_rl_assgnmnt_il_snp.MN_LSS_INDCTR]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.PRTY_ID: [instrmnt_entty_rl_assgnmnt_il_snp.PRTY_ID]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_IL.RPRTNG_AGNT_ID: [instrmnt_entty_rl_assgnmnt_il_snp.RPRTNG_AGNT_ID]
+      INSTRMNT_IL.INSTRMNT_TYP_PRDCT: [instrmnt_il_snp.INSTRMNT_TYP_PRDCT]
+      INSTRMNT_IL.RPYMNT_RGHTS: [instrmnt_il_snp.RPYMNT_RGHTS]
+      INSTRMNT_RL_IL.HLD_SL_INDCTR: [instrmnt_rl_il_snp.HLD_SL_INDCTR]
+      INSTRMNT_RL_IL.INSTRMNT_RL_TYP: [instrmnt_rl_il_snp.INSTRMNT_RL_TYP]
+      OTC_DRVTV_HDG_IL.ACCNTNG_HDG_INDCTR: [otc_drvtv_hdg_il_snp.ACCNTNG_HDG_INDCTR]
+      PRTY_IL.INSTTTNL_SCTR: [prty_il_snp.INSTTTNL_SCTR]
+    outputs:
+      INSTRMNT_RL_EIL.TYP_FNNCL_ASST_INSTRMNT_ANNX_V: [instrmnt_rl_eil_typ_fnncl_asst.TYP_FNNCL_ASST_INSTRMNT_ANNX_V]
+    extras: []
+
+  T05:
+    file: 05_securities_positions.sql
+    compare: table
+    inputs:
+      SCRTY_EXCHNG_TRDBL_DRVTV_IL: [scrty_exchng_trdbl_drvtv_il_snp]
+      LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL: [lng_blnc_sht_rcgnsd_scrty_pstn_accntng_il_snp]
+    outputs:
+      LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL.GRSS_CRRYNG_AMNT:
+        [lng_scrty_pstn_eil_grss_crryng_amnt.GRSS_CRRYNG_AMNT]
+      LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL.TYP_FNNCL_ASST_INSTRMNT_ANNX_V:
+        [lng_scrty_pstn_eil_typ_fnncl_asst.TYP_FNNCL_ASST_INSTRMNT_ANNX_V]
+      SCRTY_EXCHNG_TRDBL_DRVTV_EIL.DBT_SCRTY_PRFRMNG_STTS_TYP: [scrty_exchng_trdbl_drvtv_eil.DBT_SCRTY_PRFRMNG_STTS_TYP]
+    extras:
+      - {sql: lng_shrt_blnc_sht_rcgnsd_scrty_pstn_il_snp.HLD_SL_INDCTR, reason: held-for-sale indicator of the position (correction wrong_cube)}
+      - {sql: scrty_entty_rl_assgnmnt_il_snp.ENTTY_RL_TYP, reason: equity branch of R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3 (decision OI-12)}
+
+  T06:
+    file: 06_reporting_scheme_scope.sql
+    compare: column
+    inputs:
+      INTRNL_GRP_RL_EIL.FNRP_RPRTNG_SCHM: [intrnl_grp_rl_eil.FNRP_RPRTNG_SCHM]
+    outputs:
+      F_18.00.a scope: [f_18_00_a_scp]
+    extras:
+      - {sql: intrnl_grp_rl_eil.GRP_RL_TYP, reason: gate restricted to GRP_RL_TYP_1 (decision OI-13)}
+
+  T07:
+    file: 07_counterparty_sector_rows.sql
+    compare: column
+    inputs:
+      INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.ENTTY_RL_TYP: [instrmnt_entty_rl_assgnmnt_eil.ENTTY_RL_TYP]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.MN_DBTR_INDCTR: [instrmnt_entty_rl_assgnmnt_eil.MN_DBTR_INDCTR]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.MN_DPST_TKNG_CRPRTN_INDCTR: [instrmnt_entty_rl_assgnmnt_eil.MN_DPST_TKNG_CRPRTN_INDCTR]
+      INSTRMNT_ENTTY_RL_ASSGNMNT_EIL.MN_LSS_INDCTR: [instrmnt_entty_rl_assgnmnt_eil.MN_LSS_INDCTR]
+      PRTY_EIL.INSTTTNL_SCTR: [prty_eil.INSTTTNL_SCTR]
+      PRTY_EIL.MLTLTRL_DVLPMNT_BNK_INDCTR: [prty_eil.MLTLTRL_DVLPMNT_BNK_INDCTR]
+      SCRTY_ENTTY_RL_ASSGNMNT_EIL.ENTTY_RL_TYP: [scrty_entty_rl_assgnmnt_eil.ENTTY_RL_TYP]
+      SCRTY_ENTTY_RL_ASSGNMNT_EIL.PRMRY_ISSR_INDCTR: [scrty_entty_rl_assgnmnt_eil.PRMRY_ISSR_INDCTR]
+    outputs:
+      F_18.00.a_R0080_*: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0090_*: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0100_*: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0110_*: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0120_*: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0150_*: [f_18_00_a_sctr_rw]
+    extras:
+      - {sql: instrmnt_rl_eil.ACCNTNG_CLSSFCTN, reason: the row routines also filter on ACCNTNG_CLSSFCTN; spec T07 lists only counterparty inputs}
+      - {sql: instrmnt_rl_eil.PRFRMNG_STTS, reason: carried on the datapoint record for column 0060}
+      - {sql: instrmnt_rl_eil_grss_crryng_amnt.GRSS_CRRYNG_AMNT, reason: carried on the datapoint record for the columns}
+      - {sql: instrmnt_rl_eil_typ_fnncl_asst.TYP_FNNCL_ASST_INSTRMNT_ANNX_V, reason: the row routines also filter on TYP_FNNCL_ASST_INSTRMNT_ANNX_V}
+      - {sql: lng_scrty_pstn_eil_grss_crryng_amnt.GRSS_CRRYNG_AMNT, reason: carried on the datapoint record for the columns}
+      - {sql: lng_scrty_pstn_eil_grss_crryng_amnt.ACCNTNG_CLSSFCTN, reason: the row routines also filter on ACCNTNG_CLSSFCTN (position key of security positions)}
+      - {sql: lng_scrty_pstn_eil_typ_fnncl_asst.ACCNTNG_CLSSFCTN, reason: position key of security positions}
+      - {sql: lng_scrty_pstn_eil_typ_fnncl_asst.TYP_FNNCL_ASST_INSTRMNT_ANNX_V, reason: the row routines also filter on TYP_FNNCL_ASST_INSTRMNT_ANNX_V}
+      - {sql: scrty_exchng_trdbl_drvtv_eil.DBT_SCRTY_PRFRMNG_STTS_TYP, reason: carried on the datapoint record for column 0060}
+      - {sql: f_18_00_a_scp.*, reason: positions restricted to the reporting contexts in scope (R_F_18.00.a_ALL)}
+
+  T08:
+    file: 08_total_loans_and_advances_row.sql
+    compare: table
+    inputs:
+      F_18.00.a_R0080: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0090: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0100: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0110: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0120: [f_18_00_a_sctr_rw]
+      F_18.00.a_R0150: [f_18_00_a_sctr_rw]
+    outputs:
+      F_18.00.a_R0070: [f_18_00_a_r0070]
+    extras: []
+
+  T09:
+    file: 09_gross_carrying_amount_cell.sql
+    compare: column
+    inputs:
+      GRSS_CRRYNG_AMNT: [f_18_00_a_r0070.GRSS_CRRYNG_AMNT]
+    outputs:
+      cell F_18.00.a R0070 C0010: [f_18_00_a_r0070_c0010.GRSS_CRRYNG_AMNT]
+    extras: []
+
+  T10:
+    file: 10_non_performing_cell.sql
+    compare: column
+    inputs:
+      INSTRMNT_RL_EIL.PRFRMNG_STTS: [f_18_00_a_r0070.PRFRMNG_STTS]
+      SCRTY_EXCHNG_TRDBL_DRVTV_EIL.DBT_SCRTY_PRFRMNG_STTS_TYP: [f_18_00_a_r0070.DBT_SCRTY_PRFRMNG_STTS_TYP]
+      GRSS_CRRYNG_AMNT: [f_18_00_a_r0070.GRSS_CRRYNG_AMNT]
+    outputs:
+      cell F_18.00.a R0070 C0060: [f_18_00_a_r0070_c0060.GRSS_CRRYNG_AMNT]
+    extras: []
+
+  T11:
+    file: 11_npl_ratio.sql
+    compare: column
+    inputs:
+      cell F_18.00.a R0070 C0060: [f_18_00_a_r0070_c0060.GRSS_CRRYNG_AMNT]
+      cell F_18.00.a R0070 C0010: [f_18_00_a_r0070_c0010.GRSS_CRRYNG_AMNT]
+    outputs:
+      kri.NPL_RATIO: [npl_ratio.NPL_RATIO]
+    extras: []

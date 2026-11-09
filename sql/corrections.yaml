@@ -1,0 +1,160 @@
+# Corrections applied when translating the official BIRD algorithms (pseudo-SQL) into the reference SQL.
+# Policy: fix unambiguous defects only; everything else is translated literally, including parent members
+# and NULL arithmetic (see decisions.md).
+# kind: syntactic | structure | identifier | missing_variable | wrong_cube
+
+corrections:
+
+# ---------- gross carrying amount, instrument roles ----------
+- routine: R_DER_GRSS_CRRYNG_AMNT_3
+  kind: structure
+  original: "update cubes ( set GRSS_CRRYNG_AMNT = case when ... then FV ) or ( set GRSS_CRRYNG_AMNT = case when ... ) ...; or ( set ... then null;"
+  corrected: "one SELECT computing GRSS_CRRYNG_AMNT with a single CASE whose WHEN branches keep the original order"
+  reason: The routine is written as a chain of 'set ... case when' blocks joined by 'or', with unbalanced parentheses and a stray ';'. Read as ordered alternatives, it is one CASE expression.
+  occurrences: 1
+- routine: R_DER_GRSS_CRRYNG_AMNT_3
+  kind: syntactic
+  original: "<> null / = null"
+  corrected: "IS NOT NULL / IS NULL"
+  reason: Comparison with null is always unknown in SQL; the intent is a null test.
+  occurrences: 10
+- routine: R_DER_GRSS_CRRYNG_AMNT_3
+  kind: missing_variable
+  original: "ACCNTNG_CLSSFCTN_73\nand\nSBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2 -- Measured at cost"
+  corrected: "ACCNTNG_CLSSFCTN = 'ACCNTNG_CLSSFCTN_73' AND SBJCT_IMPRMNT_INDCTR = 'SBJCT_IMPRMNT_INDCTR_2'"
+  reason: Member used as a predicate without its variable.
+  occurrences: 1
+- routine: R_DER_GRSS_CRRYNG_AMNT_3
+  kind: missing_variable
+  original: "ACCNTNG_CLSSFCTN_44\nand\nIMPRMNT_STTS not in (CRDT_QLTY_26, CRDT_QLTY_211, CRDT_QLTY_212) -- Measured at cost"
+  corrected: "ACCNTNG_CLSSFCTN = 'ACCNTNG_CLSSFCTN_44' AND IMPRMNT_STTS NOT IN ('CRDT_QLTY_26', 'CRDT_QLTY_211', 'CRDT_QLTY_212')"
+  reason: Member used as a predicate without its variable.
+  occurrences: 1
+- routine: R_DER_GRSS_CRRYNG_AMNT_3
+  kind: syntactic
+  original: "member identifiers as bare names, e.g. ACCNTNG_CLSSFCTN in (ACCNTNG_CLSSFCTN_8, ACCNTNG_CLSSFCTN_6)"
+  corrected: "member identifiers as string literals, e.g. ACCNTNG_CLSSFCTN IN ('ACCNTNG_CLSSFCTN_8', 'ACCNTNG_CLSSFCTN_6')"
+  reason: Coded attributes hold the member id as text.
+  occurrences: all
+
+# ---------- gross carrying amount, security positions ----------
+- routine: R_DER_GRSS_CRRYNG_AMNT_1
+  kind: structure
+  original: "update cubes ( set GRSS_CRRYNG_AMNT = case when ... then FV ) or ( set ... ) ...; or ( set ... then null;"
+  corrected: "one SELECT computing GRSS_CRRYNG_AMNT with a single CASE whose WHEN branches keep the original order; DBT_SCRTY_PRFRMNG_STTS_TYP is read from SCRTY_EXCHNG_TRDBL_DRVTV_IL joined on SCRTY_ID = SCRTY_EXCHNG_TRDBL_DRVTV_ID"
+  reason: Same structure as R_DER_GRSS_CRRYNG_AMNT_3. The performing status of a debt security sits on the security, not on the position.
+  occurrences: 1
+- routine: R_DER_GRSS_CRRYNG_AMNT_1
+  kind: syntactic
+  original: "<> null / = null"
+  corrected: "IS NOT NULL / IS NULL"
+  reason: Comparison with null is always unknown in SQL; the intent is a null test.
+  occurrences: 10
+- routine: R_DER_GRSS_CRRYNG_AMNT_1
+  kind: missing_variable
+  original: "ACCNTNG_CLSSFCTN_73\nand\nSBJCT_IMPRMNT_INDCTR = SBJCT_IMPRMNT_INDCTR_2 -- Measured at cost"
+  corrected: "c.ACCNTNG_CLSSFCTN = 'ACCNTNG_CLSSFCTN_73' AND c.SBJCT_IMPRMNT_INDCTR = 'SBJCT_IMPRMNT_INDCTR_2'"
+  reason: Member used as a predicate without its variable.
+  occurrences: 1
+- routine: R_DER_GRSS_CRRYNG_AMNT_1
+  kind: missing_variable
+  original: "ACCNTNG_CLSSFCTN_44\nand\nIMPRMNT_STTS not in (CRDT_QLTY_26, CRDT_QLTY_211, CRDT_QLTY_212) -- Measured at cost"
+  corrected: "c.ACCNTNG_CLSSFCTN = 'ACCNTNG_CLSSFCTN_44' AND c.IMPRMNT_STTS NOT IN ('CRDT_QLTY_26', 'CRDT_QLTY_211', 'CRDT_QLTY_212')"
+  reason: Member used as a predicate without its variable.
+  occurrences: 1
+- routine: R_DER_GRSS_CRRYNG_AMNT_1
+  kind: syntactic
+  original: "member identifiers as bare names"
+  corrected: "member identifiers as string literals"
+  reason: Coded attributes hold the member id as text.
+  occurrences: all
+
+# ---------- Annex V type, instrument roles ----------
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+  kind: structure
+  original: "Update EIL Cube -- Destination cube: INSTRMNT_RL_EIL\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = \ncase ... else null;"
+  corrected: "SELECT ... MAX(CASE ... END) FROM instrument role JOIN instrument LEFT JOIN entity-role assignment LEFT JOIN party LEFT JOIN hedge GROUP BY instrument role"
+  reason: The routine reads attributes of five source cubes (named in its comments) but states no join. Joins use the official relationship keys. An instrument role with several assignments gets one type, taken over all assignments (only the qualifying assignment yields a non-null type).
+  occurrences: 1
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+  kind: identifier
+  original: "MN_DPST_DPST_TKNG_CRPRTN_INDCTR"
+  corrected: "MN_DPST_TKNG_CRPRTN_INDCTR"
+  reason: Variable does not exist in the export; MN_DPST_TKNG_CRPRTN_INDCTR is the main deposit-taking corporation indicator on INSTRMNT_ENTTY_RL_ASSGNMNT_IL named in the comment.
+  occurrences: 3
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+  kind: identifier
+  original: "MN_DPST_TKNG_CRPRTN_INCTR_1"
+  corrected: "MN_DPST_TKNG_CRPRTN_INDCTR_1"
+  reason: Member does not exist in the export (typo 'INCTR'); MN_DPST_TKNG_CRPRTN_INDCTR_1 is 'Main Deposit-taking corporation'.
+  occurrences: 3
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+  kind: missing_variable
+  original: "or TYP_INSTRMNT_1201 --Loan on demand used for minimum reserve"
+  corrected: "OR i.INSTRMNT_TYP_PRDCT = 'TYP_INSTRMNT_1201'"
+  reason: Member used as a predicate without its variable; TYP_INSTRMNT_1201 is a member of INSTRMNT_TYP_PRDCT.
+  occurrences: 1
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2
+  kind: syntactic
+  original: "member identifiers as bare names"
+  corrected: "member identifiers as string literals"
+  reason: Coded attributes hold the member id as text.
+  occurrences: all
+
+# ---------- Annex V type, security positions ----------
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3
+  kind: structure
+  original: "Update EIL Cube -- Destination cube: LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = \ncase ... else null;"
+  corrected: "SELECT ... MAX(CASE ... END) FROM accounting-classification assignment JOIN security LEFT JOIN long position LEFT JOIN security entity-role assignment GROUP BY position"
+  reason: The routine reads attributes of four source cubes but states no join. Joins use the official relationship keys (security position chain, SCRTY_EXCHNG_TRDBL_DRVTV_ID -> SCRTY_ID).
+  occurrences: 1
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3
+  kind: wrong_cube
+  original: "HLD_SL_INDCTR ... -- Source cube: EXCHNG_TRDBL_SCRTY_PSTN_IL"
+  corrected: "l.HLD_SL_INDCTR from LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL"
+  reason: EXCHNG_TRDBL_SCRTY_PSTN_IL does not exist in the export. HLD_SL_INDCTR for security positions is on LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL, the parent of the position-assignment cubes.
+  occurrences: 6
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3
+  kind: syntactic
+  original: "(nGAAP)\nand\nand ENTTY_RL_TYP = ENTTY_RL_TYP_8"
+  corrected: "AND e.ENTTY_RL_TYP = 'ENTTY_RL_TYP_8'"
+  reason: Duplicated 'and'.
+  occurrences: 1
+- routine: R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3
+  kind: syntactic
+  original: "member identifiers as bare names"
+  corrected: "member identifiers as string literals"
+  reason: Coded attributes hold the member id as text.
+  occurrences: all
+
+# ---------- template routines ----------
+- routine: R_F_18.00.a_ALL
+  kind: structure
+  original: "Select *\nwhere\nFNRP_RPRTNG_SCHM in \n(\nFNRP_RPRTNG_SCHM_1, \nFNRP_RPRTNG_SCHM_2, \nFNRP_RPRTNG_SCHM_3\n);"
+  corrected: "reporting contexts (DT_RFRNC, RPRTNG_AGNT_ID, ACCNTNG_CNSLDTN_LVL, ACCNTNG_STNDRD) whose INTRNL_GRP_RL_EIL row with GRP_RL_TYP = 'GRP_RL_TYP_1' has FNRP_RPRTNG_SCHM in (1, 2, 3); positions are joined to these contexts"
+  reason: FNRP_RPRTNG_SCHM is not an attribute of positions. Join as decided for OI-13 (decisions.md).
+  occurrences: 1
+- routine: [R_F_18.00.a_R0080, R_F_18.00.a_R0090, R_F_18.00.a_R0100, R_F_18.00.a_R0110, R_F_18.00.a_R0120, R_F_18.00.a_R0150]
+  kind: structure
+  original: "Update DataPointCube\nset\nTYP_FNNCL_ASST_INSTRMNT_ANNX_V = TYP_INSTRMNT_1117,\nACCNTNG_CLSSFCTN = ACCNTNG_CLSSFCTN_531,\nINSTTTNL_SCTR = ...\nwhere ..."
+  corrected: "SELECT datapoint records WHERE <same predicate>, tagged with the row code"
+  reason: The 'set' clause relabels the record with the cell's aggregate members; it does not change amounts. The predicate is kept literally. The datapoint record joins each position to its entity-role assignments and counterparty.
+  occurrences: 6
+- routine: R_F_18.00.a_R0070
+  kind: structure
+  original: "SUM(R0080, R0090, R0100, R0110, R0120, R0150)"
+  corrected: "row 0070 records = all records of the six sector rows (UNION ALL); cells sum over them"
+  reason: Sum of rows expressed at record level, so column filters apply once (decision OI-10).
+  occurrences: 1
+- routine: [R_F_18.00.a_C0010, R_F_18.00.a_C0060]
+  kind: structure
+  original: "Update DataPointCube\nset\nGRSS_CRRYNG_AMNT = GRSS_CRRYNG_AMNT ...\nwhere\nGRSS_CRRYNG_AMNT > 0 ..."
+  corrected: "SELECT SUM(GRSS_CRRYNG_AMNT) ... WHERE <same predicate>"
+  reason: The cell value is the sum of the metric over the records that satisfy the predicate.
+  occurrences: 2
+- routine: R_F_18.00.a_C0060
+  kind: syntactic
+  original: "member identifiers as bare names"
+  corrected: "member identifiers as string literals"
+  reason: Coded attributes hold the member id as text.
+  occurrences: all

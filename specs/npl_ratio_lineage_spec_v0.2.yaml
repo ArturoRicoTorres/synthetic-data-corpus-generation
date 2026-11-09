@@ -420,6 +420,27 @@ attributes:
   domain: Finrep reporting scheme
   legal_refs: []
   provenance: bird_official
+- id: INTRNL_GRP_RL_IL.GRP_ID
+  table: INTRNL_GRP_RL_IL
+  column: GRP_ID
+  present_in_official_il: true
+  mandatory: true
+  business_name: Group ID
+  business_definition: RIAD Code of the head entity of group concatenated with the type of group, for example DE00001.A (Entity
+    with RIAD Code DE00001 is the head of the Type A group).
+  domain: String
+  legal_refs: []
+  provenance: bird_official
+- id: INTRNL_GRP_RL_IL.GRP_RL_TYP
+  table: INTRNL_GRP_RL_IL
+  column: GRP_RL_TYP
+  present_in_official_il: true
+  mandatory: true
+  business_name: Internal group role type
+  business_definition: A discriminator to distinguish between different roles a group may act in.
+  domain: Group role type
+  legal_refs: []
+  provenance: bird_official
 - id: OTC_DRVTV_HDG_IL.ACCNTNG_HDG_INDCTR
   table: OTC_DRVTV_HDG_IL
   column: ACCNTNG_HDG_INDCTR

@@ -2152,3 +2152,270 @@ documents:
     source: src/corpus_text/reporting_chain.yaml
     node: T11
     title: Non-performing loans ratio
+  corpus/shared/regulatory/f_18_00_a_template.md:
+    provenance: bird_official
+    source: rendering_table.csv, header.csv, table_header.csv, cube.csv
+  corpus/shared/regulatory/bird_definitions.md:
+    provenance: bird_official
+    source: variable.csv, domain.csv, member.csv, legal_reference.csv
+  corpus/shared/regulatory/bird_transformation_rules.md:
+    provenance: bird_official
+    source: routine.csv
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-13:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 13
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-15:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 15
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-16:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 16
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-27:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 27
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-31:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 31
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-32:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 32
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-33:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 33
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-34:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 34
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-42:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 42
+  corpus/shared/regulatory/annex_v_extracts.md#part-1-paragraph-44:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 1, paragraph 44
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-2:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 2
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-3:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 3
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-213:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 213
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-217:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 217
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-218:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 218
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-220:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 220
+  corpus/shared/regulatory/annex_v_extracts.md#part-2-paragraph-221:
+    provenance: legal:REG_EU_2021_451
+    source: Annex V, Part 2, paragraph 221
+  corpus/shared/regulatory/glossary.md#accounting-classification:
+    provenance: bird_official
+    source: BIRD variable `ACCNTNG_CLSSFCTN`
+  corpus/shared/regulatory/glossary.md#accounting-consolidation-level:
+    provenance: bird_official
+    source: BIRD variable `ACCNTNG_CNSLDTN_LVL`
+  corpus/shared/regulatory/glossary.md#accounting-hedge-indicator:
+    provenance: bird_official
+    source: BIRD variable `ACCNTNG_HDG_INDCTR`
+  corpus/shared/regulatory/glossary.md#accounting-portfolios:
+    provenance: bird_official+legal
+    source: Annex V, Part 1, paragraph 13
+  corpus/shared/regulatory/glossary.md#accounting-standard:
+    provenance: bird_official
+    source: BIRD variable `ACCNTNG_STNDRD`
+  corpus/shared/regulatory/glossary.md#accumulated-changes-in-fair-value-due-to-credit-risk:
+    provenance: bird_official
+    source: BIRD variable `ACCMLTD_CHNGS_FV_CR`
+  corpus/shared/regulatory/glossary.md#accumulated-impairment:
+    provenance: bird_official
+    source: BIRD variable `ACCMLTD_IMPRMNT`
+  corpus/shared/regulatory/glossary.md#carrying-amount:
+    provenance: bird_official+legal
+    source: BIRD variable `CRRYNG_AMNT`; Annex V, Part 1, paragraph 27
+  corpus/shared/regulatory/glossary.md#cash-balances-at-central-banks:
+    provenance: bird_official+legal
+    source: Annex V, Part 2, paragraph 2
+  corpus/shared/regulatory/glossary.md#central-banks:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0080; Annex V, Part 1, paragraph 42(a)
+  corpus/shared/regulatory/glossary.md#credit-institutions:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0100; Annex V, Part 1, paragraph 42(c)
+  corpus/shared/regulatory/glossary.md#debt-instruments:
+    provenance: bird_official+legal
+    source: Annex V, Part 1, paragraph 33
+  corpus/shared/regulatory/glossary.md#debt-securities:
+    provenance: bird_official+legal
+    source: Annex V, Part 1, paragraph 31
+  corpus/shared/regulatory/glossary.md#debt-security-by-performing-status-type:
+    provenance: bird_official
+    source: BIRD variable `DBT_SCRTY_PRFRMNG_STTS_TYP`
+  corpus/shared/regulatory/glossary.md#entity-role-type:
+    provenance: bird_official
+    source: BIRD variable `ENTTY_RL_TYP`
+  corpus/shared/regulatory/glossary.md#fair-value:
+    provenance: bird_official
+    source: BIRD variable `FV`
+  corpus/shared/regulatory/glossary.md#finrep-reporting-scheme:
+    provenance: bird_official
+    source: BIRD variable `FNRP_RPRTNG_SCHM`
+  corpus/shared/regulatory/glossary.md#general-allowances-for-bank-risk-affecting-carrying-amount-ngaap:
+    provenance: bird_official
+    source: BIRD variable `GNRL_ALLWNCS_BNK_RSK`
+  corpus/shared/regulatory/glossary.md#general-allowances-for-credit-risk-affecting-carrying-amount-ngaap:
+    provenance: bird_official
+    source: BIRD variable `GNRL_ALLWNCS_CRDT_RSK`
+  corpus/shared/regulatory/glossary.md#general-governments:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0090; Annex V, Part 1, paragraph 42(b)
+  corpus/shared/regulatory/glossary.md#gross-carrying-amount:
+    provenance: bird_official+legal
+    source: BIRD variable `GRSS_CRRYNG_AMNT`; Annex V, Part 1, paragraph 34
+  corpus/shared/regulatory/glossary.md#gross-carrying-amount-nominal-amount:
+    provenance: bird_official
+    source: Template F 18.00.a column 0010
+  corpus/shared/regulatory/glossary.md#group-id:
+    provenance: bird_official
+    source: BIRD variable `GRP_ID`
+  corpus/shared/regulatory/glossary.md#held-for-sale-indicator:
+    provenance: bird_official
+    source: BIRD variable `HLD_SL_INDCTR`
+  corpus/shared/regulatory/glossary.md#households:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0150; Annex V, Part 1, paragraph 42(f)
+  corpus/shared/regulatory/glossary.md#impairment-status:
+    provenance: bird_official
+    source: BIRD variable `IMPRMNT_STTS`
+  corpus/shared/regulatory/glossary.md#institutional-sector:
+    provenance: bird_official
+    source: BIRD variable `INSTTTNL_SCTR`
+  corpus/shared/regulatory/glossary.md#instrument:
+    provenance: bird_official
+    source: BIRD input layer entity `INSTRMNT_IL`
+  corpus/shared/regulatory/glossary.md#instrument-entity-role-assignment:
+    provenance: bird_official
+    source: BIRD input layer entity `INSTRMNT_ENTTY_RL_ASSGNMNT_IL`
+  corpus/shared/regulatory/glossary.md#instrument-identifier:
+    provenance: bird_official
+    source: BIRD variable `INSTRMNT_ID`
+  corpus/shared/regulatory/glossary.md#instrument-role:
+    provenance: bird_official
+    source: BIRD input layer entity `INSTRMNT_RL_IL`
+  corpus/shared/regulatory/glossary.md#instrument-role-type:
+    provenance: bird_official
+    source: BIRD variable `INSTRMNT_RL_TYP`
+  corpus/shared/regulatory/glossary.md#instrument-type-by-product:
+    provenance: bird_official
+    source: BIRD variable `INSTRMNT_TYP_PRDCT`
+  corpus/shared/regulatory/glossary.md#internal-group-role:
+    provenance: bird_official
+    source: BIRD input layer entity `INTRNL_GRP_RL_IL`
+  corpus/shared/regulatory/glossary.md#internal-group-role-type:
+    provenance: bird_official
+    source: BIRD variable `GRP_RL_TYP`
+  corpus/shared/regulatory/glossary.md#investor-entity-role-type:
+    provenance: bird_official
+    source: BIRD variable `INVSTR_ENTTY_RL_TYP`
+  corpus/shared/regulatory/glossary.md#investor-party-identifier:
+    provenance: bird_official
+    source: BIRD variable `INVSTR_PRTY_ID`
+  corpus/shared/regulatory/glossary.md#loans-and-advances:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0070; Annex V, Part 1, paragraph 32
+  ? corpus/shared/regulatory/glossary.md#long-balance-sheet-recognised-security-position-prudential-portfolio-accounting-classification-assignment
+  : provenance: bird_official
+    source: BIRD input layer entity `LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL`
+  corpus/shared/regulatory/glossary.md#long-short-balance-sheet-recognised-security-position:
+    provenance: bird_official
+    source: BIRD input layer entity `LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL`
+  corpus/shared/regulatory/glossary.md#long-short-balance-sheet-recognised-security-position-type:
+    provenance: bird_official
+    source: BIRD variable `LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP`
+  corpus/shared/regulatory/glossary.md#main-debtor-indicator:
+    provenance: bird_official
+    source: BIRD variable `MN_DBTR_INDCTR`
+  corpus/shared/regulatory/glossary.md#main-deposit-taking-corporation-indicator:
+    provenance: bird_official
+    source: BIRD variable `MN_DPST_TKNG_CRPRTN_INDCTR`
+  corpus/shared/regulatory/glossary.md#main-lessee-indicator:
+    provenance: bird_official
+    source: BIRD variable `MN_LSS_INDCTR`
+  corpus/shared/regulatory/glossary.md#multilateral-development-bank-indicator:
+    provenance: bird_official
+    source: BIRD variable `MLTLTRL_DVLPMNT_BNK_INDCTR`
+  corpus/shared/regulatory/glossary.md#negotiable-security-indicator:
+    provenance: bird_official
+    source: BIRD variable `NGTBL_SCRTY_INDCTR`
+  corpus/shared/regulatory/glossary.md#non-financial-corporations:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0120; Annex V, Part 1, paragraph 42(e)
+  corpus/shared/regulatory/glossary.md#non-performing:
+    provenance: bird_official
+    source: Template F 18.00.a column 0060
+  corpus/shared/regulatory/glossary.md#non-performing-exposures:
+    provenance: bird_official+legal
+    source: Annex V, Part 2, paragraph 213
+  corpus/shared/regulatory/glossary.md#other-demand-deposits:
+    provenance: bird_official+legal
+    source: Annex V, Part 2, paragraph 3
+  corpus/shared/regulatory/glossary.md#other-financial-corporations:
+    provenance: bird_official+legal
+    source: Template F 18.00.a row 0110; Annex V, Part 1, paragraph 42(d)
+  corpus/shared/regulatory/glossary.md#over-the-counter-otc-derivative-as-a-hedge:
+    provenance: bird_official
+    source: BIRD input layer entity `OTC_DRVTV_HDG_IL`
+  corpus/shared/regulatory/glossary.md#party:
+    provenance: bird_official
+    source: BIRD input layer entity `PRTY_IL`
+  corpus/shared/regulatory/glossary.md#party-identifier:
+    provenance: bird_official
+    source: BIRD variable `PRTY_ID`
+  corpus/shared/regulatory/glossary.md#performing-status:
+    provenance: bird_official
+    source: BIRD variable `PRFRMNG_STTS`
+  corpus/shared/regulatory/glossary.md#primary-issuer-indicator:
+    provenance: bird_official
+    source: BIRD variable `PRMRY_ISSR_INDCTR`
+  corpus/shared/regulatory/glossary.md#prudential-portfolio-type:
+    provenance: bird_official
+    source: BIRD variable `PRDNTL_PRTFL_TYP`
+  corpus/shared/regulatory/glossary.md#reference-date:
+    provenance: bird_official
+    source: BIRD variable `DT_RFRNC`
+  corpus/shared/regulatory/glossary.md#repayment-rights:
+    provenance: bird_official
+    source: BIRD variable `RPYMNT_RGHTS`
+  corpus/shared/regulatory/glossary.md#reporting-agent-identifier:
+    provenance: bird_official
+    source: BIRD variable `RPRTNG_AGNT_ID`
+  corpus/shared/regulatory/glossary.md#security-and-exchange-tradable-derivative:
+    provenance: bird_official
+    source: BIRD input layer entity `SCRTY_EXCHNG_TRDBL_DRVTV_IL`
+  corpus/shared/regulatory/glossary.md#security-and-exchange-tradable-derivative-identifier:
+    provenance: bird_official
+    source: BIRD variable `SCRTY_EXCHNG_TRDBL_DRVTV_ID`
+  corpus/shared/regulatory/glossary.md#security-and-exchange-tradable-derivative-type:
+    provenance: bird_official
+    source: BIRD variable `SCRTY_EXCHNG_TRDBL_DRVTV_TYP`
+  corpus/shared/regulatory/glossary.md#security-entity-role-assignment:
+    provenance: bird_official
+    source: BIRD input layer entity `SCRTY_ENTTY_RL_ASSGNMNT_IL`
+  corpus/shared/regulatory/glossary.md#security-identifier:
+    provenance: bird_official
+    source: BIRD variable `SCRTY_ID`
+  corpus/shared/regulatory/glossary.md#security-position-balance-sheet-recognised-type:
+    provenance: bird_official
+    source: BIRD variable `SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP`
+  corpus/shared/regulatory/glossary.md#subject-to-impairment-indicator:
+    provenance: bird_official
+    source: BIRD variable `SBJCT_IMPRMNT_INDCTR`
+  corpus/shared/regulatory/glossary.md#type-of-financial-asset-instrument-according-to-annex-v:
+    provenance: bird_official
+    source: BIRD variable `TYP_FNNCL_ASST_INSTRMNT_ANNX_V`
+  corpus/shared/regulatory/register.md:
+    provenance: bird_official
+    source: legal_text.csv; 2021/451 file; decision OI-14

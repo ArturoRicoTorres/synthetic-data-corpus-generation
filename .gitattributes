@@ -1,0 +1,3 @@
+# Generated corpus and answer key: keep LF so renders are byte-identical on every platform
+corpus/** text eol=lf
+answer_key/** text eol=lf

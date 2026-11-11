@@ -1,0 +1,68 @@
+# Legal text quoted in corpus/shared/regulatory/ (decisions D3, D7, OI-14). Read by src/render_corpus.py.
+# The text is never typed here: the renderer extracts each paragraph from the cached source file by number,
+# and a test checks every extract appears verbatim in that file.
+
+source:
+  register_id: REG_EU_2021_451
+  file: data/raw/legal/L_2021097EN.01000101.xml.html     # saved from EUR-Lex by the project owner (decision D7)
+  title: >-
+    Commission Implementing Regulation (EU) 2021/451 of 17 December 2020 laying down implementing technical
+    standards for the application of Regulation (EU) No 575/2013 of the European Parliament and of the Council with
+    regard to supervisory reporting of institutions and repealing Implementing Regulation (EU) No 680/2014
+  issuer: European Commission
+  version: Original publication, Official Journal L 97, 19.3.2021, p. 1 (later amendments not included)
+  url: https://eur-lex.europa.eu/eli/reg_impl/2021/451/oj/eng
+  annex: ANNEX V
+  annex_title: Instructions for reporting on financial information
+
+# Annex V paragraphs to quote, by part and paragraph number, with the topic they support.
+extracts:
+  - {part: 1, paragraph: 13, topic: Accounting portfolios}
+  - {part: 1, paragraph: 15, topic: Accounting portfolios under IFRS}
+  - {part: 1, paragraph: 16, topic: Accounting portfolios under national GAAP}
+  - {part: 1, paragraph: 27, topic: Carrying amount}
+  - {part: 1, paragraph: 31, topic: Debt securities}
+  - {part: 1, paragraph: 32, topic: Loans and advances}
+  - {part: 1, paragraph: 33, topic: Debt instruments}
+  - {part: 1, paragraph: 34, topic: Gross carrying amount}
+  - {part: 1, paragraph: 42, topic: Counterparty sectors}
+  - {part: 1, paragraph: 44, topic: Immediate counterparty}
+  - {part: 2, paragraph: 2, topic: Cash balances at central banks}
+  - {part: 2, paragraph: 3, topic: Other demand deposits}
+  - {part: 2, paragraph: 213, topic: Non-performing exposures}
+  - {part: 2, paragraph: 217, topic: Exposures in template 18}
+  - {part: 2, paragraph: 218, topic: Accounting portfolios in template 18}
+  - {part: 2, paragraph: 220, topic: Held for sale in template 18}
+  - {part: 2, paragraph: 221, topic: Gross carrying amount in template 18}
+
+# Glossary terms defined by an Annex V paragraph (or one lettered point of it).
+glossary_terms:
+  - {term: Accounting portfolios, part: 1, paragraph: 13}
+  - {term: Carrying amount, part: 1, paragraph: 27}
+  - {term: Debt securities, part: 1, paragraph: 31}
+  - {term: Loans and advances, part: 1, paragraph: 32}
+  - {term: Debt instruments, part: 1, paragraph: 33}
+  - {term: Gross carrying amount, part: 1, paragraph: 34}
+  - {term: Central banks, part: 1, paragraph: 42, point: a}
+  - {term: General governments, part: 1, paragraph: 42, point: b}
+  - {term: Credit institutions, part: 1, paragraph: 42, point: c}
+  - {term: Other financial corporations, part: 1, paragraph: 42, point: d}
+  - {term: Non-financial corporations, part: 1, paragraph: 42, point: e}
+  - {term: Households, part: 1, paragraph: 42, point: f}
+  - {term: Cash balances at central banks, part: 2, paragraph: 2}
+  - {term: Other demand deposits, part: 2, paragraph: 3}
+  - {term: Non-performing exposures, part: 2, paragraph: 213}
+
+# Facts read from the source file, used for the register status of the documents it repeals.
+repeal:
+  REG_EU_680_2014: >-
+    Repealed by Implementing Regulation (EU) 2021/451 (Article 22), which applies from 28 June 2021 (Article 23).
+    References to the repealed Regulation shall be construed as references to Implementing Regulation (EU) 2021/451.
+
+# Short names used in the quoted legal text, as defined in Implementing Regulation (EU) 2021/451 (checked in the
+# source file), mapped to register ids.
+aliases:
+  ECB BSI Regulation: REG_EU_1071_2013     # "'ECB BSI Regulation' or 'ECB/2013/33': Regulation (EU) No 1071/2013"
+  ECB/2013/33: REG_EU_1071_2013
+  CRR: CRR_REGULATION                      # "Regulation (EU) No 575/2013 ... is referred to as 'CRR'"
+  1071/201: REG_EU_1071_2013               # truncated as published in the BIRD export (legal reference of TYP_INSTRMNT_51)

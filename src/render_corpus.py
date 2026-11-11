@@ -528,6 +528,350 @@ def render_reporting_chain(out, m, prov):
     return chain
 
 
+# ---------------------------------------------------------------- legal text (decisions D3, D7)
+def legal_plain_text(path):
+    """Plain text of an EUR-Lex HTML file: tags removed, entities decoded, one block per line."""
+    import html
+    raw = Path(path).read_text(encoding="utf-8", errors="strict")
+    txt = html.unescape(re.sub(r"<[^>]+>", "\n", raw))
+    return [ln.strip() for ln in re.sub(r"[ \t\r\f\v ]+", " ", txt).split("\n") if ln.strip()]
+
+
+def normalise(text):
+    return re.sub(r"\s+", " ", text.replace(" ", " ")).strip()
+
+
+def annex_paragraphs(lines, annex="ANNEX V"):
+    """{(part, number): {"heading": str, "points": [(label or None, text)]}} for one annex."""
+    start = next(i for i, ln in enumerate(lines) if ln == annex and i > 0 and "INSTRUCTIONS" in lines[i + 1])
+    end = next(i for i in range(start + 1, len(lines)) if re.fullmatch(r"ANNEX [IVX]+", lines[i]))
+    part, cur, heading, out, label = None, None, None, {}, None
+    for ln in lines[start:end]:
+        if re.fullmatch(r"PART \d+", ln):
+            part, cur = int(ln.split()[1]), None
+            continue
+        if part is None:
+            continue
+        if re.fullmatch(r"\d+\.", ln):
+            cur = (part, int(ln[:-1]))
+            out[cur] = {"heading": heading, "points": []}
+            label = None
+            continue
+        if re.match(r"^\d+(\.\d+)*\.\s*\S", ln):
+            heading, cur = ln, None
+            continue
+        if cur is None:
+            continue
+        if re.fullmatch(r"\([a-z]+\)|\([ivx]+\)", ln):
+            label = ln
+            continue
+        out[cur]["points"].append((label, ln))
+        label = None
+    return out
+
+
+def paragraph_text(para, point=None):
+    pts = para["points"]
+    if point:
+        pts = [p for p in pts if p[0] == f"({point})"]
+    return [(f"{lab} {t}" if lab else t) for lab, t in pts]
+
+
+def load_legal():
+    cfg = load_yaml(TEXT_DIR / "legal_extracts.yaml")
+    src = ROOT / cfg["source"]["file"]
+    lines = legal_plain_text(src)
+    return cfg, src, lines, annex_paragraphs(lines, cfg["source"]["annex"])
+
+
+# ---------------------------------------------------------------- regulatory documents (shared by all scenarios)
+REG_DIR = Path("corpus") / "shared" / "regulatory"
+BIRD_ID = "BIRD_FINREP_4_3"
+ROUTINES = ["R_IDT_DER", "R_DER_GRSS_CRRYNG_AMNT_3", "R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2",
+            "R_DER_GRSS_CRRYNG_AMNT_1", "R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3", "R_F_18.00.a_ALL",
+            "R_F_18.00.a_R0070", "R_F_18.00.a_R0080", "R_F_18.00.a_R0090", "R_F_18.00.a_R0100", "R_F_18.00.a_R0110",
+            "R_F_18.00.a_R0120", "R_F_18.00.a_R0150", "R_F_18.00.a_C0010", "R_F_18.00.a_C0060"]
+TEMPLATE = "F_18.00.a"
+USED_ROWS = ["0070", "0080", "0090", "0100", "0110", "0120", "0150"]
+USED_COLS = ["0010", "0060"]
+
+
+def anchor(a):
+    return f'<a id="{slug(a)}"></a>'
+
+
+def reg_link(reg_id, prefix=""):
+    return f"[{reg_id}]({prefix}register.md#{slug(reg_id)})"
+
+
+def header_tree(direction):
+    th = bird_export.read("table_header")
+    h = bird_export.indexed("header", "HEADER_ID")
+    t = th[th.TABLE_ID == TEMPLATE]
+    t = t[t.HEADER_ID.map(lambda x: h.DIRECTION.get(x)) == direction]
+    t = t.assign(o=t.ORDER_NUMBER.astype(int)).sort_values("o")
+    parent = dict(zip(t.HEADER_ID, t.PARENT_HEADER_ID))
+    depth = lambda x: 0 if not parent.get(x) else 1 + depth(parent[x])  # noqa: E731
+    return [(x, h.CODE[x], h.LABEL[x], depth(x)) for x in t.HEADER_ID]
+
+
+def render_template(out, prov):
+    rel = REG_DIR / "f_18_00_a_template.md"
+    rt = bird_export.indexed("rendering_table", "TABLE_ID")
+    cube = bird_export.indexed("cube", "CUBE_ID")
+    lines = [f"# Template F 18.00.a: {rt.NAME[TEMPLATE]}", ""]
+    lines += wrap("Row and column structure of FINREP template F 18.00.a as published in the ECB BIRD metadata "
+                  f"(FINREP {bird_export.framework_version()}). Rows and columns marked with * are the ones the "
+                  "non-performing loans ratio uses.") + [""]
+    for direction, title, used in (("Y", "Rows", USED_ROWS), ("X", "Columns", USED_COLS)):
+        lines += [f"## {title}", "", "| Code | Label |", "|---|---|"]
+        for _, code, label, depth in header_tree(direction):
+            mark = " *" if code in used and (direction == "X" or depth <= 2) else ""
+            lines.append(f"| {code}{mark} | {'&nbsp;&nbsp;' * 2 * depth}{label} |")
+        lines.append("")
+    lines += ["## Cells used", "", "| Cell | Data point | Description |", "|---|---|---|"]
+    for col in USED_COLS:
+        dp = f"{TEMPLATE}_R0070_C{col}_OL"
+        lines.append(f"| r0070, c{col} | `{dp}` | {cube.DESCRIPTION[dp]} |")
+    write(out / rel, "\n".join(lines) + "\n")
+    prov[str(rel).replace("\\", "/")] = {"provenance": "bird_official",
+                                         "source": "rendering_table.csv, header.csv, table_header.csv, cube.csv"}
+
+
+def render_bird_definitions(out, m, prov):
+    rel = REG_DIR / "bird_definitions.md"
+    lines = ["# BIRD definitions", ""]
+    lines += wrap("Definitions of the BIRD variables and code values used in the reporting data mart, verbatim "
+                  f"from the ECB BIRD metadata (FINREP {bird_export.framework_version()}). Legal references are "
+                  "given as published there; see the register for the status of each document.") + [""]
+    lines += ["## Variables", ""]
+    for v in m.variables:
+        d = m.var.DOMAIN_ID[v]
+        lines += [anchor(v), f"### {m.var.NAME[v]} (`{v}`)", ""] + wrap(m.var.DESCRIPTION[v].replace("\n", " "))
+        lines += ["", f"- Domain: {m.dom.NAME.get(d, d)} (`{d}`)"]
+        lines += [f"- Legal reference: {reg_link(c)} {a}" for c, a in m.legal_refs("VARIABLE", v)]
+        lines.append("")
+    lines += ["## Code values", ""]
+    for d in m.domains:
+        lines += [f"### {m.dom.NAME[d]} (`{d}`)", "", "| Code value | Code | Name | Description |", "|---|---|---|---|"]
+        for mid in m.members_of(d):
+            desc = m.mem.DESCRIPTION[mid].replace("\n", " ").replace("|", "/")
+            lines.append(f"| `{mid}` | {m.mem.CODE[mid]} | {m.mem.NAME[mid]} | {desc} |")
+        refs = [(mid, c, a) for mid in m.members_of(d) for c, a in m.legal_refs("MEMBER", mid)]
+        if refs:
+            lines += ["", "Legal references:"] + [f"- `{mid}`: {reg_link(c)} {a}" for mid, c, a in refs]
+        lines.append("")
+    write(out / rel, "\n".join(lines).rstrip() + "\n")
+    prov[str(rel).replace("\\", "/")] = {"provenance": "bird_official",
+                                         "source": "variable.csv, domain.csv, member.csv, legal_reference.csv"}
+
+
+def render_bird_rules(out, prov):
+    rel = REG_DIR / "bird_transformation_rules.md"
+    ro = bird_export.indexed("routine", "ROUTINE_ID")
+    lines = ["# BIRD transformation rules", ""]
+    lines += wrap("Official algorithm text of the BIRD routines behind the non-performing loans ratio, verbatim from "
+                  f"the ECB BIRD metadata (FINREP {bird_export.framework_version()}). The algorithms are written in "
+                  "the BIRD pseudo-code and are not directly executable.") + [""]
+    for rid in ROUTINES:
+        lines += [anchor(rid), f"## {rid}", ""]
+        desc = ro.DESCRIPTION.get(rid) or ro.NAME.get(rid)
+        if desc:
+            lines += wrap(desc.replace("\n", " ")) + [""]
+        lines += ["```", bird_export.algorithm(rid), "```", ""]
+    write(out / rel, "\n".join(lines).rstrip() + "\n")
+    prov[str(rel).replace("\\", "/")] = {"provenance": "bird_official", "source": "routine.csv"}
+
+
+def render_annex_extracts(out, legal, prov):
+    cfg, _, _, paras = legal
+    s = cfg["source"]
+    rel = REG_DIR / "annex_v_extracts.md"
+    lines = [f"# Annex V extracts: {s['annex_title']}", ""]
+    lines += wrap(f"Quoted from {s['title']}, Annex V. Version: {s['version']}. Source: {s['url']}. Register entry: "
+                  f"{reg_link(s['register_id'])}.") + [""]
+    for e in cfg["extracts"]:
+        key = (e["part"], e["paragraph"])
+        lines += [anchor(f"part-{key[0]}-paragraph-{key[1]}"),
+                  f"## Part {key[0]}, paragraph {key[1]}: {e['topic']}", ""]
+        for t in paragraph_text(paras[key]):
+            lines += ["> " + t, ">"]
+        lines[-1] = ""
+        prov[f"{rel}#part-{key[0]}-paragraph-{key[1]}".replace("\\", "/")] = {
+            "provenance": f"legal:{s['register_id']}", "source": f"Annex V, Part {key[0]}, paragraph {key[1]}"}
+    write(out / rel, "\n".join(lines).rstrip() + "\n")
+
+
+def reg_number(code):
+    """REG_EU_680_2014 -> 680/2014; REG_EU_534_2015 -> 2015/534 (EU numbering changed in 2015)."""
+    mt = re.fullmatch(r"(?:REG|DIR)_(?:EU|EC)_(\d+)_(\d{4})", code)
+    if not mt:
+        return None
+    num, year = mt.groups()
+    return f"{year}/{num}" if int(year) >= 2015 else f"{num}/{year}"
+
+
+def register_entries(m, legal):
+    cfg = legal[0]
+    s = cfg["source"]
+    lt = bird_export.read("legal_text").set_index("LEGAL_CODE")
+    fv = bird_export.read("framework_version")
+    fin = fv[fv.FRAMEWORK_ID == "FINREP"].iloc[0]
+    entries = {
+        BIRD_ID: {"title": f"ECB BIRD metadata export, FINREP framework version {fin.VERSION_ID}",
+                  "issuer": "European Central Bank (BIRD)", "version": f"{fin.VERSION_ID}, valid from {fin.VALID_FROM}",
+                  "url": "https://bird.ecb.europa.eu", "file": bird_export.ZIP.name, "sha256": bird_export.zip_sha256(),
+                  "status": "Source of the data model, definitions and transformation rules of this corpus.",
+                  "replaced_by": None, "numbers": []},
+        s["register_id"]: {"title": normalise(s["title"]), "issuer": s["issuer"], "version": s["version"],
+                           "url": s["url"], "file": Path(s["file"]).name,
+                           "sha256": __import__("hashlib").sha256((ROOT / s["file"]).read_bytes()).hexdigest(),
+                           "status": "Applies from 28 June 2021 (Article 23). Repeals Implementing Regulation (EU) "
+                                     "No 680/2014 (Article 22).",
+                           "replaced_by": None, "numbers": ["2021/451"]},
+    }
+    for code in sorted(lt.index):
+        r = lt.loc[code]
+        entries.setdefault(code, {
+            "title": normalise(r.LEGAL_DESCRIPTION), "issuer": None, "version": None,
+            "url": r.LEGAL_TEXT_URL or None, "file": None, "sha256": None,
+            "status": normalise(cfg["repeal"][code]) if code in cfg["repeal"] else
+            "As listed in the BIRD export; status not verified.",
+            "replaced_by": s["register_id"] if code in cfg["repeal"] else None,
+            "numbers": [n for n in [reg_number(code)] if n] + re.findall(r"ECB/\d{4}/\d+", r.LEGAL_DESCRIPTION)})
+    entries["CRR_REGULATION"]["numbers"] = ["575/2013"]
+    return entries
+
+
+CITATION = re.compile(r"(?:Regulation|Directive)\s*\((?:EU|EC|EEC)\)\s*(?:No\s*)?(\d+/\d+)|"
+                      r"\(?(ECB/\d{4}/\d+)\)?")
+
+
+def citations_in(text, entries, aliases):
+    """Register ids cited in a text, and citations that resolve to no entry."""
+    by_number = {n: k for k, e in entries.items() for n in e["numbers"]}
+    found, unresolved = set(), set()
+    for mt in CITATION.finditer(text):
+        num = mt.group(1) or mt.group(2)
+        reg = by_number.get(num) or aliases.get(num)
+        (found.add(reg) if reg else unresolved.add(num))
+    for k in entries:
+        if re.search(rf"\b{re.escape(k)}\b", text):
+            found.add(k)
+    for alias, reg in aliases.items():
+        if re.search(rf"(?<![\w/]){re.escape(alias)}(?![\w/])", text):
+            found.add(reg)
+    return found, unresolved
+
+
+def render_register(out, m, legal, prov):
+    """Register of every document the corpus cites; written last so 'cited in' covers every corpus file."""
+    entries = register_entries(m, legal)
+    aliases = legal[0]["aliases"]
+    cited = {k: set() for k in entries}
+    unresolved = {}
+    for p in sorted((out / "corpus").rglob("*")):
+        if p.is_file():
+            found, bad = citations_in(p.read_text(encoding="utf-8"), entries, aliases)
+            relp = p.relative_to(out).as_posix()
+            for k in found:
+                cited[k].add(relp)
+            if bad:
+                unresolved[relp] = sorted(bad)
+    keep = {k: e for k, e in entries.items() if cited[k] or k in (BIRD_ID, legal[0]["source"]["register_id"])}
+    data = {k: {**{f: e[f] for f in ("title", "issuer", "version", "url", "file", "sha256", "status", "replaced_by")},
+                "cited_in": sorted(cited[k])} for k, e in sorted(keep.items())}
+    data = {k: {f: v for f, v in e.items() if v not in (None, [])} for k, e in data.items()}
+    write(out / REG_DIR / "register.yaml", dump_yaml({"documents": data}))
+    lines = ["# Register of referenced documents", ""]
+    lines += wrap("Every regulatory and reference document cited anywhere in this corpus. Citations are kept as "
+                  "they appear in their source; where a cited document has been replaced, the entry says by which "
+                  "document.") + [""]
+    for k, e in data.items():
+        lines += [anchor(k), f"## {k}", "", f"**{e['title']}**", ""]
+        for f in ("issuer", "version", "url", "file", "sha256", "status"):
+            if f in e:
+                lines.append(f"- {f.replace('_', ' ').capitalize()}: {e[f]}")
+        if "replaced_by" in e:
+            lines.append(f"- Replaced by: {reg_link(e['replaced_by'])}")
+        lines.append(f"- Cited in: {', '.join(e['cited_in']) if e['cited_in'] else 'not cited'}")
+        lines.append("")
+    write(out / REG_DIR / "register.md", "\n".join(lines).rstrip() + "\n")
+    prov[(REG_DIR / "register.md").as_posix()] = {"provenance": "bird_official",
+                                                  "source": "legal_text.csv; 2021/451 file; decision OI-14"}
+    return data, unresolved
+
+
+def glossary_entries(m, legal):
+    """{key: {"name", "definitions": [(label, text, [register ids])]}} for terms, and code values separately."""
+    cfg, _, _, paras = legal
+    reg = cfg["source"]["register_id"]
+    terms = {}
+
+    def add(name, label, text, regs):
+        e = terms.setdefault(name.lower(), {"name": name, "definitions": []})
+        e["definitions"].append((label, normalise(text), regs))
+
+    for v in m.variables:
+        add(m.var.NAME[v], f"BIRD variable `{v}`", m.var.DESCRIPTION[v],
+            [BIRD_ID] + [c for c, _ in m.legal_refs("VARIABLE", v)])
+    for t in m.tables:
+        add(m.cube.NAME[t["name"]], f"BIRD input layer entity `{t['name']}`", m.cube.DESCRIPTION[t["name"]], [BIRD_ID])
+    hdr = bird_export.indexed("header", "HEADER_ID")
+    for direction, codes in (("Y", USED_ROWS), ("X", USED_COLS)):
+        for code in codes:
+            hid = f"{TEMPLATE}_{direction}{code}"
+            kind = "row" if direction == "Y" else "column"
+            add(hdr.LABEL[hid], f"Template F 18.00.a {kind} {code}",
+                f"Label of {kind} {code} of template F 18.00.a.", [BIRD_ID])
+    for g in cfg["glossary_terms"]:
+        text = " ".join(paragraph_text(paras[(g["part"], g["paragraph"])], g.get("point")))
+        where = f"Annex V, Part {g['part']}, paragraph {g['paragraph']}" + (f"({g['point']})" if g.get("point") else "")
+        add(g["term"], where, text, [reg])
+    codes = {mid: {"name": m.mem.NAME[mid], "domain": m.dom.NAME[m.mem.DOMAIN_ID[mid]],
+                   "text": normalise(m.mem.DESCRIPTION[mid]),
+                   "regs": [BIRD_ID] + [c for c, _ in m.legal_refs("MEMBER", mid)]} for mid in m.members}
+    return terms, codes
+
+
+def render_glossary(out, m, legal, prov):
+    terms, codes = glossary_entries(m, legal)
+    lines = ["# Glossary", ""]
+    lines += wrap("General vocabulary of this corpus: the business terms of the reporting data mart, the labels of "
+                  "template F 18.00.a and the Annex V concepts they rely on, followed by the code values used. "
+                  "Definitions are quoted from their source; each links to its entry in the register.") + [""]
+    lines += ["## Terms", ""]
+    for key in sorted(terms):
+        e = terms[key]
+        lines += [anchor(e["name"]), f"### {e['name']}", ""]
+        for label, text, regs in e["definitions"]:
+            lines.append(f"- {label}: {text} (Source: {', '.join(reg_link(r) for r in dict.fromkeys(regs))})")
+        lines.append("")
+        prov[f"{REG_DIR.as_posix()}/glossary.md#{slug(e['name'])}"] = {
+            "provenance": "bird_official" if all(r != legal[0]["source"]["register_id"]
+                                                 for _, _, rs in e["definitions"] for r in rs) else "bird_official+legal",
+            "source": "; ".join(label for label, _, _ in e["definitions"])}
+    lines += ["## Code values", ""]
+    for mid in sorted(codes):
+        c = codes[mid]
+        lines += [anchor(mid), f"### {mid}: {c['name']}", ""]
+        lines.append(f"- Code list: {c['domain']}. {c['text']} "
+                     f"(Source: {', '.join(reg_link(r) for r in dict.fromkeys(c['regs']))})")
+        lines.append("")
+    write(out / REG_DIR / "glossary.md", "\n".join(lines).rstrip() + "\n")
+    return terms, codes
+
+
+def render_regulatory(out, m, prov):
+    legal = load_legal()
+    render_template(out, prov)
+    render_bird_definitions(out, m, prov)
+    render_bird_rules(out, prov)
+    render_annex_extracts(out, legal, prov)
+    render_glossary(out, m, legal, prov)
+    return legal
+
+
 # ---------------------------------------------------------------- main
 def render(out=ROOT, seed=42):
     out = Path(out)
@@ -541,6 +885,10 @@ def render(out=ROOT, seed=42):
     docs = {}
     render_data_model(out, m, docs)
     render_reporting_chain(out, m, docs)
+    legal = render_regulatory(out, m, docs)
+    _, unresolved = render_register(out, m, legal, docs)
+    if unresolved:
+        raise ValueError(f"citations without a register entry: {unresolved}")
     write(out / "answer_key" / "provenance.yaml",
           dump_yaml({"note": "Provenance of every corpus metadata asset, glossary entry and document section. "
                              "bird_official = verbatim from the BIRD export; gap_fill = written for this project; "

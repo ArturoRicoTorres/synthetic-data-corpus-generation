@@ -122,7 +122,7 @@ that matches no sector row is not part of row 0070.
 - Terms: [Type of Financial Asset Instrument according to Annex V](../../shared/regulatory/glossary.md#type-of-financial-asset-instrument-according-to-annex-v)
 - References: [REG_EU_2021_451](../../shared/regulatory/register.md#reg-eu-2021-451) Annex V, Part 2, paragraph 217; [REG_EU_2021_451](../../shared/regulatory/register.md#reg-eu-2021-451) Annex V, Part 2, paragraph 218
 
-## Step 9: Column 0010: gross carrying amount
+## Step 9: Gross carrying amount in column 0010
 
 Column 0010 is the sum of the gross carrying amount of the positions in row 0070. Only positive amounts are
 added.
@@ -134,7 +134,7 @@ added.
 - Terms: [Gross carrying amount](../../shared/regulatory/glossary.md#gross-carrying-amount)
 - References: [REG_EU_2021_451](../../shared/regulatory/register.md#reg-eu-2021-451) Annex V, Part 2, paragraph 221
 
-## Step 10: Column 0060: non-performing
+## Step 10: Non-performing amount in column 0060
 
 Column 0060 is the same sum restricted to non-performing positions: instrument roles whose performing status
 is non-performing, and security positions whose security is a non-performing debt security.

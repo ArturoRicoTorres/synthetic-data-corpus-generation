@@ -107,7 +107,7 @@ sections:
       - [REG_EU_2021_451, "Annex V, Part 2, paragraph 217"]
       - [REG_EU_2021_451, "Annex V, Part 2, paragraph 218"]
   T09:
-    title: "Column 0010: gross carrying amount"
+    title: Gross carrying amount in column 0010
     text: >-
       Column 0010 is the sum of the gross carrying amount of the positions in row 0070. Only positive amounts are
       added.
@@ -115,7 +115,7 @@ sections:
     cites:
       - [REG_EU_2021_451, "Annex V, Part 2, paragraph 221"]
   T10:
-    title: "Column 0060: non-performing"
+    title: Non-performing amount in column 0060
     text: >-
       Column 0060 is the same sum restricted to non-performing positions: instrument roles whose performing status is
       non-performing, and security positions whose security is a non-performing debt security.

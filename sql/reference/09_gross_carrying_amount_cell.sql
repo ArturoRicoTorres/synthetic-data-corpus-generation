@@ -1,4 +1,4 @@
--- F 18.00.a row 0070, column 0010: gross carrying amount.
+-- F 18.00.a row 0070, column 0010 (gross carrying amount).
 
 CREATE OR REPLACE VIEW f_18_00_a_r0070_c0010 AS
 SELECT SUM(GRSS_CRRYNG_AMNT) AS GRSS_CRRYNG_AMNT

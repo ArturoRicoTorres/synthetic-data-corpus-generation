@@ -2141,12 +2141,12 @@ documents:
     provenance: gap_fill
     source: src/corpus_text/reporting_chain.yaml
     node: T09
-    title: 'Column 0010: gross carrying amount'
+    title: Gross carrying amount in column 0010
   corpus/s1_rich/docs/reporting_chain.md#step-10:
     provenance: gap_fill
     source: src/corpus_text/reporting_chain.yaml
     node: T10
-    title: 'Column 0060: non-performing'
+    title: Non-performing amount in column 0060
   corpus/s1_rich/docs/reporting_chain.md#step-11:
     provenance: gap_fill
     source: src/corpus_text/reporting_chain.yaml

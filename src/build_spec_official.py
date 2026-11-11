@@ -270,8 +270,13 @@ node(id="T07", name="Resolve counterparty sector and debtor role per sector row"
                            "MN_DPST_TKNG_CRPRTN_INDCTR_1) or (ENTTY_RL_TYP 19 and MN_LSS_INDCTR_1) or "
                            "(ENTTY_RL_TYP 8 and PRMRY_ISSR_INDCTR_1)",
             "rows": {r: ro.loc[f"R_F_18.00.a_{r}", "DESCRIPTION"].split(": ")[-1] for r in SECTOR_ROWS},
-            "official_algorithms": {r: alg(f"R_F_18.00.a_{r}") for r in SECTOR_ROWS}},
-     business_group="COUNTERPARTY_ENRICHMENT", provenance="bird_official", open_issues=["OI-10", "OI-12"])
+            "official_algorithms": {r: alg(f"R_F_18.00.a_{r}") for r in SECTOR_ROWS},
+            "decided_corrections": {"R0110": {"add_sectors": ["INSTTTNL_SCTR_S126"], "decision": "OI-15",
+                                              "provenance": "gap_fill",
+                                              "reason": "financial auxiliaries (S126, under S12_D) are other "
+                                                        "financial corporations per Annex V Part 1 paragraph 42(d) "
+                                                        "of Implementing Regulation (EU) 2021/451"}}},
+     business_group="COUNTERPARTY_ENRICHMENT", provenance="bird_official", open_issues=["OI-10", "OI-12", "OI-15"])
 node(id="T08", name="Row 0070 as sum of sector rows", layer="reporting",
      inputs=[f"F_18.00.a_{r}" for r in SECTOR_ROWS], outputs=["F_18.00.a_R0070"],
      logic={"type": "aggregate", "official_algorithm": alg("R_F_18.00.a_R0070")},
@@ -393,7 +398,7 @@ issues = [
     {"id": "OI-14", "status": "DECIDED", "decision": "see decisions.md", "severity": "low",
      "issue": "Legal references cite Implementing Regulation (EU) No 680/2014, which was replaced by Implementing "
               "Regulation (EU) 2021/451. Confirm citations before writing the Collibra and regulatory documents."},
-    {"id": "OI-15", "status": "OPEN", "severity": "medium",
+    {"id": "OI-15", "status": "DECIDED", "decision": "see decisions.md", "severity": "medium",
      "issue": "INSTTTNL_SCTR_S126 (financial auxiliaries) sits under INSTTTNL_SCTR_S12_D in the member hierarchy but is "
               "missing from the member list of official routine R_F_18.00.a_R0110. Read literally, loans to financial "
               "auxiliaries fall in no sector row and drop out of R0070."},
@@ -414,7 +419,7 @@ issues = [
 
 spec = {
     "spec_version": "0.2-draft",
-    "status": "DRAFT - open issues OI-15 to OI-18 are undecided; decided issues are logged in decisions.md",
+    "status": "DRAFT - open issues OI-16 to OI-18 are undecided; decided issues are logged in decisions.md",
     "provenance": {
         "primary_source": {"type": "official ECB BIRD metadata export", "file": ZIP.name,
                            "sha256": zip_sha, "obtained_from": "bird.ecb.europa.eu (downloaded by user)",

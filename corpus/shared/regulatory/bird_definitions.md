@@ -443,6 +443,7 @@ Type of Financial Asset Instrument according to Annex V
 | `INSTTTNL_SCTR_S125_E` | S125_E | Central Counterparties (CCPs) | CCPs as defined in point (1) of Article 2 of Regulation (EU) No 648/2012. |
 | `INSTTTNL_SCTR_S125_I` | S125_I | Other financial intermediaries, except insurance corporations and pension funds, other than CCPs, FVCs, security and derivative dealers, financial corporations engaged in lending and specialised financial corporations | It corresponds to subsector S.125, as defined in Regulation (EU) No 549/2013 (paragraphs 2.86 to 2.94 of Annex A), extended to the rest of the world, other than CCPs, as defined in point (1) of Article 2 of Regulation (EU) No 648/2012, FVCs, as defined in Article 1 of Regulation (EU) No 1075/2013, and security and derivative dealers, financial corporations engaged in lending and specialised financial corporations, as defined in Regulation (EU) No 549/2013 (paragraphs 2.91, 2.92 and 2.93, respectively, of Annex A), extended to the rest of the world. |
 | `INSTTTNL_SCTR_S125_W` | S125_W | Other financial corporations excluding financial vehicle corporations | Other financial corporations excluding financial vehicle corporations |
+| `INSTTTNL_SCTR_S126` | S126 | Financial auxiliaries | It corresponds to subsector S.126, as defined in Regulation (EU) No 549/2013 (paragraphs 2.63 and 2.95 to 2.97 of Annex A), extended to the rest of the world. |
 | `INSTTTNL_SCTR_S127` | S127 | Captive financial institutions and money lenders | It corresponds to subsector S.127, as defined in Regulation (EU) No 549/2013 (paragraphs 2.98 to 2.99 of Annex A), extended to the rest of the world. |
 | `INSTTTNL_SCTR_S128` | S128 | Insurance corporations | It corresponds to subsector S.128, as defined in Regulation (EU) No 549/2013 (paragraphs 2.100 to 2.104 of Annex A), extended to the rest of the world. |
 | `INSTTTNL_SCTR_S129` | S129 | Pension funds | It corresponds to subsector S.129, as defined in Regulation (EU) No 549/2013 (paragraphs 2.105 to 2.110 of Annex A), extended to the rest of the world. |
@@ -470,6 +471,7 @@ Legal references:
 - `INSTTTNL_SCTR_S125_D`: [REG_EU_549_2013](register.md#reg-eu-549-2013) Regulation (EU) No 549/2013 (paragraph 2.93 of Annex A)
 - `INSTTTNL_SCTR_S125_E`: [REG_EU_648_2012](register.md#reg-eu-648-2012) Point (1) of Article 2 of Regulation (EU) No 648/2012
 - `INSTTTNL_SCTR_S125_I`: [REG_EU_549_2013](register.md#reg-eu-549-2013) Regulation (EU) No 549/2013
+- `INSTTTNL_SCTR_S126`: [REG_EU_549_2013](register.md#reg-eu-549-2013) Subsector S.127, as defined in Regulation (EU) No 549/2013 (paragraphs 2.98 to 2.99 of Annex A)
 - `INSTTTNL_SCTR_S127`: [REG_EU_549_2013](register.md#reg-eu-549-2013) Subsector S.127, as defined in Regulation (EU) No 549/2013 (paragraphs 2.98 to 2.99 of Annex A)
 - `INSTTTNL_SCTR_S128`: [REG_EU_549_2013](register.md#reg-eu-549-2013) Subsector S.127, as defined in Regulation (EU) No 549/2013 (paragraphs 2.98 to 2.99 of Annex A)
 - `INSTTTNL_SCTR_S129`: [REG_EU_549_2013](register.md#reg-eu-549-2013) Subsector S.129, as defined in Regulation (EU) No 549/2013 (paragraphs 2.105 to 2.110 of Annex A)

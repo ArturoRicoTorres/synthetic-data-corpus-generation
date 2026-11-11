@@ -46,6 +46,7 @@ A Party is an entity of interest.
 | `INSTTTNL_SCTR_S125_E` | S125_E | Central Counterparties (CCPs) |
 | `INSTTTNL_SCTR_S125_I` | S125_I | Other financial intermediaries, except insurance corporations and pension funds, other than CCPs, FVCs, security and derivative dealers, financial corporations engaged in lending and specialised financial corporations |
 | `INSTTTNL_SCTR_S125_W` | S125_W | Other financial corporations excluding financial vehicle corporations |
+| `INSTTTNL_SCTR_S126` | S126 | Financial auxiliaries |
 | `INSTTTNL_SCTR_S127` | S127 | Captive financial institutions and money lenders |
 | `INSTTTNL_SCTR_S128` | S128 | Insurance corporations |
 | `INSTTTNL_SCTR_S129` | S129 | Pension funds |

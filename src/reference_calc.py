@@ -48,6 +48,8 @@ def spec_constants(spec_path=SPEC):
         where = text.split("where", 1)[1]
         c["rows"][r] = {"sectors": set(re.findall(r"INSTTTNL_SCTR_\w+", where)),
                         "mdb": "MLTLTRL_DVLPMNT_BNK_INDCTR_1" in where}
+    for r, fix in (T["T07"]["logic"].get("decided_corrections") or {}).items():   # decided issues (decisions.md)
+        c["rows"][r]["sectors"] |= set(fix["add_sectors"])
     return c
 
 

@@ -43,7 +43,7 @@ ROW_SECTORS = {
     "R0100": ["INSTTTNL_SCTR_S122_A_1", "INSTTTNL_SCTR_S122_A_2"],
     "R0110": ["INSTTTNL_SCTR_S123", "INSTTTNL_SCTR_S124", "INSTTTNL_SCTR_S125_I", "INSTTTNL_SCTR_S125_C",
               "INSTTTNL_SCTR_S125_A", "INSTTTNL_SCTR_S125_E", "INSTTTNL_SCTR_S125_D", "INSTTTNL_SCTR_S125_B",
-              "INSTTTNL_SCTR_S125_W", "INSTTTNL_SCTR_S127", "INSTTTNL_SCTR_S128", "INSTTTNL_SCTR_S129",
+              "INSTTTNL_SCTR_S125_W", "INSTTTNL_SCTR_S126", "INSTTTNL_SCTR_S127", "INSTTTNL_SCTR_S128", "INSTTTNL_SCTR_S129",
               "INSTTTNL_SCTR_S122_B1", "INSTTTNL_SCTR_S122_B2"],
     "R0120": ["INSTTTNL_SCTR_S11"],
     "R0150": ["INSTTTNL_SCTR_S14_A", "INSTTTNL_SCTR_S14_B", "INSTTTNL_SCTR_S15"],
@@ -202,7 +202,7 @@ def edge_cases(b):
     b.instrument("IFRS", "C-I21", ca=400, ai=0, roles=[debtor("INSTTTNL_SCTR_S14")])
     b.case("I21", "IFRS", I, "C-I21", [], 400, 0, 0, "OI-17 literal: parent sector S14 matches no row")
     b.instrument("IFRS", "C-I22", ca=400, ai=0, roles=[debtor("INSTTTNL_SCTR_S126")])
-    b.case("I22", "IFRS", I, "C-I22", [], 400, 0, 0, "OI-15 literal: financial auxiliary S126 in no row")
+    b.case("I22", "IFRS", I, "C-I22", ["R0110"], 400, 1, 0, "OI-15 decided: financial auxiliary S126 in R0110")
     b.instrument("IFRS", "C-I23", ca=1000, ai=0, prf=NP, roles=[debtor(S1311, mdb=MDB)])
     b.case("I23", "IFRS", I, "C-I23", ["R0090", "R0100"], 1000, 1, 1,
            "OI-16 literal: development bank on government sector counted twice")
@@ -257,7 +257,7 @@ def edge_cases(b):
 
 
 def random_positions(b, rng, n):
-    sectors = [s for v in ROW_SECTORS.values() for s in v] + ["INSTTTNL_SCTR_S126", "INSTTTNL_SCTR_S14"]
+    sectors = [s for v in ROW_SECTORS.values() for s in v] + ["INSTTTNL_SCTR_S14"]
     amt = lambda lo, hi: Decimal(rng.randint(lo * 100, hi * 100)) / 100
     for ctx_name in ("IFRS", "NGAAP"):
         ifrs = ctx_name == "IFRS"

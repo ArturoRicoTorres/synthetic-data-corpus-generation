@@ -617,6 +617,11 @@ their source; each links to its entry in the register.
 
 - Code list: Institutional sectors. Other financial corporations excluding financial vehicle corporations (Source: [BIRD_FINREP_4_3](register.md#bird-finrep-4-3))
 
+<a id="instttnl-sctr-s126"></a>
+### INSTTTNL_SCTR_S126: Financial auxiliaries
+
+- Code list: Institutional sectors. It corresponds to subsector S.126, as defined in Regulation (EU) No 549/2013 (paragraphs 2.63 and 2.95 to 2.97 of Annex A), extended to the rest of the world. (Source: [BIRD_FINREP_4_3](register.md#bird-finrep-4-3), [REG_EU_549_2013](register.md#reg-eu-549-2013))
+
 <a id="instttnl-sctr-s127"></a>
 ### INSTTTNL_SCTR_S127: Captive financial institutions and money lenders
 

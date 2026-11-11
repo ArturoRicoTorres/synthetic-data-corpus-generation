@@ -1,7 +1,7 @@
 # Corrections applied when translating the official BIRD algorithms (pseudo-SQL) into the reference SQL.
 # Policy: fix unambiguous defects only; everything else is translated literally, including parent members
 # and NULL arithmetic (see decisions.md).
-# kind: syntactic | structure | identifier | missing_variable | wrong_cube
+# kind: syntactic | structure | identifier | missing_variable | wrong_cube | missing_member
 
 corrections:
 
@@ -140,6 +140,12 @@ corrections:
   corrected: "SELECT datapoint records WHERE <same predicate>, tagged with the row code"
   reason: The 'set' clause relabels the record with the cell's aggregate members; it does not change amounts. The predicate is kept literally. The datapoint record joins each position to its entity-role assignments and counterparty.
   occurrences: 6
+- routine: R_F_18.00.a_R0110
+  kind: missing_member
+  original: "INSTTTNL_SCTR in (INSTTTNL_SCTR_S123, INSTTTNL_SCTR_S124, INSTTTNL_SCTR_S125_*, INSTTTNL_SCTR_S127, INSTTTNL_SCTR_S128, INSTTTNL_SCTR_S129, INSTTTNL_SCTR_S122_B1, INSTTTNL_SCTR_S122_B2)"
+  corrected: "same list plus 'INSTTTNL_SCTR_S126'"
+  reason: Financial auxiliaries (S126, under S12_D in the BIRD member hierarchy) are other financial corporations per Annex V, Part 1, paragraph 42(d) of Implementing Regulation (EU) 2021/451; the official list omits them, so they fell in no sector row. Decided as OI-15 (decisions.md).
+  occurrences: 1
 - routine: R_F_18.00.a_R0070
   kind: structure
   original: "SUM(R0080, R0090, R0100, R0110, R0120, R0150)"

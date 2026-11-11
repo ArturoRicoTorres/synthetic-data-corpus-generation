@@ -17146,6 +17146,9 @@
           "name": "INSTTTNL_SCTR_S125_W"
         },
         {
+          "name": "INSTTTNL_SCTR_S126"
+        },
+        {
           "name": "INSTTTNL_SCTR_S127"
         },
         {
@@ -17725,6 +17728,39 @@
       "Description": [
         {
           "value": "Other financial corporations excluding financial vehicle corporations"
+        }
+      ]
+    }
+  },
+  {
+    "resourceType": "Asset",
+    "identifier": {
+      "name": "INSTTTNL_SCTR_S126",
+      "domain": {
+        "name": "Regulatory Code Lists",
+        "community": {
+          "name": "Regulatory Reporting"
+        }
+      }
+    },
+    "type": {
+      "name": "Code Value"
+    },
+    "displayName": "Financial auxiliaries",
+    "attributes": {
+      "Code": [
+        {
+          "value": "S126"
+        }
+      ],
+      "Description": [
+        {
+          "value": "It corresponds to subsector S.126, as defined in Regulation (EU) No 549/2013 (paragraphs 2.63 and 2.95 to 2.97 of Annex A), extended to the rest of the world."
+        }
+      ],
+      "Legal reference": [
+        {
+          "value": "REG_EU_549_2013: Subsector S.127, as defined in Regulation (EU) No 549/2013 (paragraphs 2.98 to 2.99 of Annex A)"
         }
       ]
     }

@@ -1,0 +1,120 @@
+MAINTENANCE_AGENCY_ID,FACET_ID,CODE,NAME,FACET_VALUE_TYPE,VALID_FROM,VALID_TO
+BIRD,PSTL_CD_VG,PSTL_CD_VG,Facet for the postal code of Virgin Islands (British),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VI,PSTL_CD_VI,Facet for the postal code of Virgin Islands (U.S.),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_WF,PSTL_CD_WF,Facet for the postal code of Wallis and Futuna,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_WS,PSTL_CD_WS,Facet for the postal code of Samoa,String,2026-03-01,9999-12-31
+BIRD,PSTV_2D,PSTV_2D,PSTV_2D,Decimal,2026-03-01,9999-12-31
+BIRD,PTTRN_LEI,PTTRN_LEI,PTTRN_LEI,String,2026-03-01,9999-12-31
+BIRD,RL_NN_NGTV_2D,RL_NN_NGTV_2D,RL_NN_NGTV_2D,Decimal,2026-03-01,9999-12-31
+BIRD,RSTRCTD_ID,RSTRCTD_ID,RSTRCTD_ID,String,2026-03-01,9999-12-31
+BIRD,RSTRCTD_ID_50,RSTRCTD_ID_50,RSTRCTD_ID_50,String,2026-03-01,9999-12-31
+BIRD,RSTRCTD_ID_60,RSTRCTD_ID_60,RSTRCTD_ID_60,String,2026-03-01,9999-12-31
+BIRD,STRNG_1,STRNG_1,STRNG_1,String,2026-03-01,9999-12-31
+BIRD,STRNG_10,STRNG_10,STRNG_10,String,2026-03-01,9999-12-31
+BIRD,STRNG_120_ID,STRNG_120_ID,STRNG_120_ID,String,2026-03-01,9999-12-31
+BIRD,STRNG_2,STRNG_2,String restricted to two characters,String,2026-03-01,9999-12-31
+BIRD,STRNG_255,STRNG_255,STRNG_255,String,2026-03-01,9999-12-31
+BIRD,STRNG_50,STRNG_50,STRNG_50,String,2026-03-01,9999-12-31
+BIRD,STRNG_ASCII_250,STRNG_ASCII_250,STRNG_ASCII_250,String,2026-03-01,9999-12-31
+BIRD,STRNG_FULL,STRNG_FULL,STRNG_FULL,String,2026-03-01,9999-12-31
+BIRD,RL_NN_NGTV_0D,RL_NN_NGTV_0D,RL_NN_NGTV_0D,Decimal,2026-03-01,9999-12-31
+BIRD,0TO1_6D,0TO1_6D,0TO1_6D,Decimal,2026-03-01,9999-12-31
+BIRD,ALL_2D,ALL_2D,ALL_2D,Decimal,2026-03-01,9999-12-31
+BIRD,ALL_6D,ALL_6D,ALL_6D,Decimal,2026-03-01,9999-12-31
+BIRD,BLN_STRNG,BLN_STRNG,Boolean string,String,2026-03-01,9999-12-31
+BIRD,END_MNTH_YYYY_MM_DD,END_MNTH_YYYY_MM_DD,END_MNTH_YYYY_MM_DD,GregorianDay,2026-03-01,9999-12-31
+BIRD,END_QRTR_YYYY_MM_DD,END_QRTR_YYYY_MM_DD,END_QRTR_YYYY_MM_DD,GregorianDay,2026-03-01,9999-12-31
+BIRD,FLL_YYYYMMDD,FLL_YYYYMMDD,FLL_YYYYMMDD,GregorianDay,2026-03-01,9999-12-31
+BIRD,FLL_YYYY_MM_DD,FLL_YYYY_MM_DD,FLL_YYYY_MM_DD,GregorianDay,2026-03-01,9999-12-31
+BIRD,ID_1D_2D,ID_1D_2D,ID_1D_2D,String,2026-03-01,9999-12-31
+BIRD,ID_1D_3D,ID_1D_3D,ID_1D_3D,String,2026-03-01,9999-12-31
+BIRD,ID_1D_5D,ID_1D_5D,ID_1D_5D,String,2026-03-01,9999-12-31
+BIRD,ID_1_TO_5_4D,ID_1_TO_5_4D,ID_1_TO_5_4D,String,2026-03-01,9999-12-31
+BIRD,ID_1_TO_8_3D,ID_1_TO_8_3D,ID_1_TO_8_3D,String,2026-03-01,9999-12-31
+BIRD,ID_1_TO_8_4D,ID_1_TO_8_4D,ID_1_TO_8_4D,String,2026-03-01,9999-12-31
+BIRD,ID_20,ID_20,ID_20,String,2026-03-01,9999-12-31
+BIRD,ID_3,ID_3,ID_3,String,2026-03-01,9999-12-31
+BIRD,ID_39_2D,ID_39_2D,ID_39_2D,String,2026-03-01,9999-12-31
+BIRD,ID_4,ID_4,ID_4,String,2026-03-01,9999-12-31
+BIRD,ID_5,ID_5,ID_5,String,2026-03-01,9999-12-31
+BIRD,ID_5_TO_6,ID_5_TO_6,ID_5_TO_6,String,2026-03-01,9999-12-31
+BIRD,ID_6,ID_6,ID_6,String,2026-03-01,9999-12-31
+BIRD,ID_7,ID_7,ID_7,String,2026-03-01,9999-12-31
+BIRD,ID_7_5D,ID_7_5D,ID_7_5D,String,2026-03-01,9999-12-31
+BIRD,INTGR_NN_NGTV,INTGR_NN_NGTV,INTGR_NN_NGTV,Integer,2026-03-01,9999-12-31
+BIRD,ISIN_12,ISIN_12,ISIN_12,String,2026-03-01,9999-12-31
+BIRD,LTN_EXT_255,LTN_EXT_255,LTN_EXT_255,String,2026-03-01,9999-12-31
+BIRD,NN_NGTV_2D,NN_NGTV_2D,NN_NGTV_2D,Monetary,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AD,PSTL_CD_AD,Facet for the postal code of Andorra,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AI,PSTL_CD_AI,Facet for the postal code of Anguilla,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AM,PSTL_CD_AM,Facet for the postal code of Armenia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AQ,PSTL_CD_AQ,Facet for the postal code of Antarctica,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AR,PSTL_CD_AR,Facet for the postal code of Argentina,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AS,PSTL_CD_AS,Facet for the postal code of American Samoa,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AZ,PSTL_CD_AZ,Facet for the postal code of Azerbaijan,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BB,PSTL_CD_BB,Facet for the postal code of Barbados,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BH,PSTL_CD_BH,Facet for the postal code of Bahrain,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BM,PSTL_CD_BM,Facet for the postal code of Bermuda,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BN,PSTL_CD_BN,Facet for the postal code of Brunei Darussalam,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BR,PSTL_CD_BR,Facet for the postal code of Brazil,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CA,PSTL_CD_CA,Facet for the postal code of Canada,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CC,PSTL_CD_CC,Facet for the postal code of Cocos (Keeling) Islands (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CU,PSTL_CD_CU,Facet for the postal code of Cuba,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CX,PSTL_CD_CX,Facet for the postal code of Christmas Island,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CZ,PSTL_CD_CZ,Facet for the postal code of Czechia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_FK,PSTL_CD_FK,Facet for the postal code of Falkland Islands (the) [Malvinas],String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_FM,PSTL_CD_FM,"Facet for the postal code of Micronesia, Federated States of",String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GB,PSTL_CD_GB,Facet for the postal code of United Kingdom of Great Britain and Northern Ireland (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GG,PSTL_CD_GG,Facet for the postal code of Guernsey,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GI,PSTL_CD_GI,Facet for the postal code of Gibraltar,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GR,PSTL_CD_GR,Facet for the postal code of Greece,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GS,PSTL_CD_GS,Facet for the postal code of South Georgia and the South Sandwich Islands,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GU,PSTL_CD_GU,Facet for the postal code of Guam,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_HK,PSTL_CD_HK,Facet for the postal code of Hong Kong,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_HM,PSTL_CD_HM,Facet for the postal code of Heard Island and McDonald Islands,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_HT,PSTL_CD_HT,Facet for the postal code of Haiti,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_IM,PSTL_CD_IM,Facet for the postal code of Isle of Man,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_IO,PSTL_CD_IO,Facet for the postal code of British Indian Ocean Territory (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_IR,PSTL_CD_IR,Facet for the postal code of Iran (Islamic Republic of),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_JE,PSTL_CD_JE,Facet for the postal code of Jersey,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_JM,PSTL_CD_JM,Facet for the postal code of Jamaica,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_JP,PSTL_CD_JP,Facet for the postal code of Japan,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KI,PSTL_CD_KI,Facet for the postal code of Kiribati,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KN,PSTL_CD_KN,Facet for the postal code of Saint Kitts and Nevis,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KY,PSTL_CD_KY,Facet for the postal code of Cayman Islands (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KZ,PSTL_CD_KZ,Facet for the postal code of Kazakhstan,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LB,PSTL_CD_LB,Facet for the postal code of Lebanon,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LC,PSTL_CD_LC,Facet for the postal code of Saint Lucia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LT,PSTL_CD_LT,Facet for the postal code of Lithuania,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LU,PSTL_CD_LU,Facet for the postal code of Luxembourg,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LV,PSTL_CD_LV,Facet for the postal code of Latvia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MD,PSTL_CD_MD,Facet for the postal code of Moldova (the Republic of),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MH,PSTL_CD_MH,Facet for the postal code of Marshall Islands (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MP,PSTL_CD_MP,Facet for the postal code of Northern Mariana Islands,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MS,PSTL_CD_MS,Facet for the postal code of Montserrat,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MT,PSTL_CD_MT,Facet for the postal code of Malta,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MU,PSTL_CD_MU,Facet for the postal code of Mauritius,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NC,PSTL_CD_NC,Facet for the postal code of New Caledonia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NF,PSTL_CD_NF,Facet for the postal code of Norfolk Island,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NL,PSTL_CD_NL,Facet for the postal code of Netherlands (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NR,PSTL_CD_NR,Facet for the postal code of Nauru,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NU,PSTL_CD_NU,Facet for the postal code of Niue,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_OPN,PSTL_CD_OPN,PSTL_CD_OPN,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PF,PSTL_CD_PF,Facet for the postal code of French Polynesia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PL,PSTL_CD_PL,Facet for the postal code of Poland,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PN,PSTL_CD_PN,Facet for the postal code of Pitcairn,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PS,PSTL_CD_PS,"Facet for the postal code of Palestine, State of",String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PT,PSTL_CD_PT,Facet for the postal code of Portugal,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PW,PSTL_CD_PW,Facet for the postal code of Palau,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SA,PSTL_CD_SA,Facet for the postal code of Saudi Arabia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SE,PSTL_CD_SE,Facet for the postal code of Sweden,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SH,PSTL_CD_SH,"Facet for the postal code of Saint Helena, Ascension and Tristan da Cunha",String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SI,PSTL_CD_SI,PSTL_CD_SI,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SK,PSTL_CD_SK,Facet for the postal code of Slovakia,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SM,PSTL_CD_SM,Facet for the postal code of San Marino,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SZ,PSTL_CD_SZ,Facet for the postal code of Swaziland,String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_TC,PSTL_CD_TC,Facet for the postal code of Turks and Caicos Islands (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_TW,PSTL_CD_TW,Facet for the postal code of Taiwan (Province of China),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_US,PSTL_CD_US,Facet for the postal code of United States of America (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VA,PSTL_CD_VA,Facet for the postal code of Holy See (the),String,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VC,PSTL_CD_VC,Facet for the postal code of Saint Vincent and the Grenadines,String,2026-03-01,9999-12-31

@@ -1,0 +1,43 @@
+case_id,ctx,pstn_src,pstn_id,rows,gca,c0010,c0060,note
+I01,IFRS,INSTRMNT,C-I01,R0120,1050.00,1,0,"loan, amortised cost, performing, non-financial corp"
+I02,IFRS,INSTRMNT,C-I02,R0120,1000.00,1,1,"loan, amortised cost, non-performing"
+I03,IFRS,INSTRMNT,C-I03,R0150,600.00,1,1,"finance lease, main lessee, household"
+I04,IFRS,INSTRMNT,C-I04,R0100,300.00,1,0,term deposit at credit institution
+I05,IFRS,INSTRMNT,C-I05,R0080,400.00,1,0,term deposit at central bank (not on demand)
+I06,IFRS,INSTRMNT,C-I06,R0090,710.00,1,0,loan to central government
+I07,IFRS,INSTRMNT,C-I07,R0110,1200.00,1,1,loan to financial vehicle corporation
+I08,IFRS,INSTRMNT,C-I08,R0150,255.00,1,0,"credit card debt, non-profit serving households"
+I09,IFRS,INSTRMNT,C-I09,R0100,600.00,1,0,development bank flag on a credit institution: once
+I10,IFRS,INSTRMNT,C-I10,,1100.00,0,0,"IFRS held for sale: type 1118, excluded"
+I11,IFRS,INSTRMNT,C-I11,R0120,,0,0,null impairment: no gross carrying amount (OI-11)
+I12,IFRS,INSTRMNT,C-I12,R0120,0.00,0,0,zero gross carrying amount
+I13,IFRS,INSTRMNT,C-I13,R0120,-80.00,0,0,negative gross carrying amount
+I14,IFRS,INSTRMNT,C-I14,,1000.00,0,0,only a non-main debtor: not loans and advances
+I15,IFRS,INSTRMNT,C-I15,R0120,2100.00,1,1,"main and non-main debtor: counted once, main sector"
+I16,IFRS,INSTRMNT,C-I16,,808.00,0,0,fair value through OCI portfolio: outside the cell
+I17,IFRS,INSTRMNT,C-I17,,50.00,0,0,"OTC swap, hedge accounting: type 1119"
+I18,IFRS,INSTRMNT,C-I18,,300.00,0,0,on-demand deposit at central bank: type 1112
+I19,IFRS,INSTRMNT,C-I19,,300.00,0,0,on-demand deposit at credit institution: type 1113
+I20,IFRS,INSTRMNT,C-I20,R0100,150.00,1,0,"OI-17 literal: on-demand deposit, leaf sector S122_A_1 not excluded, classified as loan"
+I21,IFRS,INSTRMNT,C-I21,,400.00,0,0,OI-17 literal: parent sector S14 matches no row
+I22,IFRS,INSTRMNT,C-I22,R0110,400.00,1,0,OI-15 decided: financial auxiliary S126 in R0110
+I23,IFRS,INSTRMNT,C-I23,R0090;R0100,1000.00,1,1,OI-16 literal: development bank on government sector counted twice
+I24,IFRS,INSTRMNT,C-I24,,100.00,0,0,equity instrument: type 1115
+I25,IFRS,INSTRMNT,C-I25,,,0,0,other reporting date: not in snapshot
+I26,IFRS,INSTRMNT,C-I26,,,0,0,other reporting agent: not in snapshot
+S01,IFRS,SCRTY_PSTN,C-S01,R0120,2040.00,1,0,"non-negotiable debt security, performing"
+S02,IFRS,SCRTY_PSTN,C-S02,R0110,2000.00,1,1,"non-negotiable debt security, non-performing"
+S03,IFRS,SCRTY_PSTN,C-S03,,1000.00,0,0,negotiable debt security: type 1116
+S04,IFRS,SCRTY_PSTN,C-S04,,1000.00,0,0,non-negotiable security held for sale: type 1118
+S05,IFRS,SCRTY_PSTN,C-S05,,1000.00,0,0,issuer is not the primary issuer
+N01,NGAAP,INSTRMNT,C-N01,R0120,1100.00,1,0,"LOCOM portfolio, specific allowances"
+N02,NGAAP,INSTRMNT,C-N02,R0120,750.00,1,1,"cost-based portfolio, specific allowances, NPE"
+N03,NGAAP,INSTRMNT,C-N03,R0090,650.00,1,0,general allowances for credit risk
+N04,NGAAP,INSTRMNT,C-N04,R0150,415.00,1,1,"general allowances for banking risk, NPE"
+N05,NGAAP,INSTRMNT,C-N05,R0110,360.00,1,1,"other non-trading portfolio, subject to impairment"
+N06,NGAAP,INSTRMNT,C-N06,R0120,205.00,1,0,"portfolio 74, general allowances"
+N07,NGAAP,INSTRMNT,C-N07,R0120,,0,0,portfolio 74 not subject to impairment: no amount
+N08,NGAAP,INSTRMNT,C-N08,R0120,,0,0,impairment status without a branch: no amount
+N09,NGAAP,INSTRMNT,C-N09,R0120,,0,0,OI-18 literal: one allowance null gives null amount
+N10,NGAAP,SCRTY_PSTN,C-N10,R0100,1000.00,1,1,"non-negotiable covered bond, nGAAP, NPE"
+X01,SCHEME4,INSTRMNT,C-X01,,1000.00,0,0,reporting scheme 4 (data points): template not reported

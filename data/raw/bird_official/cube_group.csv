@@ -1,0 +1,73 @@
+MAINTENANCE_AGENCY_ID,CUBE_GROUP_ID,NAME,CODE,DESCRIPTION,VALID_FROM,VALID_TO
+BIRD,LDM_GRP_RLTD,Group related,LDM_GRP_RLTD,Group related,2026-03-01,9999-12-31
+BIRD,LDM_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,LDM_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,2026-03-01,9999-12-31
+BIRD,LDM_INSTRMNT_PRTY_RLTD,Instrument Party related,LDM_INSTRMNT_PRTY_RLTD,Instrument Party related,2026-03-01,9999-12-31
+BIRD,LDM_INSTRMNT_RLTD,Instrument related,LDM_INSTRMNT_RLTD,Instrument related,2026-03-01,9999-12-31
+BIRD,LDM_INSTRMNT_SCRTY_RLTD,Instrument Security related,LDM_INSTRMNT_SCRTY_RLTD,Instrument Security related,2026-03-01,9999-12-31
+BIRD,LDM_PRTCTN_RLTD,Protection related,LDM_PRTCTN_RLTD,Protection related,2026-03-01,9999-12-31
+BIRD,LDM_PRTY_GRP_RLTD,Party Group related,LDM_PRTY_GRP_RLTD,Party Group related,2026-03-01,9999-12-31
+BIRD,LDM_PRTY_RLTD,Party related,LDM_PRTY_RLTD,Party related,2026-03-01,9999-12-31
+BIRD,LDM_RSK_RLTD,Risk related,LDM_RSK_RLTD,Risk related,2026-03-01,9999-12-31
+BIRD,LDM_RTNG_SYSTM_RLTD,Rating system related,LDM_RTNG_SYSTM_RLTD,Rating system related,2026-03-01,9999-12-31
+BIRD,LDM_SCRTSTN_RLTD,Securitisation related,LDM_SCRTSTN_RLTD,Securitisation related,2026-03-01,9999-12-31
+BIRD,LDM_SCRTY_PRTY_RLTD,Security Party related,LDM_SCRTY_PRTY_RLTD,Security Party related,2026-03-01,9999-12-31
+BIRD,LDM_SCRTY_RLTD,Security related,LDM_SCRTY_RLTD,Security related,2026-03-01,9999-12-31
+BIRD,ELDM_BLNC_SHT_RLTD,Balance sheet related,ELDM_BLNC_SHT_RLTD,Balance sheet related,2026-03-01,9999-12-31
+BIRD,ELDM_CNTRCT_RLTD,Contract related,ELDM_CNTRCT_RLTD,Contract related,2026-03-01,9999-12-31
+BIRD,ELDM_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,ELDM_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,2026-03-01,9999-12-31
+BIRD,ELDM_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,ELDM_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,2026-03-01,9999-12-31
+BIRD,ELDM_CRDT_FCLTY_RLTD,Credit facility related,ELDM_CRDT_FCLTY_RLTD,Credit facility related,2026-03-01,9999-12-31
+BIRD,ELDM_GRP_RLTD,Group related,ELDM_GRP_RLTD,Group related,2026-03-01,9999-12-31
+BIRD,ELDM_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,ELDM_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,2026-03-01,9999-12-31
+BIRD,ELDM_INSTRMNT_PRTY_RLTD,Instrument Party related,ELDM_INSTRMNT_PRTY_RLTD,Instrument Party related,2026-03-01,9999-12-31
+BIRD,ELDM_INSTRMNT_RLTD,Instrument related,ELDM_INSTRMNT_RLTD,Instrument related,2026-03-01,9999-12-31
+BIRD,ELDM_INSTRMNT_SCRTY_RLTD,Instrument Security related,ELDM_INSTRMNT_SCRTY_RLTD,Instrument Security related,2026-03-01,9999-12-31
+BIRD,ELDM_PRTCTN_RLTD,Protection related,ELDM_PRTCTN_RLTD,Protection related,2026-03-01,9999-12-31
+BIRD,ELDM_PRTY_GRP_RLTD,Party Group related,ELDM_PRTY_GRP_RLTD,Party Group related,2026-03-01,9999-12-31
+BIRD,ELDM_PRTY_RLTD,Party related,ELDM_PRTY_RLTD,Party related,2026-03-01,9999-12-31
+BIRD,ELDM_RSK_RLTD,Risk related,ELDM_RSK_RLTD,Risk related,2026-03-01,9999-12-31
+BIRD,ELDM_RTNG_SYSTM_RLTD,Rating system related,ELDM_RTNG_SYSTM_RLTD,Rating system related,2026-03-01,9999-12-31
+BIRD,ELDM_SCRTSTN_RLTD,Securitisation related,ELDM_SCRTSTN_RLTD,Securitisation related,2026-03-01,9999-12-31
+BIRD,ELDM_SCRTY_PRTY_RLTD,Security Party related,ELDM_SCRTY_PRTY_RLTD,Security Party related,2026-03-01,9999-12-31
+BIRD,ELDM_SCRTY_RLTD,Security related,ELDM_SCRTY_RLTD,Security related,2026-03-01,9999-12-31
+BIRD,EIL_BLNC_SHT_RLTD,Balance sheet related,EIL_BLNC_SHT_RLTD,Balance sheet related,2026-03-01,9999-12-31
+BIRD,EIL_CNTRCT_RLTD,Contract related,EIL_CNTRCT_RLTD,Contract related,2026-03-01,9999-12-31
+BIRD,EIL_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,EIL_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,2026-03-01,9999-12-31
+BIRD,EIL_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,EIL_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,2026-03-01,9999-12-31
+BIRD,EIL_GRP_RLTD,Group related,EIL_GRP_RLTD,Group related,2026-03-01,9999-12-31
+BIRD,EIL_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,EIL_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,2026-03-01,9999-12-31
+BIRD,EIL_INSTRMNT_PRTY_RLTD,Instrument Party related,EIL_INSTRMNT_PRTY_RLTD,Instrument Party related,2026-03-01,9999-12-31
+BIRD,EIL_INSTRMNT_RLTD,Instrument related,EIL_INSTRMNT_RLTD,Instrument related,2026-03-01,9999-12-31
+BIRD,EIL_INSTRMNT_SCRTY_RLTD,Instrument Security related,EIL_INSTRMNT_SCRTY_RLTD,Instrument Security related,2026-03-01,9999-12-31
+BIRD,EIL_PRTCTN_RLTD,Protection related,EIL_PRTCTN_RLTD,Protection related,2026-03-01,9999-12-31
+BIRD,EIL_PRTY_GRP_RLTD,Party Group related,EIL_PRTY_GRP_RLTD,Party Group related,2026-03-01,9999-12-31
+BIRD,EIL_PRTY_RLTD,Party related,EIL_PRTY_RLTD,Party related,2026-03-01,9999-12-31
+BIRD,EIL_RSK_RLTD,Risk related,EIL_RSK_RLTD,Risk related,2026-03-01,9999-12-31
+BIRD,EIL_RTNG_SYSTM_RLTD,Rating system related,EIL_RTNG_SYSTM_RLTD,Rating system related,2026-03-01,9999-12-31
+BIRD,EIL_SCRTSTN_RLTD,Securitisation related,EIL_SCRTSTN_RLTD,Securitisation related,2026-03-01,9999-12-31
+BIRD,EIL_SCRTY_PRTY_RLTD,Security Party related,EIL_SCRTY_PRTY_RLTD,Security Party related,2026-03-01,9999-12-31
+BIRD,EIL_SCRTY_RLTD,Security related,EIL_SCRTY_RLTD,Security related,2026-03-01,9999-12-31
+BIRD,EIL_CRDT_FCLTY_RLTD,Credit facility related,EIL_CRDT_FCLTY_RLTD,Credit facility related,2026-03-01,9999-12-31
+BIRD,IL_BLNC_SHT_RLTD,Balance sheet related,IL_BLNC_SHT_RLTD,Balance sheet related,2026-03-01,9999-12-31
+BIRD,IL_CNTRCT_RLTD,Contract related,IL_CNTRCT_RLTD,Contract related,2026-03-01,9999-12-31
+BIRD,IL_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,IL_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,2026-03-01,9999-12-31
+BIRD,IL_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,IL_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,2026-03-01,9999-12-31
+BIRD,IL_CRDT_FCLTY_RLTD,Credit facility related,IL_CRDT_FCLTY_RLTD,Credit facility related,2026-03-01,9999-12-31
+BIRD,IL_GRP_RLTD,Group related,IL_GRP_RLTD,Group related,2026-03-01,9999-12-31
+BIRD,IL_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,IL_INSTRMNT_PRTCTN_RLTD,Instrument Protection related,2026-03-01,9999-12-31
+BIRD,IL_INSTRMNT_PRTY_RLTD,Instrument Party related,IL_INSTRMNT_PRTY_RLTD,Instrument Party related,2026-03-01,9999-12-31
+BIRD,IL_INSTRMNT_RLTD,Instrument related,IL_INSTRMNT_RLTD,Instrument related,2026-03-01,9999-12-31
+BIRD,IL_INSTRMNT_SCRTY_RLTD,Instrument Security related,IL_INSTRMNT_SCRTY_RLTD,Instrument Security related,2026-03-01,9999-12-31
+BIRD,IL_PRTCTN_RLTD,Protection related,IL_PRTCTN_RLTD,Protection related,2026-03-01,9999-12-31
+BIRD,IL_PRTY_GRP_RLTD,Party Group related,IL_PRTY_GRP_RLTD,Party Group related,2026-03-01,9999-12-31
+BIRD,IL_PRTY_RLTD,Party related,IL_PRTY_RLTD,Party related,2026-03-01,9999-12-31
+BIRD,IL_RSK_RLTD,Risk related,IL_RSK_RLTD,Risk related,2026-03-01,9999-12-31
+BIRD,IL_RTNG_SYSTM_RLTD,Rating system related,IL_RTNG_SYSTM_RLTD,Rating system related,2026-03-01,9999-12-31
+BIRD,IL_SCRTSTN_RLTD,Securitisation related,IL_SCRTSTN_RLTD,Securitisation related,2026-03-01,9999-12-31
+BIRD,IL_SCRTY_PRTY_RLTD,Security Party related,IL_SCRTY_PRTY_RLTD,Security Party related,2026-03-01,9999-12-31
+BIRD,IL_SCRTY_RLTD,Security related,IL_SCRTY_RLTD,Security related,2026-03-01,9999-12-31
+BIRD,LDM_BLNC_SHT_RLTD,Balance sheet related,LDM_BLNC_SHT_RLTD,Balance sheet related,2026-03-01,9999-12-31
+BIRD,LDM_CNTRCT_RLTD,Contract related,LDM_CNTRCT_RLTD,Contract related,2026-03-01,9999-12-31
+BIRD,LDM_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,LDM_CRDT_FCLTY_PRTCTN_RLTD,Credit facility Protection related,2026-03-01,9999-12-31
+BIRD,LDM_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,LDM_CRDT_FCLTY_PRTY_RLTD,Credit facility Party related,2026-03-01,9999-12-31
+BIRD,LDM_CRDT_FCLTY_RLTD,Credit facility related,LDM_CRDT_FCLTY_RLTD,Credit facility related,2026-03-01,9999-12-31

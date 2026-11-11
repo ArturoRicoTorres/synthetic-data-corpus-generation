@@ -1,0 +1,977 @@
+MAINTENANCE_AGENCY_ID,SUBDOMAIN_ID,NAME,DOMAIN_ID,CODE,FACET_ID,DESCRIPTION,IS_NATURAL,VALID_FROM,VALID_TO
+BIRD,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_ACCNTNG_STNDRD_TYP,Long balance sheet recognised security position prudential portfolio Accounting classification assignment accounting standard type,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_ACCNTNG_STNDRD_TYP,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_ACCNTNG_STNDRD_TYP,,Long balance sheet recognised security position prudential portfolio Accounting classification assignment accounting standard type,false,2026-03-01,9999-12-31
+BIRD,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_TYP,Long balance sheet recognised security position prudential portfolio Accounting classifcation assignment type,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_TYP,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_TYP,,Long balance sheet recognised security position prudential portfolio Accounting classifcation assignment type,false,2026-03-01,9999-12-31
+BIRD,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,Long/Short balance sheet recognised security position type,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,,Long/Short balance sheet recognised security position type,false,2026-03-01,9999-12-31
+BIRD,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_INPT,Long/Short balance sheet recognised security position type (Input Layer),LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP_INPT,,Long/Short balance sheet recognised security position type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,LN_AND_ADVNC_TYP,Loan and advance type,TYP_INSTRMNT,LN_AND_ADVNC_TYP,,Loan and advance type,false,2026-03-01,9999-12-31
+BIRD,LN_TYP,Loan type,TYP_INSTRMNT,LN_TYP,,Loan type,false,2026-03-01,9999-12-31
+BIRD,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,Listed central bank and private sector company indicator,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,,Listed central bank and private sector company indicator,false,2026-03-01,9999-12-31
+BIRD,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR_INPT,Listed central bank and private sector company indicator (Input layer),LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR_INPT,,Listed central bank and private sector company indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,LST_INDCTR_INPT,Is listed indicator (Input Layer),BLN,LST_INDCTR_INPT,,Subdomain that specifies whether an instrument Is listed according to the Directive 2014/65/EU on markets in financial instruments.,false,2026-03-01,9999-12-31
+BIRD,LTGTN_STTS,Litigation status,LTGTN_STTS,LTGTN_STTS,,,false,2026-03-01,9999-12-31
+BIRD,LTGTN_STTS_F_23.02,Subdomain for LTGTN_STTS of the Table F_23.02,LTGTN_STTS,LTGTN_STTS_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,LTGTN_STTS_INPT,Litigation status,LTGTN_STTS,LTGTN_STTS_INPT,,,false,2026-03-01,9999-12-31
+BIRD,LVL_RPRTNG_37969_REF_LVL_RPRTNG,Subdomain for LVL_RPRTNG of the Combination 37969_REF,LVL_RPRTNG,LVL_RPRTNG_37969_REF_LVL_RPRTNG,,,false,2026-03-01,9999-12-31
+BIRD,LW_CRDT_RSK_INDCTR,Low credit risk indicator for Finrep,LW_CRDT_RSK_INDCTR,LW_CRDT_RSK_INDCTR,,Low credit risk indicator for Finrep,false,2026-03-01,9999-12-31
+BIRD,LW_CRDT_RSK_INDCTR_F_04.03.1,Subdomain for LW_CRDT_RSK_INDCTR of the Cube F_04.03.1,LW_CRDT_RSK_INDCTR,LW_CRDT_RSK_INDCTR_F_04.03.1,,,false,2026-03-01,9999-12-31
+BIRD,LW_CRDT_RSK_INDCTR_INPT,Low credit risk indicator for Finrep,LW_CRDT_RSK_INDCTR,LW_CRDT_RSK_INDCTR_INPT,,Low credit risk indicator for Finrep,false,2026-03-01,9999-12-31
+BIRD,MLTLTRL_DVLPMNT_BNK_INDCTR,Multilateral development bank indicator,MLTLTRL_DVLPMNT_BNK_INDCTR,MLTLTRL_DVLPMNT_BNK_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,MLTLTRL_DVLPMNT_BNK_INDCTR_INPT,Multilateral development bank indicator (Input Layer),MLTLTRL_DVLPMNT_BNK_INDCTR,MLTLTRL_DVLPMNT_BNK_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,MLTPL_FRBRNC_MSR_INDCTR,Multiple forbearance measures in place indicator,MLTPL_FRBRNC_MSR_INDCTR,MLTPL_FRBRNC_MSR_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,MLTPL_FRBRNC_MSR_INDCTR_INPT,Multiple forbearance measures in place indicator (Input Layer),MLTPL_FRBRNC_MSR_INDCTR,MLTPL_FRBRNC_MSR_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,MNMM_RSRV_INDCTR,Minimum reserve indicator,TYP_INSTRMNT,MNMM_RSRV_INDCTR,,Minimum reserve indicator subdomain,false,2026-03-01,9999-12-31
+BIRD,MNTRY,Monetary,MNTRY,MNTRY,,Monetary,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VI,Subdomain for the postal code of PSTL_CD_VI,STRNG,PSTL_CD_VI,PSTL_CD_VI,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_WF,Subdomain for the postal code of PSTL_CD_WF,STRNG,PSTL_CD_WF,PSTL_CD_WF,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_WS,Subdomain for the postal code of PSTL_CD_WS,STRNG,PSTL_CD_WS,PSTL_CD_WS,,false,2026-03-01,9999-12-31
+BIRD,PST_DU_FNNCL_ASST_INSTRMNT_INDCTR,Past due financial asset indicator,ABSTRCT_INSTRMNT_RL_TYP,PST_DU_FNNCL_ASST_INSTRMNT_INDCTR,,Past due financial asset indicator,false,2026-03-01,9999-12-31
+BIRD,PST_DU_FNNCL_ASST_INSTRMNT_INDCTR_INPT,Past due financial asset indicator,ABSTRCT_INSTRMNT_RL_TYP,PST_DU_FNNCL_ASST_INSTRMNT_INDCTR_INPT,,Past due financial asset indicator,false,2026-03-01,9999-12-31
+BIRD,PST_D_DBT_SCRTY_INDCTR,Past due debt security indicator,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,PST_D_DBT_SCRTY_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,PST_D_DBT_SCRTY_INDCTR_INPT,Past due debt security indicator (Input layer),SCRTY_EXCHNG_TRDBL_DRVTV_TYP,PST_D_DBT_SCRTY_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,PTNTL_RTL_EXPSR_CLSS_FNNCL_ASST_INSTRMNT_TYP,Potential retail exposure class financial asset instrument type,ABSTRCT_INSTRMNT_RL_TYP,PTNTL_RTL_EXPSR_CLSS_FNNCL_ASST_INSTRMNT_TYP,,Potential retail exposure class financial asset instrument type,false,2026-03-01,9999-12-31
+BIRD,RCGNTN_STTS_ANCRDT_CLLCTN,AnaCredit - ECB collection,RCGNTN_STTS,RCGNTN_STTS_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,RCRS_ANCRDT_CLLCTN,AnaCredit - ECB collection,RCRS,RCRS_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,RFRNC_RT,Reference rate,RFRNC_RT,RFRNC_RT,,Reference rate,false,2026-03-01,9999-12-31
+BIRD,RFRNC_RT_ANCRDT_CLLCTN,AnaCredit - ECB collection,RFRNC_RT,RFRNC_RT_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,ISO3166_DSJNT_S_STGNG,ISO-3166 Country Codes (disjoint) for staging cubes,GGRPHCL_ARS,ISO3166_DSJNT_S_STGNG,,ISO 3166 Country codes excluding the codes belonging to countries that belong to other countries. Includes -99 for Technical null,false,2026-03-01,9999-12-31
+BIRD,ISO3166_INPT,ISO 3166-1 alpha-2 code of the country (Input Layer),GGRPHCL_ARS,ISO3166_INPT,,ISO 3166-1 alpha-2 code of the country (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ISO4217,Subdomain for domain ISO-4217 Currency Codes (ISO4217 Domain),CRRNCY,ISO4217,,Subdomain for domain ISO-4217 Currency Codes (ISO4217 Domain),false,2026-03-01,9999-12-31
+BIRD,ISO4217_INPT,Subdomain for domain ISO-4217 Currency Codes (ISO4217 Domain) (Input Layer),CRRNCY,ISO4217_INPT,,Subdomain for domain ISO-4217 Currency Codes (ISO4217 Domain) (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ISSR_BSD_RTNG_SYSTM_TYP,Issuer based rating system type,RTNG_SYSTM_TYP,ISSR_BSD_RTNG_SYSTM_TYP,,Issuer based rating system type,false,2026-03-01,9999-12-31
+BIRD,IS_DMSTC_ACTVTY_F_20.01,Subdomain for IS_DMSTC_ACTVTY of the Cube F_20.01,BLN,IS_DMSTC_ACTVTY_F_20.01,,,false,2026-03-01,9999-12-31
+BIRD,IS_DMSTC_ACTVTY_F_20.02,Subdomain for IS_DMSTC_ACTVTY of the Cube F_20.02,BLN,IS_DMSTC_ACTVTY_F_20.02,,,false,2026-03-01,9999-12-31
+BIRD,LDNG_BRNCH_INDCTR,Leading branch indicator,PRTY_TYP,LDNG_BRNCH_INDCTR,,Leading branch indicator,false,2026-03-01,9999-12-31
+BIRD,LDNG_BRNCH_INDCTR_INPT,Leading branch indicator,PRTY_TYP,LDNG_BRNCH_INDCTR_INPT,,Leading branch indicator,false,2026-03-01,9999-12-31
+BIRD,LGL_FRM,Legal form,LGL_FRM,LGL_FRM,,Legal form,false,2026-03-01,9999-12-31
+BIRD,LGL_FRM_INPT,Legal form (Input Layer),LGL_FRM,LGL_FRM_INPT,,LGL_FRM_INPT,false,2026-03-01,9999-12-31
+BIRD,LGL_FRM_RIAD_ANCRDT,Anacredit subdomain for domain Legal forms,LGL_FRM,LGL_FRM_RIAD_ANCRDT,,"This subdomain contains all the existent RIAD legal forms contained in the subdomain ""LGL_FRMS"" as well as Technical null with code -99. Used by anacredit",false,2026-03-01,9999-12-31
+BIRD,GRP_TYP,Group type,GRP_TYP,GRP_TYP,,type of groups,false,2026-03-01,9999-12-31
+BIRD,HDGD_PRTFL_ASST_LBLTY_INDCTR,Hedged portfolio asset or liability indicator,HDGD_PRTFL_ASST_LBLTY_INDCTR,HDGD_PRTFL_ASST_LBLTY_INDCTR,,Hedged portfolio asset or liability indicator,false,2026-03-01,9999-12-31
+BIRD,HLD_SL_INDCTR,Held for sale indicator,HLD_SL_INDCTR,HLD_SL_INDCTR,,Held for sale indicator,false,2026-03-01,9999-12-31
+BIRD,HLD_SL_INDCTR_INPT,Held for sale indicator (Input Layer),HLD_SL_INDCTR,HLD_SL_INDCTR_INPT,,Held for sale indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,HRCTS_TRDNG_PSTN_F_01.01,Subdomain for HRCTS_TRDNG_PSTN_TYP for Table F_01.01,HRCTS_TRDNG_PSTN,HRCTS_TRDNG_PSTN_F_01.01,,,false,2026-03-01,9999-12-31
+BIRD,HRCTS_TRDNG_PSTN_TYP,Subdomain for HRCTS_TRDNG_PSTN_TYP for EBA Output cubes,HRCTS_TRDNG_PSTN,HRCTS_TRDNG_PSTN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,IDNTFR_TYP,Indentifier type (Input Layer),TYP_INSTRMNT_ID,IDNTFR_TYP,,,false,2026-03-01,9999-12-31
+BIRD,IMMDT_PRNT_ANCRDT_INDCTR,Immediate parent according to AnaCredit indicator,IMMDT_PRNT_ANCRDT_INDCTR,IMMDT_PRNT_ANCRDT_INDCTR,,Immediate parent according to AnaCredit indicator,false,2026-03-01,9999-12-31
+BIRD,IMMTRL_RGHT_CLLTRL_TYP,Immaterial rights collateral type,TYP_PRTCTN,IMMTRL_RGHT_CLLTRL_TYP,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_ASSSSMNT_MTHD_ANCRDT_CLLCTN,AnaCredit - ECB collection,IMPRMNT_ASSSSMNT_MTHD,IMPRMNT_ASSSSMNT_MTHD_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_ASSSSMNT_MTHD_INPT,Impairment assessment method (Input Layer),IMPRMNT_ASSSSMNT_MTHD,IMPRMNT_ASSSSMNT_MTHD_INPT,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS,Impairment status,CRDT_QLTY,IMPRMNT_STTS,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_04.03.1,Subdomain for IMPRMNT_STTS of the Cube F_04.03.1,CRDT_QLTY,IMPRMNT_STTS_F_04.03.1,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_04.04.1,Subdomain for IMPRMNT_STTS of the Table F_04.04.1,CRDT_QLTY,IMPRMNT_STTS_F_04.04.1,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_04.08,Subdomain for IMPRMNT_STTS of the Table F_04.08,CRDT_QLTY,IMPRMNT_STTS_F_04.08,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_04.09,Subdomain for IMPRMNT_STTS of the Table F_04.09,CRDT_QLTY,IMPRMNT_STTS_F_04.09,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_04.10,Subdomain for IMPRMNT_STTSof the Table F_04.10,CRDT_QLTY,IMPRMNT_STTS_F_04.10,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_07.01,Subdomain for IMPRMNT_STTS of the Cube F_07.01,CRDT_QLTY,IMPRMNT_STTS_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_07.02,Subdomain for IMPRMNT_STTS of the Cube F_07.02,CRDT_QLTY,IMPRMNT_STTS_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_09.01.1,Subdomain for IMPRMNT_STTS of the Table F_09.01.1,CRDT_QLTY,IMPRMNT_STTS_F_09.01.1,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_18.00.a,Subdomain for IMPRMNT_STTS of the Cube F_18.00.a,CRDT_QLTY,IMPRMNT_STTS_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_18.00.b,Subdomain for IMPRMNT_STTS of the Cube F_18.00.b,CRDT_QLTY,IMPRMNT_STTS_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_F_18.00.e,Subdomain for IMPRMNT_STTS of the Cube F_18.00.e,CRDT_QLTY,IMPRMNT_STTS_F_18.00.e,,,false,2026-03-01,9999-12-31
+BIRD,IMPRMNT_STTS_INPT,Impairment status (Input Layer),CRDT_QLTY,IMPRMNT_STTS_INPT,,Impairment status (Input Layer),false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_CLLTRL_ASSGNMNT_TYP,Instrument Collateral assignment type,INSTRMNT_CLLTRL_ASSGNMNT_TYP,INSTRMNT_CLLTRL_ASSGNMNT_TYP,,Instrument Collateral assignment type,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_CLLTRL_INSTRMNT_ASSGNMNT_TYP,Instrument Collateral instrument assignment type,INSTRMNT_CLLTRL_INSTRMNT_ASSGNMNT_TYP,INSTRMNT_CLLTRL_INSTRMNT_ASSGNMNT_TYP,,Instrument Collateral instrument assignment type,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_ENTTY_RL_ASSGNMNT_TYP,Instrument Entity role assignment type,INSTRMNT_ENTTY_RL_ASSGNMNT_TYP,INSTRMNT_ENTTY_RL_ASSGNMNT_TYP,,Instrument Entity role assignment type,false,2026-03-01,9999-12-31
+BIRD,RFRNC_RT_INPT,Reference rate (Input Layer),RFRNC_RT,RFRNC_RT_INPT,,Reference rate (Input Layer),false,2026-03-01,9999-12-31
+BIRD,RGHT_US_ASST_INDCTR,Subdomain for RGHT_US_ASST_INDCTR,RGHT_US_ASST_INDCTR,RGHT_US_ASST_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,RGSTRD_CLLTRL_INDCTR_INPT,Registered collateral indicator (Input Layer),RGSTRD_PHYSCL_CLLTRL_INDCTR,RGSTRD_CLLTRL_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,RGSTRD_PHYSCL_CLLTRL_INDCTR,Registered physical collateral indicator,RGSTRD_PHYSCL_CLLTRL_INDCTR,RGSTRD_PHYSCL_CLLTRL_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,RGSTRD_PSTL_CD_SYSTM_PRTY,Registered postal code system party,PRTY_TYP_ADDRSS,RGSTRD_PSTL_CD_SYSTM_PRTY,,Registered postal code system party,false,2026-03-01,9999-12-31
+BIRD,RL,Real,RL,RL,,Real,false,2026-03-01,9999-12-31
+BIRD,RL_0TO1_6D,Real numbers from 0 to 1 with 6 decimals,RL,RL_0TO1_6D,0TO1_6D,Real numbers from 0 to 1 with 6 decimals,false,2026-03-01,9999-12-31
+BIRD,RL_ALL_2D,Real numbers with 2 decimals,RL,RL_ALL_2D,PSTV_2D,Real numbers with 2 decimals,false,2026-03-01,9999-12-31
+BIRD,RL_ALL_6D,Real numbers positive or negative with 6 decimals,RL,RL_ALL_6D,ALL_6D,Real numbers positive or negative with 6 decimals,false,2026-03-01,9999-12-31
+BIRD,RL_ESTT_CLLTRL_LCTN_INPT,Real estate collateral location type (Input Layer),TYP_PRTCTN,RL_ESTT_CLLTRL_LCTN_INPT,,,false,2026-03-01,9999-12-31
+BIRD,RL_ESTT_CLLTRL_TYP,Real estate collateral type,TYP_PRTCTN,RL_ESTT_CLLTRL_TYP,,,false,2026-03-01,9999-12-31
+BIRD,RL_ESTT_PRTCTN_TYP,Real estate collateral by location type,TYP_PRTCTN,RL_ESTT_PRTCTN_TYP,,Real estate collateral type,false,2026-03-01,9999-12-31
+BIRD,RL_NN_NGTV_2D,Non-negative real numbers with 2 decimals,RL,RL_NN_NGTV_2D,RL_NN_NGTV_2D,Non-negative real numbers with 2 decimals,false,2026-03-01,9999-12-31
+BIRD,RNGTTD_CRDT_FCLTY_TYP,Renegotiated credit facility type,RNGTTD_CRDT_FCLTY_TYP,RNGTTD_CRDT_FCLTY_TYP,,Renegotiation credit facility type,false,2026-03-01,9999-12-31
+BIRD,RNGTTD_CRDT_FCLTY_TYP_INPT,Renegotiated credit facility type (Input Layer),RNGTTD_CRDT_FCLTY_TYP,RNGTTD_CRDT_FCLTY_TYP_INPT,,Renegotiated credit facility type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TM_INTRVL_F_33.00.a,Subdomain for TM_INTRVL of the Cube F_33.00.a,TM_INTRVL,TM_INTRVL_F_33.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TM_INTRVL_F_33.00.b,Subdomain for TM_INTRVL of the Cube F_33.00.b,TM_INTRVL,TM_INTRVL_F_33.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TM_INTRVL_F_35.00.a,Subdomain for TM_INTRVL_RFRNC_DT of the Cube F_35.00.a,TM_INTRVL,TM_INTRVL_F_35.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND,Time past due band,TM_INTRVL,TM_PST_DU_BND,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_07.01,Subdomain for TM_PST_DU_BND of the Cube F_07.01,TM_INTRVL,TM_PST_DU_BND_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_07.02,Subdomain for TM_PST_DU_BND of the Cube F_07.02,TM_INTRVL,TM_PST_DU_BND_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_18.00.a,Subdomain for TM_PST_DU_BND of the Cube F_18.00.a,TM_INTRVL,TM_PST_DU_BND_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_18.00.b,Subdomain for TM_PST_DU_BND of the Cube F_18.00.b,TM_INTRVL,TM_PST_DU_BND_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_18.02.a,Subdomain for TM_PST_DU_BND of the Table F_18.02.a,TM_INTRVL,TM_PST_DU_BND_F_18.02.a,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_23.02,Subdomain for TM_PST_DU_BND of the Table F_23.02,TM_INTRVL,TM_PST_DU_BND_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_F_23.04,Subdomain for TM_PST_DU_BND of the Table F_23.04,TM_INTRVL,TM_PST_DU_BND_F_23.04,,,false,2026-03-01,9999-12-31
+BIRD,TM_PST_DU_BND_INPT,Time past due band (Input Layer),TM_INTRVL,TM_PST_DU_BND_INPT,,Time past due band (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TM_SNC_INTL_RCGNTN,Time elapsed since initial recognition band,TM_INTRVL,TM_SNC_INTL_RCGNTN,,Time elapsed since initial recognition band,false,2026-03-01,9999-12-31
+BIRD,TM_SNC_INTL_RCGNTN_F_25.02.a,Subdomain for TM_SNC_INTL_RCGNTN of the Table F_25.02.a,TM_INTRVL,TM_SNC_INTL_RCGNTN_F_25.02.a,,,false,2026-03-01,9999-12-31
+BIRD,TM_SNC_INTL_RCGNTN_F_25.02.b,Subdomain for TM_SNC_INTL_RCGNTN of the Table F_25.02.b,TM_INTRVL,TM_SNC_INTL_RCGNTN_F_25.02.b,,,false,2026-03-01,9999-12-31
+BIRD,TM_SNC_INTL_RCGNTN_INPT,Time elapsed since initial recognition band (Input Layer),TM_INTRVL,TM_SNC_INTL_RCGNTN_INPT,,Time elapsed since initial recognition band (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TRD_RCVBL_TYP,Trade receivable type,TYP_INSTRMNT,TRD_RCVBL_TYP,,Trade receivable type,false,2026-03-01,9999-12-31
+BIRD,TRNCH_SYNTHTC_SCRTSTN_TYP,Tranche in a synthetic securitisation type,SCRTSTN_TRNCH_TYP,TRNCH_SYNTHTC_SCRTSTN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_TYP,Tranche in a synthetic securitisation without SSPE type,TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_TYP,TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_TYP,,Tranche in a synthetic securitisation without SSPE type,false,2026-03-01,9999-12-31
+BIRD,TRNSFR_IMPRMNT_STGS_F_12.02,Subdomain for TRNSFR_IMPRMNT_STGS of the Cube F_12.02,TRNSFR_IMPRMNT_STGS,TRNSFR_IMPRMNT_STGS_F_12.02,,,false,2026-03-01,9999-12-31
+BIRD,TRNSFR_IMPRMNT_STGS_F_12.02_TRNSFR_IMPRMNT_STGS_REF,Subdomain for TRNSFR_IMPRMNT_STGS of the Cube F_12.02,TRNSFR_IMPRMNT_STGS,TRNSFR_IMPRMNT_STGS_F_12.02_TRNSFR_IMPRMNT_STGS_REF,,,false,2026-03-01,9999-12-31
+BIRD,TRNSFR_IMPRMNT_STGS_INPT,Transfers between impairment stages (Input Layer),TRNSFR_IMPRMNT_STGS,TRNSFR_IMPRMNT_STGS_INPT,,Transfers between impairment stages (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT,Treatment of transferred assets in balance sheet,RCGNTN_STTS,TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT,,Treatment of transferred assets in balance sheet,false,2026-03-01,9999-12-31
+BIRD,TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT_F_15.00.a,Subdomain for TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT for F_15.00.a,RCGNTN_STTS,TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT_F_15.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT_F_15.00.b,Subdomain for TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT for F_15.00.b,RCGNTN_STTS,TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT_F_15.00.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT_TYP,Instrument Protection arrangement assignment type,INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT_TYP,INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT_TYP,,Instrument Protection arrangement assignment type,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_RL_TYP,Instrument role type,ABSTRCT_INSTRMNT_RL_TYP,INSTRMNT_RL_TYP,,Instrument role type,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_RL_TYP_INPT,Instrument role type (Input layer),ABSTRCT_INSTRMNT_RL_TYP,INSTRMNT_RL_TYP_INPT,,Instrument role type (Input layer),false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_ORGN,Instrument type by origin,TYP_INSTRMNT,INSTRMNT_TYP_ORGN,,Instrument type by origin,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT,Instrument type by product,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT,,Instrument type by product,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_05.01,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_05.01,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_05.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_07.01,Subdomain for TYP_INSTRMNT of the Table F_07.01,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_07.02,Subdomain for TYP_INSTRMNT of the Table F_07.02,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_08.01.a,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_08.01.a,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_08.01.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_09.01,Subdomain for INSTRMNT_TYP_PRDCT of the Cube F_09.01,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_09.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_09.01.1,Subdomain for INSTRMNT_TYP_PRDCT of the Cube F_09.01.1,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_09.01.1,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_09.02,Subdomain for INSTRMNT_TYP_PRDCT of the Cube F_09.02,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_09.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_10.00,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_10.00,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_10.00,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_11.01,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_11.01,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_11.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_11.02,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_11.02,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_11.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_13.01,Subdomain for INSTRMNT_TYP_PRDCT of the Cube F_13.01,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_13.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_18.00.b,Subdomain for TYP_INSTRMNT of the Table F_18.00.b,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_18.00.c,Subdomain for TYP_INSTRMNT of the Table F_18.00.c,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_18.00.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_18.00.d,Subdomain for TYP_INSTRMNT of the Table F_18.00.d,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_18.00.d,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_18.00.e,Subdomain for TYP_INSTRMNT of the Table F_18.00.e,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_18.00.e,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_20.05.a,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_20.05.a,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_20.05.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_20.05.b,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_20.05.b,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_20.05.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_F_31.01,Subdomain for INSTRMNT_TYP_PRDCT of the Table F_31.01,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT_F_31.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTRMNT_TYP_PRDCT_INPT,Instrument type by product - IL,TYP_INSTRMNT,INSTRMNT_TYP_PRDCT,,Instrument type by product for INPUT lAYER,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR,Institutional sectors,INSTTTNL_SCTR,INSTTTNL_SCTR,,Institutional sectors,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_ANCRDT_ENTTY_C,Institutional sector,INSTTTNL_SCTR,INSTTTNL_SCTR_ANCRDT_ENTTY_C,,Anacredit subdomain containing Institutional sectors for counterparty reference data collection.,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_CRDT_INSTTTN,Institutional sector for Credit institution,INSTTTNL_SCTR,INSTTTNL_SCTR_CRDT_INSTTTN,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.01,Subdomain for INSTTTNL_SCTR of the Cube F_04.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.01,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_13.03.1.a,Subdomain for NN_FNNCL_ASST_TYP of the Cube F_13.03.1.a,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_13.03.1.a,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_13.03.1.b,Subdomain for NN_FNNCL_ASST_TYP of the Cube F_13.03.1.b,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_13.03.1.b,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_20.01,Subdomain for NN_FNNCL_ASST_TYP of the Cube F_20.01,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_20.01,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_25.02.a,Subdomain for NN_FNNCL_ASST_TYP of the Table F_25.02.a,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_25.02.a,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_25.02.c,Subdomain for NN_FNNCL_ASST_TYP of the Table F_25.02.c,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_25.02.c,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_42.00,Subdomain for NN_FNNCL_ASST_TYP of the Cube F_42.00,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_42.00,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_INPT,Non-financial asset type (Input Layer),TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_INPT,,Non-financial asset type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_LBLTY_TYP_F_01.02,Subdomain for NN_FNNCL_LBLTY_TYP of the Cube F_01.02,TYP_ACCNTNG_ITM,NN_FNNCL_LBLTY_TYP_F_01.02,,,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_LBLTY_TYP_F_20.02,Subdomain for NN_FNNCL_LBLTY_TYP of the Cube F_20.02,TYP_ACCNTNG_ITM,NN_FNNCL_LBLTY_TYP_F_20.02,,,false,2026-03-01,9999-12-31
+BIRD,NN_PRFRMNG_EXT_CRTR_INDCTR_INPT,Failed to meet the non-performing exit criteria indicator,FLD_NN_PRFRMNG_EXT_CRTR_INDCTR,NN_PRFRMNG_EXT_CRTR_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,NN_PRFRMNG_PRR_FRBRNC_INDCTR,Non-performing prior to forbearance indicator,NN_PRFRMNG_PRR_FRBRNC_INDCTR,NN_PRFRMNG_PRR_FRBRNC_INDCTR,,Non-performing prior to forbearance indicator,false,2026-03-01,9999-12-31
+BIRD,NN_PRFRMNG_PRR_FRBRNC_INDCTR_INPT,Non-performing prior to forbearance indicator (Input Layer),NN_PRFRMNG_PRR_FRBRNC_INDCTR,NN_PRFRMNG_PRR_FRBRNC_INDCTR_INPT,,Non-performing prior to forbearance indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,NN_RTL_EXPSR_FNNCL_ASST_INSTRMNT_TYP,Non-retail exposure financial asset instrument type,ABSTRCT_INSTRMNT_RL_TYP,NN_RTL_EXPSR_FNNCL_ASST_INSTRMNT_TYP,,Non-retail exposure financial asset instrument type,false,2026-03-01,9999-12-31
+BIRD,NTRL_PRSN_GRP_RL_TYP,Natural person group role type,ENTTY_RL_TYP,NTRL_PRSN_GRP_RL_TYP,,Natural person group role type,false,2026-03-01,9999-12-31
+BIRD,NTRL_PRSN_TYP,Natural person type,PRTY_TYP,NTRL_PRSN_TYP,,Natural person type,false,2026-03-01,9999-12-31
+BIRD,NUTS3_ANCRDT,Anacredit subdomain for NUTS codes level 3,GGRPHCL_ARS,NUTS3_ANCRDT,,"Disjoint NUTS codes at level 3, including the member Technical null with code -99. Used by anacredit",true,2026-03-01,9999-12-31
+BIRD,NUTS3_ANCRDT_CLLCTN,Anacredit subdomain for NUTS codes level 3,GGRPHCL_ARS,NUTS3_ANCRDT_CLLCTN,,Disjoint NUTS codes at level 3. Used by AnaCredit collection cubes.,true,2026-03-01,9999-12-31
+BIRD,NUTS3_INPT,NUTS 3 codes,GGRPHCL_ARS,NUTS3_INPT,,NUTS 3 codes,false,2026-03-01,9999-12-31
+BIRD,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG,Observed agent indicator for Anacredit reporting,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG,,,false,2026-03-01,9999-12-31
+BIRD,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG_INPT,Observed agent indicator for Anacredit reporting input layer,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG_INPT,,Observed agent indicator for Anacredit reporting input layer,false,2026-03-01,9999-12-31
+BIRD,OFFC_CMMRCL_PRMS_CLLTRL_INDCTR,Offices and commercial premises collateral indicator,TYP_PRTCTN,OFFC_CMMRCL_PRMS_CLLTRL_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ISSR_INDCTR,Primary issuer indicator,PRMRY_ISSR_INDCTR,PRMRY_ISSR_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ISSR_INPT,Primary issuer (Input Layer),PRMRY_ISSR_INDCTR,PRMRY_ISSR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,PRMRY_PRTCTN_PRVDR_INDCTR,Primary protection provider indicator,PRMRY_PRTCTN_PRVDR_INDCTR,PRMRY_PRTCTN_PRVDR_INDCTR,,Primary protection provider indicator,false,2026-03-01,9999-12-31
+BIRD,PRPRTY_PLNT_EQPMNT_TKN_PSSSSN_DRNG_PRD_INDCTR,Property plant and equipment during the period indicator,PRPRTY_PLNT_EQPMNT_TKN_PSSSSN_DRNG_PRD_INDCTR,PRPRTY_PLNT_EQPMNT_TKN_PSSSSN_DRNG_PRD_INDCTR,,Property plant and equipment during the period indicator,false,2026-03-01,9999-12-31
+BIRD,PRPS,Purpose,PRPS,PRPS,,Purpose,false,2026-03-01,9999-12-31
+BIRD,PRPS_ANCRDT_CLLCTN,AnaCredit - ECB collection,PRPS,PRPS_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,PRPS_F_05.01,Subdomain for PRPS of the Table F_05.01,PRPS,PRPS_F_05.01,,,false,2026-03-01,9999-12-31
+BIRD,PRPS_F_07.01,Subdomain for PRPS of the Table F_07.01,PRPS,PRPS_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,PRPS_F_07.02,Subdomain for PRPS of the Table F_07.02,PRPS,PRPS_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,PRPS_F_13.01,Subdomain for PRPS of the Cube F_13.01,PRPS,PRPS_F_13.01,,,false,2026-03-01,9999-12-31
+BIRD,PRPS_INPT,Purpose (Input Layer),PRPS,PRPS_INPT,,Purpose (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRPTL_DBT_SCRTY_INDCTR,Perpetual debt security indicator,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,PRPTL_DBT_SCRTY_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,PRPTL_DBT_SCRTY_INDCTR_INPT,Perpetual debt security indicator,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,PRPTL_DBT_SCRTY_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_ARRNGMNT_RL_TYP,Protection arrangement role type,PRTCTN_ARRNGMNT_RL_TYP,PRTCTN_ARRNGMNT_RL_TYP,,Protection arrangement role type,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_ARRNGMNT_RS_INDCTR,Protection arrangement instrument reuse indicator,PRTCTN_ARRNGMNT_RS_INDCTR,PRTCTN_ARRNGMNT_RS_INDCTR,,Protection arrangement instrument reuse indicator,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_ARRNGMNT_RS_INDCTR_INPT,Protection arrangement instrument reuse indicator (Input Layer),PRTCTN_ARRNGMNT_RS_INDCTR,PRTCTN_ARRNGMNT_RS_INDCTR_INPT,,Protection arrangement instrument reuse indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRTCTN_ARRNGMNT_TYP,Protection arrangement type,ARRNGMNT_TYP,PRTCTN_ARRNGMNT_TYP,,Protection arrangement type,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH,Protection valuation approach,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH,,Protection valuation approach,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_ANCRDT_CLLCTN,AnaCredit - ECB collection,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_ARCRFT_CLLTRL,Type of protection valuation approach for Aircraft collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_ARCRFT_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_FNNCL_CLLTRL,Type of protection valuation approach for Financial collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_FNNCL_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_OTHR_CMMDTY_CLLTRL,Type of protection valuation approach for commodity collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_OTHR_CMMDTY_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_OTHR_FNNCL_CLLTRL,Type of protection valuation approach for Other financial collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_OTHR_FNNCL_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_OTHR_NN_RGSTRD_CLLTRL,Type of protection valuation approach for Other non-registered collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_OTHR_NN_RGSTRD_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_RL_ESTT_CLLTRL,Type of protection valuation approach for Real estate,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_RL_ESTT_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_SCRTY_CLLTRL,Type of protection valuation approach for Security collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_SCRTY_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH_SHP_CLLTRL,Type of protection valuation approach for Ship collateral,PRTCTN_VLTN_APPRCH,PRTCTN_VLTN_APPRCH_SHP_CLLTRL,,,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VL_TYP,Protection value type,PRTCTN_VL_TYP,PRTCTN_VL_TYP,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.07,Subdomain for INSTTTNL_SCTR of the Table F_04.07,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.07,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.08,Subdomain for INSTTTNL_SCTR of the Table F_04.08,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.08,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.09,Subdomain for INSTTTNL_SCTR of the Table F_04.09,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.09,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.10,Subdomain for INSTTTNL_SCTR of the Table F_04.10,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.10,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_05.01,Subdomain for INSTTTNL_SCTR of the Table F_05.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_05.01,,,false,2026-03-01,9999-12-31
+BIRD,DFLT_STTS_DFLT_FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD,Default status for Default financial asset instrument individually assessed,CRDT_QLTY,DFLT_STTS_DFLT_FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD,,,false,2026-03-01,9999-12-31
+BIRD,DFLT_STTS_INPT,Default status (Input Layer),CRDT_QLTY,DFLT_STTS_INPT,,Default status (Input Layer),false,2026-03-01,9999-12-31
+BIRD,DMSTC_ACTVT_INDCTR,Domestic activities indicator,DMSTC_ACTVT_INDCTR,DMSTC_ACTVT_INDCTR,,Domestic activities indicator,false,2026-03-01,9999-12-31
+BIRD,DMSTC_BRNCH_INDCTR,Domestic branch indicator,PRTY_TYP,DMSTC_BRNCH_INDCTR,,Domestic branch indicator,false,2026-03-01,9999-12-31
+BIRD,DMSTC_INSTTTNL_UNT_INDCTR,Domestic institutional unit indicator,GRP_TYP,DMSTC_INSTTTNL_UNT_INDCTR,,Domestic institutional unit indicator,false,2026-03-01,9999-12-31
+BIRD,DPST_TYP,Deposit type,TYP_INSTRMNT,DPST_TYP,,Deposit type,false,2026-03-01,9999-12-31
+BIRD,DRVD_DFLT_STTS,Derived default status,CRDT_QLTY,DRVD_DFLT_STTS,,Derived default status,false,2026-03-01,9999-12-31
+BIRD,DRVD_DFLT_STTS_INPT,Derived default status input layer,CRDT_QLTY,DRVD_DFLT_STTS_INPT,,Derived default status input layer,false,2026-03-01,9999-12-31
+BIRD,DT,Date,DT,DT,,Date,false,2026-03-01,9999-12-31
+BIRD,DT_END_MNTH_YYYY_MM_DD,All last days of months - YYYY-MM,DT,DT_END_MNTH_YYYY_MM_DD,END_MNTH_YYYY_MM_DD,All last days of months - YYYY-MM,false,2026-03-01,9999-12-31
+BIRD,DT_END_QRTR_YYYY_MM_DD,All last days of quarters - YYYY-MM,DT,DT_END_QRTR_YYYY_MM_DD,END_QRTR_YYYY_MM_DD,All last days of quarters - YYYY-MM,false,2026-03-01,9999-12-31
+BIRD,DT_FLL,All possible dates,DT,DT_FLL,FLL_YYYY_MM_DD,All possible dates,false,2026-03-01,9999-12-31
+BIRD,DT_FLL_YYYYMMDD,All possible dates YYYYMMDD,DT,DT_FLL_YYYYMMDD,FLL_YYYYMMDD,All possible dates YYYYMMDD,false,2026-03-01,9999-12-31
+BIRD,DT_FLL_YYYY_MM_DD,All possible dates YYYY-MM-DD,DT,DT_FLL_YYYY_MM_DD,FLL_YYYY_MM_DD,All possible dates YYYY-MM-DD,false,2026-03-01,9999-12-31
+BIRD,DT_OPNNG_BLNC_F_24.01_INTL_RCGNTN_DT_REF,Subdomain for INTL_RCGNTN_DT of the Cube F_24.01,DT_OPNNG_BLNC,DT_OPNNG_BLNC_F_24.01_INTL_RCGNTN_DT_REF,,,false,2026-03-01,9999-12-31
+BIRD,ECAI_ECA,ECAI/ECA - full domain,ECAI_ECA,ECAI_ECA,,ECAI/ECA - full domain,false,2026-03-01,9999-12-31
+BIRD,ECNMC_ACTVTY_V2_F_40.01,Subdomain for ECNMC_ACTVTY_V2 of the Table F_40.01,ECNMC_ACTVTY_V2,ECNMC_ACTVTY_V2_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,ECNMY,Economy,ECNMY,ECNMY,,,false,2026-03-01,9999-12-31
+BIRD,EHQLA_INDCTR,(Extremely) High liquidity and credit quality (HQLA) indicator,EHQLA_INDCTR,EHQLA_INDCTR,,(Extremely) High liquidity and credit quality (HQLA) indicator,false,2026-03-01,9999-12-31
+BIRD,EHQLA_INDCTR_INPT,(Extremely) High liquidity and credit quality (HQLA) indicator (input layer),EHQLA_INDCTR,EHQLA_INDCTR_INPT,,(Extremely) High liquidity and credit quality (HQLA) indicator (input layer),false,2026-03-01,9999-12-31
+BIRD,ELGBL_CNTRL_BNK_FNDNG,Eligible for central bank funding,ELGBL_CNTRL_BNK_FNDNG,ELGBL_CNTRL_BNK_FNDNG,,This Subdomain covers the complete Domain Eligible for central bank funding (excluding the Member Not applicable (0)) on the most granular level.,false,2026-03-01,9999-12-31
+BIRD,ELGBL_CNTRL_BNK_FNDNG_INPT,Eligible for central bank fundung (Input Layer),ELGBL_CNTRL_BNK_FNDNG,ELGBL_CNTRL_BNK_FNDNG_INPT,,Eligible for central bank fundung (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ELGBL_GRNT_INDCTR,Eligible as guarantee indicator,ELGBL_GRNT_INDCTR,ELGBL_GRNT_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,ELGBL_GRNT_INDCTR_INPT,Eligible as guarantee indicator (Input Layer),ELGBL_GRNT_INDCTR,ELGBL_GRNT_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,EMPLY_BNFT_TYP,Employee benefit type,TYP_ACCNTNG_ITM,EMPLY_BNFT_TYP,,Employee benefit type,false,2026-03-01,9999-12-31
+BIRD,ENCMBRD_ASST_INDCTR,Encumbered asset indicator,SRC_ENCMBRNC,ENCMBRD_ASST_INDCTR,,Encumbered asset indicator,false,2026-03-01,9999-12-31
+BIRD,ENCMBRD_ASST_INDCTR_F_32.01,Subdomain for ENCMBRD_ASST_INDCTR of the Cube F_32.01,SRC_ENCMBRNC,ENCMBRD_ASST_INDCTR_F_32.01,,,false,2026-03-01,9999-12-31
+BIRD,ENCMBRD_ASST_INDCTR_F_36.01.c,Subdomain for ENCMBRD_ASST_INDCTR of the Cube F_36.01.c,SRC_ENCMBRNC,ENCMBRD_ASST_INDCTR_F_36.01.c,,,false,2026-03-01,9999-12-31
+BIRD,ENCMBRD_ASST_INDCTR_F_36.02.c,Subdomain for ENCMBRD_ASST_INDCTR of the Cube F_36.02.c,SRC_ENCMBRNC,ENCMBRD_ASST_INDCTR_F_36.02.c,,,false,2026-03-01,9999-12-31
+BIRD,ENCMBRD_ASST_INDCTR_INPT,Encumbered asset indicator (Input layer),SRC_ENCMBRNC,ENCMBRD_ASST_INDCTR_INPT,,Encumbered asset indicator for the input layer,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_INDCTR,Enterprise indicator,ENTRPRS_INDCTR,ENTRPRS_INDCTR,,Enterprise indicator,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_INDCTR_INPT,Enterprise indicator (Input Layer),ENTRPRS_INDCTR,ENTRPRS_INDCTR_INPT,,Enterprise indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_SZ_F_13.01,Subdomain for ENTRPRS_SZ of the Cube F_13.01,SZ,ENTRPRS_SZ_F_13.01,,,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_SZ_F_18.02.a,Subdomain for ENTRPRS_SZ of the Table F_18.02.a,SZ,ENTRPRS_SZ_F_18.02.a,,,false,2026-03-01,9999-12-31
+BIRD,TX_ASST_TYP,Tax asset type,TYP_ACCNTNG_ITM,TX_ASST_TYP,,Tax asset type,false,2026-03-01,9999-12-31
+BIRD,TX_LBLTY_TYP,Tax liability type,TYP_ACCNTNG_ITM,TX_LBLTY_TYP,,Tax liability type,false,2026-03-01,9999-12-31
+BIRD,TYPE_OF_RELATIONSHIP,Type of relationship,TYPE_OF_RELATIONSHIP,TYPE_OF_RELATIONSHIP,,The type of relationship between entities.,true,2026-03-01,9999-12-31
+BIRD,TYPE_OF_SCHEME,Type of scheme most granular members,TYPE_OF_SCHEME,TYPE_OF_SCHEME,,Type of schemes in the BIRD proces that comprises only the most granular members.,true,2026-03-01,9999-12-31
+BIRD,TYPE_OF_TRANSFORMATION,TYPE_OF_TRANSFORMATION,TYPE_OF_TRANSFORMATION,TYPE_OF_TRANSFORMATION,,The type of transformation.,true,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM_F_13.03.1.a,Subdomain for TYP_ACCNTNG_ITM of the Cube F_13.03.1.a,TYP_ACCNTNG_ITM,TYP_ACCNTNG_ITM_F_13.03.1.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM_F_13.03.1.b,Subdomain for TYP_ACCNTNG_ITM of the Cube F_13.03.1.b,TYP_ACCNTNG_ITM,TYP_ACCNTNG_ITM_F_13.03.1.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM_F_25.02.a,Subdomain for TYP_ACCNTNG_ITM of the Table F_25.02.a,TYP_ACCNTNG_ITM,TYP_ACCNTNG_ITM_F_25.02.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM_F_25.02.c,Subdomain for TYP_ACCNTNG_ITM of the Table F_25.02.c,TYP_ACCNTNG_ITM,TYP_ACCNTNG_ITM_F_25.02.c,,,false,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM_F_32.04.a,Subdomain for TYP_ACCNTNG_ITM of the Cube F_32.04.a,TYP_ACCNTNG_ITM,TYP_ACCNTNG_ITM_F_32.04.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM_F_35.00.b,Subdomain for TYP_ACCNTNG_ITM of the Cube F_35.00.b,TYP_ACCNTNG_ITM,TYP_ACCNTNG_ITM_F_35.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_AMRTSTN,Type of amortisation,TYP_AMRTSTN,TYP_AMRTSTN,,Type of amortisation,false,2026-03-01,9999-12-31
+BIRD,TYP_AMRTSTN_ANCRDT_CLLCTN,AnaCredit - ECB collection,TYP_AMRTSTN,TYP_AMRTSTN_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,TYP_AMRTSTN_INPT,Type of amortisation (Input Layer),TYP_AMRTSTN,TYP_AMRTSTN_INPT,,Type of amortisation (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_ASST_SCRTSTN_INPT,Type of asset provided as security,TYP_ASST_SCRTSTN,TYP_ASST_SCRTSTN_INPT,,Type of asset provided as security,false,2026-03-01,9999-12-31
+BIRD,TYP_ASST_SCRTSTN_INPT_WNA,Type of asset provided as security (Input Layer),TYP_ASST_SCRTSTN,TYP_ASST_SCRTSTN_INPT_WNA,,Type of asset provided as security (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_CLLTRL_INPT,Type of collateral (Input Layer),TYP_PRTCTN,TYP_CLLTRL_INPT,,Type of collateral (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_CMMTMNT,Type of commitment - full domain,TYP_CMMTMNT,TYP_CMMTMNT,,Type of commitment - full domain,false,2026-03-01,9999-12-31
+BIRD,TYP_CMMTMNT_INPT,Type of commitment (Input Layer),TYP_CMMTMNT,TYP_CMMTMNT_INPT,,Type of commitment (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_DMNSN,Types of dimension for the SDD,TYP_DMNSN,TYP_DMNSN,,Types of dimension for the SDD,false,2026-03-01,9999-12-31
+BIRD,TYP_ECNMY_INPT,Economy,ECNMY,TYP_ECNMY_INPT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FCT_VL,Types of facet values for the SDD,TYP_FCT_VL,TYP_FCT_VL,,Types of facet values for the SDD,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_CSH_HND_IFRS_DRVD_DT,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the EIL Cube CSH_HND_IFRS_EIL,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_CSH_HND_IFRS_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_EXCHNG_TRDBL_DRVTV_ASST_PSTN_DRVD_DT,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the EIL Cube EXCHNG_TRDBL_DRVTV_PSTN_RL_EIL,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_EXCHNG_TRDBL_DRVTV_ASST_PSTN_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_FNNCL_ASST_INSTRMNT_DRVD_DT,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the EIL Cube INSTRMNT_RL_EIL,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_FNNCL_ASST_INSTRMNT_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP_INPT,Security position Balance sheet recognised type (Input Layer),SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP_INPT,,Security position Balance sheet recognised type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_PSTN_HDGD_OTC_DRVTV_TYP,Security position hedged by Over the counter (OTC) derivative type,ABSTRCT_INSTRMNT_RL_TYP,SCRTY_PSTN_HDGD_OTC_DRVTV_TYP,,,false,2026-03-01,9999-12-31
+BIRD,SCRTY_PSTN_RL_TYP,Security position role type,SCRTY_PSTN_RL_TYP,SCRTY_PSTN_RL_TYP,,Security position role type,false,2026-03-01,9999-12-31
+BIRD,SCRTY_RNK_LVL_F_32.03.b,Subdomain for SCRTY_RNK_LVL of the Cube F_32.03.b,SCRTY_RNK_LVL,SCRTY_RNK_LVL_F_32.03.b,,,false,2026-03-01,9999-12-31
+BIRD,SCRTY_RNK_LVL_INPT,Full list of the security rank level (Input Layer),SCRTY_RNK_LVL,SCRTY_RNK_LVL_INPT,,Full list of the security rank level (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_RNK_LVL_SHS,Full list of the security rank level,SCRTY_RNK_LVL,SCRTY_RNK_LVL_SHS,,Full list of the security rank level,false,2026-03-01,9999-12-31
+BIRD,SCRTY_STTS,Status of the security (whether the instrument is active and not active),STTS,SCRTY_STTS,,,false,2026-03-01,9999-12-31
+BIRD,SCRTY_STTS_INPT,Status of the security (whether the instrument is active and not active) (Input Layer),STTS,SCRTY_STTS_INPT,,,false,2026-03-01,9999-12-31
+BIRD,SCRTY_TYP_ID,Security type by identifier,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,SCRTY_TYP_ID,,Security type by identifier,false,2026-03-01,9999-12-31
+BIRD,SCRTY_TYP_ID_INPT,Security type by identifier (Input Layer),SCRTY_EXCHNG_TRDBL_DRVTV_TYP,SCRTY_TYP_ID_INPT,,Security type by identifier (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_TYP_PRDCT,Security type by product,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,SCRTY_TYP_PRDCT,,Security type by product,false,2026-03-01,9999-12-31
+BIRD,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,Securities borrowing and lending transaction including cash as collateral component type,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,,Securities borrowing and lending transaction including cash as collateral component type,false,2026-03-01,9999-12-31
+BIRD,MNTRY_ALL_2D,Positive and negative monetary amounts with 2 decimals,MNTRY,MNTRY_ALL_2D,ALL_2D,Positive and negative monetary amounts with 2 decimals,false,2026-03-01,9999-12-31
+BIRD,MNTRY_NN_NGTV_2D,Non negative monetary amounts with 2 decimals,MNTRY,MNTRY_NN_NGTV_2D,NN_NGTV_2D,Non negative monetary amounts with 2 decimals,false,2026-03-01,9999-12-31
+BIRD,PRTCTN_VL_TYP_INPT,Protection value type (Input layer),PRTCTN_VL_TYP,PRTCTN_VL_TYP_INPT,,Protection value type (Input layer),false,2026-03-01,9999-12-31
+BIRD,PRTY_CD_TYP,Party code type,PRTY_CD_TYP,PRTY_CD_TYP,,Party code type,false,2026-03-01,9999-12-31
+BIRD,PRTY_CD_TYP_F_40.01,Subdomain for PRTY_CD_TYP of the Table  F_40.01,PRTY_CD_TYP,PRTY_CD_TYP_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,PRTY_RL_TYP,Party role type,ENTTY_RL_TYP,PRTY_RL_TYP,,Party role type,false,2026-03-01,9999-12-31
+BIRD,PRTY_TYP,Party type,PRTY_TYP,PRTY_TYP,,Party type,false,2026-03-01,9999-12-31
+BIRD,PRTY_TYP_ADDRSS,Party type by address,PRTY_TYP_ADDRSS,PRTY_TYP_ADDRSS,,Party type by address,false,2026-03-01,9999-12-31
+BIRD,PRTY_TYP_ADDRSS_INPT,Party type by address (Input Layer),PRTY_TYP_ADDRSS,PRTY_TYP_ADDRSS_INPT,,Party type by address (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRTY_TYP_ANCRDT,Subdomain for PRTY_TYP in AnaCredit,PRTY_TYP,PRTY_TYP_ANCRDT,,,false,2026-03-01,9999-12-31
+BIRD,PRTY_TYP_INPT,Party type (Input Layer),PRTY_TYP,PRTY_TYP_INPT,,Party type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRVSN_TYP,Provision type,TYP_ACCNTNG_ITM,PRVSN_TYP,,Provision type,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AD,Subdomain for the postal code of PSTL_CD_AD,STRNG,PSTL_CD_AD,PSTL_CD_AD,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AI,Subdomain for the postal code of PSTL_CD_AI,STRNG,PSTL_CD_AI,PSTL_CD_AI,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AM,Subdomain for the postal code of PSTL_CD_AM,STRNG,PSTL_CD_AM,PSTL_CD_AM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AQ,Subdomain for the postal code of PSTL_CD_AQ,STRNG,PSTL_CD_AQ,PSTL_CD_AQ,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AR,Subdomain for the postal code of PSTL_CD_AR,STRNG,PSTL_CD_AR,PSTL_CD_AR,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AS,Subdomain for the postal code of PSTL_CD_AS,STRNG,PSTL_CD_AS,PSTL_CD_AS,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_AZ,Subdomain for the postal code of PSTL_CD_AZ,STRNG,PSTL_CD_AZ,PSTL_CD_AZ,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BB,Subdomain for the postal code of PSTL_CD_BB,STRNG,PSTL_CD_BB,PSTL_CD_BB,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BH,Subdomain for the postal code of PSTL_CD_BH,STRNG,PSTL_CD_BH,PSTL_CD_BH,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BM,Subdomain for the postal code of PSTL_CD_BM,STRNG,PSTL_CD_BM,PSTL_CD_BM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BN,Subdomain for the postal code of PSTL_CD_BN,STRNG,PSTL_CD_BN,PSTL_CD_BN,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_BR,Subdomain for the postal code of PSTL_CD_BR,STRNG,PSTL_CD_BR,PSTL_CD_BR,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CA,Subdomain for the postal code of PSTL_CD_CA,STRNG,PSTL_CD_CA,PSTL_CD_CA,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CC,Subdomain for the postal code of PSTL_CD_CC,STRNG,PSTL_CD_CC,PSTL_CD_CC,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CU,Subdomain for the postal code of PSTL_CD_CU,STRNG,PSTL_CD_CU,PSTL_CD_CU,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CX,Subdomain for the postal code of PSTL_CD_CX,STRNG,PSTL_CD_CX,PSTL_CD_CX,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_CZ,Subdomain for the postal code of PSTL_CD_CZ,STRNG,PSTL_CD_CZ,PSTL_CD_CZ,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_FK,Subdomain for the postal code of PSTL_CD_FK,STRNG,PSTL_CD_FK,PSTL_CD_FK,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_FM,Subdomain for the postal code of PSTL_CD_FM,STRNG,PSTL_CD_FM,PSTL_CD_FM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GB,Subdomain for the postal code of PSTL_CD_GB,STRNG,PSTL_CD_GB,PSTL_CD_GB,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GG,Subdomain for the postal code of PSTL_CD_GG,STRNG,PSTL_CD_GG,PSTL_CD_GG,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GI,Subdomain for the postal code of PSTL_CD_GI,STRNG,PSTL_CD_GI,PSTL_CD_GI,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GR,Subdomain for the postal code of PSTL_CD_GR,STRNG,PSTL_CD_GR,PSTL_CD_GR,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GS,Subdomain for the postal code of PSTL_CD_GS,STRNG,PSTL_CD_GS,PSTL_CD_GS,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_GU,Subdomain for the postal code of PSTL_CD_GU,STRNG,PSTL_CD_GU,PSTL_CD_GU,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_HK,Subdomain for the postal code of PSTL_CD_HK,STRNG,PSTL_CD_HK,PSTL_CD_HK,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_HM,Subdomain for the postal code of PSTL_CD_HM,STRNG,PSTL_CD_HM,PSTL_CD_HM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_HT,Subdomain for the postal code of PSTL_CD_HT,STRNG,PSTL_CD_HT,PSTL_CD_HT,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_IM,Subdomain for the postal code of PSTL_CD_IM,STRNG,PSTL_CD_IM,PSTL_CD_IM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_IO,Subdomain for the postal code of PSTL_CD_IO,STRNG,PSTL_CD_IO,PSTL_CD_IO,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_IR,Subdomain for the postal code of PSTL_CD_IR,STRNG,PSTL_CD_IR,PSTL_CD_IR,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_JE,Subdomain for the postal code of PSTL_CD_JE,STRNG,PSTL_CD_JE,PSTL_CD_JE,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_JM,Subdomain for the postal code of PSTL_CD_JM,STRNG,PSTL_CD_JM,PSTL_CD_JM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_JP,Subdomain for the postal code of PSTL_CD_JP,STRNG,PSTL_CD_JP,PSTL_CD_JP,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KI,Subdomain for the postal code of PSTL_CD_KI,STRNG,PSTL_CD_KI,PSTL_CD_KI,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.02.1,Subdomain for INSTTTNL_SCTR of the Cube F_04.02.1,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.02.1,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.02.2,Subdomain for INSTTTNL_SCTR of the Cube F_04.02.2,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.02.2,,,false,2026-03-01,9999-12-31
+BIRD,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP_INPT,Securities borrowing and lending transaction including cash as collateral component type (Input Layer),SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP_INPT,,Securities borrowing and lending transaction including cash as collateral component type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SFTWR_ASST_INDCTR,Software assets indicator,SFTWR_ASST_INDCTR,SFTWR_ASST_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,SFTWR_ASST_INDCTR_INPT,Software assets indicator,SFTWR_ASST_INDCTR,SFTWR_ASST_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,SFT_TYP,Securities financial transaction type,TYP_INSTRMNT,SFT_TYP,,Securities financial transaction type,false,2026-03-01,9999-12-31
+BIRD,SGNFCNT_ASST_CLSS,Significant asset class,SGNFCNT_ASST_CLSS,SGNFCNT_ASST_CLSS,,Significant asset class,false,2026-03-01,9999-12-31
+BIRD,SGNFCNT_ASST_CLSS_INPT,Significant asset class (Input Layer),SGNFCNT_ASST_CLSS,SGNFCNT_ASST_CLSS_INPT,,Significant asset class (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SGNFCNT_RSK_TRNSFR_INDCTR,Significant risk transfer indicator,SGNFCNT_RSK_TRNSFR_INDCTR,SGNFCNT_RSK_TRNSFR_INDCTR,,Significant risk transfer indicator,false,2026-03-01,9999-12-31
+BIRD,SHCK_DRCTN,Shock direction,SHCK_DRCTN,SHCK_DRCTN,,,false,2026-03-01,9999-12-31
+BIRD,SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_ACCNTNG_STNDRD_TYP,Short balance sheet recognised security position accounting standard type,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_ACCNTNG_STNDRD_TYP,,Short balance sheet recognised security position accounting standard type,false,2026-03-01,9999-12-31
+BIRD,SHRT_PSTN_ACCNTNG_CLSSFCTN_F_14.00,Subdomain for SHRT_PSTN_ACCNTNG_CLSSFCTN of the Cube F_14.00,ACCNTNG_CLSSFCTN,SHRT_PSTN_ACCNTNG_CLSSFCTN_F_14.00,,,false,2026-03-01,9999-12-31
+BIRD,SHRT_TRM_CRDT_ASSMNT_INDCTR,Short term credit assessment indicator,SHRT_TRM_CRDT_ASSMNT_INDCTR,SHRT_TRM_CRDT_ASSMNT_INDCTR,,Short term credit assessment indicator,false,2026-03-01,9999-12-31
+BIRD,SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR,Syndication or sub-participation member instrument indicator,SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR,SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR,,Syndication or sub-participation member instrument indicator,false,2026-03-01,9999-12-31
+BIRD,SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR_INPT,Syndication or sub-participation member instrument indicator (Input layer),SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR,SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR_INPT,,Syndication or sub-participation member instrument indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,SNRTY,Seniority,SCRTY_RNK_LVL,SNRTY,,Seniority,false,2026-03-01,9999-12-31
+BIRD,SNRTY_INPT,Seniority (Input layer),SCRTY_RNK_LVL,SNRTY_INPT,,Seniority (Input layer),false,2026-03-01,9999-12-31
+BIRD,SPCLSD_LNDNG_EXPSR_TYP,Specialised lending exposure type,SPCLSD_LNDNG_EXPSR_TYP,SPCLSD_LNDNG_EXPSR_TYP,,,false,2026-03-01,9999-12-31
+BIRD,SPCLSD_LNDNG_EXPSR_TYP_INPT,Specialised lending exposure type (Input Layer),SPCLSD_LNDNG_EXPSR_TYP,SPCLSD_LNDNG_EXPSR_TYP_INPT,,,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_ANCRDT_CLLCTN,AnaCredit - ECB collection,SRC_ENCMBRNC,SRC_ENCMBRNC_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,RNGTTD_CRDT_FCLTY_WTH_FRBRNC_MSR_INDCTR,Renegotiated credit facility with forbearance measure indicator,RNGTTD_CRDT_FCLTY_TYP,RNGTTD_CRDT_FCLTY_WTH_FRBRNC_MSR_INDCTR,,Renegotiated credit facility with forbearance measure indicator,false,2026-03-01,9999-12-31
+BIRD,RNGTTD_DBT_SCRTY_TYP,Renegotiated debt security type,RNGTTD_DBT_SCRTY_TYP,RNGTTD_DBT_SCRTY_TYP,,Renegotiated debt security type,false,2026-03-01,9999-12-31
+BIRD,RNGTTD_DBT_SCRTY_TYP_INPT,Renegotiated debt security type (Input Layer),RNGTTD_DBT_SCRTY_TYP,RNGTTD_DBT_SCRTY_TYP_INPT,,Renegotiated debt security type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,RNGTTD_DBT_SCRTY_WTH_FRBRNC_MSR_INDCTR,Renegotiated debt security with forbearance measure indicator,RNGTTD_DBT_SCRTY_TYP,RNGTTD_DBT_SCRTY_WTH_FRBRNC_MSR_INDCTR,,Renegotiated debt security with forbearance measure indicator,false,2026-03-01,9999-12-31
+BIRD,RNGTTD_FNNCL_ASST_INSTRMNT_TYP,Renegotiated financial asset instrument type,ABSTRCT_INSTRMNT_RL_TYP,RNGTTD_FNNCL_ASST_INSTRMNT_TYP,,Renegotiated financial asset instrument type,false,2026-03-01,9999-12-31
+BIRD,RPRCHS_TRNSCTN_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_ASSGNMNT_TYP,Repurchase transaction Non-balance sheet recognised security position assignment type,RPRCHS_TRNSCTN_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_ASSGNMNT_TYP,RPRCHS_TRNSCTN_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_ASSGNMNT_TYP,,Repurchase transaction Non-balance sheet recognised security position assignment type,false,2026-03-01,9999-12-31
+BIRD,RPRCHS_TRNSCTN_TYP,Repurchase transaction type,TYP_INSTRMNT,RPRCHS_TRNSCTN_TYP,,Repurchase transaction type,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS,Repayment rights,RPYMNT_RGHTS,RPYMNT_RGHTS,,Repayment rights,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_ANCRDT_CLLCTN,AnaCredit - ECB collection,RPYMNT_RGHTS,RPYMNT_RGHTS_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_32.01,Subdomain for RPYMNT_RGHTS of the Cube F_32.01,RPYMNT_RGHTS,RPYMNT_RGHTS_F_32.01,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_32.02.a,Subdomain for RPYMNT_RGHTS of the Cube F_32.02.a,RPYMNT_RGHTS,RPYMNT_RGHTS_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_36.01.a,Subdomain for RPYMNT_RGHTS of the Cube F_36.01.a,RPYMNT_RGHTS,RPYMNT_RGHTS_F_36.01.a,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_36.01.b,Subdomain for RPYMNT_RGHTS of the Cube F_36.01.b,RPYMNT_RGHTS,RPYMNT_RGHTS_F_36.01.b,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_36.01.c,Subdomain for RPYMNT_RGHTS of the Cube F_36.01.c,RPYMNT_RGHTS,RPYMNT_RGHTS_F_36.01.c,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_36.02.a,Subdomain for RPYMNT_RGHTS of the Cube F_36.02.a,RPYMNT_RGHTS,RPYMNT_RGHTS_F_36.02.a,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_36.02.b,Subdomain for RPYMNT_RGHTS of the Cube F_36.02.b,RPYMNT_RGHTS,RPYMNT_RGHTS_F_36.02.b,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_F_36.02.c,Subdomain for RPYMNT_RGHTS of the Cube F_36.02.c,RPYMNT_RGHTS,RPYMNT_RGHTS_F_36.02.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.03.1,Subdomain for INSTTTNL_SCTR of the Cube F_04.03.1,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.03.1,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.04.1,Subdomain for INSTTTNL_SCTR of the Table F_04.04.1,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.04.1,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_04.06,Subdomain for INSTTTNL_SCTR of the Table F_04.06,INSTTTNL_SCTR,INSTTTNL_SCTR_F_04.06,,,false,2026-03-01,9999-12-31
+BIRD,AVLBL_ENCMBRNC_INDCTR_INPT,Available for encumbrance indicator (Input layer),AVLBL_ENCMBRNC,AVLBL_ENCMBRNC_INDCTR_INPT,,Available for encumbrance indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_ETD_ASST_PSTN_TYP,Balance sheet recognised exchange tradable derivative asset position type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_ETD_ASST_PSTN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN_ACCNTNG_STNDRD_TYP,Balance sheet recognised exchange tradable derivative liability position,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN_ACCNTNG_STNDRD_TYP,,Balance sheet recognised exchange tradable derivative liability position,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_ACCNTNG_STNDRD_TYP,Balance sheet recognised exchange tradable derivative asset position by accounting standard type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_ACCNTNG_STNDRD_TYP,,Balance sheet recognised exchange tradable derivative asset position by accounting standard type,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_ACCNTNG_STNDRD_TYP_INPT,Balance sheet recognised exchange tradable derivative asset position by accounting standard type (Input layer),EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_ACCNTNG_STNDRD_TYP_INPT,,Balance sheet recognised exchange tradable derivative asset position by accounting standard type (Input layer),false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_TKN_PSSSSN_TYP,Balance sheet recognised exchange tradable derivative asset position obtained by taking possession type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_TKN_PSSSSN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_TKN_PSSSSN_TYP_INPT,Balance sheet recognised exchange tradable derivative asset position taken into possession type (Input Layer),EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_TKN_PSSSSN_TYP_INPT,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_TYP,Balance sheet recognised exchange tradable derivative liability position type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_TYP,,Balance sheet recognised exchange tradable derivative liability position type,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FFNCL_ASST_INSTRMNT_FR_VL_TYP_INPT,Balance sheet recognised financial asset instrument by fair value type,ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FFNCL_ASST_INSTRMNT_FR_VL_TYP_INPT,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_FR_VL_TYP,Balance sheet recognised financial asset instrument by fair value type,ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_FR_VL_TYP,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_TKN_PSSSSN_TYP,Balance sheet recognised financial asset instrument taken into possession type,ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_TKN_PSSSSN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_TKN_PSSSSN_TYP_INPT,Balance sheet recognised financial asset instrument taken into possession type (Input Layer),ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_TKN_PSSSSN_TYP_INPT,,,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_TYP,Balance sheet recognised financial asset instrument type,ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_TYP,,Balance sheet recognised financial asset instrument type,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_ACCNTNG_STNDRD_TYP,Balance sheet recognised financial liability instrument accounting standard type,ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_ACCNTNG_STNDRD_TYP,,Balance sheet recognised financial liability instrument accounting standard type,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_TYP,Balance sheet recognised financial liability instrument type,ABSTRCT_INSTRMNT_RL_TYP,BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_TYP,,Balance sheet recognised financial liability instrument type,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNTN_FNNCL_ASST,Balance sheet recognition of the financial asset,RCGNTN_STTS,BLNC_SHT_RCGNTN_FNNCL_ASST,,Balance sheet recognition of the financial asset,false,2026-03-01,9999-12-31
+BIRD,BLNC_SHT_RCGNTN_FNNCL_ASST_INPT,Balance sheet recognition of the financial asset (Input Layer),RCGNTN_STTS,BLNC_SHT_RCGNTN_FNNCL_ASST_INPT,,Balance sheet recognition of the financial asset,false,2026-03-01,9999-12-31
+BIRD,BLN_STRNG,Boolean string,BLN_STRNG,BLN_STRNG,,"A Domain that allows string values of TRUE and FALSE only.
+Please note that this Domain's purpose is the mapping of non-reference boolean Domains that are not enumerated, e.g. EBA_Boolean.",false,2026-03-01,9999-12-31
+BIRD,BLN_TF,Pure boolean (true and false values),BLN,BLN_TF,,Pure boolean (true and false values),false,2026-03-01,9999-12-31
+BIRD,BLN_TFN,Boolean including NULL value,BLN,BLN_TFN,,Boolean including NULL value,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_05.01,Subdomain for CLLTRLZD of the Table F_05.01,CLLTRLZD,CLLTRLZD_F_05.01,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_07.01,Subdomain for CLLTRLZD of the Table F_07.01,CLLTRLZD,CLLTRLZD_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_07.02,Subdomain for CLLTRLZD of the Table F_07.02,CLLTRLZD,CLLTRLZD_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_18.00.a,Subdomain for CLLTRLZD of the Table F_18.00.a,CLLTRLZD,CLLTRLZD_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_18.00.b,Subdomain for CLLTRLZD of the Table F_18.00.b,CLLTRLZD,CLLTRLZD_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_18.00.c,Subdomain for CLLTRLZD of the Table F_18.00.c,CLLTRLZD,CLLTRLZD_F_18.00.c,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_18.00.d,Subdomain for CLLTRLZD of the Table F_18.00.d,CLLTRLZD,CLLTRLZD_F_18.00.d,,,false,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS_INPT,Repayment rights (Input Layer),RPYMNT_RGHTS,RPYMNT_RGHTS_INPT,,Repayment rights (Input Layer),false,2026-03-01,9999-12-31
+BIRD,RSCRTSTN_INDCTR,Re-securitisation indicator,RSCRTSTN_INDCTR,RSCRTSTN_INDCTR,,Re-securitisation indicator,false,2026-03-01,9999-12-31
+BIRD,RSDL_MTRTY_BND,Residual maturity band,TM_INTRVL,RSDL_MTRTY_BND,,Residual maturity band,false,2026-03-01,9999-12-31
+BIRD,RSDL_MTRTY_BND_INPT,Residual maturity band (Input Layer),TM_INTRVL,RSDL_MTRTY_BND_INPT,,Residual maturity band (Input Layer),false,2026-03-01,9999-12-31
+BIRD,RSK_CLSS,Risk class,RSK_CLSS,RSK_CLSS,,,false,2026-03-01,9999-12-31
+BIRD,RSK_MSR_TYP_PSTN,Risk measure type by position,FRTB_RSK_MSR_TYP,RSK_MSR_TYP_PSTN,,,false,2026-03-01,9999-12-31
+BIRD,RTL_EXPSR_ACCRDNG_CRR_INDCTR,"Retail exposure accordign to CRR, Article 123 (b) indicator",RTL_EXPSR_ACCRDNG_CRR_INDCTR,RTL_EXPSR_ACCRDNG_CRR_INDCTR,,"Retail exposure accordign to CRR, Article 123 (b) indicator",false,2026-03-01,9999-12-31
+BIRD,RTND_DBT_SCRTY_INDCTR,Retained debt security indicator,RTND_DBT_SCRTY_INDCTR,RTND_DBT_SCRTY_INDCTR,,Retained debt security indicator,false,2026-03-01,9999-12-31
+BIRD,RTND_DBT_SCRTY_INDCTR_INPT,Retained debt security indicator (Input Layer),RTND_DBT_SCRTY_INDCTR,RTND_DBT_SCRTY_INDCTR_INPT,,Retained debt security indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,RTNG_GRD_CRDT_QLTY,Rating grade credit quality,RTNG_GRD_CRDT_QLTY,RTNG_GRD_CRDT_QLTY,,,false,2026-03-01,9999-12-31
+BIRD,RTNG_GRD_ISSR_BSD_RTNG_SYSTM,Rating grade for issuer based rating systems type,RTNG_GRD_TYP,RTNG_GRD_ISSR_BSD_RTNG_SYSTM,,Rating grade for issuer based rating systems type,false,2026-03-01,9999-12-31
+BIRD,RTNG_GRD_TYP,Rating grade type,RTNG_GRD_TYP,RTNG_GRD_TYP,,Rating grade type,false,2026-03-01,9999-12-31
+BIRD,RTNG_SYSTM_TYP_TRGT,Rating system type by target (Issue vs. Issuer based) type,RTNG_SYSTM_TYP,RTNG_SYSTM_TYP_TRGT,,Rating system type by target (Issue vs. Issuer based) type,false,2026-03-01,9999-12-31
+BIRD,RTNG_SYSTM_TYP_TRGT_INPT,Rating system type by target (Issue vs. Issuer based) type,RTNG_SYSTM_TYP,RTNG_SYSTM_TYP_TRGT_INPT,,Rating system type by target (Issue vs. Issuer based) type,false,2026-03-01,9999-12-31
+BIRD,RTN_SYSTM_TYP_NTR,Rating system type by nature (Grade vs. Numeric) type,RTNG_SYSTM_TYP,RTN_SYSTM_TYP_NTR,,Rating system type by nature (Grade vs. Numeric) type,false,2026-03-01,9999-12-31
+BIRD,RVCBL_INDCTR,Revocable indicator,RVCBL_INDCTR,RVCBL_INDCTR,,Revocable indicator,false,2026-03-01,9999-12-31
+BIRD,RVCBL_INDCTR_INPT,Revocable indicator (Input Layer),RVCBL_INDCTR,RVCBL_INDCTR_INPT,,Revocable indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,RVLVNG_LN_INDCTR,Revolving loan indicator,RVLVNG_LN_INDCTR,RVLVNG_LN_INDCTR,,Revolving loan indicator,false,2026-03-01,9999-12-31
+BIRD,RVLVNG_LN_INDCTR_INPT,Revolving loan indicator (Input Layer),RVLVNG_LN_INDCTR,RVLVNG_LN_INDCTR_INPT,,Revolving loan indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SBJCT_IMPRMNT_INDCTR_F_04.08,Subdomain for SBJCT_IMPRMNT_INDCTR of the Table F_04.08,SBJCT_IMPRMNT_INDCTR,SBJCT_IMPRMNT_INDCTR_F_04.08,,,false,2026-03-01,9999-12-31
+BIRD,SBJCT_IMPRMNT_INDCTR_F_04.08_SBJCT_IMPRMNT_INDCTR_REF,Subdomain for SBJCT_IMPRMNT_INDCTR of the Cube F_04.08,SBJCT_IMPRMNT_INDCTR,SBJCT_IMPRMNT_INDCTR_F_04.08_SBJCT_IMPRMNT_INDCTR_REF,,,false,2026-03-01,9999-12-31
+BIRD,SBJCT_IMPRMNT_INDCTR_INPT,Subject to impairment indicator (Input Layer),SBJCT_IMPRMNT_INDCTR,SBJCT_IMPRMNT_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,SBJCT_OPRTNG_LS_INDCTR,Subject to operating lease indicator,SBJCT_OPRTNG_LS_INDCTR,SBJCT_OPRTNG_LS_INDCTR,,Subject to operating lease indicator,false,2026-03-01,9999-12-31
+BIRD,SBJCT_OPRTNG_LS_INDCTR_INPT,Subject to operating lease indicator (Input Layer),SBJCT_OPRTNG_LS_INDCTR,SBJCT_OPRTNG_LS_INDCTR_INPT,,Subject to operating lease indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SBRDNTD_DBT_ANCRDT_CLLCTN,AnaCredit - ECB collection,SBRDNTD_DBT,SBRDNTD_DBT_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,SBRDNTD_DBT_INDCTR_INPT,Subordinated debt indicator (Input Layer),SBRDNTD_DBT,SBRDNTD_DBT_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,SBSDRY_JNT_VNTR_ASSCT_OTHR_ORGNSTN_ASSGNMNT_TYP,Subsidiary joint venture and associate Other organisation role assignment,SBSDRY_JNT_VNTR_ASSCT_OTHR_ORGNSTN_ASSGNMNT_TYP,SBSDRY_JNT_VNTR_ASSCT_OTHR_ORGNSTN_ASSGNMNT_TYP,,Subsidiary joint venture and associate Other organisation role assignment,false,2026-03-01,9999-12-31
+BIRD,SCRTSN_TYP,Securitisation type,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,SCRTSN_TYP,,Securitisation type,false,2026-03-01,9999-12-31
+BIRD,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,Securitisation and other credit transfer type,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,,Securitisation and other credit transfer type,false,2026-03-01,9999-12-31
+BIRD,SCRTSTN_TRNCH_TYP,Securitisation tranche type,SCRTSTN_TRNCH_TYP,SCRTSTN_TRNCH_TYP,,,false,2026-03-01,9999-12-31
+BIRD,SCRTSTN_TYP,Securitisation type,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,SCRTSTN_TYP,,Securitisation type,false,2026-03-01,9999-12-31
+BIRD,SCRTY_BRRWNG_LNDNG_TRNSCTN_CMPNNT_BY_DRCTN,Security borrowing and lending transaction component type by direction,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,SCRTY_BRRWNG_LNDNG_TRNSCTN_CMPNNT_BY_DRCTN,,Security borrowing and lending transaction component type by direction,false,2026-03-01,9999-12-31
+BIRD,SCRTY_BRRWNG_LNDNG_TRNSCTN_CMPNNT_BY_DRCTN_INPT,Security borrowing and lending transaction component type by direction (Input Layer),SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,SCRTY_BRRWNG_LNDNG_TRNSCTN_CMPNNT_BY_DRCTN_INPT,,Security borrowing and lending transaction component type by direction (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_BRRWNG_LNDNG_TRNSCTN_CMPNNT_TYP_BY_SCRTY_TYP,Security borrowing and lending transaction component type by Security type,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,SCRTY_BRRWNG_LNDNG_TRNSCTN_CMPNNT_TYP_BY_SCRTY_TYP,,Security borrowing and lending transaction component type by Security type,false,2026-03-01,9999-12-31
+BIRD,SCRTY_BRRWNG_LNDNG_TRNSCTN_TYP,Security borrowing and lending transaction type,TYP_INSTRMNT,SCRTY_BRRWNG_LNDNG_TRNSCTN_TYP,,Security borrowing and lending transaction type,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_SZ_F_18.02.b,Subdomain for ENTRPRS_SZ of the Table F_18.02.b,SZ,ENTRPRS_SZ_F_18.02.b,,,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_SZ_F_18.02.c,Subdomain for ENTRPRS_SZ of the Table F_18.02.c,SZ,ENTRPRS_SZ_F_18.02.c,,,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_SZ_F_23.02,Subdomain for ENTRPRS_SZ of the Table F_23.02,SZ,ENTRPRS_SZ_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,ENTRPRS_SZ_F_23.04,Subdomain for ENTRPRS_SZ of the Table F_23.04,SZ,ENTRPRS_SZ_F_23.04,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_GRP_RL_TYP,Entity group role type,ENTTY_RL_TYP,ENTTY_GRP_RL_TYP,,Entity group role type,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_ANCRDT,AnaCredit Entity Role,ENTTY_RL,ENTTY_RL_ANCRDT,,AnaCredit Entity Role,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP,Entity role type,ENTTY_RL_TYP,ENTTY_RL_TYP,,Entity role type,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_ANCRDT,Subdomain for ENTTY_RL_TYP in AnaCredit,ENTTY_RL_TYP,ENTTY_RL_TYP_ANCRDT,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_31.01,Subdomain for ENTTY_RL_TYP of the Table F_31.01,ENTTY_RL_TYP,ENTTY_RL_TYP_F_31.01,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_36.01.a,Subdomain for ENTTY_RL_TYP of the Cube F_36.01.a,ENTTY_RL_TYP,ENTTY_RL_TYP_F_36.01.a,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_36.01.b,Subdomain for ENTTY_RL_TYP of the Cube F_36.01.b,ENTTY_RL_TYP,ENTTY_RL_TYP_F_36.01.b,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_36.01.c,Subdomain for ENTTY_RL_TYP of the Cube F_36.01.c,ENTTY_RL_TYP,ENTTY_RL_TYP_F_36.01.c,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_36.02.a,Subdomain for ENTTY_RL_TYP of the Cube F_36.02.a,ENTTY_RL_TYP,ENTTY_RL_TYP_F_36.02.a,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_36.02.b,Subdomain for ENTTY_RL_TYP of the Cube F_36.02.b,ENTTY_RL_TYP,ENTTY_RL_TYP_F_36.02.b,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_36.02.c,Subdomain for ENTTY_RL_TYP of the Cube F_36.02.c,ENTTY_RL_TYP,ENTTY_RL_TYP_F_36.02.c,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_F_40.01,Subdomain for ENTTY_RL_TYP of the Table  F_40.01,ENTTY_RL_TYP,ENTTY_RL_TYP_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP_INPT,Entity role type (Input Layer),ENTTY_RL_TYP,ENTTY_RL_TYP_INPT,,Entity role type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ENTTY_TRNSCTN_RL_TYP,Entity transaction role type,ENTTY_RL_TYP,ENTTY_TRNSCTN_RL_TYP,,Entity transaction role type,false,2026-03-01,9999-12-31
+BIRD,EQTY_FND_SCRTY,Equity or fund security type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,EQTY_FND_SCRTY,,Equity or fund security type,false,2026-03-01,9999-12-31
+BIRD,EQUTY_FCTR_TYP,Equity factor type,EQUTY_FCTR_TYP,EQUTY_FCTR_TYP,,,false,2026-03-01,9999-12-31
+BIRD,ERLY_RDMPTN_INCLSN_INDCTR_INPT,Early redemptions included indicator (Input Layer),ERLY_RDMPTN_INCLSN_INDCTR,ERLY_RDMPTN_INCLSN_INDCTR_INPT,,Early redemptions included indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ERLY_RDMPTN_INCLSN_INDCTR_SHSG4_ISIN_ERLY_RDMPTN_INCLSN_INDCTR_REF,Subdomain for ERLY_RDMPTN_INCLSN_INDCTR of the Cube SHSG4_ISIN,ERLY_RDMPTN_INCLSN_INDCTR,ERLY_RDMPTN_INCLSN_INDCTR_SHSG4_ISIN_ERLY_RDMPTN_INCLSN_INDCTR_REF,,,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_ASST_LBLTY_PSTN_RL_TYP,Exchange tradable derivative asset or liability position role type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,EXCHNG_TRDBL_DRVTV_ASST_LBLTY_PSTN_RL_TYP,,Exchange tradable derivative asset or liability position role type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_ASST_PSTN_TYP,Exchange tradable derivative asset position type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,EXCHNG_TRDBL_DRVTV_ASST_PSTN_TYP,,Exchange tradable derivative asset position type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_TYP,Exchange tradable derivative liability position type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_TYP,,Exchange tradable derivative liability position type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_PRTCN_ARRNGMNT_ASSGNMNT_TYP,Exchange tradable derivative Protection arrangement assignment type,EXCHNG_TRDBL_DRVTV_PRTCN_ARRNGMNT_ASSGNMNT_TYP,EXCHNG_TRDBL_DRVTV_PRTCN_ARRNGMNT_ASSGNMNT_TYP,,Exchange tradable derivative Protection arrangement assignment type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_PSTN_HDG_ACCNTNG_STNDRD_TYP,Exchange tradable derivative position hedge accounting standard type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,EXCHNG_TRDBL_DRVTV_PSTN_HDG_ACCNTNG_STNDRD_TYP,,Exchange tradable derivative position hedge accounting standard type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,Exchange tradable derivative position role type,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,,Exchange tradable derivative position role type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP_INPT,Exchange tradable derivative position role type (Input Layer),EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP_INPT,,Exchange tradable derivative position role type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_TYP,Exchange tradable derivative type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,EXCHNG_TRDBL_DRVTV_TYP,,Exchange tradable derivative type,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR,Exchange tradable derivative type by identifier,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR,,,false,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR_INPT,Exchange tradable derivative type by identifier (Input Layer),EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,EXPSR_CLSS_CLCLTN,Exposure classes for the calculation of risk weight,EXPSR_CLSS,EXPSR_CLSS_CLCLTN,,Exposure classes for the calculation of risk weight,false,2026-03-01,9999-12-31
+BIRD,EXPSR_CLSS_CLCLTN_INPT,Exposure classes for the calculation of risk weight (Input Layer),EXPSR_CLSS,EXPSR_CLSS_CLCLTN_INPT,,Exposure classes for the calculation of risk weight (Input Layer),false,2026-03-01,9999-12-31
+BIRD,EXPSR_RCRS_INDCTR_INPT,Exposure with recourse indicator (Input Layer),RCRS,EXPSR_RCRS_INDCTR_INPT,,Exposure with recourse indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,EXTRNL_PRTY_ID_TYP,External party identifier type,PRTY_CD_TYP,EXTRNL_PRTY_ID_TYP,,,false,2026-03-01,9999-12-31
+BIRD,SCRTY_ENTTY_RL_ASSGNMNT_TYP,Security Entity role assignment type,SCRTY_ENTTY_RL_ASSGNMNT_TYP,SCRTY_ENTTY_RL_ASSGNMNT_TYP,,Security Entity role assignment type,false,2026-03-01,9999-12-31
+BIRD,SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP,Security or exchange tradable derivative position type,SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP,SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP,,Security or exchange tradable derivative position type,false,2026-03-01,9999-12-31
+BIRD,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,Security or exchange tradable derivative type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,,Security or exchange tradable derivative type,false,2026-03-01,9999-12-31
+BIRD,SCRTY_EXCHNG_TRDBL_DRVTV_TYP_INPT,Security or exchange tradable derivative type (Input Layer),SCRTY_EXCHNG_TRDBL_DRVTV_TYP,SCRTY_EXCHNG_TRDBL_DRVTV_TYP_INPT,,Security or exchange tradable derivative type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_GRNT_LVL_INPT,Full list of the Security Guarantee level (Input Layer),SCRTY_GRNT_LVL,SCRTY_GRNT_LVL_INPT,,Full list of the Security Guarantee level (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_GRNT_LVL_SHS,Full list of the Security Guarantee level,SCRTY_GRNT_LVL,SCRTY_GRNT_LVL_SHS,,Full list of the Security Guarantee level,false,2026-03-01,9999-12-31
+BIRD,SCRTY_LNDNG_CMPNNT_INDCTR,Security/Security Collateral lending component indicator,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,SCRTY_LNDNG_CMPNNT_INDCTR,,Security/Security Collateral lending component indicator,false,2026-03-01,9999-12-31
+BIRD,SCRTY_LVL_INPT,Full list of the security level (Input Layer),SCRTY_LVL,SCRTY_LVL_INPT,,Full list of the security level (Input Layer),false,2026-03-01,9999-12-31
+BIRD,SCRTY_LVL_SHS,Full list of the security level,SCRTY_LVL,SCRTY_LVL_SHS,,Full list of the security level,false,2026-03-01,9999-12-31
+BIRD,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,Security position Balance sheet recognised type,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,,Security position Balance sheet recognised type,false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_3,String numeric with 3 digits,STRNG,STRNG_NMRC_ID_3,ID_3,,false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_4,String numeric with 4 digits,STRNG,STRNG_NMRC_ID_4,ID_4,,false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_5,String numeric with 5 digits,STRNG,STRNG_NMRC_ID_5,ID_5,,false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_5_TO_6,String numeric from 5 to 6 digits,STRNG,STRNG_NMRC_ID_5_TO_6,ID_5_TO_6,String numeric from 5 to 6 digits,false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_7,String numeric with 7 digits,STRNG,STRNG_NMRC_ID_7,ID_7,,false,2026-03-01,9999-12-31
+BIRD,STRNG_PTTRN_LEI,String with 18 characters (capital letters or digits) followed by 2 digits,STRNG,STRNG_PTTRN_LEI,PTTRN_LEI,String with 18 characters (capital letters or digits) followed by 2 digits,false,2026-03-01,9999-12-31
+BIRD,STRNG_RSTRCTD_ID,String with restrictions,STRNG,STRNG_RSTRCTD_ID,RSTRCTD_ID,String with restrictions,false,2026-03-01,9999-12-31
+BIRD,STRNG_RSTRCTD_ID_50,"String up to 50 characters except spaces, with restrictions",STRNG,STRNG_RSTRCTD_ID_50,RSTRCTD_ID_50,"String up to 50 characters except spaces, with restrictions",false,2026-03-01,9999-12-31
+BIRD,STRNG_RSTRCTD_ID_60,"String up to 60 characters of the Basic Latin block, including (non-leading and non-trailing) spaces",STRNG,STRNG_RSTRCTD_ID_60,RSTRCTD_ID_60,"String up to 60 characters of the Basic Latin block, including (non-leading and non-trailing) spaces",false,2026-03-01,9999-12-31
+BIRD,STS_SCRTSTN_INDCTR,"Simple, transparent and standardised (STS) securitisation indicator",STS_SCRTSTN_INDCTR,STS_SCRTSTN_INDCTR,,"Simple, transparent and standardised (STS) securitisation indicator",false,2026-03-01,9999-12-31
+BIRD,SYNTHTC_SCRTSTN_TYP,Synthetic securitisation type,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,SYNTHTC_SCRTSTN_TYP,,Synthetic securitisation type,false,2026-03-01,9999-12-31
+BIRD,SZ_ANCRDT_STGNG,AnaCredit - ECB staging,SZ,SZ_ANCRDT_STGNG,,AnaCredit - ECB staging,false,2026-03-01,9999-12-31
+BIRD,SZ_CLCLTD_PRVS_PRD,Enterprise size calculated (previous period),SZ,SZ_CLCLTD_PRVS_PRD,,Enterprise size calculated (previous period),false,2026-03-01,9999-12-31
+BIRD,SZ_RIAD_CLLCTN,Enterprise size,SZ,SZ_RIAD_CLLCTN,,Enterprise size,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KN,Subdomain for the postal code of PSTL_CD_KN,STRNG,PSTL_CD_KN,PSTL_CD_KN,,false,2026-03-01,9999-12-31
+BIRD,OFF_BLNC_INSTRMNT_TYP,Off-balance instrument type,TYP_INSTRMNT,OFF_BLNC_INSTRMNT_TYP,,Off-balance instrument type,false,2026-03-01,9999-12-31
+BIRD,OFF_BLNC_SHT_ACCNTNG_CLSSFCTN,Accounting classification applicable to off-balance sheet items,ACCNTNG_CLSSFCTN,OFF_BLNC_SHT_ACCNTNG_CLSSFCTN,,Accounting classification applicable to off-balance sheet items.,false,2026-03-01,9999-12-31
+BIRD,OFF_BLNC_SHT_ITM_GVN_INSTRMNT_FRBRNC_STTS_TYP,Off-balance sheet item given instrument by forbearance status type,ABSTRCT_INSTRMNT_RL_TYP,OFF_BLNC_SHT_ITM_GVN_INSTRMNT_FRBRNC_STTS_TYP,,Off-balance sheet item given instrument by forbearance status type,false,2026-03-01,9999-12-31
+BIRD,OPTN_TYP,Option type,OPTN_TYP,OPTN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,OPTN_TYP_INPT,Option type (Input Layer),OPTN_TYP,OPTN_TYP_INPT,,,false,2026-03-01,9999-12-31
+BIRD,ORGNSTNL_UNT_TYP,Organisational unit type,PRTY_TYP,ORGNSTNL_UNT_TYP,,Organisational unit type,false,2026-03-01,9999-12-31
+BIRD,ORGNSTN_BY_PRCDNG_STTS,Organisation type by legal proceding status,PRTY_TYP,ORGNSTN_BY_PRCDNG_STTS,,Organisation type by legal proceding status,false,2026-03-01,9999-12-31
+BIRD,ORGNSTN_BY_PRCDNG_STTS_INPT,Organisation type by legal proceding status (Input Layer),PRTY_TYP,ORGNSTN_BY_PRCDNG_STTS_INPT,,Organisation type by legal proceding status (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ORGNSTN_RL_TYP,Organisation role type,ENTTY_RL_TYP,ORGNSTN_RL_TYP,,Organisation role type,false,2026-03-01,9999-12-31
+BIRD,ORGNSTN_TYP,Organisation type,PRTY_TYP,ORGNSTN_TYP,,Organisation type,false,2026-03-01,9999-12-31
+BIRD,OTC_DRVTV_HDG_ACCNTNG_STNDRD_TYP,Over the counter (OTC) Derivative hedge accounting standard type,OTC_DRVTV_HDG_ACCNTNG_STNDRD_TYP,OTC_DRVTV_HDG_ACCNTNG_STNDRD_TYP,,Over the counter (OTC) Derivative hedge accounting standard type,false,2026-03-01,9999-12-31
+BIRD,FDCRY_ANCRDT_CLLCTN,AnaCredit - ECB collection,FDCRY,FDCRY_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,FDCRY_INSTRMNT_INDCTR,Fiduciary instrument indicator,FDCRY,FDCRY_INSTRMNT_INDCTR,,Fiduciary instrument indicator,false,2026-03-01,9999-12-31
+BIRD,FDCRY_INSTRMNT_INDCTR_INPT,Fiduciary instrument indicator (Input Layer),FDCRY,FDCRY_INSTRMNT_INDCTR_INPT,,Fiduciary instrument indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,FLD_NN_PRFRMNG_EXT_CRTR_INDCTR,Failed to meet the non-performing exit criteria indicator,FLD_NN_PRFRMNG_EXT_CRTR_INDCTR,FLD_NN_PRFRMNG_EXT_CRTR_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_DBTR_ASSSSD_TYP,Financial asset instrument debtor assessed type,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_DBTR_ASSSSD_TYP,,Financial asset instrument debtor assessed type,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD_TYP,Financial asset instrument individually assessed type,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD_TYP,,Financial asset instrument individually assessed type,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP,Financial asset instrument type,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP,,Financial asset instrument type,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_19.00.a,Subdomain for CLLTRLZD of the Cube F_19.00.a,CLLTRLZD,CLLTRLZD_F_19.00.a,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_19.00.b,Subdomain for CLLTRLZD of the Cube F_19.00.b,CLLTRLZD,CLLTRLZD_F_19.00.b,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_19.00.c,Subdomain for CLLTRLZD of the Cube F_19.00.c,CLLTRLZD,CLLTRLZD_F_19.00.c,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_19.00.e,Subdomain for CLLTRLZD of the Cube F_19.00.e,CLLTRLZD,CLLTRLZD_F_19.00.e,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_20.04,Subdomain for CLLTRLZD of the Table F_20.04,CLLTRLZD,CLLTRLZD_F_20.04,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_23.02,Subdomain for CLLTRLZD of the Table F_23.02,CLLTRLZD,CLLTRLZD_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRLZD_F_23.04,Subdomain for CLLTRLZD of the Table F_23.04,CLLTRLZD,CLLTRLZD_F_23.04,,,false,2026-03-01,9999-12-31
+BIRD,CLLTRL_INSTRMNT_RS_INDCTR,Collateral instrument reuse indicator,CLLTRL_INSTRMNT_RS_INDCTR,CLLTRL_INSTRMNT_RS_INDCTR,,Collateral instrument reuse indicator,false,2026-03-01,9999-12-31
+BIRD,CLLTRL_INSTRMNT_RS_INDCTR_INPT,Collateral instrument reuse indicator (Input layer),CLLTRL_INSTRMNT_RS_INDCTR,CLLTRL_INSTRMNT_RS_INDCTR_INPT,,Collateral instrument reuse indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,CLLTRL_RCVD_INSTRMNT_TYP,Collateral received instrument type,ABSTRCT_INSTRMNT_RL_TYP,CLLTRL_RCVD_INSTRMNT_TYP,,Collateral received instrument type,false,2026-03-01,9999-12-31
+BIRD,CLLTRL_RL_TYP,Collateral role type,CLLTRL_RL_TYP,CLLTRL_RL_TYP,,Collateral role type,false,2026-03-01,9999-12-31
+BIRD,CLLTRL_RL_TYP_INPT,Collateral role type (Input layer),CLLTRL_RL_TYP,CLLTRL_RL_TYP_INPT,,Collateral role type (Input layer),false,2026-03-01,9999-12-31
+BIRD,CLLTRL_RS_INDCTR,Collateral reuse indicator,CLLTRL_RS_INDCTR,CLLTRL_RS_INDCTR,,Collateral reuse indicator,false,2026-03-01,9999-12-31
+BIRD,CLLTRL_RS_INDCTR_INPT,Collateral reuse indicator (Input layer),CLLTRL_RS_INDCTR,CLLTRL_RS_INDCTR_INPT,,Collateral reuse indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,CLLTRL_TYP,Collateral type,TYP_PRTCTN,CLLTRL_TYP,,Collateral type,false,2026-03-01,9999-12-31
+BIRD,CLLTRL_TYP_F_13.01,Subdomain for CLLTRL_TYP of the Cube F_13.01,TYP_PRTCTN,CLLTRL_TYP_F_13.01,,,false,2026-03-01,9999-12-31
+BIRD,CMMDTY_CLLTRL_TYP,Commodity collateral type,TYP_PRTCTN,CMMDTY_CLLTRL_TYP,,Commodity collateral type,false,2026-03-01,9999-12-31
+BIRD,CMMDTY_TYP_FRTB,Commodity type for FRTB,CMMDTY_TYP_FRTB,CMMDTY_TYP_FRTB,,,false,2026-03-01,9999-12-31
+BIRD,CMMDTY_TYP_FRTB_INPT,Commodity type (Input Layer),CMMDTY_TYP_FRTB,CMMDTY_TYP_FRTB_INPT,,Commodity type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,CMMRCL_RL_ESTT_LN_INDCTR,Commercial real estate loan indicator,CMMRCL_RL_ESTT_LN_INDCTR,CMMRCL_RL_ESTT_LN_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,CMMRCL_RL_ESTT_LN_INDCTR_INPT,Commercial real estate loan indicator (Input Layer),CMMRCL_RL_ESTT_LN_INDCTR,CMMRCL_RL_ESTT_LN_INDCTR_INPT,,Commercial real estate loan indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,CMMRCL_RL_ESTT_OFFC_CMMRCL_PRMS_CLLTRL_TYP,Commercial real estate and offices and commercial premises collateral type,TYP_PRTCTN,CMMRCL_RL_ESTT_OFFC_CMMRCL_PRMS_CLLTRL_TYP,,,false,2026-03-01,9999-12-31
+BIRD,CMPLNC_CRR_129_TYP,Compliance with article 129 CRR type,CMPLNC_CRR_129_TYP,CMPLNC_CRR_129_TYP,,Compliance with article 129 CRR type,false,2026-03-01,9999-12-31
+BIRD,CMPLNC_CRR_129_TYP_INPT,Compliance with article 129 CRR type,CMPLNC_CRR_129_TYP,CMPLNC_CRR_129_TYP_INPT,,Compliance with article 129 CRR type,false,2026-03-01,9999-12-31
+BIRD,CNSLDTN_MTHD_FLL,Consolidation method - full domain,CNSLDTN_MTHD,CNSLDTN_MTHD_FLL,,Consolidation method - full domain,false,2026-03-01,9999-12-31
+BIRD,CNTRLLD_NTNL_FRGN_BDS,Controlled by national or foreign bodies,INSTTTNL_SCTR_CNTRL,CNTRLLD_NTNL_FRGN_BDS,,Controlled by national or foreign bodies,false,2026-03-01,9999-12-31
+BIRD,CNTRLLD_NTNL_FRGN_BDS_INPT,Controlled by national or foreign bodies (Input Layer),INSTTTNL_SCTR_CNTRL,CNTRLLD_NTNL_FRGN_BDS_INPT,,Controlled by national or foreign bodies (Input Layer),false,2026-03-01,9999-12-31
+BIRD,CNTRL_BNK_TYP,Central bank type,PRTY_TYP,CNTRL_BNK_TYP,,,false,2026-03-01,9999-12-31
+BIRD,CNTRY_CD_F_20.04,Subdomain for CNTRY_CD of the Table F_20.04,GGRPHCL_ARS,CNTRY_CD_F_20.04,,,false,2026-03-01,9999-12-31
+BIRD,CNTRY_CD_F_20.05.a,Subdomain for CNTRY_CD of the Table F_20.05.a,GGRPHCL_ARS,CNTRY_CD_F_20.05.a,,,false,2026-03-01,9999-12-31
+BIRD,CNTRY_CD_F_20.05.b,Subdomain for CNTRY_CD of the Table F_20.05.b,GGRPHCL_ARS,CNTRY_CD_F_20.05.b,,,false,2026-03-01,9999-12-31
+BIRD,CNTRY_CD_F_20.06,Subdomain for CNTRY_CD of the Table F_20.06,GGRPHCL_ARS,CNTRY_CD_F_20.06,,,false,2026-03-01,9999-12-31
+BIRD,CNTRY_CD_F_40.01,Subdomain for CNTRY_CD of the Table F_40.01,GGRPHCL_ARS,CNTRY_CD_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,OTC_OPTN_TYP,OTC Option type,TYP_INSTRMNT,OTC_OPTN_TYP,,OTC Option type,false,2026-03-01,9999-12-31
+BIRD,OTC_SWP_TYP,OTC Swap type,TYP_INSTRMNT,OTC_SWP_TYP,,OTC Swap type,false,2026-03-01,9999-12-31
+BIRD,OTHR_DPST_TYP,Other deposit type,TYP_INSTRMNT,OTHR_DPST_TYP,,Other deposit type,false,2026-03-01,9999-12-31
+BIRD,OTHR_ORGNSTN_RL_TYP,Other organisation role type,ENTTY_RL_TYP,OTHR_ORGNSTN_RL_TYP,,Other organisation role type,false,2026-03-01,9999-12-31
+BIRD,OTHR_ORGNSTN_TYP,Other organisation type,PRTY_TYP,OTHR_ORGNSTN_TYP,,Other organisation type,false,2026-03-01,9999-12-31
+BIRD,OVRDRFT_INDCTR,Overdraft indicator,OVRDRFT_INDCTR,OVRDRFT_INDCTR,,Overdraft indicator,false,2026-03-01,9999-12-31
+BIRD,OVRDRFT_INDCTR_INPT,Overdraft indicator (Input layer),OVRDRFT_INDCTR,OVRDRFT_INDCTR_INPT,,Overdraft indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,OVRNGHT_DPST_TYP,Overnight deposit type,TYP_INSTRMNT,OVRNGHT_DPST_TYP,,Overnight deposit type,false,2026-03-01,9999-12-31
+BIRD,OVR_CNTR_DRVTV_INSTRMNT_TYP,Over the counter (OTC) Derivative instrument type,TYP_INSTRMNT,OVR_CNTR_DRVTV_INSTRMNT_TYP,,Over the counter (OTC) Derivative instrument type,false,2026-03-01,9999-12-31
+BIRD,OWN_CMPNY_INVSTMNT_INDCTR,Own company investment indicator,OWN_CMPNY_INVSTMNT_INDCTR,OWN_CMPNY_INVSTMNT_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,OWN_CMPNY_INVSTMNT_INDCTR_INPT,Own company investment indicator,OWN_CMPNY_INVSTMNT_INDCTR,OWN_CMPNY_INVSTMNT_INDCTR_INPT,,Own company investment indicator,false,2026-03-01,9999-12-31
+BIRD,PHASE,Phase (full domain),PHASE,PHASE,,Phases of the BIRD process covering the full domain.,true,2026-03-01,9999-12-31
+BIRD,PHYSCL_PRTCTN_TYP,Physical collateral type,TYP_PRTCTN,PHYSCL_PRTCTN_TYP,,Physical collateral type,false,2026-03-01,9999-12-31
+BIRD,PLLNG_EFFCT_INDCTR,Pulling effect indicator,PLLNG_EFFCT_INDCTR,PLLNG_EFFCT_INDCTR,,Pulling effect indicator,false,2026-03-01,9999-12-31
+BIRD,PLLNG_EFFCT_INDCTR_INPT,Pulling effect indicator (Input Layer),PLLNG_EFFCT_INDCTR,PLLNG_EFFCT_INDCTR_INPT,,Pulling effect indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PLNNNG_PRMSSN_DVLPMNT_INDCTR,Planning permission for development indicator,PLNNNG_PRMSSN_INDCTR,PLNNNG_PRMSSN_DVLPMNT_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,PLNNNG_PRMSSN_DVLPMNT_INDCTR_LND_EXCLDNG_AGRCLTR,Planning permission for development indicator for Land exluding agriculture collateral,PLNNNG_PRMSSN_INDCTR,PLNNNG_PRMSSN_DVLPMNT_INDCTR_LND_EXCLDNG_AGRCLTR,,,false,2026-03-01,9999-12-31
+BIRD,PLNNNG_PRMSSN_INDCTR_F_25.02.a,Subdomain for PLNNNG_PRMSSN_INDCTR of the Table F_25.02.a,PLNNNG_PRMSSN_INDCTR,PLNNNG_PRMSSN_INDCTR_F_25.02.a,,,false,2026-03-01,9999-12-31
+BIRD,PLNNNG_PRMSSN_INDCTR_F_25.02.c,Subdomain for PLNNNG_PRMSSN_INDCTR of the Table F_25.02.c,PLNNNG_PRMSSN_INDCTR,PLNNNG_PRMSSN_INDCTR_F_25.02.c,,,false,2026-03-01,9999-12-31
+BIRD,PLNNNG_PRMSSN_INDCTR_INPT,Planning permission indicator (Input Layer),PLNNNG_PRMSSN_INDCTR,PLNNNG_PRMSSN_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,PRDNTL_PRTFL,Prudential portfolio,PRDNTL_PRTFL_TYP,PRDNTL_PRTFL,,Prudential portfolio,false,2026-03-01,9999-12-31
+BIRD,PRDNTL_PRTFL_ANCRDT_CLLCTN,AnaCredit - ECB collection,PRDNTL_PRTFL_TYP,PRDNTL_PRTFL_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,PRDNTL_PRTFL_INPT,Prudential portfolio (Input Layer),PRDNTL_PRTFL_TYP,PRDNTL_PRTFL_INPT,,Prudential portfolio (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRDNTL_PRTFL_TYP,Type of Prudential portfolio,PRDNTL_PRTFL_TYP,PRDNTL_PRTFL_TYP,,Prudential portfolio,false,2026-03-01,9999-12-31
+BIRD,PRDNTL_PRTFL_TYP_INPT,Type of Prudential portfolio,PRDNTL_PRTFL_TYP,PRDNTL_PRTFL_TYP_INPT,,Prudential portfolio,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR,Performing forborne exposure under probation reclassified from non-performing indicator,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR_INPT,Performing forborne exposure under probation reclassified from non-performing indicator (Input Layer),PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR_INPT,,Performing forborne exposure under probation reclassified from non-performing indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS,Performing status,CRDT_QLTY,PRFRMNG_STTS,,Performing status,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.00.a,Subdomain for PRFRMNG_STTS of the Table F_18.00.a,CRDT_QLTY,PRFRMNG_STTS_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.00.b,Subdomain for PRFRMNG_STTS of the Table F_18.00.b,CRDT_QLTY,PRFRMNG_STTS_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NL,Subdomain for the postal code of PSTL_CD_NL,STRNG,PSTL_CD_NL,PSTL_CD_NL,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NR,Subdomain for the postal code of PSTL_CD_NR,STRNG,PSTL_CD_NR,PSTL_CD_NR,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NU,Subdomain for the postal code of PSTL_CD_NU,STRNG,PSTL_CD_NU,PSTL_CD_NU,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_OPN,"Subdomain for the postal code of countries where no postal code format is in place (for example, when no postal code system is in use in a country altogether or there’s uncertainty about the actual format).",STRNG,PSTL_CD_OPN,PSTL_CD_OPN,"Subdomain for the postal code of countries where no postal code format is in place (for example, when no postal code system is in use in a country altogether or there’s uncertainty about the actual format).",false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PF,Subdomain for the postal code of PSTL_CD_PF,STRNG,PSTL_CD_PF,PSTL_CD_PF,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PL,Subdomain for the postal code of PSTL_CD_PL,STRNG,PSTL_CD_PL,PSTL_CD_PL,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PN,Subdomain for the postal code of PSTL_CD_PN,STRNG,PSTL_CD_PN,PSTL_CD_PN,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PS,Subdomain for the postal code of PSTL_CD_PS,STRNG,PSTL_CD_PS,PSTL_CD_PS,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PT,Subdomain for the postal code of PSTL_CD_PT,STRNG,PSTL_CD_PT,PSTL_CD_PT,,false,2026-03-01,9999-12-31
+BIRD,CRDNLTY,Cardinality,CRDNLTY,CRDNLTY,,Cardinality,true,2026-03-01,9999-12-31
+BIRD,CRDT_FCLTY_ENTTY_RL_ASSGNMNT_TYP,Credit facility Entity role assignment type,CRDT_FCLTY_ENTTY_RL_ASSGNMNT_TYP,CRDT_FCLTY_ENTTY_RL_ASSGNMNT_TYP,,Credit facility Entity role assignment type,false,2026-03-01,9999-12-31
+BIRD,CRDT_FCLTY_OTHR_THN_UNDR_PRSPCFD_TRM_CNDTN_TYP,Subdomain for Credit facility other than under pre-specified terms and conditions type,TYP_CMMTMNT,CRDT_FCLTY_OTHR_THN_UNDR_PRSPCFD_TRM_CNDTN_TYP,,,false,2026-03-01,9999-12-31
+BIRD,CRDT_FCLTY_TYP,Credit facility type,TYP_CMMTMNT,CRDT_FCLTY_TYP,,Credit facility type,false,2026-03-01,9999-12-31
+BIRD,CRDT_FCLTY_UNDR_PRSPCFD_TRM_CNDTN_TYP,Subdomain for Credit facility under pre-specified terms and conditions type,TYP_CMMTMNT,CRDT_FCLTY_UNDR_PRSPCFD_TRM_CNDTN_TYP,,Subdomain for Credit facility under pre-specified terms and conditions type,false,2026-03-01,9999-12-31
+BIRD,CRDT_QLTY_DFLT_STTS_ANCRDT_CLLCTN,AnaCredit collection Default status,CRDT_QLTY,CRDT_QLTY_DFLT_STTS_ANCRDT_CLLCTN,,AnaCredit collection Default status,false,2026-03-01,9999-12-31
+BIRD,CRDT_QLTY_IMPRMNT_STTS_ANCRDT_CLLCTN,AnaCredit collection Impairment status,CRDT_QLTY,CRDT_QLTY_IMPRMNT_STTS_ANCRDT_CLLCTN,,AnaCredit collection Impairment status,false,2026-03-01,9999-12-31
+BIRD,CRDT_QLTY_PRFRMNG_STTS_ANCRDT_CLLCTN,Subdomain for the members of CreQua in Ana Credit  for instrument,CRDT_QLTY,CRDT_QLTY_PRFRMNG_STTS_ANCRDT_CLLCTN,,Subdomain for the members of CreQua in Ana Credit  for instrument,false,2026-03-01,9999-12-31
+BIRD,CRPRTN_TYP,Corporation type,PRTY_TYP,CRPRTN_TYP,,Corporation type,false,2026-03-01,9999-12-31
+BIRD,CRRNCY_SHSG4_ISIN_1_CRRNCY_TRNSCTN_RPRTD_REF,Currency for transaction reported,CRRNCY,CRRNCY_SHSG4_ISIN_1_CRRNCY_TRNSCTN_RPRTD_REF,,CRRNCY_SHSG4_ISIN_1_CRRNCY_TRNSCTN_RPRTD_REF,false,2026-03-01,9999-12-31
+BIRD,CRRNT_LTV_RT_BND_F_18.02.a,Subdomain for CRRNT_LTV_RT_BND of the Table F_18.02.a,LTV_RT_BND,CRRNT_LTV_RT_BND_F_18.02.a,,,false,2026-03-01,9999-12-31
+BIRD,CRRNT_LTV_RT_BND_F_18.02.b,Subdomain for CRRNT_LTV_RT_BND of the Table F_18.02.b,LTV_RT_BND,CRRNT_LTV_RT_BND_F_18.02.b,,,false,2026-03-01,9999-12-31
+BIRD,CRRNT_LTV_RT_BND_F_18.02.c,Subdomain for CRRNT_LTV_RT_BND of the Table F_18.02.c,LTV_RT_BND,CRRNT_LTV_RT_BND_F_18.02.c,,,false,2026-03-01,9999-12-31
+BIRD,CSR_CRV_TYP,Credit spread risk curve type,CSR_CRV_TYP,CSR_CRV_TYP,,,false,2026-03-01,9999-12-31
+BIRD,CST_BSD_MTHD_LCM_INDCTR,At cost based method or Lower of cost or market (LOCOM) indicator,CST_BSD_MTHD_LCM_INDCTR,CST_BSD_MTHD_LCM_INDCTR,,At cost based method or Lower of cost or market (LOCOM) indicator,false,2026-03-01,9999-12-31
+BIRD,CST_BSD_MTHD_LCM_INDCTR_INPT,At cost based method or Lower of cost or market (LOCOM) indicator (Input layer),CST_BSD_MTHD_LCM_INDCTR,CST_BSD_MTHD_LCM_INDCTR_INPT,,At cost based method or Lower of cost or market (LOCOM) indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,CUBE_TYPE,Cube type,CUBE_TYPE,CUBE_TYPE,,Specifies the type of cube as part of the data production process.,false,2026-03-01,9999-12-31
+BIRD,DATA_TYPE_SIMPLIFIED_FULL,Simplified data type full,DATA_TYPE_SIMPLIFIED,DATA_TYPE_SIMPLIFIED_FULL,,,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_ACCNTNG_STNDRD_TYP,Debt security by accounting standard,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_ACCNTNG_STNDRD_TYP,,Debt security by accounting standard,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_ACCNTNG_STNDRD_TYP_INPT,Debt security by accounting standard,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_ACCNTNG_STNDRD_TYP_INPT,,Debt security by accounting standard,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_ISSD_PRDNTL_PRTFL_TYP,Debt security issued prudential portfolio type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_ISSD_PRDNTL_PRTFL_TYP,,Debt security issued prudential portfolio type,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_ISSD_PRDNTL_PRTFL_TYP_INPT,Debt security issued type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_ISSD_PRDNTL_PRTFL_TYP_INPT,,Debt security issued type,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_ISSD_TRDNG_BK_ACCNTNG_STNDRD,Issued debt security in the trading book accounting standard,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_ISSD_TRDNG_BK_ACCNTNG_STNDRD,,Issued debt security in the trading book accounting standard,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_ISSD_TYP,Debt security issued type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_ISSD_TYP,,Debt security issued type,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_PRFRMNG_STTS_TYP,Debt security by performing status type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_PRFRMNG_STTS_TYP,,,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_PRFRMNG_STTS_TYP_INPT,Debt security by performing status type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_PRFRMNG_STTS_TYP_INPT,,,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_TYP,Debt security type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_TYP,,Debt security type,false,2026-03-01,9999-12-31
+BIRD,DBT_SCRTY_WTH_UNDRLYNG_ASSTS_TYP,Debt security with underlying assets type,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,DBT_SCRTY_WTH_UNDRLYNG_ASSTS_TYP,,Debt security with underlying assets type,false,2026-03-01,9999-12-31
+BIRD,DFLT_STTS,Default status,CRDT_QLTY,DFLT_STTS,,Default status,false,2026-03-01,9999-12-31
+BIRD,ABSTRCT_INSTRMNT_RL_TYP_F_32.02.a,Subdomain for TYP_INSTRMNT_RL of the Cube F_32.02.a,ABSTRCT_INSTRMNT_RL_TYP,ABSTRCT_INSTRMNT_RL_TYP_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN,Accounting classification,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN,,Accounting classification,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_ANCRDT_CLLCTN,AnaCredit - ECB collection,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_ASSTS,Accounting classification for assets,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_ASSTS,,Subdomain comprising all accounting classifications that are relevant for assets.,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_01.01,Subdomain for ACCNTNG_CLSSFCTN of the Table F_01.01,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_01.01,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_01.02,Subdomain for ACCNTNG_CLSSFCTN of the Cube F_01.02,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_01.02,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_04.02.2,Subdomain for ACCNTNG_CLSSFCTN for F_04.02.2,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_04.02.2,,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_PW,Subdomain for the postal code of PSTL_CD_PW,STRNG,PSTL_CD_PW,PSTL_CD_PW,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SA,Subdomain for the postal code of PSTL_CD_SA,STRNG,PSTL_CD_SA,PSTL_CD_SA,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SE,Subdomain for the postal code of PSTL_CD_SE,STRNG,PSTL_CD_SE,PSTL_CD_SE,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SH,Subdomain for the postal code of PSTL_CD_SH,STRNG,PSTL_CD_SH,PSTL_CD_SH,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SI,Subdomain for the postal code of PSTL_CD_SI,STRNG,PSTL_CD_SI,PSTL_CD_SI,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SK,Subdomain for the postal code of PSTL_CD_SK,STRNG,PSTL_CD_SK,PSTL_CD_SK,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SM,Subdomain for the postal code of PSTL_CD_SM,STRNG,PSTL_CD_SM,PSTL_CD_SM,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_SZ,Subdomain for the postal code of PSTL_CD_SZ,STRNG,PSTL_CD_SZ,PSTL_CD_SZ,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_TC,Subdomain for the postal code of PSTL_CD_TC,STRNG,PSTL_CD_TC,PSTL_CD_TC,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_TW,Subdomain for the postal code of PSTL_CD_TW,STRNG,PSTL_CD_TW,PSTL_CD_TW,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_US,Subdomain for the postal code of PSTL_CD_US,STRNG,PSTL_CD_US,PSTL_CD_US,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VA,Subdomain for the postal code of PSTL_CD_VA,STRNG,PSTL_CD_VA,PSTL_CD_VA,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VC,Subdomain for the postal code of PSTL_CD_VC,STRNG,PSTL_CD_VC,PSTL_CD_VC,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_VG,Subdomain for the postal code of PSTL_CD_VG,STRNG,PSTL_CD_VG,PSTL_CD_VG,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_31.01,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_31.01,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_31.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_41.01,Subdomain for TYPFNNCL_ASST_INSTRMNT_ANNX_V of the Table F_41.01,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_41.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_DRVD_DT,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the EIL Cube LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_EIL,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_DBT_SCRTY_ISSD_DRVD_DT,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the EIL Cube DBT_SCRTY_ISSD_EIL,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_DBT_SCRTY_ISSD_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_DRVD_DT,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the EIL Cube EXCHNG_TRDBL_DRVTV_PSTN_RL_EIL,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_FNNCL_LBLTY_INSTRMNT_DRVD_DT,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the EIL Cube INSTRMNT_RL_EIL,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_FNNCL_LBLTY_INSTRMNT_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_01.02,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Cube F_01.02,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_01.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_08.01.a,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Table F_08.01.a,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_08.01.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_08.02,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Cube F_08.02,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_08.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_14.00,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Cube F_14.00,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_14.00,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_20.02,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Cube F_20.02,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_20.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_20.06,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Table F_20.06,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_20.06,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_31.01,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Table F_31.01,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_31.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_41.01,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the Table F_41.01,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_F_41.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_DRVD_DT,Subdomain for TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V of the EIL Cube LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_EIL,TYP_INSTRMNT,TYP_FNNCL_LBLTY_INSTRMNT_ANNX_V_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,TYP_GRP_INPT,Type of groups (Input Layer),GRP_TYP,TYP_GRP_INPT,,Type of groups (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_HDG_BIRD,Type of hedge,TYP_HDG,TYP_HDG_BIRD,,Type of hedge BIRD subdomain,false,2026-03-01,9999-12-31
+BIRD,TYP_HDG_F_10.00,Subdomain for TYP_HDG of the Table F_10.00,TYP_HDG,TYP_HDG_F_10.00,,,false,2026-03-01,9999-12-31
+BIRD,TYP_HDG_F_11.01,Subdomain for TYP_HDG of the Table F_11.01,TYP_HDG,TYP_HDG_F_11.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_HDG_F_11.02,Subdomain for TYP_HDG of the Table F_11.02,TYP_HDG,TYP_HDG_F_11.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_HDG_INPT,Type of hedge (Input Layer),TYP_HDG,TYP_HDG_INPT,,Type of hedge (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_ANCRDT_CLLCTN,AnaCredit - ECB collection,TYP_INSTRMNT,TYP_INSTRMNT_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_32.01,Subdomain for TYP_INSTRMNT of the Cube F_32.01,TYP_INSTRMNT,TYP_INSTRMNT_F_32.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_32.02.a,Subdomain for TYP_INSTRMNT of the Cube F_32.02.a,TYP_INSTRMNT,TYP_INSTRMNT_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_04.09,Subdomain for ACCNTNG_CLSSFCTN of the Table F_04.09,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_04.09,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_04.10,Subdomain for ACCNTNG_CLSSFCTN of the Table F_04.10,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_04.10,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_08.01.a,Subdomain for ACCNTNG_CLSSFCTN of the Table F_08.01.a,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_08.01.a,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_08.01.b,Subdomain for ACCNTNG_CLSSFCTN of the Table F_08.01.a,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_08.01.b,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_08.02,Subdomain for ACCNTNG_CLSSFCTN of the Cube F_08.02,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_08.02,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_09.01.1,Subdomain for ACCNTNG_CLSSFCTN of the Table F_09.01.1,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_09.01.1,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_10.00,Subdomain for ACCNTNG_CLSSFCTN of the Table F_10.00,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_10.00,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_14.00,Subdomain for ACCNTNG_CLSSFCTN of the Cube F_14.00,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_14.00,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_15.00.a,Subdomain for ACCNTNG_CLSSFCTN for F_15.00.a,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_15.00.a,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_15.00.b,Subdomain for ACCNTNG_CLSSFCTN for F_15.00.b,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_15.00.b,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_18.00.a,Subdomain for ACCNTNG_CLSSFCTN for F_18.00.a,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_18.00.b,Subdomain for ACCNTNG_CLSSFCTN for F_18.00.b,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_18.00.c,Subdomain for ACCNTNG_CLSSFCTN for F_18.00.c,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_18.00.c,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_18.00.d,Subdomain for ACCNTNG_CLSSFCTN for F_18.00.d,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_18.00.d,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_19.00.a,Subdomain for ACCNTNG_CLSSFCTN of the Table F_19.00.a,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_19.00.a,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_19.00.b,Subdomain for ACCNTNG_CLSSFCTN of the Table F_19.00.b,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_19.00.b,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_19.00.c,Subdomain for ACCNTNG_CLSSFCTN of the Table F_19.00.c,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_19.00.c,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_19.00.e,Subdomain for ACCNTNG_CLSSFCTN of the Table F_19.00.e,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_19.00.e,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_20.01,Subdomain for ACCNTNG_CLSSFCTN of the Cube F_20.01,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_20.01,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_20.02,Subdomain for ACCNTNG_CLSSFCTN of the Cube F_20.02,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_20.02,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_20.04,Subdomain for ACCNTNG_CLSSFCTN of the Table F_20.04,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_20.04,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_23.02,Subdomain for ACCNTNG_CLSSFCTN of the Table F_23.02,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_23.04,Subdomain for ACCNTNG_CLSSFCTN of the Table F_23.04,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_23.04,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_F_41.01,Subdomain for ACCNTNG_CLSSFCTN of the Table F_41.01,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_F_41.01,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_INPT,Accounting classification (Input Layer),ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_INPT,,Accounting classification (Input Layer),false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_LBLTS,Accounting classification for liabilities,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_LBLTS,,Subdomain comprising all accounting classifications that are relevant for liabilities.,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN_LBLTS_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_DRVD_DT,Accounting classification for liabilities for Short balance sheet recognised security position derived data,ACCNTNG_CLSSFCTN,ACCNTNG_CLSSFCTN_LBLTS_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CNSLDTN_LVL,Accounting consolidation level,ACCNTNG_CNSLDTN_LVL,ACCNTNG_CNSLDTN_LVL,,Accounting consolidation level,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CNSLDTN_LVL_INPT,Accounting consolidation level (Input layer),ACCNTNG_CNSLDTN_LVL,ACCNTNG_CNSLDTN_LVL_INPT,,Accounting consolidation level (Input layer),false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_FRMWRK,Accounting framework,ACCNTNG_FRMWRK,ACCNTNG_FRMWRK,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_FRMWRK_31870_REF_ACCNTNG_FRMWRK,Subdomain for ACCNTNG_FRMWRK of the Combination 31870_REF,ACCNTNG_FRMWRK,ACCNTNG_FRMWRK_31870_REF_ACCNTNG_FRMWRK,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_FRMWRK_ANCRDT_STGNG,Accounting frameworks AnaCredit staging,ACCNTNG_FRMWRK,ACCNTNG_FRMWRK_ANCRDT_STGNG,,Accounting frameworks AnaCredit staging,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_FRMWRK_INPT,Accounting framework (Input layer),ACCNTNG_FRMWRK,ACCNTNG_FRMWRK_INPT,,Accounting framework (Input layer),false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_HDG_INDCTR,Accounting hedge indicator,ACCNTNG_HDG_INDCTR,ACCNTNG_HDG_INDCTR,,Accounting hedge indicator,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_TRTMNT_CRR_F_40.01,Subdomain for ACCNTNG_TRTMNT_CRR of the Table  F_40.01,CNSLDTN_MTHD,ACCNTNG_TRTMNT_CRR_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,ACCNTNG_TRTMNT_IFRS_F_40.01,Subdomain for ACCNTNG_TRTMNT_IFRS of the Table  F_40.01,CNSLDTN_MTHD,ACCNTNG_TRTMNT_IFRS_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,ACCRD_INTRST_MRKT_VL_INDCTR_SHSG4_ISIN_ACCRD_INTRST_MRKT_VL_INDCTR_REF,Subdomain for ACCRD_INTRST_MRKT_VL_INDCTR of the Cube SHSG4_ISIN,ACCRD_INTRST_MRKT_VL_INDCTR,ACCRD_INTRST_MRKT_VL_INDCTR_SHSG4_ISIN_ACCRD_INTRST_MRKT_VL_INDCTR_REF,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_32.03.b,Subdomain for TYP_INSTRMNT of the Cube F_32.03.b,TYP_INSTRMNT,TYP_INSTRMNT_F_32.03.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_32.04.a,Subdomain for TYP_INSTRMNT of the Cube F_32.04.a,TYP_INSTRMNT,TYP_INSTRMNT_F_32.04.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_36.01.a,Subdomain for TYP_INSTRMNT of the Cube F_36.01.a,TYP_INSTRMNT,TYP_INSTRMNT_F_36.01.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_36.01.b,Subdomain for TYP_INSTRMNT of the Cube F_36.01.b,TYP_INSTRMNT,TYP_INSTRMNT_F_36.01.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_36.01.c,Subdomain for TYP_INSTRMNT of the Cube F_36.01.c,TYP_INSTRMNT,TYP_INSTRMNT_F_36.01.c,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_36.02.a,Subdomain for TYP_INSTRMNT of the Cube F_36.02.a,TYP_INSTRMNT,TYP_INSTRMNT_F_36.02.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_36.02.b,Subdomain for TYP_INSTRMNT of the Cube F_36.02.b,TYP_INSTRMNT,TYP_INSTRMNT_F_36.02.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_F_36.02.c,Subdomain for TYP_INSTRMNT of the Cube F_36.02.c,TYP_INSTRMNT,TYP_INSTRMNT_F_36.02.c,,,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_ID,Type of identifier for the security,TYP_INSTRMNT_ID,TYP_INSTRMNT_ID,,Type of identifier for the security,false,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_INPT,Type of instrument (Input Layer),TYP_INSTRMNT,TYP_INSTRMNT_INPT,,Type of instrument (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_INTRST_RT,Interest rate type,TYP_INTRST_RT,TYP_INTRST_RT,,Interest rate type,false,2026-03-01,9999-12-31
+BIRD,TYP_INTRST_RT_ANCRDT_CLLCTN,AnaCredit - ECB collection,TYP_INTRST_RT,TYP_INTRST_RT_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,TYP_INTRST_RT_INPT,Interest rate type (Input Layer),TYP_INTRST_RT,TYP_INTRST_RT_INPT,,Interest rate type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_MPPNG,Type of mapping,TYP_MPPNG,TYP_MPPNG,,Type of mapping,false,2026-03-01,9999-12-31
+BIRD,TYP_MRKT_F_10.00,Subdomain for TYP_MRKT of the Table F_10.00,TYP_MRKT,TYP_MRKT_F_10.00,,,false,2026-03-01,9999-12-31
+BIRD,TYP_MRKT_F_11.01,Subdomain for TYP_MRKT of the Table F_11.01,TYP_MRKT,TYP_MRKT_F_11.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_MRKT_F_11.02,Subdomain for TYP_MRKT of the Table F_11.02,TYP_MRKT,TYP_MRKT_F_11.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_NN_FNNCL_LBLTY_PRVSN,Type of non-financial liability or provision,TYP_ACCNTNG_ITM,TYP_NN_FNNCL_LBLTY_PRVSN,,Type of non-financial liability or provision,false,2026-03-01,9999-12-31
+BIRD,TYP_NN_FNNCL_LBLTY_PRVSN_INPT,Type of non-financial liability or provision (Input Layer),TYP_ACCNTNG_ITM,TYP_NN_FNNCL_LBLTY_PRVSN_INPT,,Type of non-financial liability or provision (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_PRDCT_DBT_SCRTS_ISSD,Type of product for debt securities issued,TYP_PRDCT,TYP_PRDCT_DBT_SCRTS_ISSD,,Lists the type of products for debt securities issued in FinRep F08.01.,false,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_ANCRDT_CLLCTN,AnaCredit - ECB collection,TYP_PRTCTN,TYP_PRTCTN_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_VLTN_APPRCH_INPT,Protection valuation approach,PRTCTN_VLTN_APPRCH,TYP_PRTCTN_VLTN_APPRCH_INPT,,Protection valuation approach,false,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_VL_ANCRDT_CLLCTN,AnaCredit - ECB collection,TYP_PRTCTN_VL,TYP_PRTCTN_VL_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_VL_APPRCH_FR_VL_INPT,Type of Protection valuation approach (FV),PRTCTN_VLTN_APPRCH,TYP_PRTCTN_VL_APPRCH_FR_VL_INPT,,Type of Protection valuation approach (FV),false,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_VL_APPRCH_INPT,Protection valuation approach,PRTCTN_VLTN_APPRCH,TYP_PRTCTN_VL_APPRCH_INPT,,Protection valuation approach,false,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_VL_APPRCH_NTNL_AMNT_INPT,Type of Protection valuation approach (Notional Amount)),PRTCTN_VLTN_APPRCH,TYP_PRTCTN_VL_APPRCH_NTNL_AMNT_INPT,,Type of Protection valuation approach (Notional Amount)),false,2026-03-01,9999-12-31
+BIRD,TYP_PRTY_RL_INPT,Type of party role (Input Layer),ENTTY_RL_TYP,TYP_PRTY_RL_INPT,,Type of party role (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_RL,Type of role,TYP_RL,TYP_RL,,Type of role,false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_DRVTVS,Type of risk for derivatives,TYP_RSK,TYP_RSK_DRVTVS,,Type of risk for derivatives,false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_F_10.00,Subdomain for TYP_RSK of the Table F_10.00,TYP_RSK,TYP_RSK_F_10.00,,,false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_F_11.01,Subdomain for TYP_RSK of the Table F_11.01,TYP_RSK,TYP_RSK_F_11.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_F_11.02,Subdomain for TYP_RSK of the Table F_11.02,TYP_RSK,TYP_RSK_F_11.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_INPT,Type of risk (Input Layer),TYP_RSK,TYP_RSK_INPT,,Type of risk (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_TRNSFR_F_15.00.a,Subdomain for TYP_RSK_TRNSFR for F_15.00.a,TYP_RSK,TYP_RSK_TRNSFR_F_15.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_RSK_TRNSFR_F_15.00.b,Subdomain for TYP_RSK_TRNSFR for F_15.00.b,TYP_RSK,TYP_RSK_TRNSFR_F_15.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_RTNG_GRD_INPT,Type of rating grade (Input Layer),RTNG_GRD_TYP,TYP_RTNG_GRD_INPT,,Type of rating grade (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_INPT,Type of specific securities borrowing and lending transaction including cash as collateral component (Input Layer),SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,TYP_SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_INPT,,Type of specific securities borrowing and lending transaction including cash as collateral component (Input Layer),false,2026-03-01,9999-12-31
+BIRD,TYP_TRNSFR_ANCRDT_CLLCTN,AnaCredit - ECB collection,TYP_TRNSFR,TYP_TRNSFR_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,UNDR_CNSTRCTN_DVLPMNT_INDCTR,Under construction or development indicator,UNDR_CNSTRCTN_INDCTR,UNDR_CNSTRCTN_DVLPMNT_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,UNDR_CNSTRCT_DVLPMNT_INDCTR_INPT,Under construction or development indicator,UNDR_CNSTRCTN_INDCTR,UNDR_CNSTRCT_DVLPMNT_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,ACCRD_INTRST_MRKT_VL_INPT,Accrued interests for market values indicator (Input layer),ACCRD_INTRST_MRKT_VL_INDCTR,ACCRD_INTRST_MRKT_VL_INPT,,Accrued interests for market values indicator (Input layer),false,2026-03-01,9999-12-31
+BIRD,ADVNC_TYP,Advance type,TYP_INSTRMNT,ADVNC_TYP,,Advance type,false,2026-03-01,9999-12-31
+BIRD,AE_ITM_F_32.02.a,Subdomain for AE_ITM_TYP_INSTRMNT of the Cube F_32.02.a,AE_ITM,AE_ITM_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,AE_ITM_F_33.00.a,Subdomain for AE_ITM_TYP_INSTRMNT of the Cube F_33.00.a,AE_ITM,AE_ITM_F_33.00.a,,,false,2026-03-01,9999-12-31
+BIRD,AE_ITM_F_36.02.a,Subdomain for AE_ITM_TYP_INSTRMNT of the Cube F_36.02.a,AE_ITM,AE_ITM_F_36.02.a,,,false,2026-03-01,9999-12-31
+BIRD,AE_ITM_F_36.02.b,Subdomain for AE_ITM_TYP_INSTRMNT of the Cube F_36.02.b,AE_ITM,AE_ITM_F_36.02.b,,,false,2026-03-01,9999-12-31
+BIRD,AE_ITM_F_36.02.c,Subdomain for AE_ITM_TYP_INSTRMNT of the Cube F_36.02.c,AE_ITM,AE_ITM_F_36.02.c,,,false,2026-03-01,9999-12-31
+BIRD,AE_RPRTNG_SCHM,AE reporting scheme,AE_RPRTNG_SCHM,AE_RPRTNG_SCHM,,AE reporting scheme,false,2026-03-01,9999-12-31
+BIRD,AGRCLTR_LND_INDCTR,Agriculture land indicator,TYP_PRTCTN,AGRCLTR_LND_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,APPRCH_CRDT_QLTY_STTS,Assessment approach for credit quality status - full domain,APPRCH_CRDT_QLTY_STTS,APPRCH_CRDT_QLTY_STTS,,Assessment approach for credit quality status - full domain,false,2026-03-01,9999-12-31
+BIRD,APPRCH_PRDNTL_PRPSS,Approach for prudential purposes,APPRCH_PRDNTL_PRPSS,APPRCH_PRDNTL_PRPSS,,Approach for prudential purposes,false,2026-03-01,9999-12-31
+BIRD,ASST_ENCMBRNC_SRC_INDCTR,Asset encumbrance source indicator,ASST_ENCMBRNC_SRC_INDCTR,ASST_ENCMBRNC_SRC_INDCTR,,Asset encumbrance source indicator,false,2026-03-01,9999-12-31
+BIRD,ASST_PL_INSTRMNT_ASSGNMNT_TYP,Asset pool Instrument assignment type,ASST_PL_INSTRMNT_ASSGNMNT_TYP,ASST_PL_INSTRMNT_ASSGNMNT_TYP,,Asset pool Instrument assignment type,false,2026-03-01,9999-12-31
+BIRD,ASST_PL_TYP,Asset pool (subject to securitisation and other credit transfer) type,ASST_PL_TYP,ASST_PL_TYP,,Asset pool (subject to securitisation and other credit transfer) type,false,2026-03-01,9999-12-31
+BIRD,AVLBL_ENCMBRNC_F_32.02.a,Subdomain for AVLBL_ENCMBRNC of the Cube F_32.02.a,AVLBL_ENCMBRNC,AVLBL_ENCMBRNC_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,AVLBL_ENCMBRNC_F_32.03.b,Subdomain for AVLBL_ENCMBRNC of the Cube F_32.03.b,AVLBL_ENCMBRNC,AVLBL_ENCMBRNC_F_32.03.b,,,false,2026-03-01,9999-12-31
+BIRD,AVLBL_ENCMBRNC_INDCTR,Available for encumbrance indicator,AVLBL_ENCMBRNC,AVLBL_ENCMBRNC_INDCTR,,Available for encumbrance indicator,false,2026-03-01,9999-12-31
+BIRD,FV_HRRCHY_INPT,Fair value hierarchy (Input Layer),FV_HRRCHY,FV_HRRCHY_INPT,,Fair value hierarchy,false,2026-03-01,9999-12-31
+BIRD,GGRPHCL_ARS_410212_REF_CNTRY,Subdomain for CNTRY of the Combination 410212_REF,GGRPHCL_ARS,GGRPHCL_ARS_410212_REF_CNTRY,,,false,2026-03-01,9999-12-31
+BIRD,GGRPHCL_ARS_SHSG4_ENTITY_1_CNTRY_REF,Area where the entity is located,GGRPHCL_ARS,GGRPHCL_ARS_SHSG4_ENTITY_1_CNTRY_REF,,GGRPHCL_ARS_SHSG4_ENTITY_1_CNTRY_REF,false,2026-03-01,9999-12-31
+BIRD,GGRPHCL_ARS_SHSG4_NON_ISIN_CLLTRL_LCTN_REF,Subdomain for CLLTRL_LCTN of the Cube SHSG4_NON_ISIN,GGRPHCL_ARS,GGRPHCL_ARS_SHSG4_NON_ISIN_CLLTRL_LCTN_REF,,,false,2026-03-01,9999-12-31
+BIRD,GIRR_RSK_FCTR,GIRR risk factor,GIRR_RSK_FCTR,GIRR_RSK_FCTR,,,false,2026-03-01,9999-12-31
+BIRD,GNRL_GVRNMNT_TYP,General government type,PRTY_TYP,GNRL_GVRNMNT_TYP,,General government type,false,2026-03-01,9999-12-31
+BIRD,GRP_CLNTS_TYP,Group of clients type,GRP_TYP,GRP_CLNTS_TYP,,Group of clients type,false,2026-03-01,9999-12-31
+BIRD,GRP_KY_MNGMNT_PRSNNL_ASSGNMNT_TYP,Group Key management personnel assignment type,GRP_KY_MNGMNT_PRSNNL_ASSGNMNT_TYP,GRP_KY_MNGMNT_PRSNNL_ASSGNMNT_TYP,,Group Key management personnel assignment type,false,2026-03-01,9999-12-31
+BIRD,GRP_RL_TYP,Group role type,GRP_RL_TYP,GRP_RL_TYP,,Group role type,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_07.01,Subdomain for INSTTTNL_SCTR of the Table F_07.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_07.02,Subdomain for INSTTTNL_SCTR of the Table F_07.02,INSTTTNL_SCTR,INSTTTNL_SCTR_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_08.01.a,Subdomain for INSTTTNL_SCTR of the Table F_08.01.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_08.01.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_09.01,Subdomain for INSTTTNL_SCTR of the Cube F_09.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_09.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_09.01.1,Subdomain for INSTTTNL_SCTR of the Cube F_09.01.1,INSTTTNL_SCTR,INSTTTNL_SCTR_F_09.01.1,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_09.02,Subdomain for INSTTTNL_SCTR of the Cube F_09.02,INSTTTNL_SCTR,INSTTTNL_SCTR_F_09.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_10.00,Subdomain for INSTTTNL_SCTR of the Table F_10.00,INSTTTNL_SCTR,INSTTTNL_SCTR_F_10.00,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_11.01,Subdomain for INSTTTNL_SCTR of the Table F_11.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_11.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_11.02,Subdomain for INSTTTNL_SCTR of the Table F_11.02,INSTTTNL_SCTR,INSTTTNL_SCTR_F_11.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_12.02,Subdomain for INSTTTNL_SCTR of the Cube F_12.02,INSTTTNL_SCTR,INSTTTNL_SCTR_F_12.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_13.01,Subdomain for INSTTTNL_SCTR of the Cube F_13.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_13.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.00.a,Subdomain for INSTTTNL_SCTR of the Table F_18.00.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.00.b,Subdomain for INSTTTNL_SCTR of the Table F_18.00.b,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.00.c,Subdomain for INSTTTNL_SCTR of the Table F_18.00.c,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.00.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.00.d,Subdomain for INSTTTNL_SCTR of the Table F_18.00.d,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.00.d,,,false,2026-03-01,9999-12-31
+BIRD,YR,Year,DT,YR,,Year,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_01.01,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_01.01,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_01.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.01,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.01,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.02.1,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.02.1,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.02.1,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.02.2,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V for F_04.02.2,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.02.2,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.03.1,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V for F_04.03.1,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.03.1,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.04.1,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.04.1,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.04.1,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.05,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V for F_04.05,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.05,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.06,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.06,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.06,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.07,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.07,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.07,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.08,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.08,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.08,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.09,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.09,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.09,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.10,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_04.10,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_04.10,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_07.01,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_07.01,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_07.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_07.02,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_07.02,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_07.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_12.02,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Cube F_12.02,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_12.02,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_14.00,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Cube F_14.00,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_14.00,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_15.00.a,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_15.00.a,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_15.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_15.00.b,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_15.00.b,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_15.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.a,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_15.00.a,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.b,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_18.00.b,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.c,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_18.00.c,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.c,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.d,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_18.00.d,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_18.00.d,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.a,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_19.00.a,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.a,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.b,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_19.00.b,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.b,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.c,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_19.00.c,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.c,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.e,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_19.00.e,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_19.00.e,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_20.01,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Cube F_20.01,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_20.01,,,false,2026-03-01,9999-12-31
+BIRD,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_20.04,Subdomain for TYP_FNNCL_ASST_INSTRMNT_ANNX_V of the Table F_20.04,TYP_INSTRMNT,TYP_FNNCL_ASST_INSTRMNT_ANNX_V_F_20.04,,,false,2026-03-01,9999-12-31
+BIRD,RL_NN_NGTV_0D,Non-negative real numbers with 0 decimals,RL,RL_NN_NGTV_0D,RL_NN_NGTV_0D,Non-negative real numbers with 0 decimals,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_F_32.02.a,Subdomain for SRC_ENCMBRNC of the Cube F_32.02.a,SRC_ENCMBRNC,SRC_ENCMBRNC_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_F_32.04.b,Subdomain for SRC_ENCMBRNC  of the Cube F_32.04.b,SRC_ENCMBRNC,SRC_ENCMBRNC_F_32.04.b,,,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_F_36.01.a,Subdomain for SRC_ENCMBRNC of the Cube F_36.01.a,SRC_ENCMBRNC,SRC_ENCMBRNC_F_36.01.a,,,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_F_36.01.b,Subdomain for SRC_ENCMBRNC of the Cube F_36.01.b,SRC_ENCMBRNC,SRC_ENCMBRNC_F_36.01.b,,,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_F_36.02.a,Subdomain for SRC_ENCMBRNC of the Cube F_36.02.a,SRC_ENCMBRNC,SRC_ENCMBRNC_F_36.02.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.00.e,Subdomain for INSTTTNL_SCTR of the Table F_18.00.e,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.00.e,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.02.a,Subdomain for INSTTTNL_SCTR of the Table F_18.02.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.02.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.02.b,Subdomain for INSTTTNL_SCTR of the Table F_18.02.b,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.02.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_18.02.c,Subdomain for INSTTTNL_SCTR of the Table F_18.02.c,INSTTTNL_SCTR,INSTTTNL_SCTR_F_18.02.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_19.00.a,Subdomain for INSTTTNL_SCTR of the Cube F_19.00.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_19.00.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_19.00.b,Subdomain for INSTTTNL_SCTR of the Cube F_19.00.b,INSTTTNL_SCTR,INSTTTNL_SCTR_F_19.00.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_19.00.c,Subdomain for INSTTTNL_SCTR of the Cube F_19.00.c,INSTTTNL_SCTR,INSTTTNL_SCTR_F_19.00.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_19.00.e,Subdomain for INSTTTNL_SCTR of the Cube F_19.00.e,INSTTTNL_SCTR,INSTTTNL_SCTR_F_19.00.e,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_20.04,Subdomain for INSTTTNL_SCTR of the Table F_20.04,INSTTTNL_SCTR,INSTTTNL_SCTR_F_20.04,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_20.06,Subdomain for INSTTTNL_SCTR of the Table F_20.06,INSTTTNL_SCTR,INSTTTNL_SCTR_F_20.06,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_23.02,Subdomain for INSTTTNL_SCTR of the Table F_23.02,INSTTTNL_SCTR,INSTTTNL_SCTR_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_23.04,Subdomain for INSTTTNL_SCTR of the Table F_23.04,INSTTTNL_SCTR,INSTTTNL_SCTR_F_23.04,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_26.00.a,Subdomain for INSTTTNL_SCTR of the Table F_26.00.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_26.00.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_26.00.b,Subdomain for INSTTTNL_SCTR of the Table F_26.00.b,INSTTTNL_SCTR,INSTTTNL_SCTR_F_26.00.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_32.01,Subdomain for INSTTTNL_SCTR of the Cube F_32.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_32.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_32.02.a,Subdomain for INSTTTNL_SCTR of the Cube F_32.02.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_32.02.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_36.01.a,Subdomain for INSTTTNL_SCTR of the Cube F_36.01.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_36.01.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_36.01.b,Subdomain for INSTTTNL_SCTR of the Cube F_36.01.b,INSTTTNL_SCTR,INSTTTNL_SCTR_F_36.01.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_36.01.c,Subdomain for INSTTTNL_SCTR of the Cube F_36.01.c,INSTTTNL_SCTR,INSTTTNL_SCTR_F_36.01.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_36.02.a,Subdomain for INSTTTNL_SCTR of the Cube F_36.02.a,INSTTTNL_SCTR,INSTTTNL_SCTR_F_36.02.a,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_36.02.b,Subdomain for INSTTTNL_SCTR of the Cube F_36.02.b,INSTTTNL_SCTR,INSTTTNL_SCTR_F_36.02.b,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_36.02.c,Subdomain for INSTTTNL_SCTR of the Cube F_36.02.c,INSTTTNL_SCTR,INSTTTNL_SCTR_F_36.02.c,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_F_40.01,Subdomain for INSTTTNL_SCTR of the Table  F_40.01,INSTTTNL_SCTR,INSTTTNL_SCTR_F_40.01,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_INPT,Institutional sectors (Input Layer),INSTTTNL_SCTR,INSTTTNL_SCTR_INPT,,Institutional sectors (Input Layer),false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_INVSTMNT_VHCL_FND,Institutional sector for Investment vehicle / fund,INSTTTNL_SCTR,INSTTTNL_SCTR_INVSTMNT_VHCL_FND,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_OTHR_FNNCL_CRPRTN,Institutional sector for Other financial corporation,INSTTTNL_SCTR,INSTTTNL_SCTR_OTHR_FNNCL_CRPRTN,,,false,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_STT_LCL_GVRNMNT_SCL_SCRTY_FNDS,Institutional sector for State and local government and Social security funds,INSTTTNL_SCTR,INSTTTNL_SCTR_STT_LCL_GVRNMNT_SCL_SCRTY_FNDS,,,false,2026-03-01,9999-12-31
+BIRD,INTGR,Integer,INTGR,INTGR,,Integer,false,2026-03-01,9999-12-31
+BIRD,INTGR_NN_NGTV,Non-negative integers,INTGR,INTGR_NN_NGTV,INTGR_NN_NGTV,Non-negative integers,false,2026-03-01,9999-12-31
+BIRD,INTL_IMPRMNT_STTS,Initial impairment status,CRDT_QLTY,INTL_IMPRMNT_STTS,,,false,2026-03-01,9999-12-31
+BIRD,INTL_IMPRMNT_STTS_INPT,Initial imapirment status (Input Layer),CRDT_QLTY,INTL_IMPRMNT_STTS_INPT,,,false,2026-03-01,9999-12-31
+BIRD,INTRNL_CNSLDTN_GRP_TYP,Internal consolidation group type,GRP_TYP,INTRNL_CNSLDTN_GRP_TYP,,Internal consolidation group type,false,2026-03-01,9999-12-31
+BIRD,INTRNTNL_ORGNSTNS,Pseudo-ISO code for international organisations of the Eurostat’s ‘Balance of Payments Vademecum’.,GGRPHCL_ARS,INTRNTNL_ORGNSTNS,,BIRD,true,2026-03-01,9999-12-31
+BIRD,INTRNTNL_ORGNSTNS_INPT,Pseudo-ISO code for international organisations of the Eurostat’s ‘Balance of Payments Vademecum’ (Input Layer),GGRPHCL_ARS,INTRNTNL_ORGNSTNS_INPT,,Pseudo-ISO code for international organisations of the Eurostat’s ‘Balance of Payments Vademecum’ (Input Layer),false,2026-03-01,9999-12-31
+BIRD,INTRNTNL_ORGNSTN_GNRL_GVNMNT_TYP,International organisation and General government type,PRTY_TYP,INTRNTNL_ORGNSTN_GNRL_GVNMNT_TYP,,International organisation and General government type,false,2026-03-01,9999-12-31
+BIRD,INTRN_GRP_TYP,Internal group type,GRP_TYP,INTRN_GRP_TYP,,Internal group type,false,2026-03-01,9999-12-31
+BIRD,INTRST_RT_RST_FRQNCY,Interest rate reset frequency,FRQNCY,INTRST_RT_RST_FRQNCY,,,false,2026-03-01,9999-12-31
+BIRD,INVSTMNT_PRPRTY_TYP,Investment property type,INVSTMNT_PRPRTY_TYP,INVSTMNT_PRPRTY_TYP,,Investment property type,false,2026-03-01,9999-12-31
+BIRD,ISO3166,ISO 3166-1 alpha-2 code of the country,GGRPHCL_ARS,ISO3166,,BIRD,false,2026-03-01,9999-12-31
+BIRD,ISO3166_DSJNT_C_CLLCTN,ISO-3166 Country Codes (disjoint) for staging cubes,GGRPHCL_ARS,ISO3166_DSJNT_C_CLLCTN,,ISO 3166 Country codes excluding the codes belonging to countries that belong to other countries. For  collection cubes.,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_F_36.02.b,Subdomain for SRC_ENCMBRNC of the Cube F_36.02.b,SRC_ENCMBRNC,SRC_ENCMBRNC_F_36.02.b,,,false,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC_INPT,Sources of encumbrance - Input Layer,SRC_ENCMBRNC,SRC_ENCMBRNC_INPT,,This Subdomain comprises the allowed Members for the BIRD Input Layer.,false,2026-03-01,9999-12-31
+BIRD,STRCTRD_NT_INDCTR,Structured note indicator,STRCTRD_NT_INDCTR,STRCTRD_NT_INDCTR,,Structured note indicator,false,2026-03-01,9999-12-31
+BIRD,STRCTRD_NT_INDCTR_INPT,Structured note indicator (Input Layer),STRCTRD_NT_INDCTR,STRCTRD_NT_INDCTR_INPT,,Structured note indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,STRNG,String,STRNG,STRNG,,String,false,2026-03-01,9999-12-31
+BIRD,STRNG_1,String one single character,STRNG,STRNG_1,STRNG_1,String one single character,false,2026-03-01,9999-12-31
+BIRD,STRNG_10,String up to 10 characters,STRNG,STRNG_10,STRNG_10,String up to 10 characters,false,2026-03-01,9999-12-31
+BIRD,STRNG_120_ID,"String up to 120 characters limited to letters (capital and low cases), numbers, dash and underscore",STRNG,STRNG_120_ID,STRNG_120_ID,"String up to 120 characters limited to letters (capital and low cases), numbers, dash and underscore",false,2026-03-01,9999-12-31
+BIRD,STRNG_2,String restricted to two characters,STRNG,STRNG_2,STRNG_2,String restricted to two characters,false,2026-03-01,9999-12-31
+BIRD,STRNG_255,String up to 255 characters (ASCII printable characters),STRNG,STRNG_255,STRNG_255,String up to 255 characters (ASCII printable characters),false,2026-03-01,9999-12-31
+BIRD,STRNG_50,String up to 50 characters,STRNG,STRNG_50,STRNG_50,String up to 50 characters,false,2026-03-01,9999-12-31
+BIRD,STRNG_ASCII_250,String-ASCII up to 250 characters,STRNG,STRNG_ASCII_250,STRNG_ASCII_250,String-ASCII up to 250 characters,false,2026-03-01,9999-12-31
+BIRD,STRNG_FULL,String maximum allowed number of characters,STRNG,STRNG_FULL,STRNG_FULL,String maximum allowed number of characters,false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_1D_2D,"String starting with a non-zero digit, followed by 2 digits.",STRNG,STRNG_ID_1D_2D,ID_1D_2D,"String starting with a non-zero digit, followed by 2 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_1D_3D,"String starting with a non-zero digit, followed by 3 digits.",STRNG,STRNG_ID_1D_3D,ID_1D_3D,"String starting with a non-zero digit, followed by 3 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_1D_5D,"String starting with a non-zero digit, followed by 5 digits.",STRNG,STRNG_ID_1D_5D,ID_1D_5D,"String starting with a non-zero digit, followed by 5 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_20,Alpha-numeric string (only capitals) of up to 20 characters and dashes,STRNG,STRNG_ID_20,ID_20,"Used in reporting real estate collateral location: if a postal code is available ""XX-postal code""; otherwise if NUTS3 is in use ""XX-NUTS3"", otherwise ""XX"", where XX stands for the two-digit ISO code of the country",false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_39_2D,"String starting with 39, followed by 2 digits.",STRNG,STRNG_ID_39_2D,ID_39_2D,"String starting with 39, followed by 2 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_6,String with 6 digits,STRNG,STRNG_ID_6,ID_6,,false,2026-03-01,9999-12-31
+BIRD,STRNG_ID_7_5D,"String starting with 7, followed by 5 digits.",STRNG,STRNG_ID_7_5D,ID_7_5D,"String starting with 7, followed by 5 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_ISIN_12,String up to 12 characters - ISIN,STRNG,STRNG_ISIN_12,ISIN_12,String up to 12 characters - ISIN,false,2026-03-01,9999-12-31
+BIRD,STRNG_LTN_EXT_255,String up to 255 characters - latin extended,STRNG,STRNG_LTN_EXT_255,LTN_EXT_255,,false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_1_TO_5_4D,"String starting with a digit from 1 to 5, followed by 4 digits.",STRNG,STRNG_NMRC_ID_1_TO_5_4D,ID_1_TO_5_4D,"String starting with a digit from 1 to 5, followed by 4 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_1_TO_8_3D,"String starting with a digit from 1 to 8, followed by 3 digits.",STRNG,STRNG_NMRC_ID_1_TO_8_3D,ID_1_TO_8_3D,"String starting with a digit from 1 to 8, followed by 3 digits.",false,2026-03-01,9999-12-31
+BIRD,STRNG_NMRC_ID_1_TO_8_4D,"String starting with a digit from 1 to 8, followed by 4 digits.",STRNG,STRNG_NMRC_ID_1_TO_8_4D,ID_1_TO_8_4D,"String starting with a digit from 1 to 8, followed by 4 digits.",false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KY,Subdomain for the postal code of PSTL_CD_KY,STRNG,PSTL_CD_KY,PSTL_CD_KY,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_KZ,Subdomain for the postal code of PSTL_CD_KZ,STRNG,PSTL_CD_KZ,PSTL_CD_KZ,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LB,Subdomain for the postal code of PSTL_CD_LB,STRNG,PSTL_CD_LB,PSTL_CD_LB,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LC,Subdomain for the postal code of PSTL_CD_LC,STRNG,PSTL_CD_LC,PSTL_CD_LC,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LT,Subdomain for the postal code of PSTL_CD_LT,STRNG,PSTL_CD_LT,PSTL_CD_LT,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LU,Subdomain for the postal code of PSTL_CD_LU,STRNG,PSTL_CD_LU,PSTL_CD_LU,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_LV,Subdomain for the postal code of PSTL_CD_LV,STRNG,PSTL_CD_LV,PSTL_CD_LV,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MD,Subdomain for the postal code of PSTL_CD_MD,STRNG,PSTL_CD_MD,PSTL_CD_MD,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MH,Subdomain for the postal code of PSTL_CD_MH,STRNG,PSTL_CD_MH,PSTL_CD_MH,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MP,Subdomain for the postal code of PSTL_CD_MP,STRNG,PSTL_CD_MP,PSTL_CD_MP,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MS,Subdomain for the postal code of PSTL_CD_MS,STRNG,PSTL_CD_MS,PSTL_CD_MS,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MT,Subdomain for the postal code of PSTL_CD_MT,STRNG,PSTL_CD_MT,PSTL_CD_MT,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_MU,Subdomain for the postal code of PSTL_CD_MU,STRNG,PSTL_CD_MU,PSTL_CD_MU,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NC,Subdomain for the postal code of PSTL_CD_NC,STRNG,PSTL_CD_NC,PSTL_CD_NC,,false,2026-03-01,9999-12-31
+BIRD,PSTL_CD_NF,Subdomain for the postal code of PSTL_CD_NF,STRNG,PSTL_CD_NF,PSTL_CD_NF,,false,2026-03-01,9999-12-31
+BIRD,MN_DBTR_INDCTR,Main debtor indicator,MN_DBTR_INDCTR,MN_DBTR_INDCTR,,Main debtor indicator,false,2026-03-01,9999-12-31
+BIRD,MN_DBTR_INDCTR_INPT,Main debtor indicator (Input Layer),MN_DBTR_INDCTR,MN_DBTR_INDCTR_INPT,,Main debtor indicator (Input Layer),false,2026-03-01,9999-12-31
+BIRD,MN_DPST_TKNG_CRPRTN_INDCTR,Main Deposit-taking corporation indicator,MN_DPST_TKNG_CRPRTN_INDCTR,MN_DPST_TKNG_CRPRTN_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,MN_DPST_TKNG_CRPRTN_INDCTR_INPT,Main Deposit-taking corporation indicator (Input Layer),MN_DPST_TKNG_CRPRTN_INDCTR,MN_DPST_TKNG_CRPRTN_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,MN_GRNTR_INDCTR,Main guarantor indicator,MN_GRNTR_INDCTR,MN_GRNTR_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,MN_GRNTR_INDCTR_INPT,Main guarantor indicator (Input Layer),MN_GRNTR_INDCTR,MN_GRNTR_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,MN_LSS_INDCTR,Main lessee indicator,MN_LSS_INDCTR,MN_LSS_INDCTR,,,false,2026-03-01,9999-12-31
+BIRD,MN_LSS_INDCTR_INPT,Main lessee indicator (Input Layer),MN_LSS_INDCTR,MN_LSS_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,MRKT_CP,Market capitalisation indicator,MRKT_CP,MRKT_CP,,,false,2026-03-01,9999-12-31
+BIRD,MRKT_CP_INDCTR_INPT,Market capitalisation indicator,MRKT_CP,MRKT_CP_INDCTR_INPT,,,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD,Measurement method,MSRMNT_MTHD,MSRMNT_MTHD,,Measurement method,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_F_42.00,Subdomain for MSRMNT_MTHD of the Cube F_42.00,MSRMNT_MTHD,MSRMNT_MTHD_F_42.00,,,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_INPT,Cost and Revaluation model (Input Layer),MSRMNT_MTHD,MSRMNT_MTHD_INPT,,Cost and Revaluation model (Input Layer),false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_INVSTMNT_PRPRTY,Measurement method for Investment property,MSRMNT_MTHD,MSRMNT_MTHD_INVSTMNT_PRPRTY,,,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_INVSTMNT_PRPRTY_TKN_PSSSSN,Subdomain for MSRMNT_MTHD of the Table INVSTMNT_PRPRTY_TKN_PSSSSN,MSRMNT_MTHD,MSRMNT_MTHD_INVSTMNT_PRPRTY_TKN_PSSSSN,,,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_INVSTMNT_PRPRTY_TKN_PSSSSN_DRVD_DT,Subdomain for MSRMNT_MTHD of the Table INVSTMNT_PRPRTY_TKN_PSSSSN_DRVD_DT,MSRMNT_MTHD,MSRMNT_MTHD_INVSTMNT_PRPRTY_TKN_PSSSSN_DRVD_DT,,,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_OTHR_INTNGL_ASST,Measurement method for Other intangible asset,MSRMNT_MTHD,MSRMNT_MTHD_OTHR_INTNGL_ASST,,,false,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD_PRPRTY_PLNT_EQPMNT,"Measurement method for Property, plant and equipment",MSRMNT_MTHD,MSRMNT_MTHD_PRPRTY_PLNT_EQPMNT,,,false,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_CCP_ASSGNMNT_TYP,Master agreement Central counterparty assignment type,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,MSTR_AGRMNT_CCP_ASSGNMNT_TYP,,Master agreement Central counterparty assignment type,false,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,Master agreement Entity role type,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,,Master agreement Entity role assignment type,false,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP_INPT,Type of master agreement Entity role (Input Layer),MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP_INPT,,Type of master agreement Entity role assignment (Input Layer),false,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_TYP,Master agreement type,MSTR_AGRMNT_TYP,MSTR_AGRMNT_TYP,,Master agreement type,false,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_TYP_INPT,Master agreement type (Input Layer),MSTR_AGRMNT_TYP,MSTR_AGRMNT_TYP_INPT,,Master agreement type (Input Layer),false,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_WIT_CCP_TYP,Master agreement with central counterparty type,MSTR_AGRMNT_TYP,MSTR_AGRMNT_WIT_CCP_TYP,,Master agreement with central counterparty type,false,2026-03-01,9999-12-31
+BIRD,NACE_LVLS2TO4_STGNG,NACE levels 2 to 4 plus not applicable (staging),ECNMC_ACTVTY,NACE_LVLS2TO4_STGNG,,NACE levels 2 to 4 plus not applicable (staging),false,2026-03-01,9999-12-31
+BIRD,NACE_LVLS2TO4_STGNG_V2,NACE (revision 2.1) levels 2 to 4 plus not applicable (staging),ECNMC_ACTVTY_V2,NACE_LVLS2TO4_STGNG_V2,,NACE (revision 2.1) levels 2 to 4 plus not applicable (staging),false,2026-03-01,9999-12-31
+BIRD,NEVS_CLLCTN,Non-enumerated value status collection subdomain,NEVS,NEVS_CLLCTN,,Non-enumerated value status collection subdomain,false,2026-03-01,9999-12-31
+BIRD,NEVS_CLLCTN_WTHT_NA,Non-enumerated value status collection subdomain,NEVS,NEVS_CLLCTN_WTHT_NA,,Non-enumerated value status collection subdomain,false,2026-03-01,9999-12-31
+BIRD,NGTBL_SCRTY,Negotiable security,NGTBL_SCRTY,NGTBL_SCRTY,,,false,2026-03-01,9999-12-31
+BIRD,NN_BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN_ACCNTNG_STNDRD_TYP,Non balance sheet recognised exchange tradable derivative liability position,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,NN_BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN_ACCNTNG_STNDRD_TYP,,Balance sheet recognised exchange tradable derivative liability position,false,2026-03-01,9999-12-31
+BIRD,NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_BY_ACCNTNG_STNDRD,Non-balance sheet recognised financial asset instrument by accounting standard,ABSTRCT_INSTRMNT_RL_TYP,NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_BY_ACCNTNG_STNDRD,,Non-balance sheet recognised financial asset instrument by accounting standard,false,2026-03-01,9999-12-31
+BIRD,NN_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_ACCNTNG_STNDRD_TYP,Non-balance sheet recognised financial liability accounting standard type,ABSTRCT_INSTRMNT_RL_TYP,NN_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_ACCNTNG_STNDRD_TYP,,Non-balance sheet recognised financial liability accounting standard type,false,2026-03-01,9999-12-31
+BIRD,NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,Non-balance sheet recognised security position type,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,,Non-balance sheet recognised security position type,false,2026-03-01,9999-12-31
+BIRD,NN_DFLT_FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD_TYP,Non-default financial asset instrument individually assessed type,ABSTRCT_INSTRMNT_RL_TYP,NN_DFLT_FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD_TYP,,Non-default financial asset instrument individually assessed type,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_NN_FNNCL_LBLTY_TYP,Non-financial asset and non-financial liability type,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_NN_FNNCL_LBLTY_TYP,,Non-financial asset and non-financial liability type,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP,Non-financial asset type,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP,,Non-financial asset type,false,2026-03-01,9999-12-31
+BIRD,NN_FNNCL_ASST_TYP_F_01.01,Subdomain for NN_FNNCL_ASST_TYP of the Table F_01.01,TYP_ACCNTNG_ITM,NN_FNNCL_ASST_TYP_F_01.01,,,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_CRR,"Financial asset instrument type by CRR, Article 123 (Retail exposure)",ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_CRR,,"Financial asset instrument type by CRR, Article 123 (Retail exposure)",false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_CRR_INPT,"Financial asset instrument type by CRR, Article 123 (Retail exposure) (Input Layer)",ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_CRR_INPT,,"Financial asset instrument type by CRR, Article 123 (Retail exposure) (Input Layer)",false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_FXD_INTRST_RT,Financial asset instrument type by fixed interest rate,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_FXD_INTRST_RT,,Financial asset instrument type by fixed interest rate,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_FXD_INTRST_RT_INPT,Financial asset instrument type by fixed interest rate (Input Layer),ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_FXD_INTRST_RT_INPT,,Financial asset instrument type by fixed interest rate (Input Layer),false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_INTRST_RT,Financial asset instrument type by interest rate only,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_INTRST_RT,,Financial asset instrument type by interest rate only,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_INTRST_RT_INPT,Financial asset instrument type by interest rate only (Input Layer),ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_INTRST_RT_INPT,,Financial asset instrument type by interest rate only (Input Layer),false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_RNGTTN_STTS,Financial asset instrument type by renegotiation status,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_RNGTTN_STTS,,Financial asset instrument type by renegotiation status,false,2026-03-01,9999-12-31
+BIRD,FNNCL_ASST_INSTRMNT_TYP_RNGTTN_STTS_INPT,Financial asset instrument type by renegotiation status (Input Layer),ABSTRCT_INSTRMNT_RL_TYP,FNNCL_ASST_INSTRMNT_TYP_RNGTTN_STTS_INPT,,Financial asset instrument type by renegotiation status (Input Layer),false,2026-03-01,9999-12-31
+BIRD,FNNCL_CNTRCT_TYP,Financial contract type,FNNCL_CNTRCT_TYP,FNNCL_CNTRCT_TYP,,Financial contract type,false,2026-03-01,9999-12-31
+BIRD,FNNCL_CRPRTN_TYP,Financial corporation type,PRTY_TYP,FNNCL_CRPRTN_TYP,,Financial corporation type,false,2026-03-01,9999-12-31
+BIRD,FNNCL_GRNT_INSTRMNT_TYP,Financial guarantee instrument type,TYP_INSTRMNT,FNNCL_GRNT_INSTRMNT_TYP,,Financial guarantee instrument type,false,2026-03-01,9999-12-31
+BIRD,FNNCL_LBLTY_INSTRMNT_TYP,Financial liability instrument type,ABSTRCT_INSTRMNT_RL_TYP,FNNCL_LBLTY_INSTRMNT_TYP,,Financial liability instrument type,false,2026-03-01,9999-12-31
+BIRD,FNNCL_PRTCTN_TYP,Financial collateral type,TYP_PRTCTN,FNNCL_PRTCTN_TYP,,Financial collateral type,false,2026-03-01,9999-12-31
+BIRD,FNRP_RPRTNG_SCHM,Finrep reporting scheme,FNRP_RPRTNG_SCHM,FNRP_RPRTNG_SCHM,,Finrep reporting scheme,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_CNT_INDCTR_F_26.00.a,Subdomain for FRBRNC_MSR_CNT_INDCTR of the Table F_26.00.a,FRBRNC_MSR_CNT,FRBRNC_MSR_CNT_INDCTR_F_26.00.a,,,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_TYP,Forbearance measure type,FRBRNC_MSR_TYP,FRBRNC_MSR_TYP,,Forbearance measure type,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_TYP_F_19.00.a,Subdomain for FRBRNC_MSR_TYP of the Cube F_19.00.a,FRBRNC_MSR_TYP,FRBRNC_MSR_TYP_F_19.00.a,,,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_TYP_F_19.00.b,Subdomain for FRBRNC_MSR_TYP of the Cube F_19.00.b,FRBRNC_MSR_TYP,FRBRNC_MSR_TYP_F_19.00.b,,,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_TYP_F_19.00.d,Subdomain for FRBRNC_MSR_TYP of the Cube F_19.00.d,FRBRNC_MSR_TYP,FRBRNC_MSR_TYP_F_19.00.d,,,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_TYP_F_26.00.a,Subdomain for FRBRNC_MSR_TYP of the Table F_26.00.a,FRBRNC_MSR_TYP,FRBRNC_MSR_TYP_F_26.00.a,,,false,2026-03-01,9999-12-31
+BIRD,FRBRNC_STTS_ANCRDT_CLLCTN,AnaCredit - ECB collection,FRBRNC_STTS,FRBRNC_STTS_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,FRQNCY_INTRST_RT_RST_ANCRDT_CLLCTN,AnaCredit Interest rate reset frequency,FRQNCY,FRQNCY_INTRST_RT_RST_ANCRDT_CLLCTN,,AnaCredit Interest rate reset frequency,false,2026-03-01,9999-12-31
+BIRD,FRQNCY_PYMNT,Payment frequency,FRQNCY,FRQNCY_PYMNT,,Payment frequency,false,2026-03-01,9999-12-31
+BIRD,FRQNCY_PYMNT_ANCRDT_CLLCTN,AnaCredit Payment frequency,FRQNCY,FRQNCY_PYMNT_ANCRDT_CLLCTN,,AnaCredit Payment frequency,false,2026-03-01,9999-12-31
+BIRD,FRQNCY_PYMNT_INPT,Payment frequency (Input Layer),FRQNCY,FRQNCY_PYMNT_INPT,,Payment frequency (Input Layer),false,2026-03-01,9999-12-31
+BIRD,FRTB_RSK_MSR_TYP,Risk measure type,FRTB_RSK_MSR_TYP,FRTB_RSK_MSR_TYP,,,false,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN,Fair value option designation,FVO_DSGNTN,FVO_DSGNTN,,Fair value option designation,false,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_IFRS,Fair value option designation for Balance sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS),FVO_DSGNTN,FVO_DSGNTN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_IFRS,,,false,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN_FR_VLD_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT,Fair value option designation for Fair-valued balance sheet recognised financial liability instrument,FVO_DSGNTN,FVO_DSGNTN_FR_VLD_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT,,,false,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN_FV_DBT_SCRTY_ISSD,Fair value option designation for Fair-valued debt security issued,FVO_DSGNTN,FVO_DSGNTN_FV_DBT_SCRTY_ISSD,,,false,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN_INPT,Fair value option designation (Input layer),FVO_DSGNTN,FVO_DSGNTN_INPT,,Fair value option designation (Input layer),false,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN_LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IFRS,Fair value option designation for Long balance sheet recognised security position prudential portfolio Accounting classification assignment International Financial Reporting Standard (IFRS),FVO_DSGNTN,FVO_DSGNTN_LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IFRS,,,false,2026-03-01,9999-12-31
+BIRD,FV_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMTN_ACCNTNG_STNDRD,Fair-valued balance sheet recognised financial liability instrument accounting standard,ABSTRCT_INSTRMNT_RL_TYP,FV_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMTN_ACCNTNG_STNDRD,,Fair-valued balance sheet recognised financial liability instrument accounting standard,false,2026-03-01,9999-12-31
+BIRD,FV_HRRCHY,Fair value hierarchy,FV_HRRCHY,FV_HRRCHY,,Fair value hierarchy,false,2026-03-01,9999-12-31
+BIRD,FV_HRRCHY_F_14.00,Subdomain for FV_HRRCHY of the Cube F_14.00,FV_HRRCHY,FV_HRRCHY_F_14.00,,,false,2026-03-01,9999-12-31
+BIRD,FV_HRRCHY_F_41.01,Subdomain for FV_HRRCHY of the Table F_41.01,FV_HRRCHY,FV_HRRCHY_F_41.01,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.00.c,Subdomain for PRFRMNG_STTS of the Table F_18.00.c,CRDT_QLTY,PRFRMNG_STTS_F_18.00.c,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.00.d,Subdomain for PRFRMNG_STTS of the Table F_18.00.d,CRDT_QLTY,PRFRMNG_STTS_F_18.00.d,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.00.e,Subdomain for PRFRMNG_STTS of the Table F_18.00.e,CRDT_QLTY,PRFRMNG_STTS_F_18.00.e,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.02.a,Subdomain for PRFRMNG_STTS of the Table F_18.02.a,CRDT_QLTY,PRFRMNG_STTS_F_18.02.a,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.02.b,Subdomain for PRFRMNG_STTS of the Table F_18.02.b,CRDT_QLTY,PRFRMNG_STTS_F_18.02.b,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_18.02.c,Subdomain for PRFRMNG_STTS of the Table F_18.02.c,CRDT_QLTY,PRFRMNG_STTS_F_18.02.c,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_19.00.a,Subdomain for PRFRMNG_STTS of the Cube F_19.00.a,CRDT_QLTY,PRFRMNG_STTS_F_19.00.a,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_19.00.b,Subdomain for PRFRMNG_STTS of the Cube F_19.00.b,CRDT_QLTY,PRFRMNG_STTS_F_19.00.b,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_19.00.d,Subdomain for PRFRMNG_STTS of the Cube F_19.00.d,CRDT_QLTY,PRFRMNG_STTS_F_19.00.d,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_23.02,Subdomain for PRFRMNG_STTS of the Table F_23.02,CRDT_QLTY,PRFRMNG_STTS_F_23.02,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_F_23.04,Subdomain for PRFRMNG_STTS of the Table F_23.04,CRDT_QLTY,PRFRMNG_STTS_F_23.04,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_INPT,Performing Status,CRDT_QLTY,PRFRMNG_STTS_INPT,,Performing Status,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_RSN,Performing status reason,PRFRMNG_STTS_RSN,PRFRMNG_STTS_RSN,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_RSN_INPT,Performing status reason (Input Layer),PRFRMNG_STTS_RSN,PRFRMNG_STTS_RSN_INPT,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_RSN_NN_PRFRMNG_DBT_SCRTY,Performing status reason for Non-performing debt security,PRFRMNG_STTS_RSN,PRFRMNG_STTS_RSN_NN_PRFRMNG_DBT_SCRTY,,,false,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_RSN_PRFRMNG_DBT_SCRTY,Performing status reason for Performing debt security,PRFRMNG_STTS_RSN,PRFRMNG_STTS_RSN_PRFRMNG_DBT_SCRTY,,,false,2026-03-01,9999-12-31
+BIRD,PRJCT_FNNC_LN_ANCRDT_CLLCTN,AnaCredit - ECB collection,PRJCT_FNNC_LN,PRJCT_FNNC_LN_ANCRDT_CLLCTN,,AnaCredit - ECB collection,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSSFCTN_INPT,Full list of the classification of the instruments (Input Layer),PRMRY_ASST_CLSSFCTN,PRMRY_ASST_CLSSFCTN_INPT,,Full list of the classification of the instruments (Input Layer),false,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSSFCTN_SHS,Full list of the classification of the instruments,PRMRY_ASST_CLSSFCTN,PRMRY_ASST_CLSSFCTN_SHS,,Full list of the classification of the instruments,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSS_CVR_PL,Primary asset class of cover pool,PRMRY_ASST_CLSS_CVR_PL,PRMRY_ASST_CLSS_CVR_PL,,This Subdomain covers the full Domain Primary asset class of cover pool with disjoint Members only.,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSS_CVR_PL_111007_REF_PRMRY_ASST_CLSS_CVR_PL,Subdomain for PRMRY_ASST_CLSS_CVR_PL of the Combination 111007_REF,PRMRY_ASST_CLSS_CVR_PL,PRMRY_ASST_CLSS_CVR_PL_111007_REF_PRMRY_ASST_CLSS_CVR_PL,,,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSS_CVR_PL_F_35.00.c,Subdomain for PRMRY_ASST_CLSS_CVR_PL of the Cube F_35.00.c,PRMRY_ASST_CLSS_CVR_PL,PRMRY_ASST_CLSS_CVR_PL_F_35.00.c,,,false,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSS_CVR_PL_INPT,Primary asset class of cover pool (Input Layer),PRMRY_ASST_CLSS_CVR_PL,PRMRY_ASST_CLSS_CVR_PL_INPT,,This Subdomain covers the full Domain Primary asset class of cover pool with disjoint Members only.,false,2026-03-01,9999-12-31
+BIRD,LGL_PRCDNG_STTS,Legal proceeding status,LGL_PRCDNG_STTS,LGL_PRCDNG_STTS,,Legal proceeding status,false,2026-03-01,9999-12-31
+BIRD,LGL_PRCDNG_STTS_ANCRDT_STGNG,AnaCredit - ECB staging,LGL_PRCDNG_STTS,LGL_PRCDNG_STTS_ANCRDT_STGNG,,AnaCredit - ECB staging,false,2026-03-01,9999-12-31
+BIRD,LGL_PRCDNG_STTS_INPT,Legal proceedings status (Input Layer),LGL_PRCDNG_STTS,LGL_PRCDNG_STTS_INPT,,Legal proceedings status (Input Layer),false,2026-03-01,9999-12-31
+BIRD,LGL_PRSN_RL_TYP,Legal person role type,ENTTY_RL_TYP,LGL_PRSN_RL_TYP,,Legal person role type,false,2026-03-01,9999-12-31
+BIRD,LGL_PRSN_TYP,Legal person type,PRTY_TYP,LGL_PRSN_TYP,,Legal person type,false,2026-03-01,9999-12-31
+BIRD,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_ACCNTNG_STNDRD_TYP,Long balance sheet recognised security position accounting standard type,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_ACCNTNG_STNDRD_TYP,,Long balance sheet recognised security position accounting standard type,false,2026-03-01,9999-12-31

@@ -1,0 +1,240 @@
+MAINTENANCE_AGENCY_ID,DOMAIN_ID,NAME,IS_ENUMERATED,DESCRIPTION,DATA_TYPE,CODE,FACET_ID,IS_REFERENCE,VALID_FROM,VALID_TO
+BIRD,INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT_TYP,Instrument Protection arrangement assignment type,true,Instrument Protection arrangement assignment type,String(50),INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR,Institutional sectors,true,Institutional sectors,string(20),INSTTTNL_SCTR,,true,2026-03-01,9999-12-31
+BIRD,INSTTTNL_SCTR_CNTRL,Institutional sector control,true,Institutional sector control,integer(6),INSTTTNL_SCTR_CNTRL,,true,2026-03-01,9999-12-31
+BIRD,INTGR,Integer,false,Integer,integer,INTGR,,true,2026-03-01,9999-12-31
+BIRD,INVSTMNT_PRPRTY_TYP,Investmemnt property type,true,Investmemnt property type,String,INVSTMNT_PRPRTY_TYP,,true,2026-03-01,9999-12-31
+BIRD,ISSR_STTS_DTL,Domain for details on the issuer status,true,Domain for details on the issuer status,integer(6),ISSR_STTS_DTL,,true,2026-03-01,9999-12-31
+BIRD,LGL_FRM,Legal Form,true,Legal Form,string(20),LGL_FRM,,true,2026-03-01,9999-12-31
+BIRD,LGL_PRCDNG_STTS,Status of legal proceedings,true,Status of legal proceedings,integer(6),LGL_PRCDNG_STTS,,true,2026-03-01,9999-12-31
+BIRD,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_ACCNTNG_STNDRD_TYP,Long balance sheet recognised security position prudential portfolio Accounting classification assignment accounting standard type,true,Long balance sheet recognised security position prudential portfolio Accounting classification assignment accounting standard type,String,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_ACCNTNG_STNDRD_TYP,,true,2026-03-01,9999-12-31
+BIRD,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_TYP,Long balance sheet recognised security position prudential portfolio Accounting classifcation assignment type,true,Long balance sheet recognised security position prudential portfolio Accounting classifcation assignment type,String,LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,Long balance sheet recognised security position accounting standard type,true,Long balance sheet recognised security position accounting standard type,String,LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_TYP,,true,2026-03-01,9999-12-31
+BIRD,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,Listed central bank and private sector company indicator,true,LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,String(50),LSTD_CNTRL_BNK_PRVT_SCTR_CMPNY_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,LTGTN_STTS,Litigation status,true,Litigation status,integer(6),LTGTN_STTS,,true,2026-03-01,9999-12-31
+BIRD,LTV_RT_BND,LTV Ratio bands,true,LTV Ratio bands,string(20),LTV_RT_BND,,true,2026-03-01,9999-12-31
+BIRD,LVL_RPRTNG,Level of reporting requested in the specific row of template,true,Level of reporting requested in the specific row of template,String,LVL_RPRTNG,,true,2026-03-01,9999-12-31
+BIRD,LW_CRDT_RSK_INDCTR,Low credit risk indicator,true,Low credit risk indicator,integer(6),LW_CRDT_RSK_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,MLTLTRL_DVLPMNT_BNK_INDCTR,Multilateral development bank indicator,true,Multilateral development bank indicator,String,MLTLTRL_DVLPMNT_BNK_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,MLTPL_FRBRNC_MSR_INDCTR,Multiple forbearance measures in place indicator,true,Multiple forbearance measures in place indicator,String,MLTPL_FRBRNC_MSR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,MNTRY,Monetary,false,Monetary,number,MNTRY,,true,2026-03-01,9999-12-31
+BIRD,MN_DBTR_INDCTR,Main debtor indicator,true,Main debtor indicator,String,MN_DBTR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,MN_DPST_TKNG_CRPRTN_INDCTR,Main Deposit-taking corporation indicator,true,Main Deposit-taking corporation indicator,String,MN_DPST_TKNG_CRPRTN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,FVO_DSGNTN,Fair value option designation,true,It lists the possible options to irrevocably designate a financial instrument at fair value through profit or loss in accordance with IFRS9,String,FVO_DSGNTN,,true,2026-03-01,9999-12-31
+BIRD,FV_HRRCHY,Fair Value Hierarchy,true,Hierarchy of fair value in accordance with IFRS13,String,FV_HRRCHY,,true,2026-03-01,9999-12-31
+BIRD,GGRPHCL_ARS,Geographical Area,true,Geographical Area,string(20),GGRPHCL_ARS,,true,2026-03-01,9999-12-31
+BIRD,GIRR_RSK_FCTR,GIRR risk factor,true,GIRR risk factor,Numeric,GIRR_RSK_FCTR,,true,2026-03-01,9999-12-31
+BIRD,GRNTD_FRBRNC_CRRNT_RPRTNG_PRD,Granted forbearance measures during the current reporting period.,true,Granted forbearance measures during the current reporting period.,string(20),GRNTD_FRBRNC_CRRNT_RPRTNG_PRD,,true,2026-03-01,9999-12-31
+BIRD,GRP_KY_MNGMNT_PRSNNL_ASSGNMNT_TYP,Group Key management personnel assignment type,true,Group Key management personnel assignment type,String (50),GRP_KY_MNGMNT_PRSNNL_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,GRP_RL_TYP,Group role type,true,Group role type,String,GRP_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,GRP_TYP,Type of groups,true,Type of groups,String,GRP_TYP,,true,2026-03-01,9999-12-31
+BIRD,HDGD_PRTFL_ASST_LBLTY_INDCTR,Hedged portfolio asset or liability indicator,true,Hedged portfolio asset or liability indicator,String,HDGD_PRTFL_ASST_LBLTY_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,HDG_INSTRMNT,Hedged or hedging instrument,true,Hedged or hedging instrument,String,HDG_INSTRMNT,,true,2026-03-01,9999-12-31
+BIRD,HLD_MTRTY_INDCTR,Held to maturity,true,Held to maturity domain,integer(6),HLD_MTRTY_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,HLD_SL_INDCTR,Held for sale,true,Held for sale domain,integer(6),HLD_SL_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,HLD_TRDNG_INDCTR,Held for trading,true,Held for trading domain,integer(6),HLD_TRDNG_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,HQLA_INDCTR,High liquidity and credit quality (HQLA) indicator,true,High liquidity and credit quality (HQLA) indicator,String,HQLA_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,HRCTS_TRDNG_PSTN,Haircuts for trading positions,true,Haircuts for trading positions,string(20),HRCTS_TRDNG_PSTN,,true,2026-03-01,9999-12-31
+BIRD,TYP_ACTVTY,Type of activity,true,Type of activity,String,TYP_ACTVTY,,true,2026-03-01,9999-12-31
+BIRD,TYP_AMRTSTN,Amortisation type,true,Amortisation type,integer(6),TYP_AMRTSTN,,true,2026-03-01,9999-12-31
+BIRD,TYP_ASST_SCRTSTN,Type of asset provided as security,true,Type of asset provided as security,String,TYP_ASST_SCRTSTN,,true,2026-03-01,9999-12-31
+BIRD,TYP_CMMTMNT,Type of commitment,true,Type of commitment,String(50),TYP_CMMTMNT,,true,2026-03-01,9999-12-31
+BIRD,TYP_DMNSN,Type of dimension,true,Type of dimension,string(1),TYP_DMNSN,,true,2026-03-01,9999-12-31
+BIRD,TYP_FCT,Type of facet,false,Type of facet,string(20),TYP_FCT,,true,2026-03-01,9999-12-31
+BIRD,TYP_FCT_VL,Type of facet value,true,Type of facet value,string(50),TYP_FCT_VL,,true,2026-03-01,9999-12-31
+BIRD,TYP_HDG,Type of hedge,true,Type of Hedge in accordance with the applicable accounting standard and Reg 680/2014 (Annex V),String,TYP_HDG,,true,2026-03-01,9999-12-31
+BIRD,TYP_ID,Group/Entity ID type,true,Group/Entity ID type,String,TYP_ID,,true,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT,Type of instrument,true,Type of instrument,integer(6),TYP_INSTRMNT,,true,2026-03-01,9999-12-31
+BIRD,TYP_INSTRMNT_ID,Identifier type code list,true,The type of the code used to ,String,TYP_INSTRMNT_ID,,true,2026-03-01,9999-12-31
+BIRD,TYP_INTRST_RT,Interest rate type,true,Interest rate type,integer(6),TYP_INTRST_RT,,true,2026-03-01,9999-12-31
+BIRD,TYP_MPPNG,Type of mapping,true,Type of mapping,string(1),TYP_MPPNG,,true,2026-03-01,9999-12-31
+BIRD,TYP_MRKT,Type of market,true,Type of market,String,TYP_MRKT,,true,2026-03-01,9999-12-31
+BIRD,TYP_PRDCT,Type of product,true,Type of product,String,TYP_PRDCT,,true,2026-03-01,9999-12-31
+BIRD,TYP_PRDNTL_ITM,Type of prudential item,true,Type of prudential item,String,TYP_PRDNTL_ITM,,true,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN,Type of protection,true,Type of protection,integer(6),TYP_PRTCTN,,true,2026-03-01,9999-12-31
+BIRD,TYP_PRTCTN_VL,Type of protection value,true,Identification of the type of value provided in the data attribute ‘Protection value’.,integer(6),TYP_PRTCTN_VL,,true,2026-03-01,9999-12-31
+BIRD,TYP_RL,Type of role,true,Type of role,string(1),TYP_RL,,true,2026-03-01,9999-12-31
+BIRD,TYP_RSK,Type of Risk,true,Type of risk in accordance with Reg. 680/2014 (Annex V),String,TYP_RSK,,true,2026-03-01,9999-12-31
+BIRD,TYP_TRNSFR,Type of Transfer,true,Type of Transfer,integer(6),TYP_TRNSFR,,true,2026-03-01,9999-12-31
+BIRD,UNDR_CNSTRCTN_INDCTR,Under construction indicator,true,Under construction indicator,integer(6),UNDR_CNSTRCTN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,VLTN_RL,Accounting portfolio valuation rules domain,true,Accounting portfolio valuation rules domain,integer(6),VLTN_RL,,true,2026-03-01,9999-12-31
+BIRD,CRDT_RTNG_AGNCY,Credit rating agency,true,"Credit rating agency used in Asset encumbrance.
+See EBA ITS on Asset encumbrance, 5.2.3. Instructions concerning specific columns, External credit rating on covered bond (090-140), As per credit rating agencies' methodology to maintain current external credit rating on covered bond (230-250).",String,CRDT_RTNG_AGNCY,,true,2026-03-01,9999-12-31
+BIRD,CRRNCY,Currencies,true,Currencies,string(20),CRRNCY,,true,2026-03-01,9999-12-31
+BIRD,CSR_CRV_TYP,Credit spread risk curve type,true,Credit spread risk curve type,String,CSR_CRV_TYP,,true,2026-03-01,9999-12-31
+BIRD,CST_BSD_MTHD_LCM_INDCTR,At cost based method or Lower of cost or market (LOCOM) indicator,true,At cost based method or Lower of cost or market (LOCOM) indicator,String (50),CST_BSD_MTHD_LCM_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,CUBE_TYPE,Cube type,true,Specifies the type of cube as part of the data production process.,String (50),CUBE_TYPE,,true,2026-03-01,9999-12-31
+BIRD,DATA_TYPE_SIMPLIFIED,Simplified data type,true,Simplified data type,String,DATA_TYPE_SIMPLIFIED,,true,2026-03-01,9999-12-31
+BIRD,ACCMLTD_CVRG_RT_BND,Accumulated coverage ratio bands,true,Accumulated coverage ratio bands,string(20),ACCMLTD_CVRG_RT_BND,,true,2026-03-01,9999-12-31
+BIRD,ACCNTG_CNS_SCP_ISSR_INDCTR,Domain for issuer part of the group for Accounting scope indicator,true,Domain for issuer part of the group for Accounting scope indicator,integer(6),ACCNTG_CNS_SCP_ISSR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CLSSFCTN,Accounting classification,true,Accounting classification,integer(6),ACCNTNG_CLSSFCTN,,true,2026-03-01,9999-12-31
+BIRD,ACCNTNG_CNSLDTN_LVL,Accounting consolidation level,true,Accounting consolidation level,String (50),ACCNTNG_CNSLDTN_LVL,,true,2026-03-01,9999-12-31
+BIRD,ACCNTNG_FRMWRK,Accounting framework,true,Accounting framework,integer(6),ACCNTNG_FRMWRK,,true,2026-03-01,9999-12-31
+BIRD,ACCNTNG_HDG_INDCTR,Accounting hedge indicator,true,Accounting hedge indicator,String,ACCNTNG_HDG_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,ACCRD_INTRST_MRKT_VL_INDCTR,Domain for accrued interests for market values indicator,true,Domain for accrued interests for market values indicator,integer(6),ACCRD_INTRST_MRKT_VL_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,AE_ITM,Asset encumbrance item,true,Domain comprising Members that allows to distinguish between AE (matching) liability information and AE (underlying) asset / collateral information.,String,AE_ITM,,true,2026-03-01,9999-12-31
+BIRD,AE_RPRTNG_SCHM,AE reporting scheme,true,AE reporting scheme,String,AE_RPRTNG_SCHM,,true,2026-03-01,9999-12-31
+BIRD,APPRCH_CRDT_QLTY_STTS,Assessment approach for credit quality status,true,Assessment approach for credit quality status,String,APPRCH_CRDT_QLTY_STTS,,true,2026-03-01,9999-12-31
+BIRD,APPRCH_PRDNTL_PRPSS,Approach for prudential purposes,true,Approach for prudential purposes,String,APPRCH_PRDNTL_PRPSS,,true,2026-03-01,9999-12-31
+BIRD,ARRNGMNT_TYP,Arrangement type,true,Arrangement type,String,ARRNGMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,ASST_ENCMBRNC_SRC_INDCTR,Asset encumbrance source indicator,true,Asset encumbrance source indicator,String (50),ASST_ENCMBRNC_SRC_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,ASST_PL_INSTRMNT_ASSGNMNT_TYP,Asset pool Instrument assignment type,true,Asset pool Instrument assignment type,String (50),ASST_PL_INSTRMNT_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,ASST_PL_TYP,Asset pool (subject to securitisation and other credit transfer) type,true,Asset pool (subject to securitisation and other credit transfer) type,String,ASST_PL_TYP,,true,2026-03-01,9999-12-31
+BIRD,AVLBL_ENCMBRNC,Available for encumbrance,true,"Domain covering the members: Available for encumbrance, Not available for encumbrance, Available and not available for encumbrance, Not applicable.
+See EBA ITS on Asset encumbrance, 2.2.1. General remarks.",String,AVLBL_ENCMBRNC,,true,2026-03-01,9999-12-31
+BIRD,BLN,Boolean,true,Boolean,string(20),BLN,,true,2026-03-01,9999-12-31
+BIRD,BLN_STRNG,Boolean string,false,"A Domain that allows string values of TRUE and FALSE only.
+Please note that this Domain's purpose is the mapping of non-reference boolean Domains that are not enumerated, e.g. EBA_Boolean.",String,BLN_STRNG,BLN_STRNG,true,2026-03-01,9999-12-31
+BIRD,CLLTRLZD,Collateralized,true,Collateralized,string(20),CLLTRLZD,,true,2026-03-01,9999-12-31
+BIRD,CLLTRL_INSTRMNT_RS_INDCTR,Collateral instrument reuse indicator,true,Collateral instrument reuse indicator,String (50),CLLTRL_INSTRMNT_RS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,CLLTRL_OBTND_TKNG_PSSSSN,Collateral obtained by taking possession,true,Collateral obtained by taking possession,string(20),CLLTRL_OBTND_TKNG_PSSSSN,,true,2026-03-01,9999-12-31
+BIRD,CLLTRL_RL_TYP,Collateral role type,true,Collateral role type,String (50),CLLTRL_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,CLLTRL_RS_INDCTR,Collateral reuse indicator,true,Collateral reuse indicator,String (50),CLLTRL_RS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,CMMDTY_TYP_FRTB,Commodity type for FRTB,true,Commodity type for FRTB,String,CMMDTY_TYP_FRTB,,true,2026-03-01,9999-12-31
+BIRD,CMMRCL_RL_ESTT_LN_INDCTR,Commercial real estate loan indicator,true,Commercial real estate loan indicator,String,CMMRCL_RL_ESTT_LN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,CMPLNC_CRR_129_TYP,Compliance with article 129 CRR type,true,Compliance with article 129 CRR type,String,CMPLNC_CRR_129_TYP,,true,2026-03-01,9999-12-31
+BIRD,CNSLDTN_MTHD,consolidation method,true,The type of consolidtation method used.,String,CNSLDTN_MTHD,,true,2026-03-01,9999-12-31
+BIRD,CNSLDTN_SCP,Scope of consolidation,true,Scope of consolidation,String,CNSLDTN_SCP,,true,2026-03-01,9999-12-31
+BIRD,CNTNGNT_SCNR,Contingent scenario/Assumptions used,true,Contingent scenario/Assumptions used,String,CNTNGNT_SCNR,,true,2026-03-01,9999-12-31
+BIRD,CRDNLTY,Cardinality,true,Specifies the cardinality of relationship,string(20),CRDNLTY,,true,2026-03-01,9999-12-31
+BIRD,CRDT_FCLTY_ENTTY_RL_ASSGNMNT_TYP,Credit facility Entity role assignment type,true,Credit facility Entity role assignment type,String,CRDT_FCLTY_ENTTY_RL_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,CRDT_QLTY,Credit quality,true,Credit quality,integer(6),CRDT_QLTY,,true,2026-03-01,9999-12-31
+BIRD,IMMDT_PRNT_ANCRDT_INDCTR,Immediate parent according to AnaCredit indicator,true,Immediate parent according to AnaCredit indicator,String,IMMDT_PRNT_ANCRDT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,IMPRMNT_ASSSSMNT_MTHD,Impairment assessment method,true,"The method by which the impairment is assessed, if the instrument is subject to impairment in accordance with applied accounting standards. Collective and individual methods are distinguished.",integer(6),IMPRMNT_ASSSSMNT_MTHD,,true,2026-03-01,9999-12-31
+BIRD,INSTRMNT_CLLTRL_ASSGNMNT_TYP,Instrument Collateral assignment type,true,Instrument Collateral assignment type,String,INSTRMNT_CLLTRL_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,INSTRMNT_CLLTRL_INSTRMNT_ASSGNMNT_TYP,Instrument Collateral instrument assignment type,true,Instrument Collateral instrument assignment type,String,INSTRMNT_CLLTRL_INSTRMNT_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,INSTRMNT_ENTTY_RL_ASSGNMNT_TYP,Instrument Entity role assignment type,true,Instrument Entity role assignment type,String,INSTRMNT_ENTTY_RL_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,MN_GRNTR_INDCTR,Main guarantor indicator,true,Main guarantor indicator,String,MN_GRNTR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,MN_LSS_INDCTR,Main lessee indicator,true,Main lessee indicator,String,MN_LSS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,MRKT_CP,Market capitalisation indicator,true,Market capitalisation indicator,String,MRKT_CP,,true,2026-03-01,9999-12-31
+BIRD,MSRMNT_MTHD,Measurement method,true,Measurement method,String,MSRMNT_MTHD,,true,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,Master agreement Entity role assignment type,true,Master agreement Entity role assignment type,String,MSTR_AGRMNT_ENTTY_RL_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,MSTR_AGRMNT_TYP,Master agreement type,true,Master agreement type,String,MSTR_AGRMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,NEVS,Null explanatory values,true,Null explanatory values,integer(6),NEVS,,true,2026-03-01,9999-12-31
+BIRD,NGTBL_SCRTY,Negotiable security,true,Negotiable security,String,NGTBL_SCRTY,,true,2026-03-01,9999-12-31
+BIRD,NN_PRFRMNG_PRR_FRBRNC_INDCTR,Non-performing prior to forbearance indicator,true,Non-performing prior to forbearance indicator,String,NN_PRFRMNG_PRR_FRBRNC_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG,Observed agent indicator for Anacredit reporting,true,Observed agent indicator for Anacredit reporting,String,OBSRVD_AGNT_INDCTR_ANCRDT_RPRTNG,,true,2026-03-01,9999-12-31
+BIRD,OPTN_TYP,Option type,true,Option type,string(20),OPTN_TYP,,true,2026-03-01,9999-12-31
+BIRD,OTC_DRVTV_HDG_ACCNTNG_STNDRD_TYP,Over the counter (OTC) Derivative hedge accounting standard type,true,Over the counter (OTC) Derivative hedge accounting standard type,String,OTC_DRVTV_HDG_ACCNTNG_STNDRD_TYP,,true,2026-03-01,9999-12-31
+BIRD,OVRDRFT_INDCTR,Overdraft indicator,true,Overdraft indicator,String(50),OVRDRFT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RTNG_GRD_CRDT_QLTY,Rating grade credit quality,true,Rating grade credit quality,String,RTNG_GRD_CRDT_QLTY,,true,2026-03-01,9999-12-31
+BIRD,OWN_CMPNY_INVSTMNT_INDCTR,Own company investment indicator,true,"Determines if the investment in the Security position is in a subsidiary, joint venture or associate of the own company or not.",String,OWN_CMPNY_INVSTMNT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PHASE,Phase,true,The phase in the BIRD process.,String,PHASE,,true,2026-03-01,9999-12-31
+BIRD,PLLNG_EFFCT_INDCTR,Pulling effect indicator,true,Pulling effect indicator,String,PLLNG_EFFCT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,DMSTC_ACTVT_INDCTR,Domestic activities indicator,true,Domestic activities indicator,String,DMSTC_ACTVT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,DT,Date,false,Date,date,DT,,true,2026-03-01,9999-12-31
+BIRD,DT_OPNNG_BLNC,Reference date opening balance,true,Reference date opening balance,Numeric,DT_OPNNG_BLNC,,true,2026-03-01,9999-12-31
+BIRD,ECAI_ECA,ECAI/ECA,true,ECAI/ECA,String,ECAI_ECA,,true,2026-03-01,9999-12-31
+BIRD,ECNMC_ACTVTY,Nomenclature of Economic Activities (NACE) codes,true,Nomenclature of Economic Activities (NACE) codes,string(20),ECNMC_ACTVTY,,true,2026-03-01,9999-12-31
+BIRD,ECNMC_ACTVTY_V2,Nomenclature of Economic Activities (NACE revision 2.1) codes,true,"Classification of counterparties according to their economic activities, in accordance with the NACE revision 2.1 statistical classification as laid down in Commission Delegated Regulation (EU) 2023/137, amending Regulation (EC) No 1893/2006 of the European Parliament and of the Council.",string(20),ECNMC_ACTVTY_V2,,true,2026-03-01,9999-12-31
+BIRD,ECNMY,Economy,true,Economy,String,ECNMY,,true,2026-03-01,9999-12-31
+BIRD,EHQLA_INDCTR,(Extremely) High liquidity and credit quality (HQLA) indicator,true,(Extremely) High liquidity and credit quality (HQLA) indicator,String,EHQLA_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,Security or exchange tradable derivative type,true,Security or exchange tradable derivative type,String,SCRTY_EXCHNG_TRDBL_DRVTV_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_GRNT_LVL,Security Guarantee level,true,Security Guarantee level,String,SCRTY_GRNT_LVL,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_LVL,Security level,true,Security level,String,SCRTY_LVL,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,Security position Balance sheet recognised type,true,Security position Balance sheet recognised type,String,SCRTY_PSTN_BLNC_SHT_RCGNSD_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_PSTN_RL_TYP,Security position role type,true,Security position role type,String(50),SCRTY_PSTN_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_RNK_LVL,Security rank level,true,Security rank level,String,SCRTY_RNK_LVL,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_STTS_DTL,Domain for details on the security status,true,Domain for details on the security status,integer(6),SCRTY_STTS_DTL,,true,2026-03-01,9999-12-31
+BIRD,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,Securities borrowing and lending transaction including cash as collateral component type,true,Securities borrowing and lending transaction including cash as collateral component type,String,SCTRY_BRRWNG_LNDNG_TRNSCTN_INCLDNG_CSH_CLLTRL_TYP,,true,2026-03-01,9999-12-31
+BIRD,SFTWR_ASST_INDCTR,Software assets indicator,true,Software assets indicator,String,SFTWR_ASST_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SGNFCNT_ASST_CLSS,Significant asset class,true,Significant asset class,String,SGNFCNT_ASST_CLSS,,true,2026-03-01,9999-12-31
+BIRD,SGNFCNT_RSK_TRNSFR_INDCTR,Significant risk transfer indicator,true,Significant risk transfer indicator,String,SGNFCNT_RSK_TRNSFR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SHCK_DRCTN,Shock direction,true,Shock direction,String,SHCK_DRCTN,,true,2026-03-01,9999-12-31
+BIRD,SHRT_PSTN_INDCTR,Short position,true,Short position domain,integer(6),SHRT_PSTN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SHRT_TRM_CRDT_ASSMNT_INDCTR,Short term credit assessment indicator,true,Short term credit assessment indicator,String,SHRT_TRM_CRDT_ASSMNT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR,Syndication or sub-participation member instrument indicator,true,Syndication or sub-participation member instrument indicator,String(50),SNDCTN_SB_PRTCPTN_MMBR_INSTRMNT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SNRTY_TYP,Domain for instrument seniority type,true,Domain for instrument seniority type,integer(6),SNRTY_TYP,,true,2026-03-01,9999-12-31
+BIRD,SPCLSD_LNDNG_EXPSR_TYP,Specialised lending exposure type,true,Specialised lending exposure type,String,SPCLSD_LNDNG_EXPSR_TYP,,true,2026-03-01,9999-12-31
+BIRD,SRC_ENCMBRNC,Encumbrance,true,Encumbrance,integer(6),SRC_ENCMBRNC,,true,2026-03-01,9999-12-31
+BIRD,STFF_TYP,Type of staff,true,Type of staff,integer(6),STFF_TYP,,true,2026-03-01,9999-12-31
+BIRD,STRCTRD_NT_INDCTR,Structured note indicator,true,Structured note indicator,String,STRCTRD_NT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,STRNG,String,false,String,string,STRNG,,true,2026-03-01,9999-12-31
+BIRD,STS_SCRTSTN_INDCTR,"Simple, transparent and standardised (STS) securitisation indicator",true,"Simple, transparent and standardised (STS) securitisation indicator",String,STS_SCRTSTN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,STTS,Status,true,Status,String,STTS,,true,2026-03-01,9999-12-31
+BIRD,STTTRY_CVRD_BND_RGM,Statutory covered bond regime,true,"Statutory covered bond regime information used in Asset encumbrance.
+See EBA ITS on Asset encumbrance, 5.2.3. Instructions concerning specific columns, As per the relevant statutory covered bond regime (220).",String,STTTRY_CVRD_BND_RGM,,true,2026-03-01,9999-12-31
+BIRD,SZ,Enterprise size,true,Enterprise size,integer(6),SZ,,true,2026-03-01,9999-12-31
+BIRD,TM_INTRVL,Time interval,true,Time interval,Numeric,TM_INTRVL,,true,2026-03-01,9999-12-31
+BIRD,TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_TYP,Tranch in a synthetic securitisation without SSPE type,true,Tranch in a synthetic securitisation without SSPE type,String,TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_TYP,,true,2026-03-01,9999-12-31
+BIRD,TRNSFR_IMPRMNT_STGS,Transfer between impairment stages,true,Transfer between impairment stages,String,TRNSFR_IMPRMNT_STGS,,true,2026-03-01,9999-12-31
+BIRD,TYPE_OF_RELATIONSHIP,Type of relationship,true,The type of relationship between entities.,String,TYPE_OF_RELATIONSHIP,,true,2026-03-01,9999-12-31
+BIRD,TYPE_OF_SCHEME,Type of scheme,true,The type of scheme in the BIRD process.,String,TYPE_OF_SCHEME,,true,2026-03-01,9999-12-31
+BIRD,TYPE_OF_TRANSFORMATION,TYPE_OF_TRANSFORMATION,true,The type of transformation.,String,TYPE_OF_TRANSFORMATION,,true,2026-03-01,9999-12-31
+BIRD,ABSTRCT_INSTRMNT_RL_TYP,Abstract instrument role type,true,Abstract instrument role type,String,ABSTRCT_INSTRMNT_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,RL,Real,false,Real,number,RL,,true,2026-03-01,9999-12-31
+BIRD,PRTY_TYP,Party type,true,Party type,String,PRTY_TYP,,true,2026-03-01,9999-12-31
+BIRD,PRTY_TYP_ADDRSS,Party type by address,true,Party type by address,String,PRTY_TYP_ADDRSS,,true,2026-03-01,9999-12-31
+BIRD,PSTN_INSTRMNT,Position in the instrument,true,Position in the instrument,Numeric,PSTN_INSTRMNT,,true,2026-03-01,9999-12-31
+BIRD,RCGNTN_STTS,Recognition,true,Recognition,integer(6),RCGNTN_STTS,,true,2026-03-01,9999-12-31
+BIRD,RCLSSFD_PRFT_LSS_INDCTR,To be reclassified to profit or loss,true,To be reclassified to profit or loss,integer(6),RCLSSFD_PRFT_LSS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RCRS,Recourse,true,Recourse,integer(6),RCRS,,true,2026-03-01,9999-12-31
+BIRD,RFRNC_RT,Reference rate code,true,Reference rate code,integer(6),RFRNC_RT,,true,2026-03-01,9999-12-31
+BIRD,RGHT_US_ASST_INDCTR,Right of use asset indicator,true,Right of use asset indicator,string(20),RGHT_US_ASST_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RGSTRD_PHYSCL_CLLTRL_INDCTR,Registered physical collateral indicator,true,Registered physical collateral indicator,String,RGSTRD_PHYSCL_CLLTRL_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RLTNSHP,Relationship,true,Relationship between entities.,String,RLTNSHP,,true,2026-03-01,9999-12-31
+BIRD,RNGTTD_CRDT_FCLTY_TYP,Renegotiated credit facility type,true,Renegotiated credit facility type,String,RNGTTD_CRDT_FCLTY_TYP,,true,2026-03-01,9999-12-31
+BIRD,RNGTTD_DBT_SCRTY_TYP,Renegotiated debt security indicator,true,Renegotiated debt security indicator,String,RNGTTD_DBT_SCRTY_TYP,,true,2026-03-01,9999-12-31
+BIRD,RPRCHS_TRNSCTN_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_ASSGNMNT_TYP,Repurchase transaction Non-balance sheet recognised security position assignment type,true,Repurchase transaction Non-balance sheet recognised security position assignment type,String,RPRCHS_TRNSCTN_NN_BLNC_SHT_RCGNSD_SCRTY_PSTN_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,RPRTNG_BSS,Reporting basis code list,true,Indicates the underlying reporting basis for the security,String,RPRTNG_BSS,,true,2026-03-01,9999-12-31
+BIRD,RPRTNG_INSTTTN,Source,true,Source,String,RPRTNG_INSTTTN,,true,2026-03-01,9999-12-31
+BIRD,RPYMNT_RGHTS,Repayment rights,true,Repayment rights,integer(6),RPYMNT_RGHTS,,true,2026-03-01,9999-12-31
+BIRD,RSCRTSTN_INDCTR,Re-securitisation indicator,true,Re-securitisation indicator,String,RSCRTSTN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RSK_CLSS,Risk class,true,Risk class,Numeric,RSK_CLSS,,true,2026-03-01,9999-12-31
+BIRD,RTL_EXPSR_ACCRDNG_CRR_INDCTR,"Retail exposure accordign to CRR, Article 123 (b) indicator",true,"Retail exposure accordign to CRR, Article 123 (b) indicator",String,RTL_EXPSR_ACCRDNG_CRR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RTND_DBT_SCRTY_INDCTR,Retained debt security indicator,true,Retained debt security indicator,String(50),RTND_DBT_SCRTY_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RTND_INSTRMNT,Retained or bought back instrument,true,"Domain covereing the members: Retained or bought back instrument, Not retained or bought back instrument, Retained and not retained instruments, Not applicable.",String,RTND_INSTRMNT,,true,2026-03-01,9999-12-31
+BIRD,TYP_ACCNTNG_ITM,Type of accounting item,true,Type of accounting item,String,TYP_ACCNTNG_ITM,,true,2026-03-01,9999-12-31
+BIRD,RTNG_GRD_TYP,Rating grade type,true,Rating grade type,String,RTNG_GRD_TYP,,true,2026-03-01,9999-12-31
+BIRD,RTNG_SYSTM_TYP,Rating system,true,Rating system,String,RTNG_SYSTM_TYP,,true,2026-03-01,9999-12-31
+BIRD,RVCBL_INDCTR,Revocable indicator,true,Revocable indicator,String,RVCBL_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,RVLVNG_LN_INDCTR,Revolving loan indicator,true,Revolving loan indicator,String,RVLVNG_LN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SBJCT_IMPRMNT_INDCTR,Subject to impairment indicator,true,Subject to impairment indicator,String,SBJCT_IMPRMNT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SBJCT_OPRTNG_LS_INDCTR,Subject to operating lease indicator,true,Subject to operating lease indicator,String,SBJCT_OPRTNG_LS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,SBRDNTD_DBT,Subordinated debt,true,Subordinated debt,integer(6),SBRDNTD_DBT,,true,2026-03-01,9999-12-31
+BIRD,SBSDRY_JNT_VNTR_ASSCT_OTHR_ORGNSTN_ASSGNMNT_TYP,Subsidiary joint venture and associate Other organisation role assignment type,true,Subsidiary joint venture and associate Other organisation role assignment type,String,SBSDRY_JNT_VNTR_ASSCT_OTHR_ORGNSTN_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,Securitisation and other credit transfer type,true,Securitisation and other credit transfer type,String,SCRTSTN_OTHR_CRDT_TRNSFR_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTSTN_TRNCH_TYP,Securitisation tranche type,true,Securitisation tranche type,String,SCRTSTN_TRNCH_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_ENTTY_RL_ASSGNMNT_TYP,Security Entity role assignment type,true,Security Entity role assignment type,String,SCRTY_ENTTY_RL_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP,Security or Exchange tradable derivative position type,true,Security or Exchange tradable derivative position type,String,SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP,,true,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_CNT,Number of times an exposure has been under forbearance measures.,true,Number of times an exposure has been under forbearance measures equal to 2 or more than 2.,string(20),FRBRNC_MSR_CNT,,true,2026-03-01,9999-12-31
+BIRD,FRBRNC_MSR_TYP,Types of forbearance measure,true,Types of forbearance measure,integer(6),FRBRNC_MSR_TYP,,true,2026-03-01,9999-12-31
+BIRD,FRBRNC_STTS,Forbearance status,true,Forbearance status,integer(6),FRBRNC_STTS,,true,2026-03-01,9999-12-31
+BIRD,FRQNCY,Frequency,true,Frequency,integer(6),FRQNCY,,true,2026-03-01,9999-12-31
+BIRD,FRTB_RSK_MSR_TYP,Fundamental review of the trading book standard approach risk measure type,true,Fundamental review of the trading book standard approach risk measure type,String,FRTB_RSK_MSR_TYP,,true,2026-03-01,9999-12-31
+BIRD,PLNNNG_PRMSSN_INDCTR,Planning permissions indicator,true,Planning permissions indicator,integer(6),PLNNNG_PRMSSN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRCHSD_ORGNTD,Purchased or originated,true,Purchased or originated,String,PRCHSD_ORGNTD,,true,2026-03-01,9999-12-31
+BIRD,PRDNTL_CNS_SCP_ISSR_INDCTR,Domain for issuer part of the group for Prudential scope indicator,true,Domain for issuer part of the group for Prudential scope indicator,integer(6),PRDNTL_CNS_SCP_ISSR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRDNTL_PRTFL_TYP,Prudential portfolio,true,Prudential portfolio,integer(6),PRDNTL_PRTFL,,true,2026-03-01,9999-12-31
+BIRD,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR,Performing forborne exposure under probation reclassified from non-performing indicator,true,Performing forborne exposure under probation reclassified from non-performing indicator,String,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRFRMNG_STTS_RSN,Performing status reasons,true,Performing status reasons,integer(6),PRFRMNG_STTS_RSN,,true,2026-03-01,9999-12-31
+BIRD,PRJCT_FNNC_LN,Project finance loans,true,Project finance loans,integer(6),PRJCT_FNNC_LN,,true,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSSFCTN,Classification of the instrument,true,Securities classified according to their asset type.,String,PRMRY_ASST_CLSSFCTN,,true,2026-03-01,9999-12-31
+BIRD,PRMRY_ASST_CLSS_CVR_PL,Primary asset class of cover pool,true,Covers the primary asset classes for cover pools according to  Article 129(4) and (5) of Regulation (EU) No 575/2013.,String,PRMRY_ASST_CLSS_CVR_PL,,true,2026-03-01,9999-12-31
+BIRD,PRMRY_ISSR_INDCTR,Primary issuer indicator,true,Primary issuer indicator,String,PRMRY_ISSR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRMRY_PRTCTN_PRVDR_INDCTR,Primary protection provider indicator,true,Primary protection provider indicator,String,PRMRY_PRTCTN_PRVDR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRPRTY_PLNT_EQPMNT_TKN_PSSSSN_DRNG_PRD_INDCTR,Property plant and equipment during the period indicator,true,Property plant and equipment during the period indicator,String,PRPRTY_PLNT_EQPMNT_TKN_PSSSSN_DRNG_PRD_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRPS,Purpose,true,Purpose,integer(6),PRPS,,true,2026-03-01,9999-12-31
+BIRD,PRTCTN_ARRNGMNT_RL_TYP,Protection arrangement role type,true,Protection arrangement role type,String (50),PRTCTN_ARRNGMNT_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,PRTCTN_ARRNGMNT_RS_INDCTR,Protection arrangement instrument reuse indicator,true,Protection arrangement instrument reuse indicator,String (50),PRTCTN_ARRNGMNT_RS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,PRTCTN_VLTN_APPRCH,Protection valuation approach,true,Type of protection valuation; method used to determine the protection value.,integer(6),PRTCTN_VLTN_APPRCH,,true,2026-03-01,9999-12-31
+BIRD,PRTCTN_VL_TYP,Protection value type,true,Protection value type,String,PRTCTN_VL_TYP,,true,2026-03-01,9999-12-31
+BIRD,PRTY_CD_TYP,Party code type,true,Party code type,String,PRTY_CD_TYP,,true,2026-03-01,9999-12-31
+BIRD,ELGBL_CNTRL_BNK_FNDNG,Eligible for central bank funding,true,"Domain covering the members: Eligible for central bank funding, Not eligible for central bank funding, Eligible and not eligible for central bank funding and Not applicable.",String,ELGBL_CNTRL_BNK_FNDNG,,true,2026-03-01,9999-12-31
+BIRD,ELGBL_GRNT_INDCTR,Eligible as guarantee indicator,true,Eligible as guarantee indicator,String,ELGBL_GRNT_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,ENTRPRS_INDCTR,Enterprise indicator,true,Enterprise indicator,String,ENTRPRS_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,ENTTY_RL,Counterparty role,true,Role of the counterparties in an instrument.,integer(6),ENTTY_RL,,true,2026-03-01,9999-12-31
+BIRD,ENTTY_RL_TYP,Entity role type,true,Entity role type,String,ENTTY_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,EQUTY_FCTR_TYP,Equity factor type,true,Equity factor type,String,EQUTY_FCTR_TYP,,true,2026-03-01,9999-12-31
+BIRD,ERLY_RDMPTN_INCLSN_INDCTR,Domain for early redempions inclusion indicator,true,Domain for early redempions inclusion indicator,integer(6),ERLY_RDMPTN_INCLSN_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_PRTCN_ARRNGMNT_ASSGNMNT_TYP,Exchange tradable derivative Protection arrangement assignment type,true,Exchange tradable derivative Protection arrangement assignment type,String (50),EXCHNG_TRDBL_DRVTV_PRTCN_ARRNGMNT_ASSGNMNT_TYP,,true,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,Exchange tradable derivative position role type,true,Exchange tradable derivative position role type,String,EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP,,true,2026-03-01,9999-12-31
+BIRD,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR,Exchange tradable derivative type by identifier,true,Exchange tradable derivative type by identifier,String,EXCHNG_TRDBL_DRVTV_TYP_BY_IDNTFR,,true,2026-03-01,9999-12-31
+BIRD,EXPNS_TYP,Type of expense,true,Type of expense,integer(6),EXPNS_TYP,,true,2026-03-01,9999-12-31
+BIRD,EXPSR_CLSS,Exposure classification,true,Exposure classification,String,EXPSR_CLSS,,true,2026-03-01,9999-12-31
+BIRD,FDCRY,Fiduciary instruments,true,Fiduciary instruments,integer(6),FDCRY,,true,2026-03-01,9999-12-31
+BIRD,FLD_NN_PRFRMNG_EXT_CRTR_INDCTR,Failed to meet the non-performing exit criteria indicator,true,Failed to meet the non-performing exit criteria indicator,String,FLD_NN_PRFRMNG_EXT_CRTR_INDCTR,,true,2026-03-01,9999-12-31
+BIRD,FLW_DRCTN,Flow direction,true,Flow direction,integer(6),FLW_DRCTN,,true,2026-03-01,9999-12-31
+BIRD,FLW_RSN,Reason/source of the flow,true,Reason/source of the flow,integer(6),FLW_RSN,,true,2026-03-01,9999-12-31
+BIRD,FNNCL_CNTRCT_TYP,Financial contract type,true,Financial contract type,String,FNNCL_CNTRCT_TYP,,true,2026-03-01,9999-12-31
+BIRD,FNRP_RPRTNG_SCHM,Finrep reporting scheme,true,Finrep reporting scheme,String,FNRP_RPRTNG_SCHM,,true,2026-03-01,9999-12-31

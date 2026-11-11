@@ -1,0 +1,80 @@
+# Hand-written header comments for the s1 (rich metadata) corpus SQL. Provenance: gap_fill.
+# Read by src/render_corpus.py. This file is not part of the corpus; only the rendered text is.
+#
+# Per SQL file:
+#   purpose   one or two sentences on what the file produces, in business language
+#   routines  official BIRD routine ids the file follows (looked up in the export)
+# Column descriptions come from the BIRD variable names (bird_official), except the columns under
+# `columns`, which have no BIRD variable.
+#
+# Wording rule (decision D6): do not use the classifier's label words, not even in lower case.
+
+files:
+  00_schema.sql:
+    purpose: >-
+      Input tables of the reporting data mart. Each row belongs to one reporting context: reference date,
+      reporting agent, consolidation level and accounting standard.
+    routines: []
+  01_load_input_snapshot.sql:
+    purpose: >-
+      Selects the input rows of one reporting context. The context is set per session with
+      sp_set_session_context (keys dt_rfrnc, rprtng_agnt_id, accntng_cnsldtn_lvl, accntng_stndrd).
+    routines: []
+  02_carry_enriched_attributes.sql:
+    purpose: >-
+      Passes status, classification and counterparty attributes unchanged into the enriched layer that the
+      reporting rules read.
+    routines: [R_IDT_DER]
+  03_gross_carrying_amount_instruments.sql:
+    purpose: >-
+      Derives the gross carrying amount of each instrument role from the carrying amount, accumulated
+      impairment, fair value and general allowances, depending on the accounting portfolio and the impairment
+      status.
+    routines: [R_DER_GRSS_CRRYNG_AMNT_3]
+  04_annex_v_type_instruments.sql:
+    purpose: >-
+      Assigns each instrument role its FINREP Annex V instrument type, such as loans and advances or on-demand
+      deposits, from the product, the role of the counterparty, its sector, the hedge flag and the held-for-sale
+      flag.
+    routines: [R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_2]
+  05_securities_positions.sql:
+    purpose: >-
+      Derives the gross carrying amount and the Annex V instrument type of long balance-sheet positions in debt
+      securities. Non-negotiable debt securities count as loans and advances.
+    routines: [R_DER_GRSS_CRRYNG_AMNT_1, R_DER_TYP_FNNCL_ASST_INSTRMNT_ANNX_V_3]
+  06_reporting_scheme_scope.sql:
+    purpose: >-
+      Keeps a reporting context only when the reporting agent reports FINREP on a full, simplified or
+      over-simplified basis.
+    routines: [R_F_18.00.a_ALL]
+  07_counterparty_sector_rows.sql:
+    purpose: >-
+      Combines instrument and security positions with their counterparty, then assigns each position to the
+      counterparty sector rows of template F 18.00.a: central banks, general governments, credit institutions,
+      other financial corporations, non-financial corporations and households.
+    routines: [R_F_18.00.a_R0080, R_F_18.00.a_R0090, R_F_18.00.a_R0100, R_F_18.00.a_R0110, R_F_18.00.a_R0120,
+               R_F_18.00.a_R0150]
+  08_total_loans_and_advances_row.sql:
+    purpose: >-
+      Row 0070 "Loans and advances" of template F 18.00.a: all positions of the counterparty sector rows.
+    routines: [R_F_18.00.a_R0070]
+  09_gross_carrying_amount_cell.sql:
+    purpose: >-
+      Cell row 0070, column 0010 of template F 18.00.a: total gross carrying amount of loans and advances.
+    routines: [R_F_18.00.a_C0010]
+  10_non_performing_cell.sql:
+    purpose: >-
+      Cell row 0070, column 0060 of template F 18.00.a: gross carrying amount of non-performing loans and
+      advances.
+    routines: [R_F_18.00.a_C0060]
+  11_npl_ratio.sql:
+    purpose: >-
+      Non-performing loans ratio: column 0060 divided by column 0010 of row 0070 in template F 18.00.a.
+    routines: []
+
+columns:
+  PSTN_SRC: Origin of the position (instrument or security position)
+  PSTN_ID: Identifier of the instrument or security
+  RW: Template row the position is reported in
+  SRC_RW: Counterparty sector row the position comes from
+  NPL_RATIO: Non-performing loans ratio

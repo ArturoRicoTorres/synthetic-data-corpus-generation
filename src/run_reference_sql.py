@@ -17,9 +17,9 @@ SQL_DIR = ROOT / "sql" / "reference"
 SCHEMA = SQL_DIR / "00_schema.sql"
 
 
-def node_files():
+def node_files(sql_dir=SQL_DIR):
     """SQL files after the schema, in execution order."""
-    return sorted(p for p in SQL_DIR.glob("[0-9][0-9]_*.sql") if p.name != SCHEMA.name)
+    return sorted(p for p in Path(sql_dir).glob("[0-9][0-9]_*.sql") if p.name != SCHEMA.name)
 
 
 def input_tables(con):
@@ -27,17 +27,17 @@ def input_tables(con):
         "SELECT table_name FROM information_schema.tables WHERE table_type = 'BASE TABLE' ORDER BY 1").fetchall()]
 
 
-def build(data_dir):
-    """Create an in-memory database: schema, input data from CSV, and all views."""
+def build(data_dir, sql_dir=SQL_DIR):
+    """Create an in-memory database: schema, input data from CSV, and all views (DuckDB SQL from sql_dir)."""
     con = duckdb.connect(":memory:")
-    con.execute(SCHEMA.read_text(encoding="utf-8"))
+    con.execute((Path(sql_dir) / SCHEMA.name).read_text(encoding="utf-8"))
     for table in input_tables(con):
         f = Path(data_dir) / f"{table}.csv"
         if f.exists():
             con.execute(f"INSERT INTO {table} BY NAME "
                         f"SELECT * FROM read_csv(?, header = true, all_varchar = true, nullstr = '')", [str(f)])
     check_inputs(con)
-    for f in node_files():
+    for f in node_files(sql_dir):
         con.execute(f.read_text(encoding="utf-8"))
     return con
 
@@ -87,9 +87,9 @@ def contexts(data_dir):
     return pd.read_csv(Path(data_dir) / "contexts.csv", dtype=str).to_dict("records")
 
 
-def run(data_dir):
+def run(data_dir, sql_dir=SQL_DIR):
     """Cells per context: {context name: {C0010, C0060, NPL_RATIO}}."""
-    con = build(data_dir)
+    con = build(data_dir, sql_dir)
     out = {}
     for ctx in contexts(data_dir):
         set_context(con, ctx)

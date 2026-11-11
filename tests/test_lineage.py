@@ -14,15 +14,24 @@ from sqlglot.optimizer.qualify import qualify
 from sqlglot.optimizer.scope import traverse_scope
 
 from conftest import ROOT, SQL_DIR
+from render_corpus import tsql_statements
 
 MAP = yaml.safe_load(open(ROOT / "sql" / "lineage_map.yaml", encoding="utf-8"))
 NODES = MAP["nodes"]
 KEYS = {k.upper() for k in MAP["keys"]}
+# The reference SQL (DuckDB) and the corpus SQL (T-SQL, decision D5) use the same object names (decision D2),
+# so both are checked against the same mapping.
+SOURCES = {"reference": (SQL_DIR, "duckdb"), "corpus": (ROOT / "corpus" / "s1_rich" / "sql", "tsql")}
 
 
-def ddl_schema():
+def parse(path, dialect):
+    text = path.read_text(encoding="utf-8")
+    return tsql_statements(text) if dialect == "tsql" else sqlglot.parse(text, read=dialect)
+
+
+def ddl_schema(sql_dir=SQL_DIR, dialect="duckdb"):
     schema = {}
-    for stmt in sqlglot.parse((SQL_DIR / "00_schema.sql").read_text(encoding="utf-8"), read="duckdb"):
+    for stmt in parse(sql_dir / "00_schema.sql", dialect):
         if isinstance(stmt, exp.Create):
             cols = {c.name.lower(): "VARCHAR" for c in stmt.this.expressions if isinstance(c, exp.ColumnDef)}
             schema[stmt.this.this.name.lower()] = cols
@@ -30,18 +39,19 @@ def ddl_schema():
 
 
 @lru_cache(maxsize=None)
-def analysis():
+def analysis(source="reference"):
     """Per SQL file: views created (with columns) and source columns read from objects outside the file."""
-    schema, out = ddl_schema(), {}
-    for path in sorted(SQL_DIR.glob("[0-9][0-9]_*.sql")):
+    sql_dir, dialect = SOURCES[source]
+    schema, out = ddl_schema(sql_dir, dialect), {}
+    for path in sorted(sql_dir.glob("[0-9][0-9]_*.sql")):
         if path.name == "00_schema.sql":
             continue
         created, refs = {}, set()
-        for stmt in sqlglot.parse(path.read_text(encoding="utf-8"), read="duckdb"):
+        for stmt in parse(path, dialect):
             if not isinstance(stmt, exp.Create):
                 continue
             view = stmt.this.name.lower()
-            q = qualify(stmt.expression.copy(), schema=schema, dialect="duckdb", validate_qualify_columns=True)
+            q = qualify(stmt.expression.copy(), schema=schema, dialect=dialect, validate_qualify_columns=True)
             for scope in traverse_scope(q):
                 for col in scope.columns:
                     src = scope.sources.get(col.table)
@@ -64,8 +74,9 @@ def test_map_covers_every_spec_node(spec):
         assert (SQL_DIR / NODES[nid]["file"]).exists(), nid
 
 
-def test_every_sql_file_maps_to_one_node():
-    files = sorted(p.name for p in SQL_DIR.glob("[0-9][0-9]_*.sql") if p.name != "00_schema.sql")
+@pytest.mark.parametrize("source", sorted(SOURCES))
+def test_every_sql_file_maps_to_one_node(source):
+    files = sorted(p.name for p in SOURCES[source][0].glob("[0-9][0-9]_*.sql") if p.name != "00_schema.sql")
     assert sorted(n["file"] for n in NODES.values()) == files
 
 
@@ -74,10 +85,11 @@ def split(ref):
     return t.upper(), c.upper()
 
 
+@pytest.mark.parametrize("source", sorted(SOURCES))
 @pytest.mark.parametrize("nid", sorted(NODES))
-def test_node_lineage(nid):
+def test_node_lineage(nid, source):
     node = NODES[nid]
-    created, refs = analysis()[node["file"]]
+    created, refs = analysis(source)[node["file"]]
     read_tables = {t for t, _ in refs}
     allowed = set()
     # spec inputs are read

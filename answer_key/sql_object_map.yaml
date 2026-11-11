@@ -1,0 +1,80 @@
+note: Corpus SQL object -> spec node. Object names equal the reference SQL (decision D2); the per-node column mapping is sql/lineage_map.yaml.
+dialect: tsql
+scenarios:
+  s1_rich: corpus/s1_rich/sql/
+  s2_limited: corpus/s2_limited/sql/
+  s3_regulatory_only: corpus/s3_regulatory_only/sql/
+files:
+  00_schema.sql:
+    node: null
+    creates:
+    - INSTRMNT_IL
+    - INSTRMNT_RL_IL
+    - INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+    - PRTY_IL
+    - INTRNL_GRP_RL_IL
+    - OTC_DRVTV_HDG_IL
+    - SCRTY_EXCHNG_TRDBL_DRVTV_IL
+    - SCRTY_ENTTY_RL_ASSGNMNT_IL
+    - LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+    - LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  01_load_input_snapshot.sql:
+    node: T01
+    creates:
+    - instrmnt_il_snp
+    - instrmnt_rl_il_snp
+    - instrmnt_entty_rl_assgnmnt_il_snp
+    - prty_il_snp
+    - intrnl_grp_rl_il_snp
+    - otc_drvtv_hdg_il_snp
+    - scrty_exchng_trdbl_drvtv_il_snp
+    - scrty_entty_rl_assgnmnt_il_snp
+    - lng_shrt_blnc_sht_rcgnsd_scrty_pstn_il_snp
+    - lng_blnc_sht_rcgnsd_scrty_pstn_accntng_il_snp
+  02_carry_enriched_attributes.sql:
+    node: T02
+    creates:
+    - instrmnt_rl_eil
+    - instrmnt_entty_rl_assgnmnt_eil
+    - prty_eil
+    - intrnl_grp_rl_eil
+    - scrty_entty_rl_assgnmnt_eil
+  03_gross_carrying_amount_instruments.sql:
+    node: T03
+    creates:
+    - instrmnt_rl_eil_grss_crryng_amnt
+  04_annex_v_type_instruments.sql:
+    node: T04
+    creates:
+    - instrmnt_rl_eil_typ_fnncl_asst
+  05_securities_positions.sql:
+    node: T05
+    creates:
+    - scrty_exchng_trdbl_drvtv_eil
+    - lng_scrty_pstn_eil_grss_crryng_amnt
+    - lng_scrty_pstn_eil_typ_fnncl_asst
+  06_reporting_scheme_scope.sql:
+    node: T06
+    creates:
+    - f_18_00_a_scp
+  07_counterparty_sector_rows.sql:
+    node: T07
+    creates:
+    - f_18_00_a_dtpnt
+    - f_18_00_a_sctr_rw
+  08_total_loans_and_advances_row.sql:
+    node: T08
+    creates:
+    - f_18_00_a_r0070
+  09_gross_carrying_amount_cell.sql:
+    node: T09
+    creates:
+    - f_18_00_a_r0070_c0010
+  10_non_performing_cell.sql:
+    node: T10
+    creates:
+    - f_18_00_a_r0070_c0060
+  11_npl_ratio.sql:
+    node: T11
+    creates:
+    - npl_ratio

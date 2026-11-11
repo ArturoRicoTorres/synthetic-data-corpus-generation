@@ -390,7 +390,7 @@ issues = [
     {"id": "OI-13", "status": "DECIDED", "decision": "see decisions.md", "severity": "medium",
      "issue": "FNRP_RPRTNG_SCHM sits on INTRNL_GRP_RL, which has no relationship to instruments. The gate is "
               "joined on the context key; which GRP_RL_TYP row applies is not specified."},
-    {"id": "OI-14", "status": "OPEN", "severity": "low",
+    {"id": "OI-14", "status": "DECIDED", "decision": "see decisions.md", "severity": "low",
      "issue": "Legal references cite Implementing Regulation (EU) No 680/2014, which was replaced by Implementing "
               "Regulation (EU) 2021/451. Confirm citations before writing the Collibra and regulatory documents."},
     {"id": "OI-15", "status": "OPEN", "severity": "medium",
@@ -414,7 +414,7 @@ issues = [
 
 spec = {
     "spec_version": "0.2-draft",
-    "status": "DRAFT - open issues OI-14 to OI-18 are undecided; decided issues are logged in decisions.md",
+    "status": "DRAFT - open issues OI-15 to OI-18 are undecided; decided issues are logged in decisions.md",
     "provenance": {
         "primary_source": {"type": "official ECB BIRD metadata export", "file": ZIP.name,
                            "sha256": zip_sha, "obtained_from": "bird.ecb.europa.eu (downloaded by user)",

@@ -1,3 +1,5 @@
 # Generated corpus and answer key: keep LF so renders are byte-identical on every platform
 corpus/** text eol=lf
 answer_key/** text eol=lf
+# Official sources are read-only: never convert line endings (their sha256 is recorded)
+data/raw/** -text

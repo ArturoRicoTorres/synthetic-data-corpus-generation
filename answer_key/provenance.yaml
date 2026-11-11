@@ -1964,3 +1964,133 @@ metadata:
   TYP_INSTRMNT_9:
     provenance: bird_official
     source: member.csv TYP_INSTRMNT_9
+documents:
+  corpus/s1_rich/docs/data_model/INSTRMNT_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv INSTRMNT_IL
+  corpus/s1_rich/docs/data_model/INSTRMNT_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/INSTRMNT_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/INSTRMNT_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/INSTRMNT_RL_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv INSTRMNT_RL_IL
+  corpus/s1_rich/docs/data_model/INSTRMNT_RL_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/INSTRMNT_RL_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/INSTRMNT_RL_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/INSTRMNT_ENTTY_RL_ASSGNMNT_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv INSTRMNT_ENTTY_RL_ASSGNMNT_IL
+  corpus/s1_rich/docs/data_model/INSTRMNT_ENTTY_RL_ASSGNMNT_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/INSTRMNT_ENTTY_RL_ASSGNMNT_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/INSTRMNT_ENTTY_RL_ASSGNMNT_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/PRTY_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv PRTY_IL
+  corpus/s1_rich/docs/data_model/PRTY_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/PRTY_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/PRTY_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/INTRNL_GRP_RL_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv INTRNL_GRP_RL_IL
+  corpus/s1_rich/docs/data_model/INTRNL_GRP_RL_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/INTRNL_GRP_RL_IL.md#relationships-context:
+    provenance: gap_fill
+    source: decision OI-13
+  corpus/s1_rich/docs/data_model/INTRNL_GRP_RL_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/INTRNL_GRP_RL_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/OTC_DRVTV_HDG_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv OTC_DRVTV_HDG_IL
+  corpus/s1_rich/docs/data_model/OTC_DRVTV_HDG_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/OTC_DRVTV_HDG_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/OTC_DRVTV_HDG_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/SCRTY_EXCHNG_TRDBL_DRVTV_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv SCRTY_EXCHNG_TRDBL_DRVTV_IL
+  corpus/s1_rich/docs/data_model/SCRTY_EXCHNG_TRDBL_DRVTV_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/SCRTY_EXCHNG_TRDBL_DRVTV_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/SCRTY_EXCHNG_TRDBL_DRVTV_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/SCRTY_ENTTY_RL_ASSGNMNT_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv SCRTY_ENTTY_RL_ASSGNMNT_IL
+  corpus/s1_rich/docs/data_model/SCRTY_ENTTY_RL_ASSGNMNT_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/SCRTY_ENTTY_RL_ASSGNMNT_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/SCRTY_ENTTY_RL_ASSGNMNT_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL
+  corpus/s1_rich/docs/data_model/LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/LNG_SHRT_BLNC_SHT_RCGNSD_SCRTY_PSTN_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.md#purpose:
+    provenance: bird_official
+    source: cube.csv LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL
+  corpus/s1_rich/docs/data_model/LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.md#columns:
+    provenance: bird_official
+    source: variable.csv / spec attributes
+  corpus/s1_rich/docs/data_model/LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.md#relationships:
+    provenance: bird_official
+    source: spec joins (cube_relationship)
+  corpus/s1_rich/docs/data_model/LNG_BLNC_SHT_RCGNSD_SCRTY_PSTN_PRDNTL_PRTFL_ACCNTNG_CLSSFCTN_ASSGNMNT_IL.md#code-lists:
+    provenance: bird_official
+    source: domain.csv / member.csv
+  corpus/s1_rich/docs/data_model/index.md#intro:
+    provenance: gap_fill
+    source: render_corpus.py
+  corpus/s2_limited/docs/overview.md:
+    provenance: bird_official
+    source: cube.csv names, joins

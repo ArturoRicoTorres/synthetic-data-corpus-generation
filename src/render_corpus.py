@@ -355,6 +355,133 @@ def render_metadata(out, m, prov, seed):
     write(out / "answer_key" / "s2_subset.yaml", dump_yaml(rules))
 
 
+# ---------------------------------------------------------------- data-model docs (s1 per table, s2 overview)
+GLOSSARY_FROM_DATA_MODEL = "../../../shared/regulatory/glossary.md"
+CONTEXT_KEYS = ["DT_RFRNC", "RPRTNG_AGNT_ID", "ACCNTNG_CNSLDTN_LVL", "ACCNTNG_STNDRD"]
+
+
+def slug(text):
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
+def mart_joins(m):
+    """Official relationships collapsed to joins between data-mart tables (paths through entities that the mart
+    does not store are followed). [(parent, child, [(parent col, child col)], via, relationship names)]"""
+    mart = {t["name"]: set(t["columns"]) for t in m.tables}
+    edges = {}
+    for j in m.spec["joins"]:
+        if j.get("provenance") != "bird_official":
+            continue
+        edges.setdefault(j["parent"], []).append(j)
+    out = []
+    for parent in mart:
+        stack = [(e, [], [e]) for e in edges.get(parent, [])]
+        first_keys = {}
+        while stack:
+            e, via, path = stack.pop()
+            child = e["child"]
+            if child in mart:
+                first = path[0]
+                km = first.get("key_map") or {}
+                pairs = [(k, km.get(k, k)) for k in first["keys"] if km.get(k, k) in mart[child] and k in mart[parent]]
+                key = (parent, child, tuple(pairs), tuple(via))
+                first_keys.setdefault(key, []).extend(p["relationship"] for p in path)
+            elif len(path) < 6:
+                stack += [(n, via + [child], path + [n]) for n in edges.get(child, [])]
+        for (p, c, pairs, via), rels in first_keys.items():
+            out.append((p, c, list(pairs), list(via), sorted(set(rels))))
+    return sorted(out, key=lambda x: (x[0], x[1], x[3]))
+
+
+def merge_joins(joins):
+    """One entry per (parent, child, key pairs): official relationship names and the entities passed merged."""
+    merged = {}
+    for p, c, pairs, via, rels in joins:
+        k = (p, c, tuple(pairs))
+        v = merged.setdefault(k, (set(), set()))
+        v[0].update(via)
+        v[1].update(rels)
+    return [(p, c, list(pairs), sorted(v[0]), sorted(v[1])) for (p, c, pairs), v in sorted(merged.items())]
+
+
+def term_link(m, name, prefix):
+    return f"[{name}]({prefix}#{slug(name)})"
+
+
+def table_page(m, t, joins, prov, rel_path):
+    name = t["name"]
+    title = m.cube.NAME.get(name) or name
+    lines = [f"# {title} ({name})", ""]
+    lines += wrap(m.cube.DESCRIPTION.get(name, "").replace("\n", " ")) + [""]
+    prov[f"{rel_path}#purpose"] = {"provenance": "bird_official", "source": f"cube.csv {name}"}
+    lines += ["## Columns", "", "| Column | Business name | Type | Key | Definition |", "|---|---|---|---|---|"]
+    for c in t["columns"]:
+        bname, definition, _, _ = m.column_text(name, c)
+        bn = term_link(m, m.var.NAME[c], GLOSSARY_FROM_DATA_MODEL) if c in m.var.index else (bname or "")
+        d = (definition or "").replace("\n", " ").replace("|", "/")
+        lines.append(f"| `{c}` | {bn} | {t['types'][c]} | {'PK' if c in t['keys'] else ''} | {d} |")
+    prov[f"{rel_path}#columns"] = {"provenance": "bird_official", "source": "variable.csv / spec attributes"}
+    lines += ["", "## Relationships", ""]
+    mine = [j for j in joins if name in (j[0], j[1])]
+    if name == "INTRNL_GRP_RL_IL":
+        lines += wrap("Joined to every position on the reporting context: " + ", ".join(CONTEXT_KEYS) + ". "
+                      "Each reporting context has exactly one row with group role type GRP_RL_TYP_1.") + [""]
+        prov[f"{rel_path}#relationships-context"] = {"provenance": "gap_fill", "source": "decision OI-13"}
+    for p, c, pairs, via, rels in mine:
+        other, direction = (c, "has many") if p == name else (p, "belongs to")
+        on = ", ".join(f"`{a}` = `{b}`" for a, b in pairs)
+        lines.append(f"- {direction} [{other}]({other}.md) on {on}")
+        if via:
+            lines.append(f"  - through BIRD entities not stored in the data mart: {', '.join(via)}")
+        lines.append(f"  - BIRD relationship(s): {', '.join(rels)}")
+    prov[f"{rel_path}#relationships"] = {"provenance": "bird_official", "source": "spec joins (cube_relationship)"}
+    coded = [c for c in t["columns"] if m.domain_of(c) and m.members_of(m.domain_of(c))]
+    if coded:
+        lines += ["", "## Code lists", ""]
+        for c in coded:
+            d = m.domain_of(c)
+            lines += [f"### {c}: {m.dom.NAME[d]}", "", "| Code value | Code | Name |", "|---|---|---|"]
+            lines += [f"| `{mid}` | {m.mem.CODE[mid]} | {m.mem.NAME[mid]} |" for mid in m.members_of(d)]
+            lines.append("")
+        prov[f"{rel_path}#code-lists"] = {"provenance": "bird_official", "source": "domain.csv / member.csv"}
+    refs = m.legal_refs("CUBE", name)
+    if refs:
+        lines += ["## Legal references", ""] + [f"- {code}: {art}" for code, art in refs]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def er_diagram(joins, labels=True):
+    lines = ["```mermaid", "erDiagram"]
+    for p, c, pairs, via, _ in joins:
+        lab = ", ".join(b for _, b in pairs if b not in CONTEXT_KEYS) or "context"
+        lines.append(f'    {p} ||--o{{ {c} : "{lab if labels else ""}"')
+    lines.append("```")
+    return lines
+
+
+def render_data_model(out, m, prov):
+    joins = merge_joins(mart_joins(m))
+    base = out / "corpus" / "s1_rich" / "docs" / "data_model"
+    for t in m.tables:
+        rel = f"corpus/s1_rich/docs/data_model/{t['name']}.md"
+        write(base / f"{t['name']}.md", table_page(m, t, joins, prov, rel))
+    idx = ["# Reporting data mart: data model", ""]
+    idx += wrap("Input tables of the reporting data mart. Every table carries the reporting context: reference "
+                "date, reporting agent, consolidation level and accounting standard. Table and column names follow "
+                "the ECB BIRD input layer.") + [""]
+    idx += ["| Table | Name |", "|---|---|"]
+    idx += [f"| [{t['name']}]({t['name']}.md) | {m.cube.NAME.get(t['name'], '')} |" for t in m.tables]
+    idx += ["", "## Relationships", ""] + er_diagram(joins)
+    write(base / "index.md", "\n".join(idx) + "\n")
+    prov["corpus/s1_rich/docs/data_model/index.md#intro"] = {"provenance": "gap_fill", "source": "render_corpus.py"}
+    ov = ["# Data mart overview", ""]
+    ov += [f"- {t['name']}: {m.cube.NAME.get(t['name'], '')}" for t in m.tables]
+    ov += ["", "## Relationships", ""] + er_diagram(joins, labels=False)
+    write(out / "corpus" / "s2_limited" / "docs" / "overview.md", "\n".join(ov) + "\n")
+    prov["corpus/s2_limited/docs/overview.md"] = {"provenance": "bird_official", "source": "cube.csv names, joins"}
+    return joins
+
+
 # ---------------------------------------------------------------- main
 def render(out=ROOT, seed=42):
     out = Path(out)
@@ -365,11 +492,13 @@ def render(out=ROOT, seed=42):
     write(out / "answer_key" / "sql_object_map.yaml", dump_yaml(sql_object_map(objects)))
     m, prov = Model(objects), {}
     render_metadata(out, m, prov, seed)
+    docs = {}
+    render_data_model(out, m, docs)
     write(out / "answer_key" / "provenance.yaml",
           dump_yaml({"note": "Provenance of every corpus metadata asset, glossary entry and document section. "
                              "bird_official = verbatim from the BIRD export; gap_fill = written for this project; "
                              "legal:<register id> = quoted from that legal text.",
-                     "metadata": prov}))
+                     "metadata": prov, "documents": docs}))
 
 
 if __name__ == "__main__":

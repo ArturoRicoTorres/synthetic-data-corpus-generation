@@ -1,0 +1,132 @@
+# Hand-written reporting-chain sections for the s1 corpus (decision D4: one section per step). Provenance: gap_fill.
+# Keyed by spec node id; the keys never reach the corpus. src/render_corpus.py adds the facts from the spec and the
+# SQL: file, objects read and created, official BIRD routines.
+#
+#   title   neutral section title (no node ids, no label words)
+#   text    what the step does and the rule, in plain English
+#   terms   business terms used (must exist in the glossary; rendered as links)
+#   cites   [register id, location] pairs; register ids are defined in corpus/shared/regulatory/register.yaml
+#
+# Wording rule (decision D6): do not use the classifier's label words, not even in lower case.
+
+intro: >-
+  This document describes how the reporting data mart produces the non-performing loans ratio for loans and advances
+  at cost or amortised cost: FINREP template F 18.00.a, row 0070, column 0060 divided by column 0010. The chain follows
+  the ECB BIRD transformation rules for FINREP 4.3. Each section below is one step of the chain, in the order in which
+  the steps run. The SQL of each step is in the file named in the section.
+
+sections:
+  T01:
+    title: Input snapshot for the reporting context
+    text: >-
+      Every input table holds rows for many reporting contexts. A reporting context is the combination of reference
+      date, reporting agent, consolidation level and accounting standard. This step keeps only the rows of the context
+      being reported. The context is set once per database session; no other filter is applied and no value is changed.
+    terms: [Reference date, Reporting agent identifier, Accounting consolidation level, Accounting standard]
+    cites: []
+  T02:
+    title: Status, classification and counterparty attributes for the reporting rules
+    text: >-
+      The attributes that the reporting rules read are passed unchanged from the input layer into the enriched layer:
+      the performing status and accounting portfolio of each instrument role, the institutional sector and the
+      multilateral development bank flag of each party, the role and main-party flags of each instrument assignment,
+      the reporting scheme of the reporting agent, and the issuer role of each security. Values are not recoded.
+    terms: [Performing status, Accounting classification, Institutional sector, Entity role type, Finrep reporting scheme]
+    cites: []
+  T03:
+    title: Gross carrying amount of instrument roles
+    text: >-
+      The gross carrying amount of each instrument role depends on its accounting portfolio and impairment status.
+      For financial assets at amortised cost under IFRS, and for national GAAP cost-based portfolios with specific
+      allowances, it is the carrying amount plus the accumulated impairment. For national GAAP portfolios covered by
+      general allowances, it is the carrying amount plus the general allowances for credit risk and for banking risk.
+      For national GAAP portfolios at cost that are not subject to impairment, it is the carrying amount.
+      For portfolios at fair value it is the fair value; for non-performing exposures the accumulated negative changes
+      in fair value due to credit risk are added back. The branches are evaluated in a fixed order and the first match
+      applies. When an input that a branch needs is missing, the instrument role gets no gross carrying amount and is
+      not reported.
+    terms: [Gross carrying amount, Carrying amount, Accumulated impairment, Fair value, Impairment status]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraph 34"]
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraph 27"]
+  T04:
+    title: Annex V instrument type of instrument roles
+    text: >-
+      Each instrument role is assigned its type of financial asset as defined in FINREP Annex V. An instrument is a
+      loan or advance when its product and the role of the counterparty match: a loan product where the counterparty
+      is the main loan debtor, a financial lease where it is the main lessee, or a deposit where it is the main
+      deposit-taking corporation. Balances at central banks and credit institutions that are repayable on demand are
+      not loans and advances; they are cash balances at central banks or other demand deposits. Under IFRS, an
+      instrument held for sale is reported as a non-current asset held for sale instead. The same rule also assigns
+      the types for equity instruments and derivatives, which this chain does not report.
+    terms: [Type of Financial Asset Instrument according to Annex V, Instrument type by product, Entity role type,
+            Repayment rights, Held for sale indicator]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraph 32"]
+      - [REG_EU_2021_451, "Annex V, Part 2, paragraphs 2 and 3"]
+  T05:
+    title: Debt securities held as loans and advances
+    text: >-
+      Long balance-sheet positions in debt securities get a gross carrying amount and an Annex V type with the same
+      rules as instrument roles, applied per prudential and accounting portfolio. A debt security that is not
+      negotiable is reported as a loan or advance; a negotiable one is a debt security and is not part of row 0070.
+      The performing status of a security position comes from the security itself.
+    terms: [Gross carrying amount, Negotiable security indicator, Debt security by Performing status type]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraphs 31 and 32"]
+  T06:
+    title: FINREP reporting basis of the reporting agent
+    text: >-
+      Template F 18.00.a is reported only by reporting agents that report FINREP on a full, simplified or
+      over-simplified basis. The reporting basis is read from the reporting agent's internal group role; each reporting
+      context has exactly one such role. Contexts on any other basis produce no figures.
+    terms: [Finrep reporting scheme, Internal group role type]
+    cites: []
+  T07:
+    title: Counterparty sector rows of template F 18.00.a
+    text: >-
+      Instrument and security positions are combined with their counterparty. A position enters the template when its
+      Annex V type is loans and advances and its accounting portfolio is at amortised cost (IFRS) or cost-based
+      (national GAAP). The counterparty must be the main debtor, main lessee, main deposit-taking corporation or, for
+      securities, the primary issuer. The institutional sector of the counterparty then decides the row: central banks
+      (0080), general governments (0090), credit institutions (0100), other financial corporations (0110),
+      non-financial corporations (0120) and households (0150). Multilateral development banks are reported under
+      credit institutions.
+    terms: [Institutional sector, Multilateral development bank indicator, Main debtor indicator, Primary issuer indicator]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraph 42"]
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraph 44"]
+      - [REG_EU_2021_451, "Annex V, Part 1, paragraphs 15 and 16"]
+  T08:
+    title: "Row 0070: loans and advances"
+    text: >-
+      Row 0070 "Loans and advances" holds the positions of the six counterparty sector rows together. A position that
+      matches no sector row is not part of row 0070.
+    terms: [Type of Financial Asset Instrument according to Annex V]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 2, paragraph 217"]
+      - [REG_EU_2021_451, "Annex V, Part 2, paragraph 218"]
+  T09:
+    title: "Column 0010: gross carrying amount"
+    text: >-
+      Column 0010 is the sum of the gross carrying amount of the positions in row 0070. Only positive amounts are
+      added.
+    terms: [Gross carrying amount]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 2, paragraph 221"]
+  T10:
+    title: "Column 0060: non-performing"
+    text: >-
+      Column 0060 is the same sum restricted to non-performing positions: instrument roles whose performing status is
+      non-performing, and security positions whose security is a non-performing debt security.
+    terms: [Gross carrying amount, Performing status, Debt security by Performing status type]
+    cites:
+      - [REG_EU_2021_451, "Annex V, Part 2, paragraph 213"]
+      - [CRR_REGULATION, "Article 47a(3)"]
+  T11:
+    title: Non-performing loans ratio
+    text: >-
+      The ratio is column 0060 divided by column 0010 of row 0070. When column 0010 is zero or missing, the ratio is
+      not reported.
+    terms: [Gross carrying amount]
+    cites: []

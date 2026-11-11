@@ -482,6 +482,52 @@ def render_data_model(out, m, prov):
     return joins
 
 
+# ---------------------------------------------------------------- reporting-chain document (s1, decision D4)
+SHARED_FROM_DOCS = "../../shared/regulatory"
+
+
+def routine_anchor(rid):
+    return slug(rid)
+
+
+def render_reporting_chain(out, m, prov):
+    chain = load_yaml(TEXT_DIR / "reporting_chain.yaml")
+    lmap = load_yaml(LINEAGE_MAP)
+    files = {o["file"] for o in m.objects}
+    by_file = {}
+    for o in m.objects:
+        by_file.setdefault(o["file"], []).append(o)
+    rel = "corpus/s1_rich/docs/reporting_chain.md"
+    lines = ["# Reporting chain: non-performing loans ratio (FINREP F 18.00.a)", ""]
+    lines += wrap(chain["intro"]) + [""]
+    prov[f"{rel}#intro"] = {"provenance": "gap_fill", "source": "src/corpus_text/reporting_chain.yaml"}
+    nodes = sorted(chain["sections"], key=lambda n: lmap["nodes"][n]["file"])
+    for i, nid in enumerate(nodes, 1):
+        sec, fname = chain["sections"][nid], lmap["nodes"][nid]["file"]
+        assert fname in files, fname
+        objs = by_file[fname]
+        created = {o["name"] for o in objs}
+        reads = sorted({s for o in objs for s in o["sources"]} - created)
+        routines = m.texts["files"][fname]["routines"]
+        lines += [f"## Step {i}: {sec['title']}", ""] + wrap(sec["text"]) + [""]
+        lines.append(f"- SQL file: `{fname}`")
+        lines.append(f"- Reads: {', '.join(f'`{r}`' for r in reads)}")
+        made = ", ".join("`" + o["name"] + "`" for o in objs)
+        lines.append(f"- Creates: {made}")
+        if routines:
+            lines.append("- Official BIRD routine(s): " + ", ".join(
+                f"[{r}]({SHARED_FROM_DOCS}/bird_transformation_rules.md#{routine_anchor(r)})" for r in routines))
+        lines.append("- Terms: " + ", ".join(term_link(m, t, f"{SHARED_FROM_DOCS}/glossary.md") for t in sec["terms"]))
+        if sec["cites"]:
+            lines.append("- References: " + "; ".join(
+                f"[{reg}]({SHARED_FROM_DOCS}/register.md#{slug(reg)}) {at}" for reg, at in sec["cites"]))
+        lines.append("")
+        prov[f"{rel}#step-{i}"] = {"provenance": "gap_fill", "source": "src/corpus_text/reporting_chain.yaml",
+                                   "node": nid, "title": sec["title"]}
+    write(out / rel, "\n".join(lines).rstrip() + "\n")
+    return chain
+
+
 # ---------------------------------------------------------------- main
 def render(out=ROOT, seed=42):
     out = Path(out)
@@ -494,6 +540,7 @@ def render(out=ROOT, seed=42):
     render_metadata(out, m, prov, seed)
     docs = {}
     render_data_model(out, m, docs)
+    render_reporting_chain(out, m, docs)
     write(out / "answer_key" / "provenance.yaml",
           dump_yaml({"note": "Provenance of every corpus metadata asset, glossary entry and document section. "
                              "bird_official = verbatim from the BIRD export; gap_fill = written for this project; "

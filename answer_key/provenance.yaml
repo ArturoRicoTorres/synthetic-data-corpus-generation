@@ -2094,3 +2094,61 @@ documents:
   corpus/s2_limited/docs/overview.md:
     provenance: bird_official
     source: cube.csv names, joins
+  corpus/s1_rich/docs/reporting_chain.md#intro:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+  corpus/s1_rich/docs/reporting_chain.md#step-1:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T01
+    title: Input snapshot for the reporting context
+  corpus/s1_rich/docs/reporting_chain.md#step-2:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T02
+    title: Status, classification and counterparty attributes for the reporting rules
+  corpus/s1_rich/docs/reporting_chain.md#step-3:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T03
+    title: Gross carrying amount of instrument roles
+  corpus/s1_rich/docs/reporting_chain.md#step-4:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T04
+    title: Annex V instrument type of instrument roles
+  corpus/s1_rich/docs/reporting_chain.md#step-5:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T05
+    title: Debt securities held as loans and advances
+  corpus/s1_rich/docs/reporting_chain.md#step-6:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T06
+    title: FINREP reporting basis of the reporting agent
+  corpus/s1_rich/docs/reporting_chain.md#step-7:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T07
+    title: Counterparty sector rows of template F 18.00.a
+  corpus/s1_rich/docs/reporting_chain.md#step-8:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T08
+    title: 'Row 0070: loans and advances'
+  corpus/s1_rich/docs/reporting_chain.md#step-9:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T09
+    title: 'Column 0010: gross carrying amount'
+  corpus/s1_rich/docs/reporting_chain.md#step-10:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T10
+    title: 'Column 0060: non-performing'
+  corpus/s1_rich/docs/reporting_chain.md#step-11:
+    provenance: gap_fill
+    source: src/corpus_text/reporting_chain.yaml
+    node: T11
+    title: Non-performing loans ratio
